@@ -3,3 +3,4 @@ Classes Select:
 Customer
 Screen
 Seating
+Imax

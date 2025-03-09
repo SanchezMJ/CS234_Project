@@ -1,0 +1,26 @@
+Created Classes for:
+Customer
+Schedule
+Screen
+Seating
+
+Customer
+set it up to have attributes customer information
+constructor with no arguments will have attributes set to guest
+Will use DOB to pull age in case we use for age restricted movies
+Plan on using a point system
+
+Screen
+defined attributes for screen
+
+Seating
+Will use a particular array depending on which type 
+the screen is set to.  IMAX vs a regular screen.
+
+Schedule
+Added this thinking it would be easier to create an ArrayList holding
+a different times for each movie.  This way, the seating array can movidified
+for each instance of a movie.  Thinking this might allow an easier wa 
+for report seats sold for each movie as well.
+
+Added relationship lines.

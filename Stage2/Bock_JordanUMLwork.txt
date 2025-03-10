@@ -1,0 +1,29 @@
+Created Classes:
+Staff
+Showtimes
+Concessions
+Management
+
+Staff
+class takes information for staff members to store in array list which is located in the management class
+
+Showtimes 
+takes in screen number, film name, and time it is showing
+information is set and stored in management class
+connects to schedule class to supply the time
+
+Concessions
+Class takes in a product name, price, and number in stock
+This information is fed to Cart where it is stored in a array list
+
+Management
+Stores employee information supplied by Staff Class
+Stores list of show times supplied by Showtime Class
+Stores list of movies information supplied by movie class
+This class has the ability to add, remove, change, and display a list of employee information
+It also has the ability to add, remove, change, and display show times
+
+additional:
+I assisted with beginning outline for the Cart class
+Cart class
+The part I added stores products from concession in an array list and displays it

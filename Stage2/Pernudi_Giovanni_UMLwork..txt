@@ -1,0 +1,16 @@
+Created Classes for:
+Movie
+Payment
+Additional corrections made for Customer class
+
+Movie:
+
+Created the necessary variables and methods that will be used to set and display the information about the movie information for customers to view and staff to edit. Will use a method t display the Movie information that will contain everything included.
+
+Payment:
+
+Created variables to store the information of the total cost from the other classes. Gave the customer an option to pay in Cash, Credit Card, Voucher, or  Gift Card. Use a menu to display the options and will call appropriate methods depending on choice for information relating to how customer will pay. 
+
+Customer:
+
+Corrections made early on in the UML design to include an arraylist for storing the customer. Corrections made on including a menu option to showcase the choices that users can make to go into other menus. 

@@ -21,14 +21,6 @@ public class Cart {
         
     }
     
-    public void addPoints(Customer customer){
-        
-    }
-    
-    public void payOut(Payment payment){
-        
-    }
-    
     public Concession getProduct(Concession product){
         return product;
     }

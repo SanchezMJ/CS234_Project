@@ -55,6 +55,6 @@ public class Staff {
     
     @Override
     public String toString(){
-        return "Staff{name: '"+name+"',position: '"+position+"',pay rate: "+payRate+'}';
+        return "Staff{name: "+ name +"' position: "+position+" pay rate: "+payRate'}';
     }
 }

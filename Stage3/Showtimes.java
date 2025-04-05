@@ -19,23 +19,25 @@ public class Showtimes {
     this.screen=screen;
 }
     
-    public void setTitle(String Title){
-        this.title=Title;
+    public void setTitle(String title){
+        this.title=title;
     }
     
     public String getTitle(){
         return title;
     }
     
-    public void setTime(int Time){
-        this.time=Time;
+    public void setTime(int time){
+        this.time=time;
     }
     
     public int getTime(){
         return time;
     }
     
-    public void displayTimes(){
-        
+    @Override
+    public String toString(){
+        return "Title: "+title+" Time: "+time+" Screen: "+screen;
     }
+    
 }

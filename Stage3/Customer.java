@@ -98,7 +98,7 @@ public class Customer {
     public int hashCode() {
         //Uses modulus operator and 10 to sort by remainder
         int check = (int)memberID;
-        return Objects.hash(check);
+        return check;
     }
     
     //Necessarily overrides equals method to verify if object exists in set

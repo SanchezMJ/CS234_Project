@@ -24,6 +24,10 @@ public class Movie {
 	public String getMovieTitle() {
 		return title;
 	}
+
+	public void setMovieTitle(String title){
+		this.title=title;
+	}
 	
 	public String getRating() {
 		return rating;
@@ -64,6 +68,16 @@ public class Movie {
 	
 	public void setCost(double cost) {
 		this.cost = cost;
+	}
+
+	@Override
+    public String toString() {
+        return "Title: " + title +
+               "\nRuntime: " + runtime +
+               "\nRating: " + rating +
+               "\n3D: " + (is3D ? "Yes" : "No") +
+               "\nSynopsis: " + Synopsis +
+               "\nCost: $" + cost;
 	}
 }
 	

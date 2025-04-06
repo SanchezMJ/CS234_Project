@@ -17,6 +17,7 @@ public class GiftCardPayment extends Payment {
         giftCardNum = gcn;
         expDate = xp;
     }       
+ 
     @Override
     public long getGiftCardNum() {
         return giftCardNum;

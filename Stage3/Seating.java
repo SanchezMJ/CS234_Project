@@ -69,8 +69,8 @@ public class Seating {
         return seatSelection;
     }
     
-    public void remScreenSeats() {
-        
+    public void remScreenSeats(String rem) {
+        //seatSelection
     }
     
     public void addScreenSeats() {

@@ -30,13 +30,15 @@ public class Membership {
     
     /**
      * Method that checks if customer is already in members list before
-     * proceeding to add member into the list. 
+     * proceeding to add member into the list. Shows a welcome message for each member added.
      */
     public void addMembers(Customer customer) {
         boolean cont = members.contains(customer);
         if (cont == false) {
-            members.add(customer);
-            System.out.println("Welcome to our Theater " + customer.getFirstName() + "!");
+            if (!customer.getFirstName().equals("Guest")){
+                members.add(customer);
+                System.out.println("Welcome to our Theater " + customer.getFirstName() + "!");
+            }
         } else {
             System.out.println("Please try password again.");
         }

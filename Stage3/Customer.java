@@ -11,6 +11,7 @@ public class Customer {
         private String password;
 	private long  memberID;  
 	private int points; 
+        private Membership members;
 	
         //Constructor for default/Guest user
 	public Customer() {
@@ -20,17 +21,8 @@ public class Customer {
 		this.memberID = 0000000001L;
 		this.points = 0; 
                 this.password = null;
+                //this.members = members;
 	}
-        
-//                //Constructor for default/Guest user
-//	public Customer(long id) {
-//		this.firstName = "Guest";
-//		this.lastName = null;
-//		this.dob = null;
-//		this.memberID = id;
-//		this.points = 0; 
-//                this.password = null;
-//	}
         
         /**
          * Constructor and variable initialization for Users
@@ -88,7 +80,7 @@ public class Customer {
         
         //Method to add points to each customer
         public void addPoints(int p) {
-            this.points = points + p;
+                this.points = points + p;
         }
         
         /**
@@ -119,6 +111,15 @@ public class Customer {
             this.password = password;
         }
         
+        @Override
+        public String toString() {
+            return "Name: " + firstName + " " + lastName + "\n" + "Birthday: " 
+                    + dob + "\nPoints: " + points; 
+        }
+        
+//        public static Customer createCustomer(int id) {
+//            return new Customer(id);
+//        }
         /**
          * Takes DOB string and will subtract from current date to get age.
          * Was planning on using this to maybe use for R rated movies.  

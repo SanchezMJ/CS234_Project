@@ -184,13 +184,13 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
         ArrayList<Staff>staffList = manage.getListOfEmployees();
         //Customer c1 = new Customer("Michael", "Sanchez", "10/31/2000", 5758888888L, "Poop");
         //mem1.addMembers(c1);
-        String choice = MainMenu();
-        if (choice.equals("Staff")) {
-            worker = StaffMainMenu(staffList, manage, authStaff);
-        }
-        if (choice.equals("Customer")) {
-            cur = CustomerMainMenu(newest, mem1, authCust);
-        }
+        //String choice = MainMenu();
+//        if (choice.equals("Staff")) {
+//            worker = StaffMainMenu(staffList, manage, authStaff);
+//        }
+//        if (choice.equals("Customer")) {
+//            cur = CustomerMainMenu(newest, mem1, authCust);
+//        }
         
         
 
@@ -205,8 +205,8 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
 //        Customer c5 = new Customer("Michael", "Sanchez", "10/31/2000", 5758888888L, "Poop");
 //        mem1.addMembers(c5);
 //        
-        System.out.println(mem1.getMembers());
-        System.out.println(manage.getListOfEmployees());
+//        System.out.println(mem1.getMembers());
+//        System.out.println(manage.getListOfEmployees());
 //        System.out.println("Please enter your phone number");
 //        long inputNum = scanner.nextLong();
 //        scanner.nextLine();
@@ -232,6 +232,19 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
         Seating s4 = new Seating("IA2", "imax");
         String ss = s4.getSeat();
         s3.addSeatSelection(ss);
+        
+        //System.out.println(s1);
+        //System.out.println(s2);
+        //s1.displaySeating(s1);
+        //s2.displaySeating(s2);
+        ArrayList<String>seats = s1.getSeatSelection();
+        s1.addSeat("A01");
+        s1.addSeat("A02");
+        s1.addSeat("E06");
+        s1.addSeat("E07");
+        //ArrayList<String>seats = s1.getSeatList();
+        s1.seatsTaken(seats);
+        s1.displaySeating(s1);
         
     }
     

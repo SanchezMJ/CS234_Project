@@ -8,13 +8,15 @@ import java.util.ArrayList;
  *
  * @author jbock
  */
+//collects information to finalize transaction
 public class Cart {
     private Customer customer;
     private ArrayList<Concession> listOfProducts;
     private ArrayList<Seating> seatSelection;
     private Payment payment;
     private Inventory productList;
-    
+
+    //intializes cart
     public Cart(Customer customer, Inventory productList){
         this.customer=customer;
         this.listOfProducts=new ArrayList<>();
@@ -22,7 +24,8 @@ public class Cart {
         this.productList= productList;
         
     }
-    
+
+    //adds product to cart from inventory
     public void addProduct(String productName){
         for(Concession product: productList.getProductList()){
             if(product.getProduct().equals(productName)){
@@ -32,11 +35,13 @@ public class Cart {
         }
         System.out.println("Item not found.");
     }
-    
+
+    //removes product
     public void removeProduct(Concession product){
         listOfProducts.remove(product);
     }
-    
+
+    //shows products in cart
     public void showProducts(){
         if(listOfProducts.isEmpty()){
             System.out.println("List of products is empty.");
@@ -47,15 +52,18 @@ public class Cart {
       }
         
     }
-    
+
+    //adds seat to cart
     public void addSeat(Seating seat){
         seatSelection.add(seat);
     }
-    
+
+    //removes seat from cart
     public void removeSeat(Seating seat){
         seatSelection.remove(seat);
     }
-    
+
+    //shows selected seats
     public void showSeats(){
         if(seatSelection.isEmpty()){
             System.out.println("No seats selected.");
@@ -66,7 +74,8 @@ public class Cart {
       }
         
     }
-    
+
+    //adds cost of concession and seating
     public double totalCost(){
         double total=0;
         for(Concession product: listOfProducts){
@@ -79,7 +88,9 @@ public class Cart {
         
         return total;
     }
-    
+
+    //prints customer name, total, and items purchased
+    //passes total to payment class
     public void transaction(){
         System.out.println("Customer: "+customer.getFirstName()+" "+customer.getLastName());
         System.out.println("Products: ");

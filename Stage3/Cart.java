@@ -100,6 +100,19 @@ public class Cart {
         double total=totalCost();
         System.out.println("Total: $"+total);
         
+        //checks if customer is member and awards points if true.
+        if(customer.getMemberID()!=0){
+            int pointsToAdd=(int)(total/10);
+            customer.addPoints(pointsToAdd);
+            System.out.println("Points added; "+pointsToAdd+" points.");
+            System.out.println("Total point: "+customer.getPoints());
+            
+        }else{
+            System.out.println("Customer is not a member.");
+        }
+        
+        
+        
         payment=new Payment(total);
         payment.paymentDetails();
     }

@@ -24,13 +24,15 @@ public class ShowtimeManager {
     }
     
     //removes show time if it exists
-    public void removeShowTime(String title){
+    public boolean removeShowTime(String title){
         Showtimes toBeRemoved=findShow(title);
         if(toBeRemoved!=null){
             listOfTime.remove(toBeRemoved);
             System.out.println("Show time for "+title+" has been removed.");
+            return true;
         }else{
             System.out.println("Unable to remove.");
+            return false;
         }
     }
     //sets list of show times
@@ -46,7 +48,7 @@ public class ShowtimeManager {
     //displays showtimes
     public void displayShowTimes(){
         if(listOfTime.isEmpty()){
-            System.out.println("List of movies is empty.");
+            System.out.println("List of show times is empty.");
         }else{
         for (Showtimes showtime : listOfTime){
             System.out.println(showtime);
@@ -55,7 +57,7 @@ public class ShowtimeManager {
         
     }
     
-    //searches for show times by title if it exists
+    //searches for show times by title if it 
     public Showtimes findShow(String title){
         for(Showtimes showtime: listOfTime){
             if(showtime.getTitle().equalsIgnoreCase(title)){

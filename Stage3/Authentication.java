@@ -1,22 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package cs234project;
 
 import java.util.HashSet;
-import java.util.Objects;
 
 /**
- *
- * @author mjsanchez
+ * @author Michael Sanchez
  */
+
+//variable definitions
 public class Authentication {
     private Membership members;
     
+    //Constructor to initialize members
     public Authentication(Membership members) {
         this.members = members;
     }
+    
+    /**
+     * Takes memberID (phone number) and password string.  Will then pull
+     * members set by using getMembers and iterate through the members list
+     * looking for a match.  If it is found, it will return the customer object.
+     * returns null if not found.
+     */
     public Customer Authenticate(long id, String p) {
         HashSet<Customer> test = new HashSet<>();
         test = members.getMembers();

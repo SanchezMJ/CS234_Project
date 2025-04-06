@@ -1,12 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+/**
+ * @author Michael Sanchez
  */
 package cs234project;
 
-import java.util.ArrayList;
-import java.util.Objects;
-
+//Variable definitions
 public class Customer {
 	private String firstName; 
 	private String lastName;
@@ -14,9 +11,8 @@ public class Customer {
         private String password;
 	private long  memberID;  
 	private int points; 
-        
-	//private ArrayList<Customer> members;
 	
+        //Constructor for default/Guest user
 	public Customer() {
 		this.firstName = "Guest";
 		this.lastName = null;
@@ -24,9 +20,23 @@ public class Customer {
 		this.memberID = 0000000001L;
 		this.points = 0; 
                 this.password = null;
-		//this.members = new ArrayList<>();
 	}
         
+//                //Constructor for default/Guest user
+//	public Customer(long id) {
+//		this.firstName = "Guest";
+//		this.lastName = null;
+//		this.dob = null;
+//		this.memberID = id;
+//		this.points = 0; 
+//                this.password = null;
+//	}
+        
+        /**
+         * Constructor and variable initialization for Users
+         * @param memberID will be the members phone number and has to be long
+         * so make sure to add L after the phone number to prevent errors.
+         */
         public Customer(String n, String l, String d, long mid, String pass) {
 		this.firstName = n;
 		this.lastName = l;
@@ -34,66 +44,93 @@ public class Customer {
 		this.memberID = mid;
 		this.points = 0;
                 this.password = pass;
-		//this.members = new ArrayList<>();
         }
 	
-	
+        //Method to set users first name.
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 	
+        //Method to return users first name.
 	public String getFirstName() {
 		return firstName;
 	}
 	
+        //Method to set last name of user.
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 	
+        //Method to return last name of user.
 	public String getLastName() {
 		return lastName;
 	}
 	
+        //Method to set DOB of user
 	public void setDOB(String dob) {
 		this.dob = dob;
 	}
 	
+        //Method to get DOB of user
 	public String getdob() {
 		return dob;
 	}
 	
+        //Method to set memberID of user.
 	public void setMemberID(long memberID) {
 		this.memberID = memberID;
 	}
         
+        //Method to return memberID
 	public long getMemberID() {
 		return memberID;
 	}
+        
+        //Method to add points to each customer
         public void addPoints(int p) {
             this.points = points + p;
         }
         
+        /**
+         * Method to remove points from customer while ensuring
+         * that the point value does not go below zero or that they have
+         * enough points for transaction.
+         */
         public void removePoints(int p) {
             if ((points - p) >= 0) {
                 this.points = points - p;
             }else {
-                this.points = 0;
+                System.out.println("Not enough points for transaction.");
             }
         }
-            
+        
+        //Method to return points for customer.
         public int getPoints() {
             return points;
         }
         
+        //Method to return customers password
         public String getPassword() {
             return password;
         }
-
+        
+        //Method to set customer passwod.
         public void setPassword(String password) {
             this.password = password;
         }
+        
+        /**
+         * Takes DOB string and will subtract from current date to get age.
+         * Was planning on using this to maybe use for R rated movies.  
+         * Most likely wont use it at all.
+         */
+        
+//        public int getAge() {
+//            int age = dob - currentDate;
+//            return age;
+//        }
     
-            //Overwrites method hashCode for sorting objects
+    //Overwrites method hashCode for sorting objects
     @Override
     public int hashCode() {
         //Uses modulus operator and 10 to sort by remainder
@@ -101,7 +138,10 @@ public class Customer {
         return check;
     }
     
-    //Necessarily overrides equals method to verify if object exists in set
+    /**
+     * Necessarily overrides equals method to verify if object exists in set
+     * Uses memberID (phone number) to check for duplicate entries.
+     */
     @Override
     public boolean equals(Object obj) {
         if (obj == this) {

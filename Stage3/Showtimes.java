@@ -11,9 +11,9 @@ package com.mycompany.cs234project;
 public class Showtimes {
     private String title;
     private int time;
-    private int screen;
+    private Screen screen;
     
-    public Showtimes(String title, int time, int screen){
+    public Showtimes(String title, int time, Screen screen){
     this.title=title;
     this.time=time;
     this.screen=screen;
@@ -33,6 +33,14 @@ public class Showtimes {
     
     public int getTime(){
         return time;
+    }
+    
+    public Screen getScreen(){
+        return screen;
+    }
+    
+    public void setScreen(Screen screen){
+        this.screen=screen;
     }
     
     @Override

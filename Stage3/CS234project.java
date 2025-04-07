@@ -15,16 +15,15 @@ public static String MainMenu() {
     System.out.println("Welcome to GENERIC Movie Theater!");
         System.out.println("Please select an option below.");
         
-//        int sentinal = 0;
-//        while(sentinal >= 0) {
+        int sentinal = 0;
+        while(sentinal >= 0) {
             System.out.println("========================");
             System.out.println("\tMain Menu\n1. Customer \n2. Staff\n3. Exit");
             System.out.println("========================");
             Scanner in = new Scanner(System.in);
             System.out.print("Enter your choice: ");
-            int sentient = 1;
+            //int sentient = 1;
             int choice = in.nextInt();
-            while(sentient >= 0){
                 switch(choice){
                     case 1:
                         return "Customer";
@@ -32,15 +31,14 @@ public static String MainMenu() {
                         return "Staff";
                     case 3:
                         System.out.println("Exiting");
-                        sentient = -1;
+                        sentinal = -1;
                         break;
                     default: 
                         System.out.println("Invalid choice. Please try again.");
-                        return null;
+                        //return null;
                 }
-                return null;
             }
-    return null;
+        return null;
 }
     
 public static Customer CustomerMainMenu(HashSet<Customer> hset, Membership objmem, Authentication objauth) {
@@ -171,6 +169,7 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
     Staff currStaff = objauth.AuthenticateStaff(uname, inputPass);
     return currStaff;
 }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Membership mem1 = new Membership();
@@ -182,15 +181,15 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
         manage.addEmployee(worker);
         HashSet<Customer>newest = mem1.getMembers();
         ArrayList<Staff>staffList = manage.getListOfEmployees();
-        //Customer c1 = new Customer("Michael", "Sanchez", "10/31/2000", 5758888888L, "Poop");
-        //mem1.addMembers(c1);
-        //String choice = MainMenu();
-//        if (choice.equals("Staff")) {
-//            worker = StaffMainMenu(staffList, manage, authStaff);
-//        }
-//        if (choice.equals("Customer")) {
-//            cur = CustomerMainMenu(newest, mem1, authCust);
-//        }
+        Customer c1 = new Customer("Michael", "Sanchez", "10/31/2000", 5758888888L, "Poop");
+        mem1.addMembers(c1);
+        String choice = MainMenu();
+        if (choice.equals("Staff")) {
+            worker = StaffMainMenu(staffList, manage, authStaff);
+        }
+        if (choice.equals("Customer")) {
+            cur = CustomerMainMenu(newest, mem1, authCust);
+        }
         
         
 
@@ -237,14 +236,20 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
         //System.out.println(s2);
         //s1.displaySeating(s1);
         //s2.displaySeating(s2);
-        ArrayList<String>seats = s1.getSeatSelection();
-        s1.addSeat("A01");
-        s1.addSeat("A02");
-        s1.addSeat("E06");
-        s1.addSeat("E07");
-        //ArrayList<String>seats = s1.getSeatList();
-        s1.seatsTaken(seats);
-        s1.displaySeating(s1);
+//        ArrayList<String>seats = s1.getSeatSelection();
+//        ArrayList<String>s2seats = s2.getSeatSelection();
+//        s1.addSeat("A01");
+//        s1.addSeat("A02");
+//        s1.addSeat("E06");
+//        s1.addSeat("E07");
+//        s2.addSeat("D13");
+//        s2.addSeat("D14");
+//        s2.addSeat("F05");
+//        s2.addSeat("F06");
+//        s1.seatsTaken(seats);
+//        s1.displaySeating(s1);
+//        s2.seatsTaken(s2seats);
+//        s2.displaySeating(s2);
         
     }
     

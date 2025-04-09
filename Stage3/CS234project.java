@@ -11,7 +11,8 @@ import java.util.Scanner;
  */
 public class CS234project {
 
-public static Object MainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
+    //Main Menu method for initial menu.
+public static Customer MainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
     System.out.println("Welcome to GENERIC Movie Theater!");
         System.out.println("Please select an option below.");
         Customer current = new Customer();
@@ -33,11 +34,11 @@ public static Object MainMenu(HashSet<Customer> hashset, Membership mem, Authent
                         return current;
                     case 2:
                         staff = StaffMainMenu(hashset, mem, obauth, alist, objman, objauth);
-                        return staff;
+                        break;
                     case 3:
                         System.out.println("Exiting");
                         sentinal = -1;
-                        return "result";
+                        break;
                     default: 
                         System.out.println("Invalid choice. Please try again.");
                         //return null;
@@ -48,10 +49,11 @@ public static Object MainMenu(HashSet<Customer> hashset, Membership mem, Authent
     
 public static Customer CustomerMainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
         Customer current = new Customer();
-        boolean check = true;
-        current = null;
+        //boolean check = true;
+        int sentinal = 0;
+        //current = null;
         Scanner in = new Scanner(System.in);
-        while(check) {
+        while(sentinal >= 0) {
             System.out.println("========================");
             System.out.println("\tCustomer Menu\n1. Customer Login\n2. Register\n3. Login as Guest\n4. Exit");
             System.out.println("========================");
@@ -61,17 +63,17 @@ public static Customer CustomerMainMenu(HashSet<Customer> hashset, Membership me
             switch(choice){
                 case 1: 
                     current = CustomerLogin(hashset, mem, obauth);
-                    check = false;
-                    break;
+                    //check = false;
+                    return current;
                 case 2:
                     CustomerRegister(hashset, mem, obauth);
-                    check = false;
+                    //check = false;
                     break;
                 case 3:
                     return current;
                 case 4:
                     System.out.println("Exiting");
-                    check = false;
+                    //check = false;
                     MainMenu(hashset, mem, obauth, alist, objman, objauth);
                     return current;
                 default: 
@@ -133,6 +135,7 @@ public static Staff StaffMainMenu(HashSet<Customer> hashset, Membership mem, Aut
 }
     
 public static Customer CustomerLogin(HashSet<Customer> hset, Membership objmem, Authentication objauth) {
+    //Need to add check for data input
     Scanner scanner = new Scanner(System.in);
     System.out.println("Please enter your phone number");
     long inputNum = scanner.nextLong();
@@ -211,14 +214,19 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
         Customer cur = new Customer();
         EmployeeManager manage = new EmployeeManager();
         Authentication authStaff = new Authentication(manage);
+        
+        //Generate Workers
         Staff worker1 = new Staff("Jordan", "Bock", "Manager", 40.45, "jbock", "Whiskey");
         manage.addEmployee(worker1);
         Staff worker2 = new Staff("Giovanni", "Pernudi", "Manager", 40.45, "gpernudi", "Bourbon");
         manage.addEmployee(worker2);
         Staff worker3 = new Staff("Michael", "Sanchez", "Cashier", 18.45, "msanchez", "Scotch");
         manage.addEmployee(worker3);
+        
         HashSet<Customer>newest = mem1.getMembers();
         ArrayList<Staff>staffList = manage.getListOfEmployees();
+        
+        //Generate Customers
         Customer c1 = new Customer("Mickey", "Mouse", "10/31/2000", 5758888888L, "Poop");
         mem1.addMembers(c1);
         Customer c2 = new Customer("Donald", "Duck", "02/14/2000", 5757777777L, "Pooping");
@@ -229,7 +237,8 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
         mem1.addMembers(c4);
         Customer c5 = new Customer("Puzzle", "Pete", "10/31/2000", 5758888888L, "Poop");
         mem1.addMembers(c5);
-        Object current = MainMenu(newest, mem1, authCust, staffList, manage, authStaff);
+        
+        //Generates Screens
         ShowtimeManager shows = new ShowtimeManager();
         ArrayList<Showtimes> showtimes = shows.getListOfTime();
         Screen screen1 = new Screen("Screen 1", "Regular");
@@ -237,11 +246,28 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
         Screen screen3 = new Screen("Screen 3");
         Screen screen4 = new Screen("Screen 4");
         Screen screen5 = new Screen("Screen 5", "imax");
+        
+        //Generate Movie objects
         Movie m1 = new Movie("Batman", "1h 36m", "PG-13", "Batman battles the Joker in this...");
         Movie m2 = new Movie("Heat", "2h 50m", "R", "Master criminal Neil McMauley...");
+        
+        //Adds showtimes
         Showtimes st1 = new Showtimes(m1, 1930, screen1);
         shows.addShowTime(st1);
         Showtimes st2 = new Showtimes(m1, 2230, screen5);
+        shows.addShowTime(st2);
+        
+        //Calls Main Menu and returns current customer.
+        cur = MainMenu(newest, mem1, authCust, staffList, manage, authStaff);
+        
+        
+
+
+
+        /**
+         * Testing for adding seats and verifying that seats are xxx out from the seat
+         * array for that specific showtime.
+         */
         //shows.addShowTime(st2);
         //shows.displaySeating(st1);
         ArrayList<String>seating = st1.getShowSeating();
@@ -280,8 +306,8 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
 //        System.out.println("Please enter your password.");
 //        String inputPass = scanner.nextLine();
 //        Customer current = auth.AuthenticateCustomer(inputNum, inputPass);       
-        //cur.addPoints(100);
-        //System.out.println(cur);
+        cur.addPoints(100);
+        System.out.println(cur);
 
         boolean result;
         GiftCards card1 = new GiftCards(6401, "10/14/2025", 5000.00);

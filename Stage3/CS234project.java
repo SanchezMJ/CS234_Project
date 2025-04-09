@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class CS234project {
 
     //Main Menu method for initial menu.
-public static Customer MainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
+    public static Customer MainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
     System.out.println("Welcome to GENERIC Movie Theater!");
         System.out.println("Please select an option below.");
         Customer current = new Customer();
@@ -70,7 +70,8 @@ public static Customer CustomerMainMenu(HashSet<Customer> hashset, Membership me
                     //check = false;
                     break;
                 case 3:
-                    return current;
+                    TransactionMenu();
+                    break;
                 case 4:
                     System.out.println("Exiting");
                     //check = false;
@@ -206,7 +207,7 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
 
 public static void TransactionMenu() {
         int sentinal = 0;
-        while(sentinal <= 0) {
+        while(sentinal == 0) {
             System.out.println("========================");
             System.out.println("\tTransaction Menu\n1. Buy Tickets\n2. Concessions\n3. Main Menu");
             System.out.println("========================");
@@ -220,11 +221,11 @@ public static void TransactionMenu() {
                         TicketMenu();
                         break;
                     case 2:
-                        ConcessionMenu();
+                        ConcessionMenu(inventory);
                         break;
                     case 3:
                         System.out.println("Exiting");
-                        sentinal = -1;
+                        sentinal = 1;
                         break;
                     default: 
                         System.out.println("Invalid choice. Please try again.");
@@ -246,14 +247,14 @@ public static void TicketMenu() {
             int choice = in.nextInt();
                 switch(choice){
                     case 1:
-                        TicketMenu();
+                        //TicketMenu();
                         break;
                     case 2:
-                        ConcessionMenu();
+                        //ConcessionMenu(inventory);
                         break;
                     case 3:
-                        System.out.println("Exiting");
-                        sentinal = -1;
+                       // System.out.println("Exiting");
+                       // sentinal = -1;
                         break;
                     default: 
                         System.out.println("Invalid choice. Please try again.");
@@ -262,27 +263,27 @@ public static void TicketMenu() {
             }
 }
 
-public static void ConcessionMenu() {
+public static void ConcessionMenu(Inventory inventory) {
         int sentinal = 0;
-        while(sentinal <= 0) {
+        while(sentinal == 0) {
             System.out.println("========================");
-            System.out.println("\tTransaction Menu\n1. Choose a Movie\n2. Concessions\n3. Main Menu");
+            System.out.println("\tConcession Menu\n1. Show Menu\n2. Concessions\n3. Main Menu");
             System.out.println("========================");
             Scanner in = new Scanner(System.in);
             //in.nextLine();
             System.out.print("Enter your choice: ");
             //int sentinal = 1;
             int choice = in.nextInt();
-                switch(choice){
+            switch(choice){
                     case 1:
-                        TicketMenu();
+                        inventory.showAllProducts();
                         break;
                     case 2:
-                        ConcessionMenu();
+                        //ConcessionMenu(inventory);
                         break;
                     case 3:
                         System.out.println("Exiting");
-                        sentinal = -1;
+                        sentinal = 1;
                         break;
                     default: 
                         System.out.println("Invalid choice. Please try again.");
@@ -293,6 +294,7 @@ public static void ConcessionMenu() {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Membership mem1 = new Membership();
+        Inventory productList=new Inventory();
         Cart cart1 = new Cart();
         Seating seats1 = new Seating();
         ArrayList<Seating> seats = cart1.getSeatSelection();
@@ -342,6 +344,11 @@ public static void ConcessionMenu() {
         shows.addShowTime(st1);
         Showtimes st2 = new Showtimes(m1, 2230, screen5);
         shows.addShowTime(st2);
+        
+        //generate products for concession
+        inventory.addProduct(new Concession("Popcorn", 5.00,5));
+        inventory.addProduct(new Concession("Soda", 3.00,6));
+        inventory.addProduct(new Concession("Candy", 2.00,7));
         
         //Calls Main Menu and returns current customer.
         cur = MainMenu(newest, mem1, authCust, staffList, manage, authStaff);
@@ -433,3 +440,5 @@ public static void ConcessionMenu() {
     }
     
 }
+
+   

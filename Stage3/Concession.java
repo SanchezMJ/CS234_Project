@@ -17,6 +17,7 @@ public class Concession {
         this.product=product;
         this.price=price;
         this.totalStock=totalStock;
+        
     }
     
     public void setPrice(double price){
@@ -43,5 +44,10 @@ public class Concession {
         return totalStock;
     }
     
+    @Override
+    public String toString(){
+       return (product+" Price: $"+price);
+    }
     
 }
+

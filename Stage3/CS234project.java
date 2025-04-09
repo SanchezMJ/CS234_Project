@@ -204,6 +204,92 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
     return currStaff;
 }
 
+public static void TransactionMenu() {
+        int sentinal = 0;
+        while(sentinal <= 0) {
+            System.out.println("========================");
+            System.out.println("\tTransaction Menu\n1. Buy Tickets\n2. Concessions\n3. Main Menu");
+            System.out.println("========================");
+            Scanner in = new Scanner(System.in);
+            //in.nextLine();
+            System.out.print("Enter your choice: ");
+            //int sentinal = 1;
+            int choice = in.nextInt();
+                switch(choice){
+                    case 1:
+                        TicketMenu();
+                        break;
+                    case 2:
+                        ConcessionMenu();
+                        break;
+                    case 3:
+                        System.out.println("Exiting");
+                        sentinal = -1;
+                        break;
+                    default: 
+                        System.out.println("Invalid choice. Please try again.");
+                        //return null;
+                }
+            }
+}
+
+public static void TicketMenu() {
+        int sentinal = 0;
+        while(sentinal <= 0) {
+            System.out.println("========================");
+            System.out.println("\tTicket Menu\n1. Choose a Movie\n2. Concessions\n3. Main Menu");
+            System.out.println("========================");
+            Scanner in = new Scanner(System.in);
+            //in.nextLine();
+            System.out.print("Enter your choice: ");
+            //int sentinal = 1;
+            int choice = in.nextInt();
+                switch(choice){
+                    case 1:
+                        TicketMenu();
+                        break;
+                    case 2:
+                        ConcessionMenu();
+                        break;
+                    case 3:
+                        System.out.println("Exiting");
+                        sentinal = -1;
+                        break;
+                    default: 
+                        System.out.println("Invalid choice. Please try again.");
+                        //return null;
+                }
+            }
+}
+
+public static void ConcessionMenu() {
+        int sentinal = 0;
+        while(sentinal <= 0) {
+            System.out.println("========================");
+            System.out.println("\tTransaction Menu\n1. Choose a Movie\n2. Concessions\n3. Main Menu");
+            System.out.println("========================");
+            Scanner in = new Scanner(System.in);
+            //in.nextLine();
+            System.out.print("Enter your choice: ");
+            //int sentinal = 1;
+            int choice = in.nextInt();
+                switch(choice){
+                    case 1:
+                        TicketMenu();
+                        break;
+                    case 2:
+                        ConcessionMenu();
+                        break;
+                    case 3:
+                        System.out.println("Exiting");
+                        sentinal = -1;
+                        break;
+                    default: 
+                        System.out.println("Invalid choice. Please try again.");
+                        //return null;
+                }
+            }
+}
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Membership mem1 = new Membership();
@@ -259,6 +345,7 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
         
         //Calls Main Menu and returns current customer.
         cur = MainMenu(newest, mem1, authCust, staffList, manage, authStaff);
+        TransactionMenu();
         
         
 
@@ -285,7 +372,6 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
         cart1.addSeat(seat4);
         
         st1.seatsTaken(cart1, st1);
-        
         st1.displayShowSeating();
         cart1.getCart();
         System.out.println("Total seat Cost: $" + cart1.getTotal());

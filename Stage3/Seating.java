@@ -4,8 +4,6 @@
  */
 package cs234project;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author mjsanchez
@@ -14,23 +12,27 @@ public class Seating {
     private String seat;
     private double seatCost;
     private String type;
-    //private List<String> seatList;
-    private ArrayList <String> seatSelection;
-    private ArrayList <Screen> seating;
+    
+    public Seating() {
+        seat = seat;
+        type = type;
+        seatCost = 11.5;
+        if (type == "imax") {
+            this.seatCost = 20.0;
+        } else {
+            this.seatCost = 11.50;
+        }   
+    }
     
     public Seating(String s, String t) {
         seat = s;
         type = t;
         seatCost = 11.5;
-        this.seatSelection = new ArrayList();
-        this.seating = new ArrayList();
         if (type == "imax") {
             this.seatCost = 20.0;
         } else {
             this.seatCost = 11.50;
-        }
-        //this.seatList = new ArrayList<>();
-        
+        }   
     }
 
     public String getSeat() {
@@ -57,17 +59,6 @@ public class Seating {
         this.type = type;
     }
 
-    public void addSeatSelection(String s) {
-        seatSelection.add(s);
-    }
-    
-    public void remSeatSelection(String s) {
-        seatSelection.remove(s);
-    }
-    
-    public ArrayList<String> getSeatSelection() {
-        return seatSelection;
-    }
     
     public void remScreenSeats(String rem) {
         //seatSelection
@@ -75,11 +66,6 @@ public class Seating {
     
     public void addScreenSeats() {
         
-    }
-    
-    @Override
-    public String toString() {
-        return "Current seat selection(s): " + seatSelection;
     }
     
     

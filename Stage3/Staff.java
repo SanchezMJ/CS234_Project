@@ -38,7 +38,7 @@ public class Staff {
     }
     
     //sets name
-    public void setFirstName(String firstName){
+    public void setFirstName(String name){
         this.firstName=name;
     }
     

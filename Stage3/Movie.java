@@ -1,3 +1,5 @@
+package cs234project;
+
 // package group_Project;
 
 public class Movie {
@@ -14,6 +16,15 @@ public class Movie {
 		this.rating = "";
 		this.is3D = false; //Initially set to false. 
 		this.Synopsis = ""; //empty string till staff changes fields. 
+		this.cost = 0.0; 
+	}
+        
+        public Movie(String t, String rt, String r, String s) {
+		this.title = t;
+		this.runtime = rt;
+		this.rating = r;
+		this.is3D = false; //Initially set to false. 
+		this.Synopsis = s; //empty string till staff changes fields. 
 		this.cost = 0.0; 
 	}
 	

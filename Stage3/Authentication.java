@@ -1,7 +1,7 @@
 
 package cs234project;
 
-import java.util.HashSet;
+//import java.util.HashSet;
 
 /**
  * @author Michael Sanchez
@@ -17,6 +17,7 @@ public class Authentication {
         this.members = members;
     }
     
+    //Constsructor to initialize list of employees
     public Authentication(EmployeeManager employee) {
         this.listOfEmployees = employee;
     }

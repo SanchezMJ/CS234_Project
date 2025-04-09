@@ -6,7 +6,7 @@ package cs234project;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+//import java.util.List;
 
 /**
  * @author Michael Sanchez
@@ -14,7 +14,7 @@ import java.util.List;
 public class Screen {
     private String name;
     private String type;
-    private ArrayList <String> seatSelection;
+    //private ArrayList <String> seatSelection;
     private ArrayList <String> seatList;
     private ArrayList <Screen> screens;
     private ArrayList <String> seating;
@@ -24,7 +24,7 @@ public class Screen {
         screens = new ArrayList();
         seating = new ArrayList();
         this.seatList = new ArrayList<>();
-        this.seatSelection = new ArrayList<>();
+        //this.seatSelection = new ArrayList<>();
         name = n;
         type = t;
         if (type == "imax") {
@@ -56,11 +56,12 @@ public class Screen {
         }
         
         }
+        
         public Screen(String n) {
         screens = new ArrayList();
         seating = new ArrayList();
         this.seatList = new ArrayList<>();
-        this.seatSelection = new ArrayList<>();
+        //this.seatSelection = new ArrayList<>();
         name = n;
         type = "Regular";
         seatCost = 11.50;
@@ -116,26 +117,8 @@ public class Screen {
         return seatCost;
     }
     
-    public void addSeat (String s) {
-        seatSelection.add(s);
-    }
-    public ArrayList<String> getSeatSelection() {
-        return seatSelection;
-    }
-    
     public ArrayList<String> getSeatList() {
         return seatList;
-    }
-    public void seatsTaken (ArrayList<String>list) {
-        for (String t : seatSelection) {
-            System.out.println(t);
-            for (int i = 0; i < seating.size(); i++) {
-                if(seating.get(i).equals(t)) {
-                    seating.set(i, "XXX");
-                    break;
-                }
-            }
-        }
     }
     
     public ArrayList<String> getSeating() {
@@ -160,7 +143,7 @@ public class Screen {
             System.out.println("||\t[" + d.get(60) + "] [" + d.get(61) + "] [" + d.get(62) + "] [" + d.get(63) + "] [" + d.get(64) + "] [" + d.get(65) + "] [" + d.get(66) + "] [" + d.get(67) + "] [" + d.get(68) + "] [" + d.get(69) + "]\t ||   ||");
             System.out.println("||\t[" + d.get(70) + "] [" + d.get(71) + "] [" + d.get(72) + "] [" + d.get(73) + "] [" + d.get(74) + "] [" + d.get(75) + "] [" + d.get(76) + "] [" + d.get(77) + "] [" + d.get(78) + "] [" + d.get(79) + "]\t ||   ||");  
         }else { 
-            System.out.println("\t========================   SCREEN   ========================");
+            System.out.println("\t===================================   SCREEN   ===================================");
             System.out.println();
             System.out.println("||\t[" + d.get(0) + "] [" + d.get(1) + "] [" + d.get(2) + "] [" + d.get(3) + "] [" + d.get(4) + "] [" + d.get(5) + "] [" + d.get(6) + "] [" + d.get(7) + "] [" + d.get(8) + "] [" + d.get(9) +"] [" + d.get(10) + "] [" + d.get(11) + "] [" + d.get(12) + "] [" + d.get(13) + "]\t ||   ||");
             System.out.println("||\t[" + d.get(14) + "] [" + d.get(15) + "] [" + d.get(16) + "] [" + d.get(17) + "] [" + d.get(18) + "] [" + d.get(19) + "] [" + d.get(20) + "] [" + d.get(21) + "] [" + d.get(22) + "] [" + d.get(23) +"] [" + d.get(24) + "] [" + d.get(25) + "] [" + d.get(26) + "] [" + d.get(27) + "]\t ||   ||");

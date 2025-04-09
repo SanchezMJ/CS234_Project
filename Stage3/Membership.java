@@ -37,7 +37,7 @@ public class Membership {
         if (cont == false) {
             if (!customer.getFirstName().equals("Guest")){
                 members.add(customer);
-                System.out.println("Welcome to our Theater " + customer.getFirstName() + "!");
+                //System.out.println("Welcome to our Theater " + customer.getFirstName() + "!");
             }
         } else {
             System.out.println("Please try password again.");
@@ -56,6 +56,7 @@ public class Membership {
         for (Customer m : members) {
             System.out.println(m.getFirstName() + " " + m.getLastName());
             System.out.println("Member ID: " + m.getMemberID() + " Points: " + m.getPoints());
+            System.out.println("------------------------------");
         }
     }
 }

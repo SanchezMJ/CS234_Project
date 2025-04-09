@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.cs234project;
+package cs234project;
 
 import java.util.ArrayList;
 
@@ -24,15 +24,13 @@ public class ShowtimeManager {
     }
     
     //removes show time if it exists
-    public boolean removeShowTime(String title){
+    public void removeShowTime(String title){
         Showtimes toBeRemoved=findShow(title);
         if(toBeRemoved!=null){
             listOfTime.remove(toBeRemoved);
             System.out.println("Show time for "+title+" has been removed.");
-            return true;
         }else{
             System.out.println("Unable to remove.");
-            return false;
         }
     }
     //sets list of show times
@@ -48,16 +46,15 @@ public class ShowtimeManager {
     //displays showtimes
     public void displayShowTimes(){
         if(listOfTime.isEmpty()){
-            System.out.println("List of show times is empty.");
+            System.out.println("List of movies is empty.");
         }else{
         for (Showtimes showtime : listOfTime){
             System.out.println(showtime);
         }
-      }
-        
+      }   
     }
     
-    //searches for show times by title if it 
+    //searches for show times by title if it exists
     public Showtimes findShow(String title){
         for(Showtimes showtime: listOfTime){
             if(showtime.getTitle().equalsIgnoreCase(title)){
@@ -65,8 +62,7 @@ public class ShowtimeManager {
          }
         }
         System.out.println("Film not found");
-        return null;
-            
+        return null;      
      }
-    }
+}
     

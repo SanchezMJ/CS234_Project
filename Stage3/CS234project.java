@@ -1,5 +1,5 @@
 
-package cs234project;
+package com.mycompany.cs234project;
 
 import java.util.HashSet;
 import java.util.ArrayList;
@@ -48,9 +48,8 @@ public class CS234project {
     
 public static Customer CustomerMainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
         Customer current = new Customer();
-        int sentinal = 0;
         Scanner in = new Scanner(System.in);
-        while(sentinal >= 0) {
+        while(true) {
             System.out.println("========================");
             System.out.println("\tCustomer Menu\n1. Customer Login\n2. Customer Registration\n3. Login as Guest\n4. Exit");
             System.out.println("========================");
@@ -69,13 +68,11 @@ public static Customer CustomerMainMenu(HashSet<Customer> hashset, Membership me
                     return current;
                 case 4:
                     System.out.println("Exiting");
-                    return current;
+                    return null;
                 default: 
                     System.out.println("Invalid choice. Please try again.");
             }
         }
-    in.close();
-    return current;
 }
 
 public static Staff StaffMainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
@@ -351,11 +348,12 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
         int sentinal = 0;
         while (sentinal >= 0) {
             cur = MainMenu(newest, mem1, authCust, staffList, manage, authStaff);
+            if(cur!=null){
             TransactionMenu(inventory, products, cart1, showtimes);
             cart1.getCart();
             System.out.printf("Total: $%.2f\n", cart1.getTotal());
             System.out.println();
-            
+            }
         }
         
         

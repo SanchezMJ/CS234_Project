@@ -62,7 +62,13 @@ public class Cart {
     public ArrayList<Concession> showProducts(){
         return listOfProducts;
     
-}
+    }
+     public void emptyCart(){
+        seatSelection.clear();
+        listOfProducts.clear();
+        total=0;
+    }
+    
     //Method to print itemized products in cart.  Can add for listOfProducts
     public void getCart() {
         for (Seating a:seatSelection) {

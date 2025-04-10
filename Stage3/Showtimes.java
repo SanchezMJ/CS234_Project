@@ -15,6 +15,11 @@ public class Showtimes {
     private int time;
     private Screen screen;
     
+    public Showtimes(){
+    this.title=title;
+    this.time=time;
+    this.screen=screen;
+}
     public Showtimes(Movie title, int time, Screen screen){
     this.title=title;
     this.time=time;
@@ -61,7 +66,7 @@ public class Showtimes {
         seating = show.getShowSeating();
         for (Seating t:list) {
             current = t.getSeat();
-            System.out.println(current);
+            //System.out.println(current);
             for (int i = 0; i < seating.size(); i++) {
                 if(seating.get(i).equals(current)) {
                     seating.set(i, "XXX");
@@ -73,7 +78,7 @@ public class Showtimes {
         
     @Override
     public String toString(){
-        return "Title: "+title+" Time: "+time+" Screen: "+screen;
+        return "Title: "+title+"\nTime: "+time+"\nScreen: "+screen + "\n";
     }
     
 }

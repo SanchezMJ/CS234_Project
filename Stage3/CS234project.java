@@ -37,8 +37,7 @@ public class CS234project {
                         break;
                     case 3:
                         System.out.println("Exiting");
-                        sentinal = -1;
-                        break;
+                        return current;
                     default: 
                         System.out.println("Invalid choice. Please try again.");
                         //return null;
@@ -49,13 +48,11 @@ public class CS234project {
     
 public static Customer CustomerMainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
         Customer current = new Customer();
-        //boolean check = true;
         int sentinal = 0;
-        //current = null;
         Scanner in = new Scanner(System.in);
         while(sentinal >= 0) {
             System.out.println("========================");
-            System.out.println("\tCustomer Menu\n1. Customer Login\n2. Register\n3. Login as Guest\n4. Exit");
+            System.out.println("\tCustomer Menu\n1. Customer Login\n2. Customer Registration\n3. Login as Guest\n4. Exit");
             System.out.println("========================");
             System.out.print("Enter your choice: ");
             int choice = in.nextInt();
@@ -67,15 +64,11 @@ public static Customer CustomerMainMenu(HashSet<Customer> hashset, Membership me
                     return current;
                 case 2:
                     CustomerRegister(hashset, mem, obauth);
-                    //check = false;
                     break;
                 case 3:
-                    TransactionMenu();
-                    break;
+                    return current;
                 case 4:
                     System.out.println("Exiting");
-                    //check = false;
-                    MainMenu(hashset, mem, obauth, alist, objman, objauth);
                     return current;
                 default: 
                     System.out.println("Invalid choice. Please try again.");
@@ -194,6 +187,7 @@ public static void StaffRegister(ArrayList<Staff> alist, EmployeeManager objman,
         objman.addEmployee(x);
         //StaffMainMenu(alist, objman, objauth);
 }
+
 public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Please enter your user name.");
@@ -205,11 +199,11 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
     return currStaff;
 }
 
-public static void TransactionMenu() {
+public static void TransactionMenu(Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         int sentinal = 0;
-        while(sentinal == 0) {
+        while(sentinal >= 0) {
             System.out.println("========================");
-            System.out.println("\tTransaction Menu\n1. Buy Tickets\n2. Concessions\n3. Main Menu");
+            System.out.println("\tTransaction Menu\n1. Buy Tickets\n2. Concessions\n3. Exit");
             System.out.println("========================");
             Scanner in = new Scanner(System.in);
             //in.nextLine();
@@ -218,83 +212,82 @@ public static void TransactionMenu() {
             int choice = in.nextInt();
                 switch(choice){
                     case 1:
-                        TicketMenu();
+                        MovieSelection(inventory, cart, shows);
                         break;
                     case 2:
-                        ConcessionMenu(inventory);
+                        AddProducts(inventory, prod, cart);
                         break;
                     case 3:
                         System.out.println("Exiting");
-                        sentinal = 1;
+                        sentinal = -1;
                         break;
                     default: 
                         System.out.println("Invalid choice. Please try again.");
                         //return null;
                 }
-            }
+        }
 }
 
-public static void TicketMenu() {
+public static void AddProducts(Inventory inventory, ArrayList<Concession> prod, Cart cart) {
+        for (int i = 0; i < prod.size(); i++) {
+            int num = i + 1;
+            System.out.println(num + ". " + prod.get(i));
+        }
         int sentinal = 0;
-        while(sentinal <= 0) {
-            System.out.println("========================");
-            System.out.println("\tTicket Menu\n1. Choose a Movie\n2. Concessions\n3. Main Menu");
-            System.out.println("========================");
-            Scanner in = new Scanner(System.in);
-            //in.nextLine();
-            System.out.print("Enter your choice: ");
-            //int sentinal = 1;
-            int choice = in.nextInt();
-                switch(choice){
-                    case 1:
-                        //TicketMenu();
-                        break;
-                    case 2:
-                        //ConcessionMenu(inventory);
-                        break;
-                    case 3:
-                       // System.out.println("Exiting");
-                       // sentinal = -1;
-                        break;
-                    default: 
-                        System.out.println("Invalid choice. Please try again.");
-                        //return null;
-                }
-            }
-}
-
-public static void ConcessionMenu(Inventory inventory) {
-        int sentinal = 0;
+        System.out.println();
+        System.out.print("Enter product selection, enter 0 when finished.");
+        System.out.println();
         while(sentinal == 0) {
-            System.out.println("========================");
-            System.out.println("\tConcession Menu\n1. Show Menu\n2. Concessions\n3. Main Menu");
-            System.out.println("========================");
             Scanner in = new Scanner(System.in);
-            //in.nextLine();
-            System.out.print("Enter your choice: ");
-            //int sentinal = 1;
             int choice = in.nextInt();
-            switch(choice){
-                    case 1:
-                        inventory.showAllProducts();
-                        break;
-                    case 2:
-                        //ConcessionMenu(inventory);
-                        break;
-                    case 3:
-                        System.out.println("Exiting");
-                        sentinal = 1;
-                        break;
-                    default: 
-                        System.out.println("Invalid choice. Please try again.");
-                        //return null;
+            if (choice != 0) {
+                int n = choice - 1;
+                cart.addProduct(prod.get(n));
+            } else {
+                sentinal = -1;
+            } 
+        }
+}
+
+public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Showtimes> shows) {
+    System.out.println();
+    Showtimes currentShow = new Showtimes();
+    ArrayList<String> seating = new ArrayList<>();
+    for (int i = 0; i < shows.size(); i++) {
+            int num = i + 1;
+            System.out.println(num + ". " + shows.get(i));
+    }
+    String seats = "";
+    String check = "f";
+    System.out.println();
+    System.out.println("Enter Movie selection, enter 0 when finished.");
+    Scanner in = new Scanner(System.in);
+    int choice = in.nextInt();
+    int n = choice - 1;
+    currentShow = shows.get(n);
+    currentShow.displayShowSeating();
+    String t = currentShow.getScreenType();
+    System.out.println();
+    System.out.println("Choose seat(s). Enter 'f' when finished.");
+        while (!seats.equals(check)) { 
+            in = new Scanner(System.in);
+            seats = in.nextLine();
+            seating = currentShow.getShowSeating();
+        //System.out.println(seating.get(1));
+
+            for (int i = 0; i < seating.size(); i++) {
+                if (seats.equals(seating.get(i))) {
+                    Seating seat = new Seating(seats, t);
+                    cart.addSeat(seat);
                 }
             }
+            currentShow.seatsTaken(cart, currentShow);
+        }
 }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Membership mem1 = new Membership();
-        Inventory productList=new Inventory();
+        Inventory inventory = new Inventory();
         Cart cart1 = new Cart();
         Seating seats1 = new Seating();
         ArrayList<Seating> seats = cart1.getSeatSelection();
@@ -313,6 +306,7 @@ public static void ConcessionMenu(Inventory inventory) {
         
         HashSet<Customer>newest = mem1.getMembers();
         ArrayList<Staff>staffList = manage.getListOfEmployees();
+        ArrayList<Concession> products = inventory.getProductList();
         
         //Generate Customers
         Customer c1 = new Customer("Mickey", "Mouse", "10/31/2000", 5758888888L, "Poop");
@@ -345,14 +339,25 @@ public static void ConcessionMenu(Inventory inventory) {
         Showtimes st2 = new Showtimes(m1, 2230, screen5);
         shows.addShowTime(st2);
         
-        //generate products for concession
-        inventory.addProduct(new Concession("Popcorn", 5.00,5));
-        inventory.addProduct(new Concession("Soda", 3.00,6));
-        inventory.addProduct(new Concession("Candy", 2.00,7));
+        //generate products for concession and add them to productList in inventory
+        Concession popcorn = new Concession("Popcorn", 5.00,5);
+        inventory.addProduct(popcorn);
+        Concession soda = new Concession("Soda", 3.00,6);
+        inventory.addProduct(soda);
+        Concession candy = new Concession("Candy", 2.00,7);
+        inventory.addProduct(candy);
         
         //Calls Main Menu and returns current customer.
-        cur = MainMenu(newest, mem1, authCust, staffList, manage, authStaff);
-        TransactionMenu();
+        int sentinal = 0;
+        while (sentinal >= 0) {
+            cur = MainMenu(newest, mem1, authCust, staffList, manage, authStaff);
+            TransactionMenu(inventory, products, cart1, showtimes);
+            cart1.getCart();
+            System.out.printf("Total: $%.2f\n", cart1.getTotal());
+            System.out.println();
+            
+        }
+        
         
         
 

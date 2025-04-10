@@ -87,8 +87,7 @@ public class Movie {
                "\nRuntime: " + runtime +
                "\nRating: " + rating +
                "\n3D: " + (is3D ? "Yes" : "No") +
-               "\nSynopsis: " + Synopsis +
-               "\nCost: $" + cost;
+               "\nSynopsis: " + Synopsis;
 	}
 }
 	

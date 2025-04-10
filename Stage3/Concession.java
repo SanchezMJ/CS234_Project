@@ -46,7 +46,7 @@ public class Concession {
     
     @Override
     public String toString(){
-       return (product+" Price: $"+price);
+        return (product+" Price: $"+ price);
     }
     
 }

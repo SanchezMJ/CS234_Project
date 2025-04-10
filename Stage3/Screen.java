@@ -158,6 +158,7 @@ public class Screen {
     
     @Override
     public String toString() {
-        return "Name: " + name + " Type: " + type + "\n" + seating;
+        String t = type.toUpperCase();
+        return "Name: " + name + " Type: " + t;
     }
 }

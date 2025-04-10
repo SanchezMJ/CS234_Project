@@ -35,6 +35,11 @@ public class Cart {
         total = total + seat.getSeatCost();
     }
     
+        //Method adds selected product and increases total for Cart
+    public void addProduct(Concession con) {
+        listOfProducts.add(con);
+        total = total + con.getPrice();
+    }
     public double getTotal() {
         return total;
     }
@@ -61,7 +66,10 @@ public class Cart {
     //Method to print itemized products in cart.  Can add for listOfProducts
     public void getCart() {
         for (Seating a:seatSelection) {
-            System.out.println("Seat: " + a.getSeat() + " Price: $" + a.getSeatCost());
+            System.out.printf("Seat: " + a.getSeat() + " Price: $%.2f\n", a.getSeatCost());
+        }
+        for (Concession c:listOfProducts) {
+            System.out.printf("Product: " + c.getProduct() + " Price: $%.2f\n", c.getPrice());
         }
     }
     

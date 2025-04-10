@@ -336,7 +336,7 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
         //Adds showtimes
         Showtimes st1 = new Showtimes(m1, 1930, screen1);
         shows.addShowTime(st1);
-        Showtimes st2 = new Showtimes(m1, 2230, screen5);
+        Showtimes st2 = new Showtimes(m2, 2230, screen5);
         shows.addShowTime(st2);
         
         //generate products for concession and add them to productList in inventory

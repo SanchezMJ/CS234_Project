@@ -197,10 +197,12 @@ public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Au
 }
 
 public static void TransactionMenu(Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
+        double totalAmount=cart.getTotal();
+        System.out.println("total: "+totalAmount);
         int sentinal = 0;
         while(sentinal >= 0) {
             System.out.println("========================");
-            System.out.println("\tTransaction Menu\n1. Buy Tickets\n2. Concessions\n3. Exit");
+            System.out.println("\tTransaction Menu\n1. Buy Tickets\n2. Concessions\n3. Payment\n4. Exit");
             System.out.println("========================");
             Scanner in = new Scanner(System.in);
             //in.nextLine();
@@ -210,11 +212,17 @@ public static void TransactionMenu(Inventory inventory, ArrayList<Concession> pr
                 switch(choice){
                     case 1:
                         MovieSelection(inventory, cart, shows);
+                        cart.getTotal();
                         break;
                     case 2:
                         AddProducts(inventory, prod, cart);
+                        cart.getTotal();
                         break;
                     case 3:
+                        totalAmount=cart.getTotal();
+                        PaymentMenu(totalAmount,cart);
+                        break;
+                    case 4:
                         System.out.println("Exiting");
                         sentinal = -1;
                         break;
@@ -281,6 +289,48 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
             currentShow.seatsTaken(cart, currentShow);
         }
 }
+
+    public static void PaymentMenu(double totalAmount, Cart cart){
+         int sentinel = 0;
+        while(sentinel >= 0) {
+            System.out.println("========================");
+            System.out.println("\tPayment Menu\n1. Cash\n2. Credit Card\n3. Gift Card\n4. Exit");
+            System.out.println("========================");
+            System.out.println("Total: "+totalAmount);
+             Scanner in = new Scanner(System.in);
+            //in.nextLine();
+            System.out.print("Enter your choice: ");
+            //int sentinal = 1;
+            int choice = in.nextInt();
+                switch(choice){
+                    case 1:
+                        System.out.print("Cash Amount: ");
+                        double cashAmount=in.nextDouble();
+                        if(cashAmount>=totalAmount){
+                            CashPayment cashPayment=new CashPayment(totalAmount,cashAmount);
+                            cashPayment.paymentDetails();
+                            cart.emptyCart();
+                            sentinel=-1;
+                        }else{
+                            System.out.println("Insufficient funds.");
+                        }
+                        break;
+                   /** case 2:
+                        CreditCardPayment();
+                        break;
+                    case 3:
+                        GiftCardPayment();
+                        break;
+                    case 4:
+                        System.out.println("Exiting");
+                        sentinal = -1;
+                        break;
+                    default: 
+                        System.out.println("Invalid choice. Please try again.");
+                        //return null;
+                        */}
+        }
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Membership mem1 = new Membership();

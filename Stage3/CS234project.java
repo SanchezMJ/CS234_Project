@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class CS234project {
 
     //Main Menu method for initial menu.
-    public static Customer MainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
+    public static Customer MainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth,Inventory inventory) {
     System.out.println("Welcome to GENERIC Movie Theater!");
         System.out.println("Please select an option below.");
         Customer current = new Customer();
@@ -33,7 +33,7 @@ public class CS234project {
                         current = CustomerMainMenu(hashset, mem, obauth, alist, objman, objauth);
                         return current;
                     case 2:
-                        staff = StaffMainMenu(hashset, mem, obauth, alist, objman, objauth);
+                        staff = StaffMainMenu(hashset, mem, obauth, alist, objman, objauth,inventory);
                         break;
                     case 3:
                         System.out.println("Exiting");
@@ -75,7 +75,7 @@ public static Customer CustomerMainMenu(HashSet<Customer> hashset, Membership me
         }
 }
 
-public static Staff StaffMainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
+public static Staff StaffMainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth,Inventory inventory) {
         Staff current = new Staff();
         boolean check = true;
         int sentinal = 0;
@@ -94,7 +94,7 @@ public static Staff StaffMainMenu(HashSet<Customer> hashset, Membership mem, Aut
             }
             String pos = current.getPosition();
             System.out.println("========================");
-            System.out.println("\tStaff Menu\n1. Register New Staff\n2. Display Members List\n3. Display Employees\n4. Main Menu");
+            System.out.println("\tStaff Menu\n1. Register New Staff\n2. Display Members List\n3. Display Employees\n4. Inventory\n5. Main Menu");
             System.out.println("========================");
             System.out.print("Enter your choice: ");
             int choice = in.nextInt();
@@ -114,8 +114,10 @@ public static Staff StaffMainMenu(HashSet<Customer> hashset, Membership mem, Aut
                     objman.showEmployees();
                     break;
                 case 4:
+                    InventoryMenu(inventory);
+                case 5:
                     System.out.println("Return to Main Menu.");
-                    MainMenu(hashset, mem, obauth, alist, objman, objauth);
+                    MainMenu(hashset, mem, obauth, alist, objman, objauth,inventory);
                     break;
                 default: 
                     System.out.println("Invalid choice. Please try again.");
@@ -331,6 +333,64 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
                         */}
         }
     }
+    
+    public static void InventoryMenu(Inventory inventory){
+         int sentinel = 0;
+        while(sentinel >= 0) {
+            System.out.println("========================");
+            System.out.println("\tInventory Menu\n1. Show Inventory\n2. Add to Inventory\n3. Remove Inventory\n4. Exit");
+            System.out.println("========================");
+             Scanner in = new Scanner(System.in);
+            //in.nextLine();
+            System.out.print("Enter your choice: ");
+            //int sentinal = 1;
+            int choice = in.nextInt();
+                switch(choice){
+                    case 1:
+                        inventory.showAllProducts();
+                        break;
+                    case 2:
+                        in.nextLine();
+                        System.out.print("Enter product name: ");
+                        String name=in.nextLine();//
+                        
+                        System.out.print("Enter product price: ");
+                        double price=in.nextDouble();
+                        in.nextLine();
+                        System.out.println("Please enter number of units: ");
+                        int totalStock=in.nextInt();
+                        Concession newProduct=new Concession(name, price,totalStock);
+                        inventory.addProduct(newProduct);
+                        System.out.println("Successfully added to inventory.");
+                        break;
+                    case 3:
+                        in.nextLine();
+                        System.out.println("Please enter item to remove from inventory:");
+                        name=in.nextLine();
+                        Concession toRemove=null;
+                        for(Concession c: inventory.getProductList()){
+                            if(c.getProduct().equalsIgnoreCase(name)){
+                                toRemove=c;
+                                break;
+                            }
+                        }
+                        if(toRemove!=null){
+                            inventory.removeProduct(toRemove);
+                            System.out.println("Product removed.");
+                        }else{
+                            System.out.println("Product not found.");
+                        }
+                        break;
+                    case 4:
+                        System.out.println("Exiting");
+                        sentinel = -1;
+                        break;
+                    default: 
+                        System.out.println("Invalid choice. Please try again.");
+                        //return null;
+                }
+        }
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Membership mem1 = new Membership();
@@ -397,7 +457,7 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
         //Calls Main Menu and returns current customer.
         int sentinal = 0;
         while (sentinal >= 0) {
-            cur = MainMenu(newest, mem1, authCust, staffList, manage, authStaff);
+            cur = MainMenu(newest, mem1, authCust, staffList, manage, authStaff,inventory);
             if(cur!=null){
             TransactionMenu(inventory, products, cart1, showtimes);
             cart1.getCart();

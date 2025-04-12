@@ -39,9 +39,10 @@ public class Membership {
                 members.add(customer);
                 //System.out.println("Welcome to our Theater " + customer.getFirstName() + "!");
             }
-        } else {
-            System.out.println("Please try password again.");
         }
+//        } else {
+//            System.out.println("Please try password again.");
+//        }
     }
     
     //Method checks to see if Customer is in the members list before removal.

@@ -12,27 +12,24 @@ import java.util.Scanner;
 public class Main {
 
     //Main Menu method for initial menu.
-    public static Customer MainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
+    public static void MainMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
     System.out.println("Welcome to GENERIC Movie Theater!");
         System.out.println("Please select an option below.");
-        Customer current = new Customer();
-        Staff staff = new Staff();
-        //String result = "";
         int sentinal = 0;
+        int choice = 0;
         while(sentinal >= 0) {
             System.out.println("========================");
             System.out.println("\tMAIN MENU\n1. Customer \n2. Staff\n3. Exit");
             System.out.println("========================");
             Scanner in = new Scanner(System.in);
             System.out.print("Enter your choice: ");
-            //int sentinal = 1;
-            int choice = in.nextInt();
+            choice = in.nextInt();
                 switch(choice){
                     case 1:
-                        current = CustomerMainMenu(hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
-                        return current;
+                        CustomerMainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
+                        break;
                     case 2:
-                        StaffMainMenu(hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+                        StaffMainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
                         break;
                     case 3:
                         System.out.println("Exiting");
@@ -40,69 +37,64 @@ public class Main {
                         break;
                     default: 
                         System.out.println("Invalid choice. Please try again.");
-                        //return null;
                 }
             }
-    return null;
 }
     
-public static Customer CustomerMainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
-        Customer current = new Customer();
+public static void CustomerMainMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         Scanner in = new Scanner(System.in);
         int sentinal = 0;
+        int choice = 0;
         while(sentinal >= 0) {
             System.out.println("========================");
             System.out.println("\tCUSTOMER MENU\n1. Customer Login\n2. Customer Registration\n3. Login as Guest\n4. Main Menu");
             System.out.println("========================");
             System.out.print("Enter your choice: ");
-            int choice = in.nextInt();
+            choice = in.nextInt();
             in.nextLine();
             switch(choice){
                 case 1: 
-                    current = CustomerLogin(hashset, mem, obauth);
-                    TransactionMenu(hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
-                    return current;
+                    customer = CustomerLogin(customer, hashset, mem, obauth);
+                    TransactionMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
+                    break;
                 case 2:
                     CustomerRegister(hashset, mem, obauth);
                     break;
                 case 3:
-                    TransactionMenu(hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
-                    return current;
+                    TransactionMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
+                    break;
                 case 4:
-                    MainMenu(hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+                    MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
                     break;
                 default: 
                     System.out.println("Invalid choice. Please try again.");
             }
         }
-        return null;
 }
 
-public static void StaffMainMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth,Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
-        Staff current = new Staff();
-        Customer x = new Customer();
-        //boolean check = true;
+public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth,Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         int sentinal = 0;
-        current = null;
+        int choice = 0;
         Scanner in = new Scanner(System.in);
         while(sentinal >=0 ) {
-            while (current == null) {
-                current = StaffLogin(alist, objman, objauth);
-                if (current == null) {
+            while (staff.getFirstName() == null) {
+                staff = StaffLogin(staff, alist, objman, objauth);
+                if (staff.getFirstName() == null) {
+                    System.out.println(staff.getFirstName());
                     System.out.println("User name or password is invalid, please try again.");
                     System.out.println("Press 1 to try again.  Press 2 to return to the Main Menu.");
-                    int choice = in.nextInt();
+                    choice = in.nextInt();
                     if (choice == 2){
-                        MainMenu(hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+                        MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
                     }
                 }
             }
-            String pos = current.getPosition();
+            String pos = staff.getPosition();
             System.out.println("========================");
             System.out.println("\tSTAFF MENU\n1. Register New Staff\n2. Display Members List\n3. Display Employees\n4. Inventory\n5. Main Menu");
             System.out.println("========================");
             System.out.print("Enter your choice: ");
-            int choice = in.nextInt();
+            choice = in.nextInt();
             switch(choice){
                 case 1: 
                     if (pos.equalsIgnoreCase("Manager")) {
@@ -122,7 +114,6 @@ public static void StaffMainMenu(HashSet<Customer> hashset, Membership mem, Auth
                     InventoryMenu(inventory);
                 case 5:
                     System.out.println("Return to Main Menu.");
-                    //MainMenu(hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
                     sentinal = -1;
                     break;
                 default: 
@@ -131,7 +122,7 @@ public static void StaffMainMenu(HashSet<Customer> hashset, Membership mem, Auth
         }
 }
     
-public static Customer CustomerLogin(HashSet<Customer> hset, Membership objmem, Authentication objauth) {
+public static Customer CustomerLogin(Customer customer, HashSet<Customer> hset, Membership objmem, Authentication objauth) {
     //Need to add check for data input
     Scanner scanner = new Scanner(System.in);
     long inputNum = 0;
@@ -145,18 +136,18 @@ public static Customer CustomerLogin(HashSet<Customer> hset, Membership objmem, 
     inputNum = Long.parseLong(input);
     System.out.println("Please enter your password.");
     String inputPass = scanner.nextLine();
-    Customer current = objauth.AuthenticateCustomer(inputNum, inputPass);
-    return null;
+    customer = objauth.AuthenticateCustomer(inputNum, inputPass);
+    return customer;
 }
 
-public static Staff StaffLogin(ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
+public static Staff StaffLogin(Staff staff, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Please enter your user name.");
     String uname = scanner.nextLine();
     System.out.println("Please enter your password.");
     String inputPass = scanner.nextLine();
-    Staff current = objauth.AuthenticateStaff(uname, inputPass);
-    return current;
+    staff = objauth.AuthenticateStaff(uname, inputPass);
+    return staff;
 }
 
 public static void CustomerRegister(HashSet<Customer> members, Membership member, Authentication authentication) {
@@ -174,7 +165,6 @@ public static void CustomerRegister(HashSet<Customer> members, Membership member
     String inputPass = scanner.nextLine();
     Customer x = new Customer(fname, lname, dob, inputNum, inputPass);
     member.addMembers(x);
-    //CustomerMainMenu(members, member, authentication);
 }
 
 public static void StaffRegister(ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
@@ -197,32 +187,28 @@ public static void StaffRegister(ArrayList<Staff> alist, EmployeeManager objman,
         //StaffMainMenu(alist, objman, objauth);
 }
 
-public static Staff StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
+public static void StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Please enter your user name.");
     String uname = scanner.nextLine();
     scanner.nextLine();
     System.out.println("Please enter your password.");
     String inputPass = scanner.nextLine();
-    Staff currStaff = objauth.AuthenticateStaff(uname, inputPass);
-    return currStaff;
+    objauth.AuthenticateStaff(uname, inputPass);
 }
 
-public static void TransactionMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
+public static void TransactionMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         //Changed this to only a definition vs inititalization as it was printing zero's when first called.
         double totalAmount;
-        
-        //System.out.println("total: "+totalAmount);
         int sentinal = 0;
+        int choice = 0;
         while(sentinal >= 0) {
             System.out.println("========================");
             System.out.println("\tTRANSACTION MENU\n1. Buy Tickets\n2. Concessions\n3. Payment\n4. Main Menu");
             System.out.println("========================");
             Scanner in = new Scanner(System.in);
-            //in.nextLine();
             System.out.print("Enter your choice: ");
-            //int sentinal = 1;
-            int choice = in.nextInt();
+            choice = in.nextInt();
                 switch(choice){
                     case 1:
                         MovieSelection(inventory, cart, shows);
@@ -234,10 +220,10 @@ public static void TransactionMenu(HashSet<Customer> hashset, Membership mem, Au
                         break;
                     case 3:
                         totalAmount=cart.getTotal();
-                        PaymentMenu(hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows, totalAmount);
+                        PaymentMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows, totalAmount);
                         break;
                     case 4:
-                        MainMenu(hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+                        MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
                         sentinal = -1;
                         break;
                     default: 
@@ -292,7 +278,6 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
             in = new Scanner(System.in);
             seats = in.nextLine();
             seating = currentShow.getShowSeating();
-        //System.out.println(seating.get(1));
 
             for (int i = 0; i < seating.size(); i++) {
                 if (seats.equals(seating.get(i))) {
@@ -304,8 +289,9 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
         }
 }
 
-public static void PaymentMenu(HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows, double totalAmount){
+public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows, double totalAmount){
         int sentinel = 0;
+        int choice = 0;
         Payment pay = new Payment();
         double outstandingBalance = 0;
         ArrayList<Seating>s = new ArrayList<>();
@@ -322,16 +308,12 @@ public static void PaymentMenu(HashSet<Customer> hashset, Membership mem, Authen
             System.out.println("----------------------");
             System.out.printf("Total: $%.2f\n", cart.getTotal());
             System.out.println();
-            //System.out.printf("Total: %.2f", totalAmount);
             System.out.println("========================");
             System.out.println("\tPAYMENT MENU\n1. Cash\n2. Credit Card\n3. Gift Card\n4. Exit");
             System.out.println("========================");
-            //Insert list of items here.
-             Scanner in = new Scanner(System.in);
-            //in.nextLine();
+            Scanner in = new Scanner(System.in);
             System.out.print("Please select your payment method. ");
-            //int sentinal = 1;
-            int choice = in.nextInt();
+            choice = in.nextInt();
                 switch(choice){
                     case 1:
                         System.out.print("Cash Amount: ");
@@ -341,17 +323,23 @@ public static void PaymentMenu(HashSet<Customer> hashset, Membership mem, Authen
                             cashPayment.paymentDetails();
                             cashPayment.addPayment(cashPayment);
                             double change = cashAmount - totalAmount;
-                            System.out.println("Change Due: $" + change);
+                            System.out.printf("Change Due: $%.2f\n", change);
                             System.out.println("TRANSACTION COMPLETE. THANK YOU!");
+                            System.out.println();
+                            customer.addPoints(totalAmount);
+                            System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
                             System.out.println();
                             cart.emptyCart();
                             sentinel=-1;
-                            MainMenu(hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+                            MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
                             break;
                         }else{
                             outstandingBalance = totalAmount - cashAmount;
                             System.out.printf("Amount remaining: $%.2f\n", outstandingBalance);
                             totalAmount = outstandingBalance;
+                            customer.addPoints(cashAmount);
+                            System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
+                            System.out.println();
                             cart.setTotal(totalAmount);
                         }
                         break;
@@ -374,9 +362,12 @@ public static void PaymentMenu(HashSet<Customer> hashset, Membership mem, Authen
                         creditPayment.paymentDetails();
                         System.out.println("TRANSACTION COMPLETE. THANK YOU!");
                         System.out.println();
+                        customer.addPoints(totalAmount);
+                        System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
+                        System.out.println();
                         cart.emptyCart();
                         sentinel=-1;
-                        MainMenu(hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+                        MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
                         break;
                     case 3:
                         System.out.println();
@@ -391,9 +382,12 @@ public static void PaymentMenu(HashSet<Customer> hashset, Membership mem, Authen
                         gcPayment.paymentDetails();
                         System.out.println("TRANSACTION COMPLETE. THANK YOU!");
                         System.out.println();
+                        customer.addPoints(totalAmount);
+                        System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
+                        System.out.println();
                         cart.emptyCart();
                         sentinel=-1;
-                        MainMenu(hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+                        MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
                         break;
                     case 4:
                         System.out.println("Exiting");
@@ -406,7 +400,7 @@ public static void PaymentMenu(HashSet<Customer> hashset, Membership mem, Authen
         }
     }
     
-    public static void InventoryMenu(Inventory inventory){
+public static void InventoryMenu(Inventory inventory){
          int sentinel = 0;
         while(sentinel >= 0) {
             System.out.println("========================");
@@ -463,15 +457,15 @@ public static void PaymentMenu(HashSet<Customer> hashset, Membership mem, Authen
                 }
         }
     }
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
+public static void main(String[] args) {
+        //Generate generic objects.
         Membership mem1 = new Membership();
         Inventory inventory = new Inventory();
         Cart cart1 = new Cart();
-        Seating seats1 = new Seating();
-        ArrayList<Seating> seats = cart1.getSeatSelection();
         Authentication authCust = new Authentication(mem1);
-        Customer cur = new Customer();
+        Customer current = new Customer();
+        Staff currentStaff = new Staff();
         EmployeeManager manage = new EmployeeManager();
         Authentication authStaff = new Authentication(manage);
         
@@ -483,6 +477,7 @@ public static void PaymentMenu(HashSet<Customer> hashset, Membership mem, Authen
         Staff worker3 = new Staff("Michael", "Sanchez", "Cashier", 18.45, "msanchez", "Scotch");
         manage.addEmployee(worker3);
         
+        //Initialize lists
         HashSet<Customer>newest = mem1.getMembers();
         ArrayList<Staff>staffList = manage.getListOfEmployees();
         ArrayList<Concession> products = inventory.getProductList();
@@ -526,100 +521,7 @@ public static void PaymentMenu(HashSet<Customer> hashset, Membership mem, Authen
         Concession candy = new Concession("Candy", 2.00,7);
         inventory.addProduct(candy);
         
-        //Calls Main Menu and returns current customer.
-//       int sentinal = 0;
-//       while (sentinal >= 0) {
-            cur = MainMenu(newest, mem1, authCust, staffList, manage, authStaff,inventory, products, cart1, showtimes);
-//            if(cur!=null){
-//            cart1.getCart();
-//            System.out.printf("Total: $%.2f\n", cart1.getTotal());
-//            System.out.println();
-//            }
-//        }
-        
-        
-        
-
-
-
-        /**
-         * Testing for adding seats and verifying that seats are xxx out from the seat
-         * array for that specific showtime.
-         */
-        //shows.addShowTime(st2);
-        //shows.displaySeating(st1);
-//        ArrayList<String>seating = st1.getShowSeating();
-        //st1.displayShowSeating();
-//        st1.getScreen();
-//        double cost = st1.getScreen().getSeatCost();
-//        String type = st1.getScreenType();
-//        Seating seat1 = new Seating("A01", type);
-//        Seating seat2 = new Seating("A02", type);
-//        Seating seat3 = new Seating("C04", type);
-//        Seating seat4 = new Seating("C05", type);
-//        cart1.addSeat(seat1);
-//        cart1.addSeat(seat2);
-//        cart1.addSeat(seat3);
-//        cart1.addSeat(seat4);
-//        
-//        st1.seatsTaken(cart1, st1);
-//        st1.displayShowSeating();
-//        cart1.getCart();
-//        System.out.println("Total seat Cost: $" + cart1.getTotal());
-        
-        //st1.getSeating();
-        
-
-
-//        mem1.addMembers(c1);
-
-//        
-//        System.out.println(mem1.getMembers());
-//        System.out.println(manage.getListOfEmployees());
-//        System.out.println("Please enter your phone number");
-//        long inputNum = scanner.nextLong();
-//        scanner.nextLine();
-//        boolean c = mem1.isMember(inputNum);
-//        System.out.println("Please enter your password.");
-//        String inputPass = scanner.nextLine();
-//        Customer current = auth.AuthenticateCustomer(inputNum, inputPass);       
-//        cur.addPoints(100);
-//        System.out.println(cur);
-//
-//        boolean result;
-//        GiftCards card1 = new GiftCards(6401, "10/14/2025", 5000.00);
-//        card1.addGiftCard(card1);
-//        Payment Pay1 = new GiftCardPayment(100.00, 6401, "10/24/25");
-//        long x = Pay1.getGiftCardNum();
-//        result = card1.isGiftCard(x);
-//        //Pay1.paymentDetails();
-//        Screen s1 = new Screen("Screen 1", "imax");
-//        Screen s2 = new Screen("Screen 2");
-//        Seating s3 = new Seating("IA1", "imax");
-//        String s = s3.getSeat();
-//        //s3.addSeatSelection(s);
-//        Seating s4 = new Seating("IA2", "imax");
-//        String ss = s4.getSeat();
-        //s3.addSeatSelection(ss);
-        
-        //System.out.println(s1);
-        //System.out.println(s2);
-        //s1.displaySeating(s1);
-        //s2.displaySeating(s2);
-//        ArrayList<String>seats = s1.getSeatSelection();
-//        ArrayList<String>s2seats = s2.getSeatSelection();
-//        s1.addSeat("A01");
-//        s1.addSeat("A02");
-//        s1.addSeat("E06");
-//        s1.addSeat("E07");
-//        s2.addSeat("D13");
-//        s2.addSeat("D14");
-//        s2.addSeat("F05");
-//        s2.addSeat("F06");
-//        s1.seatsTaken(seats);
-//        s1.displaySeating(s1);
-//        s2.seatsTaken(s2seats);
-//        s2.displaySeating(s2);
+        MainMenu(current, currentStaff, newest, mem1, authCust, staffList, manage, authStaff,inventory, products, cart1, showtimes);
         
     }
     

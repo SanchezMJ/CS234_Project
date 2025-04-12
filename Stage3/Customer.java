@@ -10,7 +10,7 @@ public class Customer {
 	private String dob;
         private String password;
 	private long  memberID;  
-	private int points; 
+	private double points; 
         private Membership members;
 	
         //Constructor for default/Guest user
@@ -79,7 +79,8 @@ public class Customer {
 	}
         
         //Method to add points to each customer
-        public void addPoints(int p) {
+        public void addPoints(double amount) {
+                double p = amount/10.0;
                 this.points = points + p;
         }
         
@@ -88,7 +89,7 @@ public class Customer {
          * that the point value does not go below zero or that they have
          * enough points for transaction.
          */
-        public void removePoints(int p) {
+        public void removePoints(double p) {
             if ((points - p) >= 0) {
                 this.points = points - p;
             }else {
@@ -97,7 +98,7 @@ public class Customer {
         }
         
         //Method to return points for customer.
-        public int getPoints() {
+        public double getPoints() {
             return points;
         }
         

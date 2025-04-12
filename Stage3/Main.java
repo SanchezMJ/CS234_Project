@@ -255,7 +255,14 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
     System.out.println("Enter Movie selection, enter 0 when finished.");
     Scanner in = new Scanner(System.in);
     int choice = in.nextInt();
-    int n = choice - 1;
+    if(choice==0){
+        return;
+    }
+    int n=choice-1;
+    if(n<0||n>=shows.size()){
+        System.out.println("Invalid selection.");
+        return;
+    }
     currentShow = shows.get(n);
     currentShow.displayShowSeating();
     String t = currentShow.getScreenType();

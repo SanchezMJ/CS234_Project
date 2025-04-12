@@ -72,15 +72,15 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
         int choice = 0;
         Scanner in = new Scanner(System.in);
         while(sentinal >=0 ) {
-            while (staff.getFirstName() == null) {
+             while (staff==null || staff.getFirstName() == null) {
                 staff = StaffLogin(staff, alist, objman, objauth);
-                if (staff.getFirstName() == null) {
-                    System.out.println(staff.getFirstName());
+                if (staff==null || staff.getFirstName() == null) {
                     System.out.println("User name or password is invalid, please try again.");
                     System.out.println("Press 1 to try again.  Press 2 to return to the Main Menu.");
                     choice = in.nextInt();
                     if (choice == 2){
                         MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+                        return;
                     }
                 }
             }

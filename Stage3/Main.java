@@ -282,7 +282,7 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
     String t = currentShow.getScreenType();
     System.out.println();
     System.out.println("Choose seat(s). Enter 'f' when finished.");
-        while (!seats.equals(check)) { 
+        while (!seats.equalsIgnoreCase(check)) { 
             in = new Scanner(System.in);
             seats = in.nextLine();
             seating = currentShow.getShowSeating();

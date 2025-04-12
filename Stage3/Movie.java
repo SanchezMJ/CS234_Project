@@ -1,4 +1,4 @@
-package cs234project;
+package com.mycompany.cs234project;
 
 // package group_Project;
 

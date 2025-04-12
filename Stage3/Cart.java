@@ -47,7 +47,7 @@ public class Cart {
     public void addProduct(Concession con) {
         listOfProducts.add(con);
         total = total + con.getPrice();
-        System.out.println("total: "+total);
+        //System.out.println("Total: "+total);
     }
     
     public ArrayList<Concession> showProducts(){
@@ -56,10 +56,14 @@ public class Cart {
     }
  
     public double getTotal() {
-        System.out.println("tota: "+total);
+        //Added format for two decimal places.  MJS
+        //System.out.printf("Total: %.2f\n", total);
         return total;
     }
     
+    public void setTotal(double m) {
+        total = m;
+    }
     public void emptyCart(){
         seatSelection.clear();
         listOfProducts.clear();
@@ -68,8 +72,20 @@ public class Cart {
     
     //Method to print itemized products in cart.  Can add for listOfProducts
     public void getCart() {
-        for (Seating a:seatSelection) {
-            System.out.println("Seat: " + a.getSeat() + " Price: $" + a.getSeatCost());
+        System.out.println();
+        if(seatSelection.isEmpty()){
+            
+        }else {
+            for (Seating a:seatSelection) {
+            System.out.printf("Seat: " + a.getSeat() + " Price: $%.2f\n", a.getSeatCost());
+            }
+        }
+        if(listOfProducts.isEmpty()) {
+            
+        }else {
+             for (Concession c:listOfProducts) {
+                System.out.printf(c.getProduct() + " Price: $%.2f\n",  c.getPrice());   
+                }
         }
     }
     

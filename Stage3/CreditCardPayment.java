@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package cs234project;
+package com.mycompany.cs234project;
 
 /**
  *
@@ -11,11 +11,11 @@ package cs234project;
 public class CreditCardPayment extends Payment{
     private String holdersFirstName;
     private String holdersLastName;
-    private int creditCardNum;
+    private String creditCardNum;
     private String expDate;
     private int securityCode;
     
-    CreditCardPayment(double p, String first, String last, int ccNum, String xp, int sc)
+    CreditCardPayment(double p, String first, String last, String ccNum, String xp, int sc)
     {
         super(p);
         holdersFirstName = first;
@@ -41,11 +41,11 @@ public class CreditCardPayment extends Payment{
         this.holdersLastName = holdersLastName;
     }
 
-    public int getCreditCardNum() {
+    public String getCreditCardNum() {
         return creditCardNum;
     }
 
-    public void setCreditCardNum(int creditCardNum) {
+    public void setCreditCardNum(String creditCardNum) {
         this.creditCardNum = creditCardNum;
     }
 
@@ -69,7 +69,7 @@ public class CreditCardPayment extends Payment{
     public void paymentDetails() {
         
         super.paymentDetails();
-        System.out.println("Card Number: " + this.creditCardNum + " \n Expiration date: " + this.expDate);
+        System.out.println("Card Number: " + this.creditCardNum + " \nExpiration date: " + this.expDate);
         System.out.println("-------------------------------------");
     }
 }

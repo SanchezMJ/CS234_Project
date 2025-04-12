@@ -2,28 +2,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package cs234project;
+package com.mycompany.cs234project;
 
 /**
  *
  * @author Michael Sanchez
  */
 public class GiftCardPayment extends Payment {
-    private long giftCardNum;
+    private String giftCardNum;
     private String expDate;
     
-    GiftCardPayment(double p, long gcn, String xp) {
+    GiftCardPayment(double p, String gcn, String xp) {
         super(p);
         giftCardNum = gcn;
         expDate = xp;
     }       
- 
-    @Override
-    public long getGiftCardNum() {
+    
+    public String getGiftCardNum() {
         return giftCardNum;
     }
 
-    public void setGiftCardNum(long giftCardNum) {
+    public void setGiftCardNum(String giftCardNum) {
         this.giftCardNum = giftCardNum;
     }
 

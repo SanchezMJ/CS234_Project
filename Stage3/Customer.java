@@ -1,7 +1,7 @@
 /**
  * @author Michael Sanchez
  */
-package cs234project;
+package com.mycompany.cs234project;
 
 //Variable definitions
 public class Customer {

@@ -25,7 +25,7 @@ public class Authentication {
     /**
      * Takes memberID (phone number) and password string.  Will then pull
      * members set by using getMembers and iterate through the members list
-     * looking for a match.  If it is found, it will return the customer object.
+     * looking for a match.  If it is found, it will return the Customer object.
      * returns null if not found.
      */
     public Customer AuthenticateCustomer(long id, String p) {
@@ -41,6 +41,12 @@ public class Authentication {
         return null;
     }
     
+     /**
+     * Takes userName and password string.  Will then pull
+     * employees from listOfEmployees and iterate through the members list
+     * looking for a match.  If it is found, it will return the Staff object.
+     * returns null if not found.
+     */
     public Staff AuthenticateStaff(String userName, String p) {
         for (Staff employee : listOfEmployees.getListOfEmployees()) {
             //Use this line to see in real time that this is iterating through the list correctly.

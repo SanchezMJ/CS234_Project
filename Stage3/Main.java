@@ -7,12 +7,12 @@ import java.util.Scanner;
 
 /**
  *
- * @author mjsanchez
+ * @author Michael Sanchez and Jordan Bock
  */
 public class Main {
 
     //Main Menu method for initial menu.
-    public static void MainMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
+public static void MainMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
     System.out.println("Welcome to GENERIC Movie Theater!");
         System.out.println("Please select an option below.");
         int sentinal = 0;
@@ -38,9 +38,10 @@ public class Main {
                     default: 
                         System.out.println("Invalid choice. Please try again.");
                 }
-            }
+        }
 }
-    
+
+//CustomerMainMenu meothod.  
 public static void CustomerMainMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         Scanner in = new Scanner(System.in);
         int sentinal = 0;
@@ -54,8 +55,11 @@ public static void CustomerMainMenu(Customer customer, Staff staff, HashSet<Cust
             in.nextLine();
             switch(choice){
                 case 1: 
+                    //Allows customer to loin and assigns the return value to customer.
                     customer = CustomerLogin(customer, hashset, mem, obauth);
+                    //Once customer is assigned, navigates to TransactionMenu()
                     TransactionMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
+                    sentinal = -1;
                     break;
                 case 2:
                     CustomerRegister(hashset, mem, obauth);
@@ -64,7 +68,8 @@ public static void CustomerMainMenu(Customer customer, Staff staff, HashSet<Cust
                     TransactionMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
                     break;
                 case 4:
-                    MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+                    System.out.println("Returning to Main Menu");
+                    sentinal = -1;
                     break;
                 default: 
                     System.out.println("Invalid choice. Please try again.");
@@ -204,7 +209,7 @@ public static void TransactionMenu(Customer customer, Staff staff, HashSet<Custo
         int choice = 0;
         while(sentinal >= 0) {
             System.out.println("========================");
-            System.out.println("\tTRANSACTION MENU\n1. Buy Tickets\n2. Concessions\n3. Payment\n4. Main Menu");
+            System.out.println("\tTRANSACTION MENU\n1. Buy Tickets\n2. Concessions\n3. Payment\n4. Customer Menu");
             System.out.println("========================");
             Scanner in = new Scanner(System.in);
             System.out.print("Enter your choice: ");
@@ -223,12 +228,11 @@ public static void TransactionMenu(Customer customer, Staff staff, HashSet<Custo
                         PaymentMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows, totalAmount);
                         break;
                     case 4:
-                        MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+                        System.out.println("Returning to Customer Menu.");
                         sentinal = -1;
                         break;
                     default: 
                         System.out.println("Invalid choice. Please try again.");
-                        //return null;
                 }
         }
 }

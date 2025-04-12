@@ -153,8 +153,22 @@ public static void CustomerRegister(HashSet<Customer> members, Membership member
     String lname = scanner.nextLine();
     System.out.println("Please enter your date of birth (mm/dd/yyyy)");
     String dob = scanner.nextLine();
-    System.out.println("Please enter your phone number");
-    long inputNum = scanner.nextLong();
+    long inputNum = 0;
+    while(true){
+    try{
+        System.out.println("Please enter your phone number");
+        inputNum = scanner.nextLong();
+        if(inputNum>=1000000000L&&inputNum<=9999999999L){
+            break;
+        }else{
+            System.out.println("Incorrect number of digits. Please try again.");
+        }
+    }catch(InputMismatchException e){
+        System.out.println("Invalid input.");
+        scanner.next();
+    }
+    scanner.nextLine();
+}
     scanner.nextLine();
     System.out.println("Please enter your password.");
     String inputPass = scanner.nextLine();

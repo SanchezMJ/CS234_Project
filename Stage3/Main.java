@@ -266,18 +266,26 @@ public static void AddProducts(Inventory inventory, ArrayList<Concession> prod, 
             System.out.println(num + ". " + prod.get(i));
         }
         int sentinal = 0;
+        int size = prod.size();
+        int useSize = size + 1;
         System.out.println();
         System.out.print("Enter product selection, enter 0 when finished.");
         System.out.println();
         while(sentinal == 0) {
             Scanner in = new Scanner(System.in);
+            while(!in.hasNextInt()){
+                System.out.println("Please enter an integer.");
+                in.next();
+            }
             int choice = in.nextInt();
-            if (choice != 0) {
+            if (choice >= 1 && choice < prod.size()) {
                 int n = choice - 1;
                 cart.addProduct(prod.get(n));
-            } else {
+            }else if (choice == 0) {
                 sentinal = -1;
-            } 
+            }else if (choice > prod.size()) {
+                System.out.println("Invalid Selection");
+            }
         }
 }
 
@@ -314,7 +322,7 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
     String t = currentShow.getScreenType();
     System.out.println();
     System.out.println("Choose seat(s). Enter 'f' when finished.");
-        while (!seats.equalsIgnoreCase(check)) { 
+        while (!seats.equalsIgnoreCase(check)) {
             in = new Scanner(System.in);
             seats = in.nextLine();
             seating = currentShow.getShowSeating();
@@ -327,22 +335,23 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
             }
             currentShow.seatsTaken(cart, currentShow);
         }
-}
+    }
 
-public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows, double totalAmount){
-        int sentinel = 0;
-        int choice = 0;
-        Payment pay = new Payment();
-        double outstandingBalance = 0;
-        ArrayList<Seating>s = new ArrayList<>();
-        while(sentinel >= 0) {
-            prod = cart.showProducts();
-            s = cart.getSeatSelection();
-            if(prod.isEmpty() && s.isEmpty()) {
-                System.out.println();
-                System.out.println("CART IS EMPTY!");
-                break;
-            }
+public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows, double totalAmount) {
+    int sentinel = 0;
+    int choice = 0;
+    String check = customer.getFirstName();
+    Payment pay = new Payment();
+    double outstandingBalance = 0;
+    ArrayList<Seating> s = new ArrayList<>();
+    while (sentinel >= 0) {
+        prod = cart.showProducts();
+        s = cart.getSeatSelection();
+        if (prod.isEmpty() && s.isEmpty()) {
+            System.out.println();
+            System.out.println("CART IS EMPTY!");
+            break;
+        }
             System.out.println();
             cart.getCart();
             System.out.println("----------------------");
@@ -353,97 +362,112 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
             System.out.println("========================");
             Scanner in = new Scanner(System.in);
             System.out.print("Please select your payment method. ");
+            while (!in.hasNextInt()) {
+                System.out.println("Please enter an integer.");
+                in.next();
+            }
             choice = in.nextInt();
-            if(choice == 1){
-                        System.out.print("Cash Amount: ");
-                        double cashAmount=in.nextDouble();
-                        if(cashAmount>=totalAmount){
-                            Payment cashPayment=new CashPayment(totalAmount,cashAmount);
-                            cashPayment.paymentDetails();
-                            cashPayment.addPayment(cashPayment);
-                            double change = cashAmount - totalAmount;
-                            System.out.printf("Change Due: $%.2f\n", change);
-                            System.out.println("TRANSACTION COMPLETE. THANK YOU!");
-                            System.out.println();
-                            customer.addPoints(totalAmount);
-                            System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
-                            System.out.println();
-                            cart.emptyCart();
-                            sentinel=-1;
-                            //MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
-                            //break;
-                        }else{
-                            outstandingBalance = totalAmount - cashAmount;
-                            System.out.printf("Amount remaining: $%.2f\n", outstandingBalance);
-                            totalAmount = outstandingBalance;
-                            customer.addPoints(cashAmount);
-                            System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
-                            System.out.println();
-                            cart.setTotal(totalAmount);
-                        }
-            }else if(choice == 2) {
-                        System.out.println();
-                        System.out.printf("Amount Due: $%.2f\n", totalAmount);
-                        System.out.println("Enter the first name on the account.");
-                        in.nextLine();
-                        String fname = in.nextLine();
-                        System.out.println("Enter the Last name on the account.");
-                        String lname = in.nextLine();
-                        System.out.println("Enter the credit card number.");
-                        String ccNum = in.nextLine();
-                        System.out.println("Enter the expiration date for the credit card.");
-                        String expDate = in.nextLine();
-                        System.out.println("Enter the security code.");
-                        int secCode = in.nextInt();
-                        Payment creditPayment = new CreditCardPayment(totalAmount, fname, lname, ccNum, expDate, secCode);
-                        creditPayment.addPayment(creditPayment);
-                        creditPayment.paymentDetails();
-                        System.out.println("TRANSACTION COMPLETE. THANK YOU!");
-                        System.out.println();
+            if (choice == 1) {
+                System.out.print("Cash Amount: ");
+                double cashAmount = in.nextDouble();
+                if (cashAmount >= totalAmount) {
+                    Payment cashPayment = new CashPayment(totalAmount, cashAmount);
+                    cashPayment.paymentDetails();
+                    cashPayment.addPayment(cashPayment);
+                    double change = cashAmount - totalAmount;
+                    System.out.printf("Change Due: $%.2f\n", change);
+                    System.out.println("TRANSACTION COMPLETE. THANK YOU!");
+                    System.out.println();
+                    if(!check.equals("Guest")) {
                         customer.addPoints(totalAmount);
                         System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
                         System.out.println();
-                        cart.emptyCart();
-                        sentinel=-1;
-                        //MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
-            }else if(choice == 3){
-                        System.out.println();
-                        System.out.printf("Amount Due: $%.2f\n", totalAmount);
-                        System.out.println("Enter the gift card number.");
-                        in.nextLine();
-                        String gcNum = in.nextLine();
-                        System.out.println("Enter the expiration date for the credit card.");
-                        String xpDate = in.nextLine();
-                        System.out.println("Please enter giftcard payment amount: ");
-                        double giftCardAmount=in.nextDouble();
-                        if(giftCardAmount>=totalAmount){
-                            Payment gcPayment = new GiftCardPayment(totalAmount, gcNum, xpDate);
-                        gcPayment.addPayment(gcPayment);
-                        gcPayment.paymentDetails();
-                        System.out.println("TRANSACTION COMPLETE. THANK YOU!");
-                        System.out.println();
+                    }
+                    cart.emptyCart();
+                    sentinel = -1;
+                } else {
+                    outstandingBalance = totalAmount - cashAmount;
+                    System.out.printf("Amount remaining: $%.2f\n", outstandingBalance);
+                    totalAmount = outstandingBalance;
+                    customer.addPoints(cashAmount);
+                    if(!check.equals("guest")) {
                         customer.addPoints(totalAmount);
                         System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
                         System.out.println();
-                        cart.emptyCart();
-                        sentinel=-1;
-                        }
-                        else{
-                            double remainingBalance=totalAmount-giftCardAmount;
-                            Payment gcPayment= new GiftCardPayment(giftCardAmount,gcNum,xpDate);
-                            gcPayment.addPayment(gcPayment);
-                            gcPayment.paymentDetails();
-                            System.out.printf("Amount remaining: $%.2f\n", remainingBalance);
-                            customer.addPoints(giftCardAmount);
-                            System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
-                            System.out.println();
-                            cart.setTotal(totalAmount=remainingBalance);
-                        }
-                    
+                    }
+                    cart.setTotal(totalAmount);
+                }
+            } else if (choice == 2) {
+                System.out.println();
+                System.out.printf("Amount Due: $%.2f\n", totalAmount);
+                System.out.println("Enter the first name on the account.");
+                in.nextLine();
+                String fname = in.nextLine();
+                System.out.println("Enter the Last name on the account.");
+                String lname = in.nextLine();
+                System.out.println("Enter the credit card number.");
+                String ccNum = in.nextLine();
+                System.out.println("Enter the expiration date for the credit card.");
+                String expDate = in.nextLine();
+                System.out.println("Enter the security code.");
+                int secCode = in.nextInt();
+                Payment creditPayment = new CreditCardPayment(totalAmount, fname, lname, ccNum, expDate, secCode);
+                creditPayment.addPayment(creditPayment);
+                creditPayment.paymentDetails();
+                System.out.println("TRANSACTION COMPLETE. THANK YOU!");
+                System.out.println();
+                if(!check.equals("Guest")) {
+                        customer.addPoints(totalAmount);
+                        System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
+                        System.out.println();
+                }
+                cart.emptyCart();
+                sentinel = -1;
+                //MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+            } else if (choice == 3) {
+                System.out.println();
+                System.out.printf("Amount Due: $%.2f\n", totalAmount);
+                System.out.println("Enter the gift card number.");
+                in.nextLine();
+                String gcNum = in.nextLine();
+                System.out.println("Enter the expiration date for the credit card.");
+                String xpDate = in.nextLine();
+                System.out.println("Please enter giftcard payment amount: ");
+                double giftCardAmount = in.nextDouble();
+                if (giftCardAmount >= totalAmount) {
+                    Payment gcPayment = new GiftCardPayment(totalAmount, gcNum, xpDate);
+                    gcPayment.addPayment(gcPayment);
+                    gcPayment.paymentDetails();
+                    System.out.println("TRANSACTION COMPLETE. THANK YOU!");
+                    System.out.println();
+                    if(!check.equals("Guest")) {
+                        customer.addPoints(totalAmount);
+                        System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
+                        System.out.println();
+                    }
+                    cart.emptyCart();
+                    sentinel = -1;
+                } else {
+                    double remainingBalance = totalAmount - giftCardAmount;
+                    Payment gcPayment = new GiftCardPayment(giftCardAmount, gcNum, xpDate);
+                    gcPayment.addPayment(gcPayment);
+                    gcPayment.paymentDetails();
+                    System.out.printf("Amount remaining: $%.2f\n", remainingBalance);
+                    if(!check.equals("Guest")) {
+                        customer.addPoints(totalAmount);
+                        System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
+                        System.out.println();
+                    }
+                    cart.setTotal(totalAmount = remainingBalance);
+                }
+            }else if (choice >= 4) {
+                System.out.println("Exiting.  Cart will be emptied");
+                cart.emptyCart();
+                    sentinel = -1;
             }
         }
     }
-    
+
 public static void InventoryMenu(Inventory inventory){
          int sentinel = 0;
         while(sentinel >= 0) {
@@ -463,8 +487,12 @@ public static void InventoryMenu(Inventory inventory){
                         in.nextLine();
                         System.out.print("Enter product name: ");
                         String name=in.nextLine();//
-                        
                         System.out.print("Enter product price: ");
+
+                        while(!in.hasNextDouble()){
+                            System.out.println("Please enter an price.");
+                            in.next();
+                        }
                         double price=in.nextDouble();
                         in.nextLine();
                         System.out.println("Please enter number of units: ");

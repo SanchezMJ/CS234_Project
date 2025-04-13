@@ -65,6 +65,7 @@ public static void CustomerMainMenu(Customer customer, Staff staff, HashSet<Cust
             }
 }
 
+    //staff main menu
 public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth,Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         int sentinal = 0;
         int choice = 0;
@@ -126,15 +127,19 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
                     }else{ System.out.println("ACCESS DENIED");
                         break;
                     } 
+                    //option to show customers that are members
                 case 3:
                     mem.getMember();
                     break;
+                    //option to show employee list
                 case 4:
                     objman.showEmployees();
                     break;
+                    //option to move to the inventory list
                 case 5:
                     InventoryMenu(inventory);
                     break;
+                    //option to return to main menu
                 case 6:
                     System.out.println("Return to Main Menu.");
                     sentinal = -1;
@@ -144,7 +149,7 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
             }
         }
 }
-           
+           //signs customer in to system if they are a memeber
 public static Customer CustomerLogin(Customer customer, HashSet<Customer> hset, Membership objmem, Authentication objauth) {
     //Need to add check for data input
     Scanner scanner = new Scanner(System.in);
@@ -166,6 +171,7 @@ public static Customer CustomerLogin(Customer customer, HashSet<Customer> hset, 
     return customer;
 }
 
+    //signs staff into the system and checks if they are staff
 public static Staff StaffLogin(Staff staff, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Please enter your user name.");
@@ -177,6 +183,7 @@ public static Staff StaffLogin(Staff staff, ArrayList<Staff> alist, EmployeeMana
     return staff;
 }
 
+    //registers customer for points system and varifies they are entering in appropriate information
 public static void CustomerRegister(HashSet<Customer> members, Membership member, Authentication authentication) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Please enter your first name.");
@@ -208,6 +215,7 @@ public static void CustomerRegister(HashSet<Customer> members, Membership member
     member.addMembers(x);
 }
 
+    //allows those that are managers to register user as a member of staff
 public static void StaffRegister(ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter employee first name.");
@@ -227,6 +235,7 @@ public static void StaffRegister(ArrayList<Staff> alist, EmployeeManager objman,
         objman.addEmployee(x);
 }
 
+    //allows staff to sign in to system
 public static void StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Please enter your user name.");
@@ -238,6 +247,7 @@ public static void StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Aut
     objauth.AuthenticateStaff(uname, inputPass);
 }
 
+    //transaction menu for selecting movies, concession or moving to payout
 public static void TransactionMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         //Changed this to only a definition vs inititalization as it was printing zero's when first called.
         double totalAmount;
@@ -298,6 +308,7 @@ public static void AddProducts(Inventory inventory, ArrayList<Concession> prod, 
         }
 }
 
+    //presents the user with movie options to select and then the option of seating
 public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Showtimes> shows) {
     System.out.println();
     Showtimes currentShow = new Showtimes();
@@ -346,6 +357,7 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
         }
     }
 
+    //menu for user to pay with either cash, credit card, or giftcard
 public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows, double totalAmount) {
     int sentinel = 0;
     int choice = 0;
@@ -375,6 +387,7 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
                 System.out.println("Please enter an integer.");
                 in.next();
             }
+        //option to pay with cash in either partial amounts or in total
             choice = in.nextInt();
             if (choice == 1) {
                 System.out.print("Cash Amount: ");
@@ -406,6 +419,7 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
                     }
                     cart.setTotal(totalAmount);
                 }
+                //option to pay with credit card
             } else if (choice == 2) {
                 System.out.println();
                 System.out.printf("Amount Due: $%.2f\n", totalAmount);
@@ -433,6 +447,8 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
                 cart.emptyCart();
                 sentinel = -1;
                 //MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
+
+                //option to pay with gift card either in the full amount or partial amount due
             } else if (choice == 3) {
                 System.out.println();
                 System.out.printf("Amount Due: $%.2f\n", totalAmount);
@@ -476,7 +492,7 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
             }
         }
     }
-
+//Menu to access inventory options
 public static void InventoryMenu(Inventory inventory){
          int sentinel = 0;
         while(sentinel >= 0) {
@@ -489,9 +505,11 @@ public static void InventoryMenu(Inventory inventory){
             //int sentinal = 1;
             int choice = in.nextInt();
                 switch(choice){
+                        //shows list of products in inventory
                     case 1:
                         inventory.showAllProducts();
                         break;
+                        //adds new product to inventory
                     case 2:
                         in.nextLine();
                         System.out.print("Enter product name: ");
@@ -510,6 +528,7 @@ public static void InventoryMenu(Inventory inventory){
                         inventory.addProduct(newProduct);
                         System.out.println("Successfully added to inventory.");
                         break;
+                        //removes product in inventory by name
                     case 3:
                         in.nextLine();
                         System.out.println("Please enter item to remove from inventory:");
@@ -528,6 +547,7 @@ public static void InventoryMenu(Inventory inventory){
                             System.out.println("Product not found.");
                         }
                         break;
+                        //exits inventory menu
                     case 4:
                         System.out.println("Exiting");
                         sentinel = -1;
@@ -539,6 +559,7 @@ public static void InventoryMenu(Inventory inventory){
         }
     }
 
+    //main method
 public static void main(String[] args) {
         //Generate generic objects.
         Membership mem1 = new Membership();

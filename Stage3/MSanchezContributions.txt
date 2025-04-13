@@ -1,0 +1,32 @@
+Main.java Contributions:
+
+Initially created these with tons of help and editing from Jordan.
+
+MainMenu() method
+CustomerMainMenu() method
+StaffMainMenu() method contributor
+CustomerLogin() method
+StaffLogin() method
+CustomerRegister() method contributor
+StaffRegister() method
+StaffMenu() method
+TransactionMenu() method
+AddProducts() method
+PaymentMenu() method
+Main() method
+
+Author of:
+Authentication.java
+CashPayment.java
+CreditCardPayment.java
+Customer.java
+GiftCardPayment.java
+GiftCards.java
+Membership.java
+Payment.java
+Screen.java
+Seating.java
+
+Contributed to:
+Cart.java - helped with the seating methods and getCart
+Showtimes.java - SeatsTaken method

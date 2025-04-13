@@ -58,6 +58,13 @@ public class Showtimes {
         screen.displaySeating(screen);
     }
     
+    /**
+     * Method takes the arraylist of selected seats and replaces those
+     * values with a "xxx" designation so users know they are taken and cant
+     * request the same seat values.
+     * @param cart uses object cart
+     * @param show modifies the unique show object seating list.
+     */
     public void seatsTaken (Cart cart, Showtimes show) {
         ArrayList<Seating>list = new ArrayList<>();
         ArrayList<String>seating = new ArrayList<>();

@@ -9,6 +9,7 @@ package com.mycompany.cs234project;
  * @author mjsanchez
  */
 public class Seating {
+    //essentially the seat name Ex. (A01)
     private String seat;
     private double seatCost;
     private String type;
@@ -16,6 +17,7 @@ public class Seating {
     public Seating() {
         seat = seat;
         type = type;
+        //Automatically assigns cost pending type.
         seatCost = 11.5;
         if (type == "imax") {
             this.seatCost = 20.0;
@@ -34,23 +36,28 @@ public class Seating {
             this.seatCost = 11.50;
         }   
     }
-
+    
+    //Returns seat desgination.
     public String getSeat() {
         return seat;
     }
-
+    
+    //Sets seat designation.
     public void setSeat(String seat) {
         this.seat = seat;
     }
-
+    
+    //Returns seat cost.
     public double getSeatCost() {
         return seatCost;
     }
-
+    
+    //sets seat cost.
     public void setSeatCost(double seatCost) {
         this.seatCost = seatCost;
     }
-
+    
+    //gets seat type.  Ex. Imax or not
     public String getType() {
         return type;
     }

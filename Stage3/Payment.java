@@ -38,6 +38,7 @@ public class Payment {
         paymentAmount = p;
     }
     
+    //takes Payment object and adds it to payment arraylist
     public void addPayment(Payment payment)
     {
         payments.add(payment);

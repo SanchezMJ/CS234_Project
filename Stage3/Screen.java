@@ -27,6 +27,7 @@ public class Screen {
         //this.seatSelection = new ArrayList<>();
         name = n;
         type = t;
+        //sets array based on screen format type.
         if (type == "imax") {
             this.seatCost = 20.0;
         } else {
@@ -91,11 +92,12 @@ public class Screen {
     public void setType(String type) {
         this.type = type;
     }
-
+    
+    //gets screen arraylist
     public ArrayList<Screen> getScreens() {
         return screens;
     }
-
+    
     public void setScreens(ArrayList<Screen> screens) {
         this.screens = screens;
     }
@@ -117,14 +119,17 @@ public class Screen {
         return seatCost;
     }
     
+    //returns seatlist arraylist
     public ArrayList<String> getSeatList() {
         return seatList;
     }
     
+    //Returns seating arraylist
     public ArrayList<String> getSeating() {
         return seating;
     }
     
+    //Checks if movie is imax or not then displays for user to be able to select the seating based on position to screen.
     public void displaySeating(Screen screen) {
         //System.out.println("displaying screen");
         ArrayList<String>d = new ArrayList<>();

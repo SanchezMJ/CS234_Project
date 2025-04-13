@@ -73,18 +73,23 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
         int choice = 0;
         Scanner in = new Scanner(System.in);
         while(sentinal >=0 ) {
+            //Enters while loop when staff object is set to default(null)
             while (staff==null || staff.getFirstName() == null) {
+                //staff object is assigned the return value of StaffLogin method.
                 staff = StaffLogin(staff, alist, objman, objauth);
+                //if no valid user is returned, prompt for correct credentials again.
                 if (staff==null || staff.getFirstName() == null) {
                     System.out.println("User name or password is invalid, please try again.");
                     System.out.println("Press 1 to try again.  Press 2 to return to the Main Menu.");
                     choice = in.nextInt();
+                    //If user can not provide the right credentials, this option allows them to return to the main menu.
                     if (choice == 2){
                         MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
                         return;
                     }
                 }
             }
+            //position is used to access certain staff menu items.
             String pos = staff.getPosition();
             System.out.println("========================");
             System.out.println("\tSTAFF MENU\n1. Register New Staff\n2. Remove Staff\n3. Display Members List\n4. Display Employees\n5. Inventory\n6. Main Menu");
@@ -93,6 +98,7 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
             choice = in.nextInt();
             switch(choice){
                 case 1: 
+                    //Require Manager level access to register new staff.
                     if (pos.equalsIgnoreCase("Manager")) {
                         StaffRegister(alist, objman, objauth);
                         break;
@@ -101,6 +107,7 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
                         break;
                     }
                      case 2:
+                         //require manager level access to remove employees
                     if (pos.equalsIgnoreCase("Manager")) {
                     in.nextLine();
                         System.out.println("Please enter username of employee to remove:");
@@ -121,9 +128,7 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
                         break;
                     }else{ System.out.println("ACCESS DENIED");
                         break;
-                    }
-                        
-                    
+                    } 
                 case 3:
                     mem.getMember();
                     break;
@@ -149,14 +154,17 @@ public static Customer CustomerLogin(Customer customer, HashSet<Customer> hset, 
     long inputNum = 0;
     System.out.println("Please enter your phone number");
     String input = scanner.nextLine();
+    //while loop checks for 10 digits of input from user for phone number and if not found enters loop.
     while (!input.matches("\\d{10}")) {
         System.out.println("Invalid phone number entry.  Please try again.");
         System.out.println("Please enter your phone number");
         input = scanner.nextLine();
     }
+    //Casts the string input to long value.
     inputNum = Long.parseLong(input);
     System.out.println("Please enter your password.");
     String inputPass = scanner.nextLine();
+    //customer is assigned to the return value of AuthenticateCustoner method.
     customer = objauth.AuthenticateCustomer(inputNum, inputPass);
     return customer;
 }
@@ -167,6 +175,7 @@ public static Staff StaffLogin(Staff staff, ArrayList<Staff> alist, EmployeeMana
     String uname = scanner.nextLine();
     System.out.println("Please enter your password.");
     String inputPass = scanner.nextLine();
+    //staff is assigned the return value of AuthenticateStaff method
     staff = objauth.AuthenticateStaff(uname, inputPass);
     return staff;
 }
@@ -219,7 +228,6 @@ public static void StaffRegister(ArrayList<Staff> alist, EmployeeManager objman,
         scanner.nextLine();
         Staff x = new Staff(fname, lname, pos, pr, uname, inputPass);
         objman.addEmployee(x);
-        //StaffMainMenu(alist, objman, objauth);
 }
 
 public static void StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
@@ -229,6 +237,7 @@ public static void StaffMenu(ArrayList<Staff> alist, EmployeeManager objman, Aut
     scanner.nextLine();
     System.out.println("Please enter your password.");
     String inputPass = scanner.nextLine();
+    //Authenticates user
     objauth.AuthenticateStaff(uname, inputPass);
 }
 
@@ -260,7 +269,9 @@ public static void TransactionMenu(Customer customer, Staff staff, HashSet<Custo
         }
 }
 
+//Method prints out a list of products that the user can select to add to the cart.
 public static void AddProducts(Inventory inventory, ArrayList<Concession> prod, Cart cart) {
+        //Prints list of products
         for (int i = 0; i < prod.size(); i++) {
             int num = i + 1;
             System.out.println(num + ". " + prod.get(i));
@@ -273,6 +284,7 @@ public static void AddProducts(Inventory inventory, ArrayList<Concession> prod, 
         System.out.println();
         while(sentinal == 0) {
             Scanner in = new Scanner(System.in);
+            //Checks to ensure an integer is entered.
             while(!in.hasNextInt()){
                 System.out.println("Please enter an integer.");
                 in.next();
@@ -358,7 +370,7 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
             System.out.printf("Total: $%.2f\n", cart.getTotal());
             System.out.println();
             System.out.println("========================");
-            System.out.println("\tPAYMENT MENU\n1. Cash\n2. Credit Card\n3. Gift Card\n4. Exit");
+            System.out.println("\tPAYMENT MENU\n1. Cash\n2. Credit Card\n3. Gift Card\n4. Exit/Cancel Purchase");
             System.out.println("========================");
             Scanner in = new Scanner(System.in);
             System.out.print("Please select your payment method. ");

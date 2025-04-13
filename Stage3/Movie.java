@@ -1,7 +1,3 @@
-package com.mycompany.cs234project;
-
-// package group_Project;
-
 public class Movie {
 	private String title; //title of the movie that the staff can set. 
 	private String runtime;

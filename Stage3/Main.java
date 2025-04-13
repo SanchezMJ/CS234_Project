@@ -293,7 +293,13 @@ public static void MovieSelection(Inventory inventory, Cart cart, ArrayList<Show
     System.out.println();
     System.out.println("Enter Movie selection, enter 0 when finished.");
     Scanner in = new Scanner(System.in);
-    int choice = in.nextInt();
+    int choice; 
+    String input=in.nextLine().trim();
+    if(!input.matches("\\d+")){
+        System.out.println("Invalid input. Returning to menu.");
+        return;
+    }
+    choice=Integer.parseInt(input);
     if(choice==0){
         return;
     }

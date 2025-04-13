@@ -21,8 +21,8 @@ public class Screen {
     private double seatCost;
     
         public Screen(String n, String t) {
-        screens = new ArrayList();
-        seating = new ArrayList();
+        screens = new ArrayList<>();
+        seating = new ArrayList<>();
         this.seatList = new ArrayList<>();
         //this.seatSelection = new ArrayList<>();
         name = n;
@@ -59,8 +59,8 @@ public class Screen {
         }
         
         public Screen(String n) {
-        screens = new ArrayList();
-        seating = new ArrayList();
+        screens = new ArrayList<>();
+        seating = new ArrayList<>();
         this.seatList = new ArrayList<>();
         //this.seatSelection = new ArrayList<>();
         name = n;

@@ -72,7 +72,7 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
         int choice = 0;
         Scanner in = new Scanner(System.in);
         while(sentinal >=0 ) {
-             while (staff==null || staff.getFirstName() == null) {
+            while (staff==null || staff.getFirstName() == null) {
                 staff = StaffLogin(staff, alist, objman, objauth);
                 if (staff==null || staff.getFirstName() == null) {
                     System.out.println("User name or password is invalid, please try again.");
@@ -86,7 +86,7 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
             }
             String pos = staff.getPosition();
             System.out.println("========================");
-            System.out.println("\tSTAFF MENU\n1. Register New Staff\n2. Display Members List\n3. Display Employees\n4. Inventory\n5. Main Menu");
+            System.out.println("\tSTAFF MENU\n1. Register New Staff\n2. Remove Staff\n3. Display Members List\n4. Display Employees\n5. Inventory\n6. Main Menu");
             System.out.println("========================");
             System.out.print("Enter your choice: ");
             choice = in.nextInt();
@@ -100,14 +100,33 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
                         break;
                     }
                 case 2:
+                    in.nextLine();
+                        System.out.println("Please enter username of employee to remove:");
+                        String name=in.nextLine();
+                        Staff toRemove=null;
+                        for(Staff emp: objman.getListOfEmployees()){
+                            if(emp.getUserName().equalsIgnoreCase(name)){
+                                toRemove=emp;
+                                break;
+                            }
+                        }
+                        if(toRemove!=null){
+                            objman.removeEmployee(toRemove);
+                            System.out.println("Employee removed.");
+                        }else{
+                            System.out.println("Employee not found.");
+                        }
+                        break;
+                case 3:
                     mem.getMember();
                     break;
-                case 3:
+                case 4:
                     objman.showEmployees();
                     break;
-                case 4:
-                    InventoryMenu(inventory);
                 case 5:
+                    InventoryMenu(inventory);
+                    break;
+                case 6:
                     System.out.println("Return to Main Menu.");
                     sentinal = -1;
                     break;

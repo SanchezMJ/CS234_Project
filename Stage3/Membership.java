@@ -1,6 +1,3 @@
-
-package com.mycompany.cs234project;
-
 import java.util.HashSet;
 
 /**

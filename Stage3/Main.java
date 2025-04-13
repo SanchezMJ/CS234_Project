@@ -99,7 +99,8 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
                         System.out.println("ACCESS DENIED");
                         break;
                     }
-                case 2:
+                     case 2:
+                    if (pos.equalsIgnoreCase("Manager")) {
                     in.nextLine();
                         System.out.println("Please enter username of employee to remove:");
                         String name=in.nextLine();
@@ -117,6 +118,11 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
                             System.out.println("Employee not found.");
                         }
                         break;
+                    }else{ System.out.println("ACCESS DENIED");
+                        break;
+                    }
+                        
+                    
                 case 3:
                     mem.getMember();
                     break;
@@ -135,7 +141,7 @@ public static void StaffMainMenu(Customer customer, Staff staff, HashSet<Custome
             }
         }
 }
-    
+           
 public static Customer CustomerLogin(Customer customer, HashSet<Customer> hset, Membership objmem, Authentication objauth) {
     //Need to add check for data input
     Scanner scanner = new Scanner(System.in);

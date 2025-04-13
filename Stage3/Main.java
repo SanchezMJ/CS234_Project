@@ -374,7 +374,7 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
                         cart.emptyCart();
                         sentinel=-1;
                         //MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
-            }else if(choice == 3) {
+            }else if(choice == 3){
                         System.out.println();
                         System.out.printf("Amount Due: $%.2f\n", totalAmount);
                         System.out.println("Enter the gift card number.");
@@ -382,7 +382,10 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
                         String gcNum = in.nextLine();
                         System.out.println("Enter the expiration date for the credit card.");
                         String xpDate = in.nextLine();
-                        Payment gcPayment = new GiftCardPayment(totalAmount, gcNum, xpDate);
+                        System.out.println("Please enter giftcard payment amount: ");
+                        double giftCardAmount=in.nextDouble();
+                        if(giftCardAmount>=totalAmount){
+                            Payment gcPayment = new GiftCardPayment(totalAmount, gcNum, xpDate);
                         gcPayment.addPayment(gcPayment);
                         gcPayment.paymentDetails();
                         System.out.println("TRANSACTION COMPLETE. THANK YOU!");
@@ -392,11 +395,19 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
                         System.out.println();
                         cart.emptyCart();
                         sentinel=-1;
-                        //MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
-            }else if (choice ==4) {
-                        System.out.println("Exiting");
-                        //MainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows);
-                        //break;
+                        }
+                        else{
+                            double remainingBalance=totalAmount-giftCardAmount;
+                            Payment gcPayment= new GiftCardPayment(giftCardAmount,gcNum,xpDate);
+                            gcPayment.addPayment(gcPayment);
+                            gcPayment.paymentDetails();
+                            System.out.printf("Amount remaining: $%.2f\n", remainingBalance);
+                            customer.addPoints(giftCardAmount);
+                            System.out.println("*** " + customer.getFirstName() + " just earned " + customer.getPoints() + " points! ***");
+                            System.out.println();
+                            cart.setTotal(totalAmount=remainingBalance);
+                        }
+                    
             }
         }
     }

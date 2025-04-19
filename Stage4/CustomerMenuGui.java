@@ -10,15 +10,15 @@ import java.awt.Color;
  *
  * @author mjsanchez
  */
-public class MainGui extends javax.swing.JFrame {
+public class CustomerMenuGui extends javax.swing.JFrame {
+
     /**
      * Creates new form MainGui
      */
-    public MainGui() {
-        getContentPane().setBackground(Color.black);
+    public CustomerMenuGui() {
         initComponents();
         
-        
+        getContentPane().setBackground(Color.black);
     }
 
     /**
@@ -30,9 +30,9 @@ public class MainGui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        butCustomer = new javax.swing.JButton();
-        butStaff = new javax.swing.JButton();
-        butExit = new javax.swing.JButton();
+        butCustLogin = new javax.swing.JButton();
+        butCustReg = new javax.swing.JButton();
+        butCustMainMenu = new javax.swing.JButton();
         lblTitle1 = new javax.swing.JLabel();
         lblTitle2 = new javax.swing.JLabel();
 
@@ -41,37 +41,37 @@ public class MainGui extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         getContentPane().setLayout(null);
 
-        butCustomer.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustomer.setText("Customer");
-        butCustomer.setAutoscrolls(true);
-        butCustomer.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butCustomer.setContentAreaFilled(false);
-        butCustomer.setOpaque(true);
-        butCustomer.addActionListener(new java.awt.event.ActionListener() {
+        butCustLogin.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butCustLogin.setText("Login");
+        butCustLogin.setAutoscrolls(true);
+        butCustLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butCustLogin.setContentAreaFilled(false);
+        butCustLogin.setOpaque(true);
+        butCustLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butCustomerActionPerformed(evt);
+                butCustLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(butCustomer);
-        butCustomer.setBounds(160, 140, 191, 58);
+        getContentPane().add(butCustLogin);
+        butCustLogin.setBounds(160, 140, 191, 58);
 
-        butStaff.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butStaff.setText("Staff");
-        butStaff.setAutoscrolls(true);
-        butStaff.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butStaff.setContentAreaFilled(false);
-        butStaff.setOpaque(true);
-        getContentPane().add(butStaff);
-        butStaff.setBounds(160, 220, 191, 58);
+        butCustReg.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butCustReg.setText("Registration");
+        butCustReg.setAutoscrolls(true);
+        butCustReg.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butCustReg.setContentAreaFilled(false);
+        butCustReg.setOpaque(true);
+        getContentPane().add(butCustReg);
+        butCustReg.setBounds(160, 220, 191, 58);
 
-        butExit.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butExit.setText("Exit");
-        butExit.setAutoscrolls(true);
-        butExit.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butExit.setContentAreaFilled(false);
-        butExit.setOpaque(true);
-        getContentPane().add(butExit);
-        butExit.setBounds(160, 300, 191, 58);
+        butCustMainMenu.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butCustMainMenu.setText("Main Menu");
+        butCustMainMenu.setAutoscrolls(true);
+        butCustMainMenu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butCustMainMenu.setContentAreaFilled(false);
+        butCustMainMenu.setOpaque(true);
+        getContentPane().add(butCustMainMenu);
+        butCustMainMenu.setBounds(160, 300, 191, 58);
 
         lblTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblTitle1.setForeground(new java.awt.Color(255, 255, 255));
@@ -89,9 +89,9 @@ public class MainGui extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void butCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustomerActionPerformed
-        this.setVisible(false); new CustomerMenuGui().setVisible(true);
-    }//GEN-LAST:event_butCustomerActionPerformed
+    private void butCustLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustLoginActionPerformed
+        //this.setVisible(false); new CustomerMenu().setVisible(true);
+    }//GEN-LAST:event_butCustLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,28 +110,31 @@ public class MainGui extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainGui().setVisible(true);
+                new CustomerMenuGui().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton butCustomer;
-    private javax.swing.JButton butExit;
-    private javax.swing.JButton butStaff;
+    private javax.swing.JButton butCustLogin;
+    private javax.swing.JButton butCustMainMenu;
+    private javax.swing.JButton butCustReg;
     private javax.swing.JLabel lblTitle1;
     private javax.swing.JLabel lblTitle2;
     // End of variables declaration//GEN-END:variables

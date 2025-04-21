@@ -16,7 +16,7 @@ public class GiftCards {
     private double giftCardBalance;
     private ArrayList<GiftCards>giftCards;
     
-    GiftCards(long gcn, String xp, double gcb) {
+    public GiftCards(long gcn, String xp, double gcb) {
         giftCardNumber = gcn;
         expDate = xp;
         giftCardBalance = gcb;

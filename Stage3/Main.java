@@ -7,6 +7,7 @@ import java.util.InputMismatchException;
  *
  * @author Michael Sanchez and Jordan Bock
  */
+
 public class Main {
 
     //Main Menu method for initial menu.
@@ -362,7 +363,7 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
     int sentinel = 0;
     int choice = 0;
     String check = customer.getFirstName();
-    Payment pay = new Payment();
+    //Payment pay = new Payment();
     double outstandingBalance = 0;
     ArrayList<Seating> s = new ArrayList<>();
     while (sentinel >= 0) {
@@ -393,9 +394,9 @@ public static void PaymentMenu(Customer customer, Staff staff, HashSet<Customer>
                 System.out.print("Cash Amount: ");
                 double cashAmount = in.nextDouble();
                 if (cashAmount >= totalAmount) {
-                    Payment cashPayment = new CashPayment(totalAmount, cashAmount);
-                    cashPayment.paymentDetails();
-                    cashPayment.addPayment(cashPayment);
+                    Payment cash = new CashPayment(totalAmount, cashAmount);
+                    cash.paymentDetails();
+                    cash.addPayment(cash);
                     double change = cashAmount - totalAmount;
                     System.out.printf("Change Due: $%.2f\n", change);
                     System.out.println("TRANSACTION COMPLETE. THANK YOU!");

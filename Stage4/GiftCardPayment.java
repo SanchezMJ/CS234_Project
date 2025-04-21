@@ -12,7 +12,7 @@ public class GiftCardPayment extends Payment {
     private String giftCardNum;
     private String expDate;
     
-    GiftCardPayment(double p, String gcn, String xp) {
+    public GiftCardPayment(double p, String gcn, String xp) {
         super(p);
         giftCardNum = gcn;
         expDate = xp;

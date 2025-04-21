@@ -8,7 +8,7 @@ public class GiftCardPayment extends Payment {
     private String expDate;
 
     //intializes variable and pulls information for payment, giftcard number, and experation date
-    GiftCardPayment(double p, String gcn, String xp) {
+    public GiftCardPayment(double p, String gcn, String xp) {
         super(p);
         giftCardNum = gcn;
         expDate = xp;

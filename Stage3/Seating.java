@@ -9,8 +9,8 @@ public class Seating {
     private String type;
     
     public Seating() {
-        seat = seat;
-        type = type;
+        this.seat = seat;
+        this.type = type;
         //Automatically assigns cost pending type.
         seatCost = 11.5;
         if (type == "imax") {

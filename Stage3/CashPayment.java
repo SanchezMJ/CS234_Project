@@ -8,7 +8,7 @@ public class CashPayment extends Payment{
     private double cashAmount;
 
     //passes the cash payment to pay for the payment amount.
-    CashPayment(double p, double ca){
+    public CashPayment(double p, double ca){
         super(p);
         cashAmount = ca;
     }

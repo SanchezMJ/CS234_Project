@@ -16,7 +16,7 @@ public class GiftCards {
         giftCardNumber = gcn;
         expDate = xp;
         giftCardBalance = gcb;
-        giftCards = new ArrayList();
+        giftCards = new ArrayList<>();
     }       
 
     //gets gift card number

@@ -11,7 +11,7 @@ public class CreditCardPayment extends Payment{
     private int securityCode;
 
     //intializes variables and assigns values name, payment amount, credit card number, experation date, and security code
-    CreditCardPayment(double p, String first, String last, String ccNum, String xp, int sc)
+    public CreditCardPayment(double p, String first, String last, String ccNum, String xp, int sc)
     {
         super(p);
         holdersFirstName = first;

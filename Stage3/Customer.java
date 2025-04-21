@@ -20,7 +20,7 @@ public class Customer {
 		this.memberID = 0000000001L;
 		this.points = 0; 
                 this.password = null;
-                //this.members = members;
+                this.members = members;
 	}
         
         /**

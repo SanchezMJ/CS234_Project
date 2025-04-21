@@ -15,7 +15,7 @@ public class CreditCardPayment extends Payment{
     private String expDate;
     private int securityCode;
     
-    CreditCardPayment(double p, String first, String last, String ccNum, String xp, int sc)
+    public CreditCardPayment(double p, String first, String last, String ccNum, String xp, int sc)
     {
         super(p);
         holdersFirstName = first;

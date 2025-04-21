@@ -11,7 +11,7 @@ package com.mycompany.cs234project;;
 public class CashPayment extends Payment{
     private double cashAmount;
     
-    CashPayment(double p, double ca){
+    public CashPayment(double p, double ca){
         super(p);
         cashAmount = ca;
     }

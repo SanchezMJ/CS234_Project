@@ -68,7 +68,6 @@ public class Showtimes {
     public void seatsTaken (Cart cart, Showtimes show) {
         ArrayList<Seating>list = new ArrayList<>();
         ArrayList<String>seating = new ArrayList<>();
-        Cart x = new Cart();
         list = cart.getSeatSelection();
         String current;
         seating = show.getShowSeating();

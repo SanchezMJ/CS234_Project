@@ -17,9 +17,9 @@ public class Showtimes {
     private Screen screen;
     
     public Showtimes(){
-    this.title=title;
-    this.time=time;
-    this.screen=screen;
+    this.title = new Movie("Unknown", "0m", "NR", "No description");
+    this.time = 0;
+    this.screen = new Screen("Unknown Screen");
 }
     public Showtimes(Movie title, int time, Screen screen){
     this.title=title;
@@ -85,7 +85,9 @@ public class Showtimes {
         
     @Override
     public String toString(){
-        return "Title: "+title+"\nTime: "+time+"\nScreen: "+screen + "\n";
+        return "Title: " + title.getMovieTitle() +
+       "\nTime: " + time +
+       "\nScreen: " + screen.getName(); // if getName() exists
     }
     
 }

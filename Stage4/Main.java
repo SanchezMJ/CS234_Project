@@ -294,7 +294,7 @@ public static void AddProducts(Inventory inventory, ArrayList<Concession> prod, 
                 in.next();
             }
             int choice = in.nextInt();
-            if (choice >= 1 && choice < prod.size()) {
+            if (choice >= 1 && choice <= prod.size()) {
                 int n = choice - 1;
                 cart.addProduct(prod.get(n));
             }else if (choice == 0) {

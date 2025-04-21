@@ -10,12 +10,12 @@ import java.awt.Color;
  *
  * @author mjsanchez
  */
-public class CustomerMenuGUI extends javax.swing.JFrame {
+public class CustomerMenuGui extends javax.swing.JFrame {
 
     /**
      * Creates new form MainGui
      */
-    public CustomerMenuGUI() {
+    public CustomerMenuGui() {
         initComponents();
         
         getContentPane().setBackground(Color.black);
@@ -45,6 +45,8 @@ public class CustomerMenuGUI extends javax.swing.JFrame {
         butCustLogin.setText("Login");
         butCustLogin.setAutoscrolls(true);
         butCustLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butCustLogin.setContentAreaFilled(false);
+        butCustLogin.setOpaque(true);
         butCustLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butCustLoginActionPerformed(evt);
@@ -57,6 +59,8 @@ public class CustomerMenuGUI extends javax.swing.JFrame {
         butCustReg.setText("Registration");
         butCustReg.setAutoscrolls(true);
         butCustReg.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butCustReg.setContentAreaFilled(false);
+        butCustReg.setOpaque(true);
         getContentPane().add(butCustReg);
         butCustReg.setBounds(160, 220, 191, 58);
 
@@ -64,6 +68,8 @@ public class CustomerMenuGUI extends javax.swing.JFrame {
         butCustMainMenu.setText("Main Menu");
         butCustMainMenu.setAutoscrolls(true);
         butCustMainMenu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butCustMainMenu.setContentAreaFilled(false);
+        butCustMainMenu.setOpaque(true);
         getContentPane().add(butCustMainMenu);
         butCustMainMenu.setBounds(160, 300, 191, 58);
 
@@ -104,21 +110,23 @@ public class CustomerMenuGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CustomerMenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CustomerMenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CustomerMenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CustomerMenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CustomerMenuGUI().setVisible(true);
+                new CustomerMenuGui().setVisible(true);
             }
         });
     }

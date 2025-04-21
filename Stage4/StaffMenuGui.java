@@ -5,17 +5,44 @@
 package com.mycompany.cs234project;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.HashSet;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author mjsanchez
  */
 public class StaffMenuGui extends javax.swing.JFrame {
+    private Customer current;
+    private Staff staff;
+    private Membership mem;
+    private Authentication obauth;
+    private EmployeeManager objman;
+    private Authentication objauth;
+    private Inventory inventory;
+    private Cart cart;
+    private HashSet<Customer> hashset;
+    private ArrayList<Staff> alist;
+    private ArrayList<Concession> prod;
+    private ArrayList<Showtimes> shows;
 
     /**
      * Creates new form MainGui
      */
-    public StaffMenuGui() {
+    public StaffMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
+        current = customer;
+        this.staff = staff;
+        hashset = new HashSet<Customer>();
+        this.mem = mem;
+        this.obauth = obauth;
+        alist = new ArrayList<Staff>();
+        this.objman = objman;
+        this.objauth = objauth;
+        this.inventory = inventory;
+        prod = new ArrayList<Concession>();
+        this.cart = cart;
+        shows = new ArrayList<Showtimes>();
         initComponents();
         
         getContentPane().setBackground(Color.black);
@@ -31,11 +58,11 @@ public class StaffMenuGui extends javax.swing.JFrame {
     private void initComponents() {
 
         butRegNewStaff = new javax.swing.JButton();
-        butCustReg = new javax.swing.JButton();
-        butCustMainMenu = new javax.swing.JButton();
+        butRemoveStaff = new javax.swing.JButton();
+        butMainMenu = new javax.swing.JButton();
         lblTitle1 = new javax.swing.JLabel();
         lblTitle2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        butDisplayMembers1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Movie Theater");
@@ -56,23 +83,28 @@ public class StaffMenuGui extends javax.swing.JFrame {
         getContentPane().add(butRegNewStaff);
         butRegNewStaff.setBounds(150, 140, 240, 58);
 
-        butCustReg.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustReg.setText("Remove Staff");
-        butCustReg.setAutoscrolls(true);
-        butCustReg.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butCustReg.setContentAreaFilled(false);
-        butCustReg.setOpaque(true);
-        getContentPane().add(butCustReg);
-        butCustReg.setBounds(150, 220, 240, 58);
+        butRemoveStaff.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butRemoveStaff.setText("Remove Staff");
+        butRemoveStaff.setAutoscrolls(true);
+        butRemoveStaff.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butRemoveStaff.setContentAreaFilled(false);
+        butRemoveStaff.setOpaque(true);
+        getContentPane().add(butRemoveStaff);
+        butRemoveStaff.setBounds(150, 220, 240, 58);
 
-        butCustMainMenu.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustMainMenu.setText("Display Members List");
-        butCustMainMenu.setAutoscrolls(true);
-        butCustMainMenu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butCustMainMenu.setContentAreaFilled(false);
-        butCustMainMenu.setOpaque(true);
-        getContentPane().add(butCustMainMenu);
-        butCustMainMenu.setBounds(150, 300, 240, 58);
+        butMainMenu.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butMainMenu.setText("Display Members List");
+        butMainMenu.setAutoscrolls(true);
+        butMainMenu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butMainMenu.setContentAreaFilled(false);
+        butMainMenu.setOpaque(true);
+        butMainMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butMainMenuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(butMainMenu);
+        butMainMenu.setBounds(150, 300, 240, 58);
 
         lblTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblTitle1.setForeground(new java.awt.Color(255, 255, 255));
@@ -86,9 +118,19 @@ public class StaffMenuGui extends javax.swing.JFrame {
         getContentPane().add(lblTitle2);
         lblTitle2.setBounds(190, 60, 255, 56);
 
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(150, 373, 240, 40);
+        butDisplayMembers1.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butDisplayMembers1.setText("Main Menu");
+        butDisplayMembers1.setAutoscrolls(true);
+        butDisplayMembers1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butDisplayMembers1.setContentAreaFilled(false);
+        butDisplayMembers1.setOpaque(true);
+        butDisplayMembers1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butDisplayMembers1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(butDisplayMembers1);
+        butDisplayMembers1.setBounds(150, 380, 240, 58);
 
         setSize(new java.awt.Dimension(543, 494));
         setLocationRelativeTo(null);
@@ -97,6 +139,14 @@ public class StaffMenuGui extends javax.swing.JFrame {
     private void butRegNewStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butRegNewStaffActionPerformed
         //this.setVisible(false); new CustomerMenu().setVisible(true);
     }//GEN-LAST:event_butRegNewStaffActionPerformed
+
+    private void butMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butMainMenuActionPerformed
+        JOptionPane.showMessageDialog(this, mem.getMembers());
+    }//GEN-LAST:event_butMainMenuActionPerformed
+
+    private void butDisplayMembers1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butDisplayMembers1ActionPerformed
+        this.setVisible(false); new MainGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+    }//GEN-LAST:event_butDisplayMembers1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,16 +185,16 @@ public class StaffMenuGui extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StaffMenuGui().setVisible(true);
+                //new StaffMenuGui().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton butCustMainMenu;
-    private javax.swing.JButton butCustReg;
+    private javax.swing.JButton butDisplayMembers1;
+    private javax.swing.JButton butMainMenu;
     private javax.swing.JButton butRegNewStaff;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton butRemoveStaff;
     private javax.swing.JLabel lblTitle1;
     private javax.swing.JLabel lblTitle2;
     // End of variables declaration//GEN-END:variables

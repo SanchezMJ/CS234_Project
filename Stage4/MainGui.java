@@ -34,7 +34,7 @@ public class MainGui extends javax.swing.JFrame {
         this.staff = staff;
         hashset = new HashSet<Customer>();
         this.mem = mem;
-        this.objauth = obauth;
+        this.obauth = obauth;
         alist = new ArrayList<Staff>();
         this.objman = objman;
         this.objauth = objauth;
@@ -88,6 +88,11 @@ public class MainGui extends javax.swing.JFrame {
         butStaff.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butStaff.setContentAreaFilled(false);
         butStaff.setOpaque(true);
+        butStaff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butStaffActionPerformed(evt);
+            }
+        });
         getContentPane().add(butStaff);
         butStaff.setBounds(160, 220, 191, 58);
 
@@ -119,6 +124,10 @@ public class MainGui extends javax.swing.JFrame {
     private void butCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustomerActionPerformed
         this.setVisible(false); new CustomerMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butCustomerActionPerformed
+
+    private void butStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butStaffActionPerformed
+        this.setVisible(false); new StaffMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+    }//GEN-LAST:event_butStaffActionPerformed
 
     /**
      * @param args the command line arguments

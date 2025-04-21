@@ -36,7 +36,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         this.staff = staff;
         hashset = new HashSet<Customer>();
         this.mem = mem;
-        this.objauth = obauth;
+        this.obauth = obauth;
         alist = new ArrayList<Staff>();
         this.objman = objman;
         this.objauth = objauth;
@@ -63,7 +63,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         butCustMainMenu = new javax.swing.JButton();
         lblTitle1 = new javax.swing.JLabel();
         lblTitle2 = new javax.swing.JLabel();
-        butCustMainMenu1 = new javax.swing.JButton();
+        butLoginAsGuest = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Movie Theater");
@@ -90,6 +90,11 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         butCustReg.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butCustReg.setContentAreaFilled(false);
         butCustReg.setOpaque(true);
+        butCustReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butCustRegActionPerformed(evt);
+            }
+        });
         getContentPane().add(butCustReg);
         butCustReg.setBounds(150, 210, 220, 58);
 
@@ -119,19 +124,19 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         getContentPane().add(lblTitle2);
         lblTitle2.setBounds(190, 60, 255, 56);
 
-        butCustMainMenu1.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustMainMenu1.setText("Login as Guest");
-        butCustMainMenu1.setAutoscrolls(true);
-        butCustMainMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butCustMainMenu1.setContentAreaFilled(false);
-        butCustMainMenu1.setOpaque(true);
-        butCustMainMenu1.addActionListener(new java.awt.event.ActionListener() {
+        butLoginAsGuest.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butLoginAsGuest.setText("Login as Guest");
+        butLoginAsGuest.setAutoscrolls(true);
+        butLoginAsGuest.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butLoginAsGuest.setContentAreaFilled(false);
+        butLoginAsGuest.setOpaque(true);
+        butLoginAsGuest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butCustMainMenu1ActionPerformed(evt);
+                butLoginAsGuestActionPerformed(evt);
             }
         });
-        getContentPane().add(butCustMainMenu1);
-        butCustMainMenu1.setBounds(150, 290, 220, 58);
+        getContentPane().add(butLoginAsGuest);
+        butLoginAsGuest.setBounds(150, 290, 220, 58);
 
         setSize(new java.awt.Dimension(543, 494));
         setLocationRelativeTo(null);
@@ -148,18 +153,28 @@ public class CustomerMenuGui extends javax.swing.JFrame {
     }
     //Casts the string input to long value.
     String pass = JOptionPane.showInputDialog(this, "Enter your password.");
-    current = objauth.AuthenticateCustomer(inputNum, pass);
-    this.setVisible(false); new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+    current = obauth.AuthenticateCustomer(inputNum, pass);
+    if (current != null) {
+        this.setVisible(false); new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+    } else {
+        JOptionPane.showMessageDialog(this, "Not a member.  Please try again or login as guest.");
+    }
+    
         //TransactionMenu(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
     }//GEN-LAST:event_butCustLoginActionPerformed
 
     private void butCustMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustMainMenuActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false); new MainGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butCustMainMenuActionPerformed
 
-    private void butCustMainMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustMainMenu1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_butCustMainMenu1ActionPerformed
+    private void butLoginAsGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butLoginAsGuestActionPerformed
+        this.setVisible(false); new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+    }//GEN-LAST:event_butLoginAsGuestActionPerformed
+
+    private void butCustRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustRegActionPerformed
+        //this.setVisible(false); 
+        new CustomerRegistrationGui(hashset, mem, obauth).setVisible(true);
+    }//GEN-LAST:event_butCustRegActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,8 +217,8 @@ public class CustomerMenuGui extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butCustLogin;
     private javax.swing.JButton butCustMainMenu;
-    private javax.swing.JButton butCustMainMenu1;
     private javax.swing.JButton butCustReg;
+    private javax.swing.JButton butLoginAsGuest;
     private javax.swing.JLabel lblTitle1;
     private javax.swing.JLabel lblTitle2;
     // End of variables declaration//GEN-END:variables

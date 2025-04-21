@@ -46,7 +46,8 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         shows = new ArrayList<Showtimes>();
         initComponents();
         
-        getContentPane().setBackground(Color.red);
+        Color col = new Color(153, 0, 0);
+        getContentPane().setBackground(col);
     }
 
     /**
@@ -63,10 +64,11 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         butCustMainMenu = new javax.swing.JButton();
         lblTitle1 = new javax.swing.JLabel();
         butCustMainMenu1 = new javax.swing.JButton();
+        lblCustomerOutput = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Movie Theater");
-        setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(204, 0, 0));
         getContentPane().setLayout(null);
 
         butCustLogin.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
@@ -81,7 +83,7 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
             }
         });
         getContentPane().add(butCustLogin);
-        butCustLogin.setBounds(150, 130, 220, 58);
+        butCustLogin.setBounds(150, 140, 220, 58);
 
         butCustReg.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butCustReg.setText("Concession");
@@ -90,7 +92,7 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         butCustReg.setContentAreaFilled(false);
         butCustReg.setOpaque(true);
         getContentPane().add(butCustReg);
-        butCustReg.setBounds(150, 210, 220, 58);
+        butCustReg.setBounds(150, 220, 220, 58);
 
         butCustMainMenu.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butCustMainMenu.setText("Exit to Main Menu");
@@ -104,13 +106,13 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
             }
         });
         getContentPane().add(butCustMainMenu);
-        butCustMainMenu.setBounds(150, 370, 220, 58);
+        butCustMainMenu.setBounds(150, 380, 220, 58);
 
         lblTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblTitle1.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle1.setText("Concessions");
         getContentPane().add(lblTitle1);
-        lblTitle1.setBounds(110, 30, 310, 46);
+        lblTitle1.setBounds(110, 20, 310, 46);
 
         butCustMainMenu1.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butCustMainMenu1.setText("Payment");
@@ -124,7 +126,14 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
             }
         });
         getContentPane().add(butCustMainMenu1);
-        butCustMainMenu1.setBounds(150, 290, 220, 58);
+        butCustMainMenu1.setBounds(150, 300, 220, 58);
+
+        lblCustomerOutput.setFont(new java.awt.Font("Charmonman", 1, 24)); // NOI18N
+        lblCustomerOutput.setForeground(new java.awt.Color(255, 255, 255));
+        lblCustomerOutput.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCustomerOutput.setText("Welcome  " + current.getFirstName());
+        getContentPane().add(lblCustomerOutput);
+        lblCustomerOutput.setBounds(110, 80, 310, 40);
 
         setSize(new java.awt.Dimension(543, 494));
         setLocationRelativeTo(null);
@@ -141,11 +150,13 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
     private void butCustMainMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustMainMenu1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_butCustMainMenu1ActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        //String name = current.getFirstName();
+        //lblCustomerOutput.setText("Name");
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -189,6 +200,7 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
     private javax.swing.JButton butCustMainMenu;
     private javax.swing.JButton butCustMainMenu1;
     private javax.swing.JButton butCustReg;
+    private javax.swing.JLabel lblCustomerOutput;
     private javax.swing.JLabel lblTitle1;
     // End of variables declaration//GEN-END:variables
 }

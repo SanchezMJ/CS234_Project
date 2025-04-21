@@ -5,16 +5,43 @@
 package com.mycompany.cs234project;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  *
  * @author mjsanchez
  */
 public class MainGui extends javax.swing.JFrame {
+    private Customer current;
+    private Staff staff;
+    private Membership mem;
+    private Authentication obauth;
+    private EmployeeManager objman;
+    private Authentication objauth;
+    private Inventory inventory;
+    private Cart cart;
+    private HashSet<Customer> hashset;
+    private ArrayList<Staff> alist;
+    private ArrayList<Concession> prod;
+    private ArrayList<Showtimes> shows;
+    
     /**
      * Creates new form MainGui
      */
-    public MainGui() {
+    public MainGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
+        current = customer;
+        this.staff = staff;
+        hashset = new HashSet<Customer>();
+        this.mem = mem;
+        this.objauth = obauth;
+        alist = new ArrayList<Staff>();
+        this.objman = objman;
+        this.objauth = objauth;
+        this.inventory = inventory;
+        prod = new ArrayList<Concession>();
+        this.cart = cart;
+        shows = new ArrayList<Showtimes>();
         getContentPane().setBackground(Color.black);
         initComponents();
         
@@ -90,7 +117,7 @@ public class MainGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void butCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustomerActionPerformed
-        this.setVisible(false); new CustomerMenuGui().setVisible(true);
+        this.setVisible(false); new CustomerMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butCustomerActionPerformed
 
     /**
@@ -123,7 +150,7 @@ public class MainGui extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainGui().setVisible(true);
+                //new MainGui(current, staff, hashset, mem, obauth, alist, objman, objauth,inventory, prod, cart, shows).setVisible(true);
             }
         });
     }

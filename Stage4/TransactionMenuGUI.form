@@ -30,12 +30,12 @@
     <Property name="useNullLayout" type="boolean" value="true"/>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="butRegNewStaff">
+    <Component class="javax.swing.JButton" name="butCustLogin">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Canela Text" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Register New Staff"/>
+        <Property name="text" type="java.lang.String" value="Buy Tickets"/>
         <Property name="autoscrolls" type="boolean" value="true"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
@@ -51,11 +51,11 @@
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butRegNewStaffActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butCustLoginActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="150" y="140" width="240" height="58"/>
+          <AbsoluteConstraints x="150" y="130" width="220" height="58"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -64,7 +64,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Canela Text" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Remove Staff"/>
+        <Property name="text" type="java.lang.String" value="Concession"/>
         <Property name="autoscrolls" type="boolean" value="true"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
@@ -81,7 +81,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="150" y="220" width="240" height="58"/>
+          <AbsoluteConstraints x="150" y="210" width="220" height="58"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -90,7 +90,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Canela Text" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Display Members List"/>
+        <Property name="text" type="java.lang.String" value="Exit to Main Menu"/>
         <Property name="autoscrolls" type="boolean" value="true"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
@@ -105,9 +105,12 @@
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butCustMainMenuActionPerformed"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="150" y="300" width="240" height="58"/>
+          <AbsoluteConstraints x="150" y="370" width="220" height="58"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -119,37 +122,40 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Generic"/>
+        <Property name="text" type="java.lang.String" value="Concessions"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="110" y="30" width="198" height="46"/>
+          <AbsoluteConstraints x="110" y="30" width="310" height="46"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblTitle2">
+    <Component class="javax.swing.JButton" name="butCustMainMenu1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Papyrus" size="36" style="3"/>
+          <Font name="Canela Text" size="24" style="0"/>
         </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="99" red="ff" type="rgb"/>
+        <Property name="text" type="java.lang.String" value="Payment"/>
+        <Property name="autoscrolls" type="boolean" value="true"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+            <BevelBorder>
+              <Color PropertyName="highlightOuter" blue="0" green="99" red="ff" type="rgb"/>
+              <Color PropertyName="highlightInner" blue="33" green="99" red="ff" type="rgb"/>
+              <Color PropertyName="shadowOuter" blue="0" green="33" red="99" type="rgb"/>
+              <Color PropertyName="shadowInner" blue="0" green="66" red="cc" type="rgb"/>
+            </BevelBorder>
+          </Border>
         </Property>
-        <Property name="text" type="java.lang.String" value="Movie Theater"/>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
+        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butCustMainMenu1ActionPerformed"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="190" y="60" width="255" height="-1"/>
-        </Constraint>
-      </Constraints>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="150" y="373" width="240" height="40"/>
+          <AbsoluteConstraints x="150" y="290" width="220" height="58"/>
         </Constraint>
       </Constraints>
     </Component>

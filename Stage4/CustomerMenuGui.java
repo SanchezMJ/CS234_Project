@@ -4,18 +4,46 @@
  */
 package com.mycompany.cs234project;
 
+import static com.mycompany.cs234project.Main.CustomerLogin;
+import static com.mycompany.cs234project.Main.TransactionMenu;
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.HashSet;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author mjsanchez
  */
 public class CustomerMenuGui extends javax.swing.JFrame {
-
+    private Customer current;
+    private Staff staff;
+    private Membership mem;
+    private Authentication obauth;
+    private EmployeeManager objman;
+    private Authentication objauth;
+    private Inventory inventory;
+    private Cart cart;
+    private HashSet<Customer> hashset;
+    private ArrayList<Staff> alist;
+    private ArrayList<Concession> prod;
+    private ArrayList<Showtimes> shows;
     /**
      * Creates new form MainGui
      */
-    public CustomerMenuGui() {
+    public CustomerMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
+        current = customer;
+        this.staff = staff;
+        hashset = new HashSet<Customer>();
+        this.mem = mem;
+        this.objauth = obauth;
+        alist = new ArrayList<Staff>();
+        this.objman = objman;
+        this.objauth = objauth;
+        this.inventory = inventory;
+        prod = new ArrayList<Concession>();
+        this.cart = cart;
+        shows = new ArrayList<Showtimes>();
         initComponents();
         
         getContentPane().setBackground(Color.black);
@@ -35,6 +63,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         butCustMainMenu = new javax.swing.JButton();
         lblTitle1 = new javax.swing.JLabel();
         lblTitle2 = new javax.swing.JLabel();
+        butCustMainMenu1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Movie Theater");
@@ -53,7 +82,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(butCustLogin);
-        butCustLogin.setBounds(160, 140, 191, 58);
+        butCustLogin.setBounds(150, 130, 220, 58);
 
         butCustReg.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butCustReg.setText("Registration");
@@ -62,16 +91,21 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         butCustReg.setContentAreaFilled(false);
         butCustReg.setOpaque(true);
         getContentPane().add(butCustReg);
-        butCustReg.setBounds(160, 220, 191, 58);
+        butCustReg.setBounds(150, 210, 220, 58);
 
         butCustMainMenu.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustMainMenu.setText("Main Menu");
+        butCustMainMenu.setText("Exit to Main Menu");
         butCustMainMenu.setAutoscrolls(true);
         butCustMainMenu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butCustMainMenu.setContentAreaFilled(false);
         butCustMainMenu.setOpaque(true);
+        butCustMainMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butCustMainMenuActionPerformed(evt);
+            }
+        });
         getContentPane().add(butCustMainMenu);
-        butCustMainMenu.setBounds(160, 300, 191, 58);
+        butCustMainMenu.setBounds(150, 370, 220, 58);
 
         lblTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblTitle1.setForeground(new java.awt.Color(255, 255, 255));
@@ -85,13 +119,47 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         getContentPane().add(lblTitle2);
         lblTitle2.setBounds(190, 60, 255, 56);
 
+        butCustMainMenu1.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butCustMainMenu1.setText("Login as Guest");
+        butCustMainMenu1.setAutoscrolls(true);
+        butCustMainMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butCustMainMenu1.setContentAreaFilled(false);
+        butCustMainMenu1.setOpaque(true);
+        butCustMainMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butCustMainMenu1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(butCustMainMenu1);
+        butCustMainMenu1.setBounds(150, 290, 220, 58);
+
         setSize(new java.awt.Dimension(543, 494));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void butCustLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustLoginActionPerformed
-        //this.setVisible(false); new CustomerMenu().setVisible(true);
+    String pNum = JOptionPane.showInputDialog(this, "Enter your phone number.");
+    long inputNum = Long.parseLong(pNum);
+    //CustomerLogin(current, hashset, mem, obauth);
+    while (!pNum.matches("\\d{10}")) {
+        JOptionPane.showInputDialog(this, "Invalid phone number entry.  Please try again.");
+        pNum = JOptionPane.showInputDialog(this, "Enter your phone number.");
+        inputNum = Long.parseLong(pNum);
+    }
+    //Casts the string input to long value.
+    String pass = JOptionPane.showInputDialog(this, "Enter your password.");
+    current = objauth.AuthenticateCustomer(inputNum, pass);
+    this.setVisible(false); new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+        //TransactionMenu(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
     }//GEN-LAST:event_butCustLoginActionPerformed
+
+    private void butCustMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustMainMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_butCustMainMenuActionPerformed
+
+    private void butCustMainMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustMainMenu1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_butCustMainMenu1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,7 +194,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CustomerMenuGui().setVisible(true);
+                //new CustomerMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
             }
         });
     }
@@ -134,6 +202,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butCustLogin;
     private javax.swing.JButton butCustMainMenu;
+    private javax.swing.JButton butCustMainMenu1;
     private javax.swing.JButton butCustReg;
     private javax.swing.JLabel lblTitle1;
     private javax.swing.JLabel lblTitle2;

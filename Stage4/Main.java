@@ -15,9 +15,8 @@ public class Main {
     //Main Menu method for initial menu.
 public static void MainMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         int choice = 0;
-        MainGui mainG = new MainGui(choice);
-        mainG.setVisible(true);
-        //mainG.setButton();
+//        MainGui mainG = new MainGui(choice);
+//        mainG.setVisible(true);
         System.out.println("Welcome to GENERIC Movie Theater!");
         System.out.println("Please select an option below.");
         //int sentinal = 0;
@@ -294,7 +293,7 @@ public static void AddProducts(Inventory inventory, ArrayList<Concession> prod, 
                 in.next();
             }
             int choice = in.nextInt();
-            if (choice >= 1 && choice <= prod.size()) {
+            if (choice >= 1 && choice < prod.size()) {
                 int n = choice - 1;
                 cart.addProduct(prod.get(n));
             }else if (choice == 0) {
@@ -611,7 +610,9 @@ public static void main(String[] args) {
         Concession candy = new Concession("Candy", 2.00,7);
         inventory.addProduct(candy);
         
-        MainMenu(current, currentStaff, newest, mem1, authCust, staffList, manage, authStaff,inventory, products, cart1, showtimes);
+        //MainMenu(current, currentStaff, newest, mem1, authCust, staffList, manage, authStaff,inventory, products, cart1, showtimes);
+        MainGui mainG = new MainGui(current, currentStaff, newest, mem1, authCust, staffList, manage, authStaff,inventory, products, cart1, showtimes);
+        mainG.setVisible(true);
         
     }
     

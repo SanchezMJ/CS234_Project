@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  *
  * @author mjsanchez
  */
-public class CustomerMenuGui extends javax.swing.JFrame {
+public class TransactionMenuGUI extends javax.swing.JFrame {
     private Customer current;
     private Staff staff;
     private Membership mem;
@@ -31,7 +31,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
     /**
      * Creates new form MainGui
      */
-    public CustomerMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
+    public TransactionMenuGUI(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         current = customer;
         this.staff = staff;
         hashset = new HashSet<Customer>();
@@ -46,7 +46,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         shows = new ArrayList<Showtimes>();
         initComponents();
         
-        getContentPane().setBackground(Color.black);
+        getContentPane().setBackground(Color.red);
     }
 
     /**
@@ -62,7 +62,6 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         butCustReg = new javax.swing.JButton();
         butCustMainMenu = new javax.swing.JButton();
         lblTitle1 = new javax.swing.JLabel();
-        lblTitle2 = new javax.swing.JLabel();
         butCustMainMenu1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,7 +70,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         butCustLogin.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustLogin.setText("Login");
+        butCustLogin.setText("Buy Tickets");
         butCustLogin.setAutoscrolls(true);
         butCustLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butCustLogin.setContentAreaFilled(false);
@@ -85,7 +84,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         butCustLogin.setBounds(150, 130, 220, 58);
 
         butCustReg.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustReg.setText("Registration");
+        butCustReg.setText("Concession");
         butCustReg.setAutoscrolls(true);
         butCustReg.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butCustReg.setContentAreaFilled(false);
@@ -109,18 +108,12 @@ public class CustomerMenuGui extends javax.swing.JFrame {
 
         lblTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblTitle1.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitle1.setText("Generic");
+        lblTitle1.setText("Concessions");
         getContentPane().add(lblTitle1);
-        lblTitle1.setBounds(110, 30, 198, 46);
-
-        lblTitle2.setFont(new java.awt.Font("Papyrus", 3, 36)); // NOI18N
-        lblTitle2.setForeground(new java.awt.Color(255, 153, 0));
-        lblTitle2.setText("Movie Theater");
-        getContentPane().add(lblTitle2);
-        lblTitle2.setBounds(190, 60, 255, 56);
+        lblTitle1.setBounds(110, 30, 310, 46);
 
         butCustMainMenu1.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustMainMenu1.setText("Login as Guest");
+        butCustMainMenu1.setText("Payment");
         butCustMainMenu1.setAutoscrolls(true);
         butCustMainMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butCustMainMenu1.setContentAreaFilled(false);
@@ -138,19 +131,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void butCustLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustLoginActionPerformed
-    String pNum = JOptionPane.showInputDialog(this, "Enter your phone number.");
-    long inputNum = Long.parseLong(pNum);
-    //CustomerLogin(current, hashset, mem, obauth);
-    while (!pNum.matches("\\d{10}")) {
-        JOptionPane.showInputDialog(this, "Invalid phone number entry.  Please try again.");
-        pNum = JOptionPane.showInputDialog(this, "Enter your phone number.");
-        inputNum = Long.parseLong(pNum);
-    }
-    //Casts the string input to long value.
-    String pass = JOptionPane.showInputDialog(this, "Enter your password.");
-    current = objauth.AuthenticateCustomer(inputNum, pass);
-    this.setVisible(false); new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
-        //TransactionMenu(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
+
     }//GEN-LAST:event_butCustLoginActionPerformed
 
     private void butCustMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustMainMenuActionPerformed
@@ -178,14 +159,18 @@ public class CustomerMenuGui extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TransactionMenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TransactionMenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TransactionMenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CustomerMenuGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TransactionMenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -205,6 +190,5 @@ public class CustomerMenuGui extends javax.swing.JFrame {
     private javax.swing.JButton butCustMainMenu1;
     private javax.swing.JButton butCustReg;
     private javax.swing.JLabel lblTitle1;
-    private javax.swing.JLabel lblTitle2;
     // End of variables declaration//GEN-END:variables
 }

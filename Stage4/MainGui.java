@@ -32,14 +32,14 @@ public class MainGui extends javax.swing.JFrame {
     public MainGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         current = customer;
         this.staff = staff;
-        hashset = new HashSet<Customer>();
+        this.hashset = hashset;
         this.mem = mem;
         this.obauth = obauth;
-        alist = new ArrayList<Staff>();
+        this.alist = alist;
         this.objman = objman;
         this.objauth = objauth;
         this.inventory = inventory;
-        prod = new ArrayList<Concession>();
+        this.prod = prod;
         this.cart = cart;
         this.shows = shows;
         getContentPane().setBackground(Color.black);
@@ -102,6 +102,11 @@ public class MainGui extends javax.swing.JFrame {
         butExit.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butExit.setContentAreaFilled(false);
         butExit.setOpaque(true);
+        butExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butExitActionPerformed(evt);
+            }
+        });
         getContentPane().add(butExit);
         butExit.setBounds(160, 300, 191, 58);
 
@@ -128,6 +133,10 @@ public class MainGui extends javax.swing.JFrame {
     private void butStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butStaffActionPerformed
         this.setVisible(false); new StaffMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butStaffActionPerformed
+
+    private void butExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_butExitActionPerformed
 
     /**
      * @param args the command line arguments

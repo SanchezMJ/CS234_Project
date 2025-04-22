@@ -33,14 +33,14 @@ public class StaffMenuGui extends javax.swing.JFrame {
     public StaffMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         current = customer;
         this.staff = staff;
-        hashset = new HashSet<Customer>();
+        this.hashset = hashset;
         this.mem = mem;
         this.obauth = obauth;
-        alist = new ArrayList<Staff>();
+        this.alist = alist;
         this.objman = objman;
         this.objauth = objauth;
         this.inventory = inventory;
-        prod = new ArrayList<Concession>();
+        this.prod = prod;
         this.cart = cart;
         shows = new ArrayList<Showtimes>();
         initComponents();

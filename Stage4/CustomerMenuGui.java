@@ -32,16 +32,16 @@ public class CustomerMenuGui extends javax.swing.JFrame {
      * Creates new form MainGui
      */
     public CustomerMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
-        current = customer;
+        current = new Customer();
         this.staff = staff;
-        hashset = new HashSet<Customer>();
+        this.hashset = hashset;
         this.mem = mem;
         this.obauth = obauth;
-        alist = new ArrayList<Staff>();
+        this.alist = alist;
         this.objman = objman;
         this.objauth = objauth;
         this.inventory = inventory;
-        prod = new ArrayList<Concession>();
+        this.prod = prod;
         this.cart = cart;
         this.shows = shows;
         initComponents();
@@ -144,21 +144,28 @@ public class CustomerMenuGui extends javax.swing.JFrame {
 
     private void butCustLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustLoginActionPerformed
     String pNum = JOptionPane.showInputDialog(this, "Enter your phone number.");
-    long inputNum = Long.parseLong(pNum);
-    //CustomerLogin(current, hashset, mem, obauth);
-    while (!pNum.matches("\\d{10}")) {
-        JOptionPane.showInputDialog(this, "Invalid phone number entry.  Please try again.");
-        pNum = JOptionPane.showInputDialog(this, "Enter your phone number.");
-        inputNum = Long.parseLong(pNum);
+    if (pNum != null && !pNum.isEmpty()) {
+        try {
+            long inputNum = Long.parseLong(pNum);
+            //CustomerLogin(current, hashset, mem, obauth);
+            while (!pNum.matches("\\d{10}")) {
+                JOptionPane.showInputDialog(this, "Invalid phone number entry.  Please try again.");
+                pNum = JOptionPane.showInputDialog(this, "Enter your phone number.");
+                inputNum = Long.parseLong(pNum);
+            }
+            //Casts the string input to long value.
+            String pass = JOptionPane.showInputDialog(this, "Enter your password.");
+            current = obauth.AuthenticateCustomer(inputNum, pass);
+        } catch (NumberFormatException e) {
+            
     }
-    //Casts the string input to long value.
-    String pass = JOptionPane.showInputDialog(this, "Enter your password.");
-    current = obauth.AuthenticateCustomer(inputNum, pass);
-    if (current != null) {
+    if (current != null && current.getFirstName() != "Guest") {
         this.setVisible(false); new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     } else {
         JOptionPane.showMessageDialog(this, "Not a member.  Please try again or login as guest.");
+        }
     }
+
     
         //TransactionMenu(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
     }//GEN-LAST:event_butCustLoginActionPerformed

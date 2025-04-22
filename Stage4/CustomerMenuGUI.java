@@ -43,7 +43,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         this.inventory = inventory;
         prod = new ArrayList<Concession>();
         this.cart = cart;
-        shows = new ArrayList<Showtimes>();
+        this.shows = shows;
         initComponents();
         
         getContentPane().setBackground(Color.black);

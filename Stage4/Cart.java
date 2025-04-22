@@ -63,7 +63,18 @@ public class Cart {
         listOfProducts.clear();
         total=0;
     }
-    
+    public String getSeatSelections() {
+        String list = "";
+        if(seatSelection.isEmpty()){
+            
+        }else {
+            for (Seating a:seatSelection) {
+                list = list + a.getSeat();
+            //System.out.print(a.getSeat() + " ");
+            }
+        } 
+        return list;
+    }
     //Method to print itemized products in cart.  Can add for listOfProducts
     public void getCart() {
         System.out.println();

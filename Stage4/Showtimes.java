@@ -35,12 +35,24 @@ public class Showtimes {
         return title.getMovieTitle();
     }
     
+    public String getRating(){
+        return title.getRating();
+    }
+    
+    public String getDesc(){
+        return title.getSynopsis();
+    }
+    
+    public String getRuntime(){
+        return title.getRuntime();
+    }
     public void setTime(int time){
         this.time=time;
     }
     
-    public int getTime(){
-        return time;
+    public String getTime(){
+        String movieTime = Integer.toString(time);
+        return movieTime;
     }
     
     public Screen getScreen() {

@@ -41,7 +41,7 @@ public class MainGui extends javax.swing.JFrame {
         this.inventory = inventory;
         prod = new ArrayList<Concession>();
         this.cart = cart;
-        shows = new ArrayList<Showtimes>();
+        this.shows = shows;
         getContentPane().setBackground(Color.black);
         initComponents();
         

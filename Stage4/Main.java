@@ -15,19 +15,17 @@ public class Main {
     //Main Menu method for initial menu.
 public static void MainMenu(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         int choice = 0;
-//        MainGui mainG = new MainGui(choice);
-//        mainG.setVisible(true);
         System.out.println("Welcome to GENERIC Movie Theater!");
         System.out.println("Please select an option below.");
-        //int sentinal = 0;
-        //while(sentinal >= 0) {
+        int sentinal = 0;
+        while(sentinal >= 0) {
             System.out.println("========================");
             System.out.println("\tMAIN MENU\n1. Customer \n2. Staff\n3. Exit");
             System.out.println("========================");
             Scanner in = new Scanner(System.in);
             System.out.print("Enter your choice: ");
             System.out.println(choice);
-            //choice = in.nextInt();
+            choice = in.nextInt();
                 switch(choice){
                     case 1:
                         CustomerMainMenu(customer, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
@@ -42,7 +40,7 @@ public static void MainMenu(Customer customer, Staff staff, HashSet<Customer> ha
                     default: 
                         System.out.println("Invalid choice. Please try again.");
                 }
-       // }
+        }
 }
 
 //CustomerMainMenu method.  
@@ -593,7 +591,7 @@ public static void main(String[] args) {
         Screen screen5 = new Screen("Screen 5", "imax");
         
         //Generate Movie objects
-        Movie m1 = new Movie("Batman", "1h 36m", "PG-13", "Batman battles the Joker in this...");
+        Movie m1 = new Movie("The Dark Knight", "2h 32m", "PG-13", "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.");
         Movie m2 = new Movie("Heat", "2h 50m", "R", "Master criminal Neil McMauley...");
         
         //Adds showtimes
@@ -610,7 +608,7 @@ public static void main(String[] args) {
         Concession candy = new Concession("Candy", 2.00,7);
         inventory.addProduct(candy);
         
-        //MainMenu(current, currentStaff, newest, mem1, authCust, staffList, manage, authStaff,inventory, products, cart1, showtimes);
+//        MainMenu(current, currentStaff, newest, mem1, authCust, staffList, manage, authStaff,inventory, products, cart1, showtimes);
         MainGui mainG = new MainGui(current, currentStaff, newest, mem1, authCust, staffList, manage, authStaff,inventory, products, cart1, showtimes);
         mainG.setVisible(true);
         

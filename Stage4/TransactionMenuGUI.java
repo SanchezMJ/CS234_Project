@@ -43,7 +43,7 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         this.inventory = inventory;
         prod = new ArrayList<Concession>();
         this.cart = cart;
-        shows = new ArrayList<Showtimes>();
+        this.shows = shows;
         initComponents();
         
         Color col = new Color(153, 0, 0);
@@ -59,11 +59,11 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        butCustLogin = new javax.swing.JButton();
-        butCustReg = new javax.swing.JButton();
-        butCustMainMenu = new javax.swing.JButton();
+        butBuyTickets = new javax.swing.JButton();
+        butConcession = new javax.swing.JButton();
+        butMainMenu = new javax.swing.JButton();
         lblTitle1 = new javax.swing.JLabel();
-        butCustMainMenu1 = new javax.swing.JButton();
+        butPayment = new javax.swing.JButton();
         lblCustomerOutput = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,42 +71,42 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         setBackground(new java.awt.Color(204, 0, 0));
         getContentPane().setLayout(null);
 
-        butCustLogin.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustLogin.setText("Buy Tickets");
-        butCustLogin.setAutoscrolls(true);
-        butCustLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butCustLogin.setContentAreaFilled(false);
-        butCustLogin.setOpaque(true);
-        butCustLogin.addActionListener(new java.awt.event.ActionListener() {
+        butBuyTickets.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butBuyTickets.setText("Buy Tickets");
+        butBuyTickets.setAutoscrolls(true);
+        butBuyTickets.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butBuyTickets.setContentAreaFilled(false);
+        butBuyTickets.setOpaque(true);
+        butBuyTickets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butCustLoginActionPerformed(evt);
+                butBuyTicketsActionPerformed(evt);
             }
         });
-        getContentPane().add(butCustLogin);
-        butCustLogin.setBounds(150, 140, 220, 58);
+        getContentPane().add(butBuyTickets);
+        butBuyTickets.setBounds(150, 140, 220, 58);
 
-        butCustReg.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustReg.setText("Concession");
-        butCustReg.setAutoscrolls(true);
-        butCustReg.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butCustReg.setContentAreaFilled(false);
-        butCustReg.setOpaque(true);
-        getContentPane().add(butCustReg);
-        butCustReg.setBounds(150, 220, 220, 58);
+        butConcession.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butConcession.setText("Concession");
+        butConcession.setAutoscrolls(true);
+        butConcession.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butConcession.setContentAreaFilled(false);
+        butConcession.setOpaque(true);
+        getContentPane().add(butConcession);
+        butConcession.setBounds(150, 220, 220, 58);
 
-        butCustMainMenu.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustMainMenu.setText("Exit to Main Menu");
-        butCustMainMenu.setAutoscrolls(true);
-        butCustMainMenu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butCustMainMenu.setContentAreaFilled(false);
-        butCustMainMenu.setOpaque(true);
-        butCustMainMenu.addActionListener(new java.awt.event.ActionListener() {
+        butMainMenu.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butMainMenu.setText("Exit to Main Menu");
+        butMainMenu.setAutoscrolls(true);
+        butMainMenu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butMainMenu.setContentAreaFilled(false);
+        butMainMenu.setOpaque(true);
+        butMainMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butCustMainMenuActionPerformed(evt);
+                butMainMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(butCustMainMenu);
-        butCustMainMenu.setBounds(150, 380, 220, 58);
+        getContentPane().add(butMainMenu);
+        butMainMenu.setBounds(150, 380, 220, 58);
 
         lblTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblTitle1.setForeground(new java.awt.Color(255, 255, 255));
@@ -114,19 +114,19 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         getContentPane().add(lblTitle1);
         lblTitle1.setBounds(110, 20, 310, 46);
 
-        butCustMainMenu1.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butCustMainMenu1.setText("Payment");
-        butCustMainMenu1.setAutoscrolls(true);
-        butCustMainMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butCustMainMenu1.setContentAreaFilled(false);
-        butCustMainMenu1.setOpaque(true);
-        butCustMainMenu1.addActionListener(new java.awt.event.ActionListener() {
+        butPayment.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butPayment.setText("Payment");
+        butPayment.setAutoscrolls(true);
+        butPayment.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butPayment.setContentAreaFilled(false);
+        butPayment.setOpaque(true);
+        butPayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butCustMainMenu1ActionPerformed(evt);
+                butPaymentActionPerformed(evt);
             }
         });
-        getContentPane().add(butCustMainMenu1);
-        butCustMainMenu1.setBounds(150, 300, 220, 58);
+        getContentPane().add(butPayment);
+        butPayment.setBounds(150, 300, 220, 58);
 
         lblCustomerOutput.setFont(new java.awt.Font("Charmonman", 1, 24)); // NOI18N
         lblCustomerOutput.setForeground(new java.awt.Color(255, 255, 255));
@@ -139,17 +139,18 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void butCustLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustLoginActionPerformed
+    private void butBuyTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butBuyTicketsActionPerformed
+        //this.setVisible(false); 
+        new MovieSelectionGui(inventory, cart, shows).setVisible(true);
+    }//GEN-LAST:event_butBuyTicketsActionPerformed
 
-    }//GEN-LAST:event_butCustLoginActionPerformed
+    private void butMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butMainMenuActionPerformed
+        this.setVisible(false); new MainGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+    }//GEN-LAST:event_butMainMenuActionPerformed
 
-    private void butCustMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustMainMenuActionPerformed
+    private void butPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butPaymentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_butCustMainMenuActionPerformed
-
-    private void butCustMainMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustMainMenu1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_butCustMainMenu1ActionPerformed
+    }//GEN-LAST:event_butPaymentActionPerformed
     
     /**
      * @param args the command line arguments
@@ -196,10 +197,10 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton butCustLogin;
-    private javax.swing.JButton butCustMainMenu;
-    private javax.swing.JButton butCustMainMenu1;
-    private javax.swing.JButton butCustReg;
+    private javax.swing.JButton butBuyTickets;
+    private javax.swing.JButton butConcession;
+    private javax.swing.JButton butMainMenu;
+    private javax.swing.JButton butPayment;
     private javax.swing.JLabel lblCustomerOutput;
     private javax.swing.JLabel lblTitle1;
     // End of variables declaration//GEN-END:variables

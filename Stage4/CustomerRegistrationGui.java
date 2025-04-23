@@ -28,6 +28,9 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
     /**
      * Creates new form CustomerRegistrationGui
      */
+    public CustomerRegistrationGui() {
+        
+    }
     public CustomerRegistrationGui(HashSet<Customer> members, Membership member, Authentication authentication) {
         newCust = new Customer();
         this.member = member;
@@ -269,7 +272,7 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new CustomerRegistrationGui().setVisible(true);
+                new CustomerRegistrationGui().setVisible(true);
             }
         });
     }

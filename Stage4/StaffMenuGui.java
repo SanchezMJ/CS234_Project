@@ -30,6 +30,10 @@ public class StaffMenuGui extends javax.swing.JFrame {
     /**
      * Creates new form MainGui
      */
+    
+    public StaffMenuGui() {
+        
+    }
     public StaffMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         current = customer;
         this.staff = staff;
@@ -185,7 +189,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new StaffMenuGui().setVisible(true);
+                new StaffMenuGui().setVisible(true);
             }
         });
     }

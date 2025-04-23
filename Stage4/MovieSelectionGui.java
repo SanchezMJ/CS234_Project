@@ -17,6 +17,10 @@ public class MovieSelectionGui extends javax.swing.JFrame {
     /**
      * Creates new form MovieSeatsGui
      */
+    
+    public MovieSelectionGui() {
+        
+    }
     public MovieSelectionGui(Inventory inventory, Cart cart, ArrayList<Showtimes> shows) {
         this.inventory = inventory;
         this.cart = cart;
@@ -247,7 +251,7 @@ public class MovieSelectionGui extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new MovieSelectionGui().setVisible(true);
+                new MovieSelectionGui().setVisible(true);
             }
         });
     }

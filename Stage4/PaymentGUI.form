@@ -110,6 +110,9 @@
               <Connection code="cart.showCart()" type="code"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="jEditorPane1PropertyChange"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

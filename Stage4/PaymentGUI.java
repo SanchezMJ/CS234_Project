@@ -56,6 +56,11 @@ public class PaymentGUI extends javax.swing.JFrame {
         btnCash.setText("Cash");
 
         jEditorPane1.setText(cart.showCart());
+        jEditorPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jEditorPane1PropertyChange(evt);
+            }
+        });
         jScrollPane1.setViewportView(jEditorPane1);
 
         btnCreditCard.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
@@ -115,6 +120,10 @@ public class PaymentGUI extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(687, 546));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jEditorPane1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jEditorPane1PropertyChange
+        cart.showCart();
+    }//GEN-LAST:event_jEditorPane1PropertyChange
 
     /**
      * @param args the command line arguments

@@ -178,11 +178,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butA01ActionPerformed(evt);
             }
         });
+        butA01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA01PropertyChange(evt);
+            }
+        });
 
         butA02.setText((show.getShowSeating()).get(1));
         butA02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butA02ActionPerformed(evt);
+            }
+        });
+        butA02.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA02PropertyChange(evt);
             }
         });
 
@@ -210,11 +220,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butA03ActionPerformed(evt);
             }
         });
+        butA03.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA03PropertyChange(evt);
+            }
+        });
 
         butA04.setText((show.getShowSeating()).get(3));
         butA04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butA04ActionPerformed(evt);
+            }
+        });
+        butA04.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA04PropertyChange(evt);
             }
         });
 
@@ -224,11 +244,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butA05ActionPerformed(evt);
             }
         });
+        butA05.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA05PropertyChange(evt);
+            }
+        });
 
         butA06.setText((show.getShowSeating()).get(5));
         butA06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butA06ActionPerformed(evt);
+            }
+        });
+        butA06.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA06PropertyChange(evt);
             }
         });
 
@@ -238,11 +268,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butA07ActionPerformed(evt);
             }
         });
+        butA07.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA07PropertyChange(evt);
+            }
+        });
 
         butA08.setText((show.getShowSeating()).get(7));
         butA08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butA08ActionPerformed(evt);
+            }
+        });
+        butA08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA08PropertyChange(evt);
             }
         });
 
@@ -252,11 +292,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butA09ActionPerformed(evt);
             }
         });
+        butA09.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA09PropertyChange(evt);
+            }
+        });
 
         butA10.setText((show.getShowSeating()).get(9));
         butA10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butA10ActionPerformed(evt);
+            }
+        });
+        butA10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA10PropertyChange(evt);
             }
         });
 
@@ -266,11 +316,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butA11ActionPerformed(evt);
             }
         });
+        butA11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA11PropertyChange(evt);
+            }
+        });
 
         butA12.setText((show.getShowSeating()).get(11));
         butA12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butA12ActionPerformed(evt);
+            }
+        });
+        butA12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA12PropertyChange(evt);
             }
         });
 
@@ -280,11 +340,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butA13ActionPerformed(evt);
             }
         });
+        butA13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA13PropertyChange(evt);
+            }
+        });
 
         butA14.setText((show.getShowSeating()).get(13));
         butA14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butA14ActionPerformed(evt);
+            }
+        });
+        butA14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butA14PropertyChange(evt);
             }
         });
 
@@ -294,11 +364,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butB01ActionPerformed(evt);
             }
         });
+        butB01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB01PropertyChange(evt);
+            }
+        });
 
         butB02.setText((show.getShowSeating()).get(15));
         butB02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butB02ActionPerformed(evt);
+            }
+        });
+        butB02.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB02PropertyChange(evt);
             }
         });
 
@@ -308,11 +388,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butB03ActionPerformed(evt);
             }
         });
+        butB03.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB03PropertyChange(evt);
+            }
+        });
 
         butB04.setText((show.getShowSeating()).get(17));
         butB04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butB04ActionPerformed(evt);
+            }
+        });
+        butB04.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB04PropertyChange(evt);
             }
         });
 
@@ -322,11 +412,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butB05ActionPerformed(evt);
             }
         });
+        butB05.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB05PropertyChange(evt);
+            }
+        });
 
         butB06.setText((show.getShowSeating()).get(19));
         butB06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butB06ActionPerformed(evt);
+            }
+        });
+        butB06.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB06PropertyChange(evt);
             }
         });
 
@@ -336,11 +436,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butB07ActionPerformed(evt);
             }
         });
+        butB07.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB07PropertyChange(evt);
+            }
+        });
 
         butB08.setText((show.getShowSeating()).get(21));
         butB08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butB08ActionPerformed(evt);
+            }
+        });
+        butB08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB08PropertyChange(evt);
             }
         });
 
@@ -350,11 +460,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butB09ActionPerformed(evt);
             }
         });
+        butB09.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB09PropertyChange(evt);
+            }
+        });
 
         butB10.setText((show.getShowSeating()).get(23));
         butB10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butB10ActionPerformed(evt);
+            }
+        });
+        butB10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB10PropertyChange(evt);
             }
         });
 
@@ -364,11 +484,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butB11ActionPerformed(evt);
             }
         });
+        butB11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB11PropertyChange(evt);
+            }
+        });
 
         butB12.setText((show.getShowSeating()).get(25));
         butB12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butB12ActionPerformed(evt);
+            }
+        });
+        butB12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB12PropertyChange(evt);
             }
         });
 
@@ -378,11 +508,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butB13ActionPerformed(evt);
             }
         });
+        butB13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB13PropertyChange(evt);
+            }
+        });
 
         butB14.setText((show.getShowSeating()).get(27));
         butB14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butB14ActionPerformed(evt);
+            }
+        });
+        butB14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB14PropertyChange(evt);
             }
         });
 
@@ -392,11 +532,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butC01ActionPerformed(evt);
             }
         });
+        butC01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC01PropertyChange(evt);
+            }
+        });
 
         butC02.setText((show.getShowSeating()).get(29));
         butC02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC02ActionPerformed(evt);
+            }
+        });
+        butC02.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC02PropertyChange(evt);
             }
         });
 
@@ -406,11 +556,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butC03ActionPerformed(evt);
             }
         });
+        butC03.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC03PropertyChange(evt);
+            }
+        });
 
         butC04.setText((show.getShowSeating()).get(31));
         butC04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC04ActionPerformed(evt);
+            }
+        });
+        butC04.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC04PropertyChange(evt);
             }
         });
 
@@ -420,11 +580,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butC05ActionPerformed(evt);
             }
         });
+        butC05.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC05PropertyChange(evt);
+            }
+        });
 
         butC06.setText((show.getShowSeating()).get(33));
         butC06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC06ActionPerformed(evt);
+            }
+        });
+        butC06.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC06PropertyChange(evt);
             }
         });
 
@@ -434,11 +604,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butC07ActionPerformed(evt);
             }
         });
+        butC07.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC07PropertyChange(evt);
+            }
+        });
 
         butC08.setText((show.getShowSeating()).get(35));
         butC08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC08ActionPerformed(evt);
+            }
+        });
+        butC08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC08PropertyChange(evt);
             }
         });
 
@@ -448,11 +628,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butC09ActionPerformed(evt);
             }
         });
+        butC09.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC09PropertyChange(evt);
+            }
+        });
 
         butC10.setText((show.getShowSeating()).get(37));
         butC10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC10ActionPerformed(evt);
+            }
+        });
+        butC10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC10PropertyChange(evt);
             }
         });
 
@@ -462,11 +652,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butC11ActionPerformed(evt);
             }
         });
+        butC11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC11PropertyChange(evt);
+            }
+        });
 
         butC12.setText((show.getShowSeating()).get(39));
         butC12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC12ActionPerformed(evt);
+            }
+        });
+        butC12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC12PropertyChange(evt);
             }
         });
 
@@ -476,11 +676,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butC13ActionPerformed(evt);
             }
         });
+        butC13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC13PropertyChange(evt);
+            }
+        });
 
         butC14.setText((show.getShowSeating()).get(41));
         butC14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC14ActionPerformed(evt);
+            }
+        });
+        butC14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butC14PropertyChange(evt);
             }
         });
 
@@ -490,11 +700,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butD01ActionPerformed(evt);
             }
         });
+        butD01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD01PropertyChange(evt);
+            }
+        });
 
         butD02.setText((show.getShowSeating()).get(43));
         butD02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butD02ActionPerformed(evt);
+            }
+        });
+        butD02.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD02PropertyChange(evt);
             }
         });
 
@@ -504,11 +724,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butD03ActionPerformed(evt);
             }
         });
+        butD03.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD03PropertyChange(evt);
+            }
+        });
 
         butD04.setText((show.getShowSeating()).get(45));
         butD04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butD04ActionPerformed(evt);
+            }
+        });
+        butD04.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD04PropertyChange(evt);
             }
         });
 
@@ -518,11 +748,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butD05ActionPerformed(evt);
             }
         });
+        butD05.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD05PropertyChange(evt);
+            }
+        });
 
         butD06.setText((show.getShowSeating()).get(47));
         butD06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butD06ActionPerformed(evt);
+            }
+        });
+        butD06.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD06PropertyChange(evt);
             }
         });
 
@@ -532,11 +772,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butD07ActionPerformed(evt);
             }
         });
+        butD07.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD07PropertyChange(evt);
+            }
+        });
 
         butD08.setText((show.getShowSeating()).get(49));
         butD08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butD08ActionPerformed(evt);
+            }
+        });
+        butD08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD08PropertyChange(evt);
             }
         });
 
@@ -546,11 +796,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butD09ActionPerformed(evt);
             }
         });
+        butD09.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD09PropertyChange(evt);
+            }
+        });
 
         butD10.setText((show.getShowSeating()).get(51));
         butD10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butD10ActionPerformed(evt);
+            }
+        });
+        butD10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD10PropertyChange(evt);
             }
         });
 
@@ -560,11 +820,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butD11ActionPerformed(evt);
             }
         });
+        butD11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD11PropertyChange(evt);
+            }
+        });
 
         butD12.setText((show.getShowSeating()).get(53));
         butD12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butD12ActionPerformed(evt);
+            }
+        });
+        butD12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD12PropertyChange(evt);
             }
         });
 
@@ -574,11 +844,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butD13ActionPerformed(evt);
             }
         });
+        butD13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD13PropertyChange(evt);
+            }
+        });
 
         butD14.setText((show.getShowSeating()).get(55));
         butD14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butD14ActionPerformed(evt);
+            }
+        });
+        butD14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butD14PropertyChange(evt);
             }
         });
 
@@ -588,11 +868,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butE01ActionPerformed(evt);
             }
         });
+        butE01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE01PropertyChange(evt);
+            }
+        });
 
         butE02.setText((show.getShowSeating()).get(57));
         butE02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butE02ActionPerformed(evt);
+            }
+        });
+        butE02.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE02PropertyChange(evt);
             }
         });
 
@@ -602,11 +892,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butE03ActionPerformed(evt);
             }
         });
+        butE03.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE03PropertyChange(evt);
+            }
+        });
 
         butE04.setText((show.getShowSeating()).get(59));
         butE04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butE04ActionPerformed(evt);
+            }
+        });
+        butE04.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE04PropertyChange(evt);
             }
         });
 
@@ -616,11 +916,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butE05ActionPerformed(evt);
             }
         });
+        butE05.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE05PropertyChange(evt);
+            }
+        });
 
         butE06.setText((show.getShowSeating()).get(61));
         butE06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butE06ActionPerformed(evt);
+            }
+        });
+        butE06.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE06PropertyChange(evt);
             }
         });
 
@@ -630,11 +940,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butE07ActionPerformed(evt);
             }
         });
+        butE07.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE07PropertyChange(evt);
+            }
+        });
 
         butE08.setText((show.getShowSeating()).get(63));
         butE08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butE08ActionPerformed(evt);
+            }
+        });
+        butE08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE08PropertyChange(evt);
             }
         });
 
@@ -644,11 +964,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butE09ActionPerformed(evt);
             }
         });
+        butE09.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE09PropertyChange(evt);
+            }
+        });
 
         butE10.setText((show.getShowSeating()).get(65));
         butE10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butE10ActionPerformed(evt);
+            }
+        });
+        butE10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE10PropertyChange(evt);
             }
         });
 
@@ -658,11 +988,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butE11ActionPerformed(evt);
             }
         });
+        butE11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE11PropertyChange(evt);
+            }
+        });
 
         butE12.setText((show.getShowSeating()).get(67));
         butE12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butE12ActionPerformed(evt);
+            }
+        });
+        butE12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE12PropertyChange(evt);
             }
         });
 
@@ -672,11 +1012,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butE13ActionPerformed(evt);
             }
         });
+        butE13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE13PropertyChange(evt);
+            }
+        });
 
         butE14.setText((show.getShowSeating()).get(69));
         butE14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butE14ActionPerformed(evt);
+            }
+        });
+        butE14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butE14PropertyChange(evt);
             }
         });
 
@@ -686,11 +1036,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butF01ActionPerformed(evt);
             }
         });
+        butF01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF01PropertyChange(evt);
+            }
+        });
 
         butF02.setText((show.getShowSeating()).get(71));
         butF02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF02ActionPerformed(evt);
+            }
+        });
+        butF02.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF02PropertyChange(evt);
             }
         });
 
@@ -700,11 +1060,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butF03ActionPerformed(evt);
             }
         });
+        butF03.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF03PropertyChange(evt);
+            }
+        });
 
         butF04.setText((show.getShowSeating()).get(73));
         butF04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF04ActionPerformed(evt);
+            }
+        });
+        butF04.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF04PropertyChange(evt);
             }
         });
 
@@ -714,11 +1084,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butF05ActionPerformed(evt);
             }
         });
+        butF05.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF05PropertyChange(evt);
+            }
+        });
 
         butF06.setText((show.getShowSeating()).get(75));
         butF06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF06ActionPerformed(evt);
+            }
+        });
+        butF06.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF06PropertyChange(evt);
             }
         });
 
@@ -728,11 +1108,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butF07ActionPerformed(evt);
             }
         });
+        butF07.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF07PropertyChange(evt);
+            }
+        });
 
         butF08.setText((show.getShowSeating()).get(77));
         butF08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF08ActionPerformed(evt);
+            }
+        });
+        butF08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF08PropertyChange(evt);
             }
         });
 
@@ -742,11 +1132,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butF09ActionPerformed(evt);
             }
         });
+        butF09.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF09PropertyChange(evt);
+            }
+        });
 
         butF10.setText((show.getShowSeating()).get(79));
         butF10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF10ActionPerformed(evt);
+            }
+        });
+        butF10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF10PropertyChange(evt);
             }
         });
 
@@ -756,11 +1156,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butF11ActionPerformed(evt);
             }
         });
+        butF11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF11PropertyChange(evt);
+            }
+        });
 
         butF12.setText((show.getShowSeating()).get(81));
         butF12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF12ActionPerformed(evt);
+            }
+        });
+        butF12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF12PropertyChange(evt);
             }
         });
 
@@ -770,11 +1180,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butF13ActionPerformed(evt);
             }
         });
+        butF13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF13PropertyChange(evt);
+            }
+        });
 
         butF14.setText((show.getShowSeating()).get(83));
         butF14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF14ActionPerformed(evt);
+            }
+        });
+        butF14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butF14PropertyChange(evt);
             }
         });
 
@@ -784,11 +1204,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butG01ActionPerformed(evt);
             }
         });
+        butG01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG01PropertyChange(evt);
+            }
+        });
 
         butG02.setText((show.getShowSeating()).get(85));
         butG02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG02ActionPerformed(evt);
+            }
+        });
+        butG02.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG02PropertyChange(evt);
             }
         });
 
@@ -798,11 +1228,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butG03ActionPerformed(evt);
             }
         });
+        butG03.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG03PropertyChange(evt);
+            }
+        });
 
         butG04.setText((show.getShowSeating()).get(87));
         butG04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG04ActionPerformed(evt);
+            }
+        });
+        butG04.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG04PropertyChange(evt);
             }
         });
 
@@ -812,11 +1252,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butG05ActionPerformed(evt);
             }
         });
+        butG05.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG05PropertyChange(evt);
+            }
+        });
 
         butG06.setText((show.getShowSeating()).get(89));
         butG06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG06ActionPerformed(evt);
+            }
+        });
+        butG06.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG06PropertyChange(evt);
             }
         });
 
@@ -826,11 +1276,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butG07ActionPerformed(evt);
             }
         });
+        butG07.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG07PropertyChange(evt);
+            }
+        });
 
         butG08.setText((show.getShowSeating()).get(91));
         butG08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG08ActionPerformed(evt);
+            }
+        });
+        butG08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG08PropertyChange(evt);
             }
         });
 
@@ -840,11 +1300,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butG09ActionPerformed(evt);
             }
         });
+        butG09.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG09PropertyChange(evt);
+            }
+        });
 
         butG10.setText((show.getShowSeating()).get(93));
         butG10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG10ActionPerformed(evt);
+            }
+        });
+        butG10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG10PropertyChange(evt);
             }
         });
 
@@ -854,11 +1324,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butG11ActionPerformed(evt);
             }
         });
+        butG11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG11PropertyChange(evt);
+            }
+        });
 
         butG12.setText((show.getShowSeating()).get(95));
         butG12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG12ActionPerformed(evt);
+            }
+        });
+        butG12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG12PropertyChange(evt);
             }
         });
 
@@ -868,11 +1348,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butG13ActionPerformed(evt);
             }
         });
+        butG13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG13PropertyChange(evt);
+            }
+        });
 
         butG14.setText((show.getShowSeating()).get(97));
         butG14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG14ActionPerformed(evt);
+            }
+        });
+        butG14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butG14PropertyChange(evt);
             }
         });
 
@@ -882,11 +1372,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butH01ActionPerformed(evt);
             }
         });
+        butH01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH01PropertyChange(evt);
+            }
+        });
 
         butH02.setText((show.getShowSeating()).get(99));
         butH02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH02ActionPerformed(evt);
+            }
+        });
+        butH02.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH02PropertyChange(evt);
             }
         });
 
@@ -896,11 +1396,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butH03ActionPerformed(evt);
             }
         });
+        butH03.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH03PropertyChange(evt);
+            }
+        });
 
         butH04.setText((show.getShowSeating()).get(101));
         butH04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH04ActionPerformed(evt);
+            }
+        });
+        butH04.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH04PropertyChange(evt);
             }
         });
 
@@ -910,11 +1420,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butH05ActionPerformed(evt);
             }
         });
+        butH05.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH05PropertyChange(evt);
+            }
+        });
 
         butH06.setText((show.getShowSeating()).get(103));
         butH06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH06ActionPerformed(evt);
+            }
+        });
+        butH06.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH06PropertyChange(evt);
             }
         });
 
@@ -924,11 +1444,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butH07ActionPerformed(evt);
             }
         });
+        butH07.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH07PropertyChange(evt);
+            }
+        });
 
         butH08.setText((show.getShowSeating()).get(105));
         butH08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH08ActionPerformed(evt);
+            }
+        });
+        butH08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH08PropertyChange(evt);
             }
         });
 
@@ -938,11 +1468,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butH09ActionPerformed(evt);
             }
         });
+        butH09.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH09PropertyChange(evt);
+            }
+        });
 
         butH10.setText((show.getShowSeating()).get(107));
         butH10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH10ActionPerformed(evt);
+            }
+        });
+        butH10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH10PropertyChange(evt);
             }
         });
 
@@ -952,11 +1492,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butH11ActionPerformed(evt);
             }
         });
+        butH11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH11PropertyChange(evt);
+            }
+        });
 
         butH12.setText((show.getShowSeating()).get(109));
         butH12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH12ActionPerformed(evt);
+            }
+        });
+        butH12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH12PropertyChange(evt);
             }
         });
 
@@ -966,11 +1516,21 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 butH13ActionPerformed(evt);
             }
         });
+        butH13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH13PropertyChange(evt);
+            }
+        });
 
         butH14.setText((show.getShowSeating()).get(111));
         butH14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH14ActionPerformed(evt);
+            }
+        });
+        butH14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butH14PropertyChange(evt);
             }
         });
 
@@ -1012,11 +1572,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblFOS, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(butB01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1215,61 +1773,62 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(butG14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(butH01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(lblSeatSelection)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(lblSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(butH01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(butClearSelection)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(butClose))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(butH12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(butH14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(51, 51, 51))
+                                    .addComponent(butH02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(butH14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(lblSeatSelection)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lblSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(28, 28, 28)
+                                    .addComponent(butClearSelection)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(butClose)))
+                            .addGap(51, 51, 51))
+                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(lblFOS, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 834, Short.MAX_VALUE)
+                        .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblFOS, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblFOS, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblEntrance, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jButton1)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(butA01)
@@ -1321,10 +1880,10 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButton4)
                                 .addGap(43, 43, 43)
-                                .addComponent(jButton5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(butD01)
                                             .addComponent(butD02)
@@ -1403,32 +1962,27 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                                             .addComponent(butH11)
                                             .addComponent(butH12)
                                             .addComponent(butH13)
-                                            .addComponent(butH14)))
-                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(lblEntrance, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSeatSelection, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(butClose)
-                            .addComponent(butClearSelection))
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                            .addComponent(butH14))
+                                        .addGap(35, 35, 35)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(lblSeatSelection, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(butClose)
+                                            .addComponent(butClearSelection)))
+                                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(1071, 608));
+        setSize(new java.awt.Dimension(1071, 650));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void butA01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA01ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA01.setForeground(Color.red);
+        butA01.setOpaque(true);
+        butA01.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A01".equals(seating.get(i))) {
                 Seating seat = new Seating("A01", t);
@@ -1449,7 +2003,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA02ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA02.setForeground(Color.red);
+        butA02.setOpaque(true);
+        butA02.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A02".equals(seating.get(i))) {
                 Seating seat = new Seating("A02", t);
@@ -1471,7 +2027,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA03ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA03.setForeground(Color.red);
+        butA03.setOpaque(true);
+        butA03.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A03".equals(seating.get(i))) {
                 Seating seat = new Seating("A03", t);
@@ -1488,7 +2046,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA04ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA04.setForeground(Color.red);
+        butA04.setOpaque(true);
+        butA04.setBackground(Color.red);         
         for (int i = 0; i < seating.size(); i++) {
             if ("A04".equals(seating.get(i))) {
                 Seating seat = new Seating("A04", t);
@@ -1505,7 +2065,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA05ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA05.setForeground(Color.red);
+        butA05.setOpaque(true);
+        butA05.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A05".equals(seating.get(i))) {
                 Seating seat = new Seating("A05", t);
@@ -1522,7 +2084,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA06ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA06.setForeground(Color.red);
+        butA06.setOpaque(true);
+        butA06.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A06".equals(seating.get(i))) {
                 Seating seat = new Seating("A06", t);
@@ -1539,7 +2103,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA07ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA07.setForeground(Color.red);
+        butA07.setOpaque(true);
+        butA07.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A07".equals(seating.get(i))) {
                 Seating seat = new Seating("A07", t);
@@ -1556,7 +2122,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA08ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA08.setForeground(Color.red);
+        butA08.setOpaque(true);
+        butA08.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A08".equals(seating.get(i))) {
                 Seating seat = new Seating("A08", t);
@@ -1573,7 +2141,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA09ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA09ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA09.setForeground(Color.red);
+        butA09.setOpaque(true);
+        butA09.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A09".equals(seating.get(i))) {
                 Seating seat = new Seating("A09", t);
@@ -1590,7 +2160,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA10ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA10.setForeground(Color.red);
+        butA10.setOpaque(true);
+        butA10.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A10".equals(seating.get(i))) {
                 Seating seat = new Seating("A10", t);
@@ -1607,7 +2179,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA11ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA11.setForeground(Color.red);
+        butA11.setOpaque(true);
+        butA11.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A11".equals(seating.get(i))) {
                 Seating seat = new Seating("A11", t);
@@ -1624,7 +2198,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA12ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA12.setForeground(Color.red);
+        butA12.setOpaque(true);
+        butA12.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A12".equals(seating.get(i))) {
                 Seating seat = new Seating("A12", t);
@@ -1641,7 +2217,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA13ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA13.setForeground(Color.red);
+        butA13.setOpaque(true);
+        butA13.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A13".equals(seating.get(i))) {
                 Seating seat = new Seating("A13", t);
@@ -1658,7 +2236,9 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     private void butA14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA14ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butA14.setForeground(Color.red);
+        butA14.setOpaque(true);
+        butA14.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
             if ("A14".equals(seating.get(i))) {
                 Seating seat = new Seating("A14", t);
@@ -1729,7 +2309,7 @@ public class RegularSeatingGui extends javax.swing.JFrame {
 
         for (int i = 0; i < seating.size(); i++) {
             if ("B04".equals(seating.get(i))) {
-                Seating seat = new Seating("B03", t);
+                Seating seat = new Seating("B04", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
                 butB04.setText((show.getShowSeating()).get(17));
@@ -3340,13 +3920,15 @@ public class RegularSeatingGui extends javax.swing.JFrame {
 
     private void butClearSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClearSelectionActionPerformed
         ArrayList<Seating> seats = cart.getSeatSelection();
-        //JOptionPane.showMessageDialog(this, cart.getSeatSelection());
+        ArrayList<Seating> remSeats = new ArrayList<>();
         ArrayList<String>currentSeating = screen.getSeating();
         while(!seats.isEmpty()) {
             for (int j = seats.size() - 1; j >= 0; j--) {
                 for (int i = 0; i < currentSeating.size(); i++) {
                     if ((seats.get(j)).getSeat().equals(currentSeating.get(i))) {
                         String seat = (seats.get(j)).getSeat();
+                        remSeats.add(seats.get(j));
+                        //cart.remSeat(seat);
                         Seating s = new Seating(seat, t);
                         replaceSeating.set(i, seat);
                     }
@@ -3354,10 +3936,909 @@ public class RegularSeatingGui extends javax.swing.JFrame {
             }
             seats.clear();
         }
+        for (Seating seat:remSeats) {
+            cart.remSeat(seat);
+        }
         //Could not get repaint() or revalidate() to refresh the frame so used this to refresh.
         this.setVisible(false); 
         new RegularSeatingGui(show, t, cart).setVisible(true);
     }//GEN-LAST:event_butClearSelectionActionPerformed
+
+    private void butA01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA01PropertyChange
+        if (butA01.getText().equals("XXX")) {
+            butA01.setForeground(Color.red);
+            butA01.setOpaque(true);
+            butA01.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA01PropertyChange
+    
+    private void butA02PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA02PropertyChange
+        if (butA02.getText().equals("XXX")) {
+            butA02.setForeground(Color.red);
+            butA02.setOpaque(true);
+            butA02.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA02PropertyChange
+
+    private void butA03PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA03PropertyChange
+        if (butA03.getText().equals("XXX")) {
+            butA03.setForeground(Color.red);
+            butA03.setOpaque(true);
+            butA03.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA03PropertyChange
+
+    private void butA04PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA04PropertyChange
+        if (butA04.getText().equals("XXX")) {
+            butA04.setForeground(Color.red);
+            butA04.setOpaque(true);
+            butA04.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA04PropertyChange
+
+    private void butA05PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA05PropertyChange
+        if (butA05.getText().equals("XXX")) {
+            butA05.setForeground(Color.red);
+            butA05.setOpaque(true);
+            butA05.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA05PropertyChange
+
+    private void butA06PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA06PropertyChange
+        if (butA06.getText().equals("XXX")) {
+            butA06.setForeground(Color.red);
+            butA06.setOpaque(true);
+            butA06.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA06PropertyChange
+
+    private void butA07PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA07PropertyChange
+        if (butA07.getText().equals("XXX")) {
+            butA07.setForeground(Color.red);
+            butA07.setOpaque(true);
+            butA07.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA07PropertyChange
+
+    private void butA08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA08PropertyChange
+        if (butA08.getText().equals("XXX")) {
+            butA08.setForeground(Color.red);
+            butA08.setOpaque(true);
+            butA08.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA08PropertyChange
+
+    private void butA09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA09PropertyChange
+        if (butA09.getText().equals("XXX")) {
+            butA09.setForeground(Color.red);
+            butA09.setOpaque(true);
+            butA09.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA09PropertyChange
+
+    private void butA10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA10PropertyChange
+        if (butA10.getText().equals("XXX")) {
+            butA10.setForeground(Color.red);
+            butA10.setOpaque(true);
+            butA10.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA10PropertyChange
+
+    private void butA11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA11PropertyChange
+        if (butA11.getText().equals("XXX")) {
+            butA11.setForeground(Color.red);
+            butA11.setOpaque(true);
+            butA11.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA11PropertyChange
+
+    private void butA12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA12PropertyChange
+        if (butA12.getText().equals("XXX")) {
+            butA12.setForeground(Color.red);
+            butA12.setOpaque(true);
+            butA12.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA12PropertyChange
+
+    private void butA13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA13PropertyChange
+        if (butA13.getText().equals("XXX")) {
+            butA13.setForeground(Color.red);
+            butA13.setOpaque(true);
+            butA13.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA13PropertyChange
+
+    private void butA14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butA14PropertyChange
+        if (butA14.getText().equals("XXX")) {
+            butA14.setForeground(Color.red);
+            butA14.setOpaque(true);
+            butA14.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butA14PropertyChange
+
+    private void butB01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB01PropertyChange
+        if (butB01.getText().equals("XXX")) {
+            butB01.setForeground(Color.red);
+            butB01.setOpaque(true);
+            butB01.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB01PropertyChange
+
+    private void butB02PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB02PropertyChange
+        if (butB02.getText().equals("XXX")) {
+            butB02.setForeground(Color.red);
+            butB02.setOpaque(true);
+            butB02.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB02PropertyChange
+
+    private void butB03PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB03PropertyChange
+        if (butB03.getText().equals("XXX")) {
+            butB03.setForeground(Color.red);
+            butB03.setOpaque(true);
+            butB03.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB03PropertyChange
+
+    private void butB04PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB04PropertyChange
+        if (butB04.getText().equals("XXX")) {
+            butB04.setForeground(Color.red);
+            butB04.setOpaque(true);
+            butB04.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB04PropertyChange
+
+    private void butB05PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB05PropertyChange
+        if (butB05.getText().equals("XXX")) {
+            butB05.setForeground(Color.red);
+            butB05.setOpaque(true);
+            butB05.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB05PropertyChange
+
+    private void butB06PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB06PropertyChange
+        if (butB06.getText().equals("XXX")) {
+            butB06.setForeground(Color.red);
+            butB06.setOpaque(true);
+            butB06.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB06PropertyChange
+
+    private void butB07PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB07PropertyChange
+        if (butB07.getText().equals("XXX")) {
+            butB07.setForeground(Color.red);
+            butB07.setOpaque(true);
+            butB07.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB07PropertyChange
+
+    private void butB08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB08PropertyChange
+        if (butB08.getText().equals("XXX")) {
+            butB08.setForeground(Color.red);
+            butB08.setOpaque(true);
+            butB08.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB08PropertyChange
+
+    private void butB09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB09PropertyChange
+        if (butB09.getText().equals("XXX")) {
+            butB09.setForeground(Color.red);
+            butB09.setOpaque(true);
+            butB09.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB09PropertyChange
+
+    private void butB10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB10PropertyChange
+        if (butB10.getText().equals("XXX")) {
+            butB10.setForeground(Color.red);
+            butB10.setOpaque(true);
+            butB10.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB10PropertyChange
+
+    private void butB11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB11PropertyChange
+        if (butB11.getText().equals("XXX")) {
+            butB11.setForeground(Color.red);
+            butB11.setOpaque(true);
+            butB11.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB11PropertyChange
+
+    private void butB12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB12PropertyChange
+        if (butB12.getText().equals("XXX")) {
+            butB12.setForeground(Color.red);
+            butB12.setOpaque(true);
+            butB12.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB12PropertyChange
+
+    private void butB13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB13PropertyChange
+        if (butB13.getText().equals("XXX")) {
+            butB13.setForeground(Color.red);
+            butB13.setOpaque(true);
+            butB13.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB13PropertyChange
+
+    private void butB14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB14PropertyChange
+        if (butB14.getText().equals("XXX")) {
+            butB14.setForeground(Color.red);
+            butB14.setOpaque(true);
+            butB14.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB14PropertyChange
+
+    private void butC01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC01PropertyChange
+        if (butC01.getText().equals("XXX")) {
+            butC01.setForeground(Color.red);
+            butC01.setOpaque(true);
+            butC01.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC01PropertyChange
+
+    private void butC02PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC02PropertyChange
+        if (butC02.getText().equals("XXX")) {
+            butC02.setForeground(Color.red);
+            butC02.setOpaque(true);
+            butC02.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC02PropertyChange
+
+    private void butC03PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC03PropertyChange
+        if (butC03.getText().equals("XXX")) {
+            butC03.setForeground(Color.red);
+            butC03.setOpaque(true);
+            butC03.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC03PropertyChange
+
+    private void butC04PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC04PropertyChange
+        if (butC04.getText().equals("XXX")) {
+            butC04.setForeground(Color.red);
+            butC04.setOpaque(true);
+            butC04.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC04PropertyChange
+
+    private void butC05PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC05PropertyChange
+        if (butC05.getText().equals("XXX")) {
+            butC05.setForeground(Color.red);
+            butC05.setOpaque(true);
+            butC05.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC05PropertyChange
+
+    private void butC06PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC06PropertyChange
+        if (butC06.getText().equals("XXX")) {
+            butC06.setForeground(Color.red);
+            butC06.setOpaque(true);
+            butC06.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC06PropertyChange
+
+    private void butC07PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC07PropertyChange
+        if (butC07.getText().equals("XXX")) {
+            butC07.setForeground(Color.red);
+            butC07.setOpaque(true);
+            butC07.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC07PropertyChange
+
+    private void butC08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC08PropertyChange
+        if (butC08.getText().equals("XXX")) {
+            butC08.setForeground(Color.red);
+            butC08.setOpaque(true);
+            butC08.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC08PropertyChange
+
+    private void butC09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC09PropertyChange
+        if (butC09.getText().equals("XXX")) {
+            butC09.setForeground(Color.red);
+            butC09.setOpaque(true);
+            butC09.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC09PropertyChange
+
+    private void butC10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC10PropertyChange
+        if (butC10.getText().equals("XXX")) {
+            butC10.setForeground(Color.red);
+            butC10.setOpaque(true);
+            butC10.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC10PropertyChange
+
+    private void butC11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC11PropertyChange
+        if (butC11.getText().equals("XXX")) {
+            butC11.setForeground(Color.red);
+            butC11.setOpaque(true);
+            butC11.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC11PropertyChange
+
+    private void butC12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC12PropertyChange
+        if (butC12.getText().equals("XXX")) {
+            butC12.setForeground(Color.red);
+            butC12.setOpaque(true);
+            butC12.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC12PropertyChange
+
+    private void butC13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC13PropertyChange
+        if (butC13.getText().equals("XXX")) {
+            butC13.setForeground(Color.red);
+            butC13.setOpaque(true);
+            butC13.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC13PropertyChange
+
+    private void butC14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC14PropertyChange
+        if (butC14.getText().equals("XXX")) {
+            butC14.setForeground(Color.red);
+            butC14.setOpaque(true);
+            butC14.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butC14PropertyChange
+
+    private void butD01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD01PropertyChange
+        if (butD01.getText().equals("XXX")) {
+            butD01.setForeground(Color.red);
+            butD01.setOpaque(true);
+            butD01.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD01PropertyChange
+
+    private void butD02PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD02PropertyChange
+        if (butD02.getText().equals("XXX")) {
+            butD02.setForeground(Color.red);
+            butD02.setOpaque(true);
+            butD02.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD02PropertyChange
+
+    private void butD03PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD03PropertyChange
+        if (butD03.getText().equals("XXX")) {
+            butD03.setForeground(Color.red);
+            butD03.setOpaque(true);
+            butD03.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD03PropertyChange
+
+    private void butD04PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD04PropertyChange
+        if (butD04.getText().equals("XXX")) {
+            butD04.setForeground(Color.red);
+            butD04.setOpaque(true);
+            butD04.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD04PropertyChange
+
+    private void butD05PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD05PropertyChange
+        if (butD05.getText().equals("XXX")) {
+            butD05.setForeground(Color.red);
+            butD05.setOpaque(true);
+            butD05.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD05PropertyChange
+
+    private void butD06PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD06PropertyChange
+        if (butD06.getText().equals("XXX")) {
+            butD06.setForeground(Color.red);
+            butD06.setOpaque(true);
+            butD06.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD06PropertyChange
+
+    private void butD07PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD07PropertyChange
+        if (butD07.getText().equals("XXX")) {
+            butD07.setForeground(Color.red);
+            butD07.setOpaque(true);
+            butD07.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD07PropertyChange
+
+    private void butD08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD08PropertyChange
+        if (butD08.getText().equals("XXX")) {
+            butD08.setForeground(Color.red);
+            butD08.setOpaque(true);
+            butD08.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD08PropertyChange
+
+    private void butD09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD09PropertyChange
+        if (butD09.getText().equals("XXX")) {
+            butD09.setForeground(Color.red);
+            butD09.setOpaque(true);
+            butD09.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD09PropertyChange
+
+    private void butD10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD10PropertyChange
+        if (butD10.getText().equals("XXX")) {
+            butD10.setForeground(Color.red);
+            butD10.setOpaque(true);
+            butD10.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD10PropertyChange
+
+    private void butD11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD11PropertyChange
+        if (butD11.getText().equals("XXX")) {
+            butD11.setForeground(Color.red);
+            butD11.setOpaque(true);
+            butD11.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD11PropertyChange
+
+    private void butD12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD12PropertyChange
+        if (butD12.getText().equals("XXX")) {
+            butD12.setForeground(Color.red);
+            butD12.setOpaque(true);
+            butD12.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD12PropertyChange
+
+    private void butD13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD13PropertyChange
+        if (butD13.getText().equals("XXX")) {
+            butD13.setForeground(Color.red);
+            butD13.setOpaque(true);
+            butD13.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD13PropertyChange
+
+    private void butD14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD14PropertyChange
+        if (butD14.getText().equals("XXX")) {
+            butD14.setForeground(Color.red);
+            butD14.setOpaque(true);
+            butD14.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butD14PropertyChange
+
+    private void butE01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE01PropertyChange
+        if (butE01.getText().equals("XXX")) {
+            butE01.setForeground(Color.red);
+            butE01.setOpaque(true);
+            butE01.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE01PropertyChange
+
+    private void butE02PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE02PropertyChange
+        if (butE02.getText().equals("XXX")) {
+            butE02.setForeground(Color.red);
+            butE02.setOpaque(true);
+            butE02.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE02PropertyChange
+
+    private void butE03PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE03PropertyChange
+        if (butE03.getText().equals("XXX")) {
+            butE03.setForeground(Color.red);
+            butE03.setOpaque(true);
+            butE03.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE03PropertyChange
+
+    private void butE04PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE04PropertyChange
+        if (butE04.getText().equals("XXX")) {
+            butE04.setForeground(Color.red);
+            butE04.setOpaque(true);
+            butE04.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE04PropertyChange
+
+    private void butE05PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE05PropertyChange
+        if (butE05.getText().equals("XXX")) {
+            butE05.setForeground(Color.red);
+            butE05.setOpaque(true);
+            butE05.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE05PropertyChange
+
+    private void butE06PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE06PropertyChange
+        if (butE06.getText().equals("XXX")) {
+            butE06.setForeground(Color.red);
+            butE06.setOpaque(true);
+            butE06.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE06PropertyChange
+
+    private void butE07PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE07PropertyChange
+        if (butE07.getText().equals("XXX")) {
+            butE07.setForeground(Color.red);
+            butE07.setOpaque(true);
+            butE07.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE07PropertyChange
+
+    private void butE08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE08PropertyChange
+        if (butE08.getText().equals("XXX")) {
+            butE08.setForeground(Color.red);
+            butE08.setOpaque(true);
+            butE08.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE08PropertyChange
+
+    private void butE09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE09PropertyChange
+        if (butE09.getText().equals("XXX")) {
+            butE09.setForeground(Color.red);
+            butE09.setOpaque(true);
+            butE09.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE09PropertyChange
+
+    private void butE10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE10PropertyChange
+        if (butE10.getText().equals("XXX")) {
+            butE10.setForeground(Color.red);
+            butE10.setOpaque(true);
+            butE10.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE10PropertyChange
+
+    private void butE11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE11PropertyChange
+        if (butE11.getText().equals("XXX")) {
+            butE11.setForeground(Color.red);
+            butE11.setOpaque(true);
+            butE11.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE11PropertyChange
+
+    private void butE12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE12PropertyChange
+        if (butE12.getText().equals("XXX")) {
+            butE12.setForeground(Color.red);
+            butE12.setOpaque(true);
+            butE12.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE12PropertyChange
+
+    private void butE13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE13PropertyChange
+        if (butE13.getText().equals("XXX")) {
+            butE13.setForeground(Color.red);
+            butE13.setOpaque(true);
+            butE13.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE13PropertyChange
+
+    private void butE14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE14PropertyChange
+        if (butE14.getText().equals("XXX")) {
+            butE14.setForeground(Color.red);
+            butE14.setOpaque(true);
+            butE14.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butE14PropertyChange
+
+    private void butF01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF01PropertyChange
+        if (butF01.getText().equals("XXX")) {
+            butF01.setForeground(Color.red);
+            butF01.setOpaque(true);
+            butF01.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF01PropertyChange
+
+    private void butF02PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF02PropertyChange
+        if (butF02.getText().equals("XXX")) {
+            butF02.setForeground(Color.red);
+            butF02.setOpaque(true);
+            butF02.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF02PropertyChange
+
+    private void butF03PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF03PropertyChange
+        if (butF03.getText().equals("XXX")) {
+            butF03.setForeground(Color.red);
+            butF03.setOpaque(true);
+            butF03.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF03PropertyChange
+
+    private void butF04PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF04PropertyChange
+        if (butF04.getText().equals("XXX")) {
+            butF04.setForeground(Color.red);
+            butF04.setOpaque(true);
+            butF04.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF04PropertyChange
+
+    private void butF05PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF05PropertyChange
+        if (butF05.getText().equals("XXX")) {
+            butF05.setForeground(Color.red);
+            butF05.setOpaque(true);
+            butF05.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF05PropertyChange
+
+    private void butF06PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF06PropertyChange
+        if (butF06.getText().equals("XXX")) {
+            butF06.setForeground(Color.red);
+            butF06.setOpaque(true);
+            butF06.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF06PropertyChange
+
+    private void butF07PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF07PropertyChange
+        if (butF07.getText().equals("XXX")) {
+            butF07.setForeground(Color.red);
+            butF07.setOpaque(true);
+            butF07.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF07PropertyChange
+
+    private void butF08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF08PropertyChange
+        if (butF08.getText().equals("XXX")) {
+            butF08.setForeground(Color.red);
+            butF08.setOpaque(true);
+            butF08.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF08PropertyChange
+
+    private void butF09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF09PropertyChange
+        if (butF09.getText().equals("XXX")) {
+            butF09.setForeground(Color.red);
+            butF09.setOpaque(true);
+            butF09.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF09PropertyChange
+
+    private void butF10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF10PropertyChange
+        if (butF10.getText().equals("XXX")) {
+            butF10.setForeground(Color.red);
+            butF10.setOpaque(true);
+            butF10.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF10PropertyChange
+
+    private void butF11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF11PropertyChange
+        if (butF11.getText().equals("XXX")) {
+            butF11.setForeground(Color.red);
+            butF11.setOpaque(true);
+            butF11.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF11PropertyChange
+
+    private void butF12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF12PropertyChange
+        if (butF12.getText().equals("XXX")) {
+            butF12.setForeground(Color.red);
+            butF12.setOpaque(true);
+            butF12.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF12PropertyChange
+
+    private void butF13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF13PropertyChange
+        if (butF13.getText().equals("XXX")) {
+            butF13.setForeground(Color.red);
+            butF13.setOpaque(true);
+            butF13.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF13PropertyChange
+
+    private void butF14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF14PropertyChange
+        if (butF14.getText().equals("XXX")) {
+            butF14.setForeground(Color.red);
+            butF14.setOpaque(true);
+            butF14.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butF14PropertyChange
+
+    private void butG01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG01PropertyChange
+        if (butG01.getText().equals("XXX")) {
+            butG01.setForeground(Color.red);
+            butG01.setOpaque(true);
+            butG01.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG01PropertyChange
+
+    private void butG02PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG02PropertyChange
+        if (butG02.getText().equals("XXX")) {
+            butG02.setForeground(Color.red);
+            butG02.setOpaque(true);
+            butG02.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG02PropertyChange
+
+    private void butG03PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG03PropertyChange
+        if (butG03.getText().equals("XXX")) {
+            butG03.setForeground(Color.red);
+            butG03.setOpaque(true);
+            butG03.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG03PropertyChange
+
+    private void butG04PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG04PropertyChange
+        if (butG04.getText().equals("XXX")) {
+            butG04.setForeground(Color.red);
+            butG04.setOpaque(true);
+            butG04.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG04PropertyChange
+
+    private void butG05PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG05PropertyChange
+        if (butG05.getText().equals("XXX")) {
+            butG05.setForeground(Color.red);
+            butG05.setOpaque(true);
+            butG05.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG05PropertyChange
+
+    private void butG06PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG06PropertyChange
+        if (butG06.getText().equals("XXX")) {
+            butG06.setForeground(Color.red);
+            butG06.setOpaque(true);
+            butG06.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG06PropertyChange
+
+    private void butG07PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG07PropertyChange
+        if (butG07.getText().equals("XXX")) {
+            butG07.setForeground(Color.red);
+            butG07.setOpaque(true);
+            butG07.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG07PropertyChange
+
+    private void butG08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG08PropertyChange
+        if (butG08.getText().equals("XXX")) {
+            butG08.setForeground(Color.red);
+            butG08.setOpaque(true);
+            butG08.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG08PropertyChange
+
+    private void butG09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG09PropertyChange
+        if (butG09.getText().equals("XXX")) {
+            butG09.setForeground(Color.red);
+            butG09.setOpaque(true);
+            butG09.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG09PropertyChange
+
+    private void butG10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG10PropertyChange
+        if (butG10.getText().equals("XXX")) {
+            butG10.setForeground(Color.red);
+            butG10.setOpaque(true);
+            butG10.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG10PropertyChange
+
+    private void butG11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG11PropertyChange
+        if (butG11.getText().equals("XXX")) {
+            butG11.setForeground(Color.red);
+            butG11.setOpaque(true);
+            butG11.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG11PropertyChange
+
+    private void butG12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG12PropertyChange
+        if (butG12.getText().equals("XXX")) {
+            butG12.setForeground(Color.red);
+            butG12.setOpaque(true);
+            butG12.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG12PropertyChange
+
+    private void butG13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG13PropertyChange
+        if (butG13.getText().equals("XXX")) {
+            butG13.setForeground(Color.red);
+            butG13.setOpaque(true);
+            butG13.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG13PropertyChange
+
+    private void butG14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG14PropertyChange
+        if (butG14.getText().equals("XXX")) {
+            butG14.setForeground(Color.red);
+            butG14.setOpaque(true);
+            butG14.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butG14PropertyChange
+
+    private void butH01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH01PropertyChange
+        if (butH01.getText().equals("XXX")) {
+            butH01.setForeground(Color.red);
+            butH01.setOpaque(true);
+            butH01.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH01PropertyChange
+
+    private void butH02PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH02PropertyChange
+        if (butH02.getText().equals("XXX")) {
+            butH02.setForeground(Color.red);
+            butH02.setOpaque(true);
+            butH02.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH02PropertyChange
+
+    private void butH03PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH03PropertyChange
+        if (butH03.getText().equals("XXX")) {
+            butH03.setForeground(Color.red);
+            butH03.setOpaque(true);
+            butH03.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH03PropertyChange
+
+    private void butH04PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH04PropertyChange
+        if (butH04.getText().equals("XXX")) {
+            butH04.setForeground(Color.red);
+            butH04.setOpaque(true);
+            butH04.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH04PropertyChange
+
+    private void butH05PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH05PropertyChange
+        if (butH05.getText().equals("XXX")) {
+            butH05.setForeground(Color.red);
+            butH05.setOpaque(true);
+            butH05.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH05PropertyChange
+
+    private void butH06PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH06PropertyChange
+        if (butH06.getText().equals("XXX")) {
+            butH06.setForeground(Color.red);
+            butH06.setOpaque(true);
+            butH06.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH06PropertyChange
+
+    private void butH07PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH07PropertyChange
+        if (butH07.getText().equals("XXX")) {
+            butH07.setForeground(Color.red);
+            butH07.setOpaque(true);
+            butH07.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH07PropertyChange
+
+    private void butH08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH08PropertyChange
+        if (butH08.getText().equals("XXX")) {
+            butH08.setForeground(Color.red);
+            butH08.setOpaque(true);
+            butH08.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH08PropertyChange
+
+    private void butH09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH09PropertyChange
+        if (butH09.getText().equals("XXX")) {
+            butH09.setForeground(Color.red);
+            butH09.setOpaque(true);
+            butH09.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH09PropertyChange
+
+    private void butH10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH10PropertyChange
+        if (butH10.getText().equals("XXX")) {
+            butH10.setForeground(Color.red);
+            butH10.setOpaque(true);
+            butH10.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH10PropertyChange
+
+    private void butH11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH11PropertyChange
+        if (butH11.getText().equals("XXX")) {
+            butH11.setForeground(Color.red);
+            butH11.setOpaque(true);
+            butH11.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH11PropertyChange
+
+    private void butH12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH12PropertyChange
+        if (butH12.getText().equals("XXX")) {
+            butH12.setForeground(Color.red);
+            butH12.setOpaque(true);
+            butH12.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH12PropertyChange
+
+    private void butH13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH13PropertyChange
+        if (butH13.getText().equals("XXX")) {
+            butH13.setForeground(Color.red);
+            butH13.setOpaque(true);
+            butH13.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH13PropertyChange
+
+    private void butH14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH14PropertyChange
+        if (butH14.getText().equals("XXX")) {
+            butH14.setForeground(Color.red);
+            butH14.setOpaque(true);
+            butH14.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butH14PropertyChange
     
     public void tryRepaint() {
         repaint();

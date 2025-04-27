@@ -63,7 +63,7 @@ public class MovieSelectionGui extends javax.swing.JFrame {
             .addGap(0, 120, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
 
         Movie1Title.setFont(new java.awt.Font("Bodoni 72 Oldstyle", 1, 48)); // NOI18N
@@ -204,7 +204,7 @@ public class MovieSelectionGui extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(707, 581));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

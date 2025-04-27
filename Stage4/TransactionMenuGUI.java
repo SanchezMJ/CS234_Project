@@ -53,6 +53,7 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         getContentPane().setBackground(col);
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -69,7 +70,7 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         butPayment = new javax.swing.JButton();
         lblCustomerOutput = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Movie Theater");
         setBackground(new java.awt.Color(204, 0, 0));
         getContentPane().setLayout(null);
@@ -94,6 +95,11 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         butConcession.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butConcession.setContentAreaFilled(false);
         butConcession.setOpaque(true);
+        butConcession.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butConcessionActionPerformed(evt);
+            }
+        });
         getContentPane().add(butConcession);
         butConcession.setBounds(150, 220, 220, 58);
 
@@ -113,9 +119,9 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
 
         lblTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblTitle1.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitle1.setText("Concessions");
+        lblTitle1.setText("Purchase Menu");
         getContentPane().add(lblTitle1);
-        lblTitle1.setBounds(110, 20, 310, 46);
+        lblTitle1.setBounds(80, 20, 380, 46);
 
         butPayment.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butPayment.setText("Payment");
@@ -136,9 +142,9 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         lblCustomerOutput.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCustomerOutput.setText("Welcome  " + current.getFirstName());
         getContentPane().add(lblCustomerOutput);
-        lblCustomerOutput.setBounds(110, 80, 310, 40);
+        lblCustomerOutput.setBounds(100, 80, 310, 40);
 
-        setSize(new java.awt.Dimension(543, 494));
+        setSize(new java.awt.Dimension(542, 537));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -152,9 +158,13 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_butMainMenuActionPerformed
 
     private void butPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butPaymentActionPerformed
-        // TODO add your handling code here:
+        new PaymentGUI(current, cart).setVisible(true);
     }//GEN-LAST:event_butPaymentActionPerformed
-    
+
+    private void butConcessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butConcessionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_butConcessionActionPerformed
+
     /**
      * @param args the command line arguments
      */

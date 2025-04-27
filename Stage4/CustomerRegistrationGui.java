@@ -66,7 +66,7 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         butRegister = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
 
         jTextPane1.setEditable(false);

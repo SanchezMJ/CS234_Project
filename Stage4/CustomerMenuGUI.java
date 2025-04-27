@@ -36,7 +36,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         
     }
     public CustomerMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
-        current = new Customer();
+        current = customer;
         this.staff = staff;
         this.hashset = hashset;
         this.mem = mem;
@@ -69,7 +69,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         lblTitle2 = new javax.swing.JLabel();
         butLoginAsGuest = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Movie Theater");
         setBackground(new java.awt.Color(0, 0, 0));
         getContentPane().setLayout(null);
@@ -164,7 +164,9 @@ public class CustomerMenuGui extends javax.swing.JFrame {
             
     }
     if (current != null && current.getFirstName() != "Guest") {
-        this.setVisible(false); new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+        this.setVisible(false); 
+        TransactionMenuGUI tm = new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
+        tm.setVisible(true);
     } else {
         JOptionPane.showMessageDialog(this, "Not a member.  Please try again or login as guest.");
         }
@@ -179,7 +181,9 @@ public class CustomerMenuGui extends javax.swing.JFrame {
     }//GEN-LAST:event_butCustMainMenuActionPerformed
 
     private void butLoginAsGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butLoginAsGuestActionPerformed
-        this.setVisible(false); new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+        this.setVisible(false); 
+        TransactionMenuGUI tm = new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
+        tm.setVisible(true);
     }//GEN-LAST:event_butLoginAsGuestActionPerformed
 
     private void butCustRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustRegActionPerformed

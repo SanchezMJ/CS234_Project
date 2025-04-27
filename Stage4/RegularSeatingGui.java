@@ -169,7 +169,7 @@ public class RegularSeatingGui extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         butClearSelection = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         butA01.setText((show.getShowSeating()).get(0)
         );
@@ -986,9 +986,12 @@ public class RegularSeatingGui extends javax.swing.JFrame {
 
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
 
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setBackground(new java.awt.Color(0, 102, 255));
+        jButton4.setForeground(new java.awt.Color(0, 102, 255));
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
 
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setForeground(new java.awt.Color(51, 102, 255));
 
         butClearSelection.setText("Clear Seat Selection");
         butClearSelection.addActionListener(new java.awt.event.ActionListener() {
@@ -1405,7 +1408,7 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
                                 .addComponent(lblEntrance, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblSeatSelection, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1418,7 +1421,8 @@ public class RegularSeatingGui extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1071, 608));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void butA01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA01ActionPerformed
@@ -1460,6 +1464,7 @@ public class RegularSeatingGui extends javax.swing.JFrame {
     }//GEN-LAST:event_butA02ActionPerformed
 
     private void butCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCloseActionPerformed
+
         this.setVisible(false); 
     }//GEN-LAST:event_butCloseActionPerformed
 

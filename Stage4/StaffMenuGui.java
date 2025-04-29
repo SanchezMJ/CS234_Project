@@ -178,7 +178,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
     }//GEN-LAST:event_butDisplayStaffActionPerformed
 
     private void butRemoveStaff1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butRemoveStaff1ActionPerformed
-        // TODO add your handling code here:
+        new StaffRemoveGUI(alist,objman).setVisible(true);
     }//GEN-LAST:event_butRemoveStaff1ActionPerformed
 
     /**

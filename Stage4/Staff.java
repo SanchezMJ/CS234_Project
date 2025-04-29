@@ -96,6 +96,6 @@ public class Staff {
     //overides showEmployees() in manager to display info in a row
     @Override
     public String toString(){
-        return "name: "+ firstName + " " + lastName + " position: "+position+" pay rate: "+payRate;
+        return "Name: "+ firstName + " " + lastName +"\n "+" position: "+position+" \npay rate: "+payRate+"\n";
     }
 }

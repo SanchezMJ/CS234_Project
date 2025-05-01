@@ -67,11 +67,13 @@ public class StaffMenuGui extends javax.swing.JFrame {
         lblTitle1 = new javax.swing.JLabel();
         lblTitle2 = new javax.swing.JLabel();
         butMainMenu = new javax.swing.JButton();
-        butRemoveStaff1 = new javax.swing.JButton();
+        butInventoryMenu1 = new javax.swing.JButton();
+        butRemoveStaff2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Movie Theater");
         setBackground(new java.awt.Color(0, 0, 0));
+        setUndecorated(true);
         getContentPane().setLayout(null);
 
         butRegNewStaff.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
@@ -80,13 +82,14 @@ public class StaffMenuGui extends javax.swing.JFrame {
         butRegNewStaff.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butRegNewStaff.setContentAreaFilled(false);
         butRegNewStaff.setOpaque(true);
+        butRegNewStaff.setPreferredSize(new java.awt.Dimension(184, 38));
         butRegNewStaff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butRegNewStaffActionPerformed(evt);
             }
         });
         getContentPane().add(butRegNewStaff);
-        butRegNewStaff.setBounds(130, 200, 270, 58);
+        butRegNewStaff.setBounds(150, 200, 240, 50);
 
         butDisplayStaff.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butDisplayStaff.setText("Display Staff List");
@@ -100,7 +103,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(butDisplayStaff);
-        butDisplayStaff.setBounds(130, 130, 270, 58);
+        butDisplayStaff.setBounds(150, 140, 240, 50);
 
         butDisplayMembersList.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butDisplayMembersList.setText("Display Members List");
@@ -108,13 +111,14 @@ public class StaffMenuGui extends javax.swing.JFrame {
         butDisplayMembersList.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butDisplayMembersList.setContentAreaFilled(false);
         butDisplayMembersList.setOpaque(true);
+        butDisplayMembersList.setPreferredSize(new java.awt.Dimension(184, 38));
         butDisplayMembersList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butDisplayMembersListActionPerformed(evt);
             }
         });
         getContentPane().add(butDisplayMembersList);
-        butDisplayMembersList.setBounds(130, 340, 270, 58);
+        butDisplayMembersList.setBounds(150, 320, 240, 50);
 
         lblTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblTitle1.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,29 +138,46 @@ public class StaffMenuGui extends javax.swing.JFrame {
         butMainMenu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butMainMenu.setContentAreaFilled(false);
         butMainMenu.setOpaque(true);
+        butMainMenu.setPreferredSize(new java.awt.Dimension(184, 38));
         butMainMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butMainMenuActionPerformed(evt);
             }
         });
         getContentPane().add(butMainMenu);
-        butMainMenu.setBounds(130, 410, 270, 58);
+        butMainMenu.setBounds(150, 430, 240, 40);
 
-        butRemoveStaff1.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butRemoveStaff1.setText("Remove Staff");
-        butRemoveStaff1.setAutoscrolls(true);
-        butRemoveStaff1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butRemoveStaff1.setContentAreaFilled(false);
-        butRemoveStaff1.setOpaque(true);
-        butRemoveStaff1.addActionListener(new java.awt.event.ActionListener() {
+        butInventoryMenu1.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butInventoryMenu1.setText("Inventory Menu");
+        butInventoryMenu1.setAutoscrolls(true);
+        butInventoryMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butInventoryMenu1.setContentAreaFilled(false);
+        butInventoryMenu1.setOpaque(true);
+        butInventoryMenu1.setPreferredSize(new java.awt.Dimension(184, 38));
+        butInventoryMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butRemoveStaff1ActionPerformed(evt);
+                butInventoryMenu1ActionPerformed(evt);
             }
         });
-        getContentPane().add(butRemoveStaff1);
-        butRemoveStaff1.setBounds(130, 270, 270, 58);
+        getContentPane().add(butInventoryMenu1);
+        butInventoryMenu1.setBounds(150, 380, 240, 40);
 
-        setSize(new java.awt.Dimension(543, 540));
+        butRemoveStaff2.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butRemoveStaff2.setText("Remove Staff");
+        butRemoveStaff2.setAutoscrolls(true);
+        butRemoveStaff2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butRemoveStaff2.setContentAreaFilled(false);
+        butRemoveStaff2.setOpaque(true);
+        butRemoveStaff2.setPreferredSize(new java.awt.Dimension(184, 38));
+        butRemoveStaff2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butRemoveStaff2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(butRemoveStaff2);
+        butRemoveStaff2.setBounds(150, 260, 240, 50);
+
+        setSize(new java.awt.Dimension(529, 532));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -177,9 +198,13 @@ public class StaffMenuGui extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, objman.getListOfEmployees());
     }//GEN-LAST:event_butDisplayStaffActionPerformed
 
-    private void butRemoveStaff1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butRemoveStaff1ActionPerformed
+    private void butInventoryMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butInventoryMenu1ActionPerformed
+        this.setVisible(false);new InventoryMenuGui(inventory, prod).setVisible(true);
+    }//GEN-LAST:event_butInventoryMenu1ActionPerformed
+
+    private void butRemoveStaff2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butRemoveStaff2ActionPerformed
         new StaffRemoveGUI(alist,objman).setVisible(true);
-    }//GEN-LAST:event_butRemoveStaff1ActionPerformed
+    }//GEN-LAST:event_butRemoveStaff2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,9 +251,10 @@ public class StaffMenuGui extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butDisplayMembersList;
     private javax.swing.JButton butDisplayStaff;
+    private javax.swing.JButton butInventoryMenu1;
     private javax.swing.JButton butMainMenu;
     private javax.swing.JButton butRegNewStaff;
-    private javax.swing.JButton butRemoveStaff1;
+    private javax.swing.JButton butRemoveStaff2;
     private javax.swing.JLabel lblTitle1;
     private javax.swing.JLabel lblTitle2;
     // End of variables declaration//GEN-END:variables

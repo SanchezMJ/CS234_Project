@@ -46,7 +46,7 @@ public class Concession {
     
     @Override
     public String toString(){
-       return product+" Price: $"+String.format("%.2f",price);
+       return product+" Price: $"+String.format("%.2f",price)+"Stock: "+totalStock+"\n";
     }
     
 }

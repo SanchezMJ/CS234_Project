@@ -41,6 +41,9 @@ public class Cart {
         return seatSelection;
     }
     
+    public double getTax() {
+        return tax;
+    }
     public String getSeatId(Object seat) {
         Seating s = new Seating();
         String st;

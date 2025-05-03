@@ -46,7 +46,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
         this.inventory = inventory;
         this.prod = prod;
         this.cart = cart;
-        shows = new ArrayList<Showtimes>();
+        this.shows = shows;
         initComponents();
         
         getContentPane().setBackground(Color.black);

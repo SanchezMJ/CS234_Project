@@ -146,7 +146,7 @@ public class InventoryAdd extends javax.swing.JFrame {
     }//GEN-LAST:event_jProductAmountActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String name=jProductName.getText();
+        String name=jProductName.getText().trim();
         double price=Double.parseDouble(jProductPrice.getText());
         int totalStock=Integer.parseInt(jProductAmount.getText());
         Concession newCon = new Concession(name,price,totalStock);

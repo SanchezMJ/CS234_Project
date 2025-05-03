@@ -49,5 +49,18 @@ public class Concession {
        return product+" Price: $"+String.format("%.2f",price)+" Stock: "+totalStock+"\n";
     }
     
+    @Override
+    public boolean equals(Object o){
+        if(this==o) return true;
+        if(!(o instanceof Concession))return false;
+        Concession other=(Concession)o;
+        return product!=null&&product.equalsIgnoreCase(other.product);
+    }
+    
+    @Override
+    public int hashCode(){
+        return product!=null?product.toLowerCase().hashCode():0;
+    }
+    
 }
 

@@ -169,7 +169,7 @@ public class InventoryMenuGui extends javax.swing.JFrame {
     }//GEN-LAST:event_butAddInventoryActionPerformed
 
     private void butRemoveInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butRemoveInventoryActionPerformed
-        
+        new InventoryRemove(inventory, prod).setVisible(true);
     }//GEN-LAST:event_butRemoveInventoryActionPerformed
 
     private void butShowInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butShowInventoryActionPerformed

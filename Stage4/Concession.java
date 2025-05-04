@@ -44,6 +44,18 @@ public class Concession {
         return totalStock;
     }
     
+    public boolean checkStock(int quantity){
+        return totalStock>=quantity;
+    }
+    
+    public void reduceStock(int quantity){
+        if(checkStock(quantity)){
+            totalStock=totalStock-quantity;
+        }else{
+            System.out.println("Out of Stock");
+        }
+    }
+    
     @Override
     public String toString(){
        return product+" Price: $"+String.format("%.2f",price)+" Stock: "+totalStock+"\n";

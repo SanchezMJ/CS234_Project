@@ -147,12 +147,32 @@ public class InventoryAdd extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String name=jProductName.getText().trim();
-        double price=Double.parseDouble(jProductPrice.getText());
-        int totalStock=Integer.parseInt(jProductAmount.getText());
-        Concession newCon = new Concession(name,price,totalStock);
-        inventory.addProduct(newCon);
-        JOptionPane.showMessageDialog(this, "Product Added Successfully!");
-                this.setVisible(false);
+        double price;
+        int totalStock;
+        try{
+            price=Double.parseDouble(jProductPrice.getText().trim());
+            totalStock=Integer.parseInt(jProductAmount.getText().trim());
+            if(name.isEmpty()){
+                JOptionPane.showMessageDialog(this,"Product name cannot by empty.");
+                return;
+            }
+            if(price<0||totalStock<0){
+                JOptionPane.showMessageDialog(this,"Price and stock must by positive amounts");
+                return;
+                }
+            Concession existing=inventory.findProductByName(name);
+            if(existing!=null){
+                existing.setPrice(price);
+                existing.setTotalStock(existing.getTotalStock()+totalStock);
+                JOptionPane.showMessageDialog(this, "Existing product stock and price update.");
+                        }else{
+                Concession newCon=new Concession(name,price,totalStock);
+                inventory.addProduct(newCon);
+            }
+            this.setVisible(false);
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(this, "Stock and price much be numbers.");
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

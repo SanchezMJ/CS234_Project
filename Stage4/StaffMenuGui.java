@@ -35,7 +35,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
         
     }
     public StaffMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
-        current = customer;
+        this.current = new Customer();
         this.staff = staff;
         this.hashset = hashset;
         this.mem = mem;
@@ -199,7 +199,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
     }//GEN-LAST:event_butDisplayStaffActionPerformed
 
     private void butInventoryMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butInventoryMenu1ActionPerformed
-        this.setVisible(false);new InventoryMenuGui(inventory, prod).setVisible(true);
+        this.setVisible(false);new InventoryMenuGui(inventory, prod,cart).setVisible(true);
     }//GEN-LAST:event_butInventoryMenu1ActionPerformed
 
     private void butRemoveStaff2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butRemoveStaff2ActionPerformed

@@ -29,9 +29,10 @@ public class InventoryMenuGui extends javax.swing.JFrame {
     /**
      * Creates new form InventoryMenuGui
      */
-    public InventoryMenuGui(Inventory inventory, ArrayList<Concession> prod) {
+    public InventoryMenuGui(Inventory inventory, ArrayList<Concession> prod, Cart cart) {
         this.inventory=inventory;
         this.prod=prod;
+        this.cart=cart;
         initComponents();
         getContentPane().setBackground(Color.black);
     }

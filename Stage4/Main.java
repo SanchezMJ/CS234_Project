@@ -592,7 +592,7 @@ public static void main(String[] args) {
         
         //Generate Movie objects
         Movie m1 = new Movie("The Dark Knight", "2h 32m", "PG-13", "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.");
-        Movie m2 = new Movie("Heat", "2h 50m", "R", "Master criminal Neil McMauley...");
+        Movie m2 = new Movie("Heat", "2h 50m", "R", "Master criminal Neil McMauley and a dedicated police officer, Vincent Hanna who find themselves locked in a cat-and-mouse game as McCauley plans one last big heist before retiring.");
         
         //Adds showtimes
         Showtimes st1 = new Showtimes(m1, 1930, screen1);

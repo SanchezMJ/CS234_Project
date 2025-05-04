@@ -31,6 +31,15 @@ public class Inventory {
     public ArrayList<Concession> getProductList(){
         return productList;
     }
+    
+    public Concession findProductByName(String name){
+        for(Concession product: productList){
+            if(product.getProduct().equalsIgnoreCase(name)){
+                return product;
+            }
+        }
+        return null;
+    }
 
     //show inventory list if anything is in it
     public void showAllProducts(){

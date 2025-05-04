@@ -162,7 +162,7 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_butPaymentActionPerformed
 
     private void butConcessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butConcessionActionPerformed
-        // TODO add your handling code here:
+        new ConcessionMenuGUI(inventory, prod, cart).setVisible(true);
     }//GEN-LAST:event_butConcessionActionPerformed
 
     /**

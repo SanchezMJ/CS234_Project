@@ -1,6 +1,7 @@
 
 package com.mycompany.cs234project;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -600,13 +601,12 @@ public static void main(String[] args) {
         Showtimes st2 = new Showtimes(m2, 2230, screen5);
         shows.addShowTime(st2);
         
-        //generate products for concession and add them to productList in inventory
-        Concession popcorn = new Concession("Popcorn", 5.00,5);
-        inventory.addProduct(popcorn);
-        Concession soda = new Concession("Soda", 3.00,6);
-        inventory.addProduct(soda);
-        Concession candy = new Concession("Candy", 2.00,7);
-        inventory.addProduct(candy);
+        try{
+            inventory.importInventory("inventory.csv");
+        }catch(IOException e){
+            System.err.println("Error importing inventory: "+e.getMessage());
+        }
+        inventory.showAllProducts();
         
 //        MainMenu(current, currentStaff, newest, mem1, authCust, staffList, manage, authStaff,inventory, products, cart1, showtimes);
         MainGui mainG = new MainGui(current, currentStaff, newest, mem1, authCust, staffList, manage, authStaff,inventory, products, cart1, showtimes);

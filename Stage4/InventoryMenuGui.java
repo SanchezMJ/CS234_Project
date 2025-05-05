@@ -34,12 +34,28 @@ public class InventoryMenuGui extends javax.swing.JFrame {
         this.prod=prod;
         this.cart=cart;
         initComponents();
+        updateInventoryTable();
         getContentPane().setBackground(Color.black);
+        
     }
 
     private InventoryMenuGui() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    private void updateInventoryTable(){
+        String[] columnNames={"Item","Price","Stock"};
+        Object[][] data=new Object[prod.size()][3];
+        
+        for(int i=0;i<prod.size();i++){
+            Concession item=prod.get(i);
+            data[i][0]=item.getProduct();
+            data[i][1]=String.format("$%.2f",item.getPrice());
+            data[i][2]=item.getTotalStock();
+    }
+    jTable1.setModel(new javax.swing.table.DefaultTableModel(data,columnNames));
+}
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -50,53 +66,13 @@ public class InventoryMenuGui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        butAddInventory = new javax.swing.JButton();
-        butRemoveInventory = new javax.swing.JButton();
-        butShowInventory = new javax.swing.JButton();
         lblTitle1 = new javax.swing.JLabel();
         lblTitle2 = new javax.swing.JLabel();
         butStaffMenu = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        butAddInventory.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butAddInventory.setText("Add to Inventory");
-        butAddInventory.setAutoscrolls(true);
-        butAddInventory.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butAddInventory.setContentAreaFilled(false);
-        butAddInventory.setOpaque(true);
-        butAddInventory.setPreferredSize(new java.awt.Dimension(184, 38));
-        butAddInventory.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butAddInventoryActionPerformed(evt);
-            }
-        });
-
-        butRemoveInventory.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butRemoveInventory.setText("Remove Inventory");
-        butRemoveInventory.setAutoscrolls(true);
-        butRemoveInventory.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butRemoveInventory.setContentAreaFilled(false);
-        butRemoveInventory.setOpaque(true);
-        butRemoveInventory.setPreferredSize(new java.awt.Dimension(184, 38));
-        butRemoveInventory.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butRemoveInventoryActionPerformed(evt);
-            }
-        });
-
-        butShowInventory.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butShowInventory.setText("Display Inventory");
-        butShowInventory.setAutoscrolls(true);
-        butShowInventory.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
-        butShowInventory.setContentAreaFilled(false);
-        butShowInventory.setOpaque(true);
-        butShowInventory.setPreferredSize(new java.awt.Dimension(184, 38));
-        butShowInventory.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butShowInventoryActionPerformed(evt);
-            }
-        });
 
         lblTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblTitle1.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,11 +95,24 @@ public class InventoryMenuGui extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap(109, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -134,12 +123,12 @@ public class InventoryMenuGui extends javax.swing.JFrame {
                                 .addComponent(lblTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(85, 85, 85))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(butAddInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(butShowInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(butRemoveInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(butStaffMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(128, 128, 128))))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addComponent(butStaffMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,32 +139,16 @@ public class InventoryMenuGui extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(lblTitle2)))
-                .addGap(18, 18, 18)
-                .addComponent(butShowInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(butAddInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(butRemoveInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
                 .addComponent(butStaffMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void butAddInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butAddInventoryActionPerformed
-        new InventoryAdd(prod,inventory).setVisible(true);
-    }//GEN-LAST:event_butAddInventoryActionPerformed
-
-    private void butRemoveInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butRemoveInventoryActionPerformed
-        new InventoryRemove(inventory, prod).setVisible(true);
-    }//GEN-LAST:event_butRemoveInventoryActionPerformed
-
-    private void butShowInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butShowInventoryActionPerformed
-        JOptionPane.showMessageDialog(this, inventory.getProductList());
-    }//GEN-LAST:event_butShowInventoryActionPerformed
 
     private void butStaffMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butStaffMenuActionPerformed
         this.setVisible(false); new StaffMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
@@ -217,10 +190,9 @@ public class InventoryMenuGui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton butAddInventory;
-    private javax.swing.JButton butRemoveInventory;
-    private javax.swing.JButton butShowInventory;
     private javax.swing.JButton butStaffMenu;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblTitle1;
     private javax.swing.JLabel lblTitle2;
     // End of variables declaration//GEN-END:variables

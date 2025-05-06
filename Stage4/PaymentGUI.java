@@ -140,8 +140,10 @@ public class PaymentGUI extends javax.swing.JFrame {
 
     private void tfRecieptPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tfRecieptPropertyChange
         if (am == 0) {
+            //System.out.println("am==0 " + am);
             cart.showCart();
         } else {
+            //System.out.println("else " + am);
             cart.showCartBalance(cash);
         }
     }//GEN-LAST:event_tfRecieptPropertyChange

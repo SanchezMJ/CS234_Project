@@ -43,7 +43,7 @@ public class InventoryMenuGui extends javax.swing.JFrame {
         this.prod =prod;
         System.out.println("prod is"+prod);
         this.cart = cart;
-        this.shows = shows;
+        this.shows = show;
         initComponents();
         updateInventoryTable();
         getContentPane().setBackground(Color.black);

@@ -20,6 +20,7 @@ public class CashPaymentGUI extends javax.swing.JFrame {
     private double totalWithTax;
     private double change;
     private double paid;
+    private double balance;
     /**
      * Creates new form CashPaymentGUI
      */
@@ -34,6 +35,7 @@ public class CashPaymentGUI extends javax.swing.JFrame {
         lblDue = new JLabel();
         this.change = 0.0;
         this.paid = 0.0;
+        this.balance = 0.0;
         lblDue.setText("0");
         lblDue.setVisible(false);
         getContentPane().setBackground(Color.darkGray);
@@ -132,7 +134,8 @@ public class CashPaymentGUI extends javax.swing.JFrame {
                 cart.setAmountPaid(num);
                 String text = String.format("%.2f", change);
                 changeText = "Change Due: $" + text;
-                cart.setTotalWithTax(0.0);
+                //cart.setTotalWithTax(0.0);
+                
                 lblDue.setForeground(Color.green);
                 lblDue.setVisible(true);
                 lblDue.setText(changeText);
@@ -140,6 +143,7 @@ public class CashPaymentGUI extends javax.swing.JFrame {
             change = totalWithTax - paid;
             cart.setTotalWithTax(change);
             cart.setAmountPaid(num);
+            balance = change;
             String text = String.format("%.2f", change);
             changeText = "Amount Due: $" + text;
             lblDue.setForeground(Color.red);
@@ -153,23 +157,25 @@ public class CashPaymentGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfCashGivenActionPerformed
 
     private void btnCompleteTransActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteTransActionPerformed
-        if (cart.getTotalWithTax() > 0) {
+        if (balance > 0) {
             this.setVisible(false);
-            System.out.print("total > 0" + cart.getTotalWithTax());
+            //System.out.print("total > 0" + cart.getTotalWithTax());
             new PaymentGUI(customer, cart, change, paid).setVisible(true);
         } else {
-            System.out.print("total < 0" + cart.getTotalWithTax());
+            //System.out.print("total < 0" + cart.getTotalWithTax());
             if (customer.getFirstName().equals("Guest")) {
-                new ReceiptGUI(customer, cart).setVisible(true);
+                new ReceiptGUI(customer, cart, change, paid).setVisible(true);
 
             } else {
                 double points = total/1;
                 customer.addPoints(points);
-                new ReceiptGUI(customer, cart).setVisible(true);
+                new ReceiptGUI(customer, cart, change, paid).setVisible(true);
             }
-            
+        //System.out.println("complete, cart emptied, amountPaid ==0");   
         cart.emptyCart();
-        cart.setAmountPaid(0.0);
+        //cart.setAmountPaid(0.0);
+        double ap = cart.getAmountPaid();
+        System.out.println("AmountPaid: " + ap);
         this.setVisible(false);
         }
         

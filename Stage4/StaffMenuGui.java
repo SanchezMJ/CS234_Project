@@ -31,11 +31,8 @@ public class StaffMenuGui extends javax.swing.JFrame {
     /**
      * Creates new form MainGui
      */
-    
-    private StaffMenuGui() {
-        
-    }
-    public StaffMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
+ 
+    public StaffMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows){
         this.current = new Customer();
         this.staff = staff;
         this.hashset = hashset;
@@ -161,11 +158,11 @@ public class StaffMenuGui extends javax.swing.JFrame {
     }//GEN-LAST:event_butMainMenuActionPerformed
 
     private void butDisplayStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butDisplayStaffActionPerformed
-        this.setVisible(false);new EmployeeRoster(objman,staff).setVisible(true);
+        this.setVisible(false);new EmployeeRoster(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butDisplayStaffActionPerformed
 
     private void butInventoryMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butInventoryMenu1ActionPerformed
-        this.setVisible(false);new InventoryMenuGui(inventory, prod,cart).setVisible(true);
+        this.setVisible(false);new InventoryMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butInventoryMenu1ActionPerformed
 
     /**
@@ -205,7 +202,6 @@ public class StaffMenuGui extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StaffMenuGui().setVisible(true);
             }
         });
     }

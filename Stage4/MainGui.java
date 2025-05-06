@@ -25,6 +25,7 @@ public class MainGui extends javax.swing.JFrame {
     private ArrayList<Staff> alist;
     private ArrayList<Concession> prod;
     private ArrayList<Showtimes> shows;
+    private StaffMenuGui staffMenu;
     
     /**
      * Creates new form MainGui

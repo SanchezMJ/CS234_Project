@@ -3,9 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.cs234project;
-import com.mycompany.cs234project.Inventory;
-import com.mycompany.cs234project.Concession;
 import java.awt.Color;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import javax.swing.JOptionPane;
@@ -26,21 +25,29 @@ public class InventoryMenuGui extends javax.swing.JFrame {
     private ArrayList<Staff> alist;
     private ArrayList<Concession> prod;
     private ArrayList<Showtimes> shows;
+    private StaffMenuGui staffMenu;
     /**
      * Creates new form InventoryMenuGui
      */
-    public InventoryMenuGui(Inventory inventory, ArrayList<Concession> prod, Cart cart) {
-        this.inventory=inventory;
-        this.prod=prod;
-        this.cart=cart;
+    public InventoryMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> show){
+         this.current = new Customer();
+        this.staff = staff;
+        this.hashset = hashset;
+        this.mem = mem;
+        this.obauth = obauth;
+        this.alist = alist;
+        this.objman = objman;
+        System.out.println("objman is"+objman);
+        this.objauth = objauth;
+        this.inventory = inventory;
+        this.prod =prod;
+        System.out.println("prod is"+prod);
+        this.cart = cart;
+        this.shows = shows;
         initComponents();
         updateInventoryTable();
         getContentPane().setBackground(Color.black);
         
-    }
-
-    private InventoryMenuGui() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     private void updateInventoryTable(){
@@ -201,7 +208,7 @@ public class InventoryMenuGui extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jProductAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRemoveButton)
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
@@ -301,7 +308,6 @@ public class InventoryMenuGui extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InventoryMenuGui().setVisible(true);
             }
         });
     }

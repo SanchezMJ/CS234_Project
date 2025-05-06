@@ -28,14 +28,28 @@ public class EmployeeRoster extends javax.swing.JFrame {
     private ArrayList<Staff> alist;
     private ArrayList<Concession> prod;
     private ArrayList<Showtimes> shows;
+    private StaffMenuGui staffMenu;
 
     /**
      * Creates new form EmployeeRoster
      */
-    public EmployeeRoster(EmployeeManager objman, Staff staff){
+    public EmployeeRoster(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows){
         newStaf=new Staff();
-        this.objman=objman;
-        this.staff=staff;
+        this.current = new Customer();
+        this.staff = staff;
+        this.hashset = hashset;
+        this.mem = mem;
+        this.obauth = obauth;
+        this.alist = alist;
+        this.objman = objman;
+        System.out.println("objman is"+objman);
+        this.objauth = objauth;
+        this.inventory = inventory;
+        this.prod =prod;
+        System.out.println("prod is"+prod);
+        this.cart = cart;
+        this.shows = shows;
+        this.staffMenu=staffMenu;
         initComponents();
         updateRosterTable();
         getContentPane().setBackground(Color.black);
@@ -266,7 +280,7 @@ public class EmployeeRoster extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void butStaffMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butStaffMenuActionPerformed
-        this.setVisible(false); new StaffMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+         this.setVisible(false); new StaffMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butStaffMenuActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -371,7 +385,8 @@ String userName=tfUserName7.getText();
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+            public void run() { 
+                
                 
             }
         });

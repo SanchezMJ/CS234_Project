@@ -158,7 +158,7 @@ public class Cart {
                 c += "\n\nBalance: $" + String.format("%.2f",totalWithTax);
             }else if (seatSelection.isEmpty() && !listOfProducts.isEmpty()) {
                 for (Concession p:listOfProducts) {
-                c += "Seat: " + p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
+                c += p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
                 }
                 c += "\nSales tax: $" + String.format("%.2f", taxTotal);
                 c += "\nTOTAL: $" + String.format("%.2f", total);
@@ -168,12 +168,13 @@ public class Cart {
                 for (Seating a:seatSelection) {
                 c += "Seat: " + a.getSeat() + " Price: $" + String.format("%.2f",a.getSeatCost()) + "\n";
                 }
+                c += "\n";
                 for (Concession p:listOfProducts) {
-                c += "\nSeat: " + p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
+                c += p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
                 }
 
                 c += "\nSales tax: $" + String.format("%.2f", taxTotal);
-                c += "\n\nTOTAL: $" + String.format("%.2f", total);
+                c += "\nTOTAL: $" + String.format("%.2f", total);
                 c += "\nPaid: $" + String.format("%.2f", amountPaid);
                 c += "\n\nBalance: $" + String.format("%.2f",totalWithTax);
             }
@@ -188,7 +189,7 @@ public class Cart {
                 c += "\nTOTAL: $" + String.format("%.2f", totalWithTax);
             }else if (seatSelection.isEmpty() && !listOfProducts.isEmpty()) {
                 for (Concession p:listOfProducts) {
-                c += "Seat: " + p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
+                c += p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
                 }
                 c += "\nSales tax: $" + String.format("%.2f", taxTotal);
                 c += "\nTOTAL: $" + String.format("%.2f", totalWithTax);
@@ -196,12 +197,13 @@ public class Cart {
                 for (Seating a:seatSelection) {
                 c += "Seat: " + a.getSeat() + " Price: $" + String.format("%.2f",a.getSeatCost()) + "\n";
                 }
+                c += "\n";
                 for (Concession p:listOfProducts) {
-                c += "\nSeat: " + p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
+                c += p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
                 }
 
                 c += "\nSales tax: $" + String.format("%.2f", taxTotal);
-                c += "\n\nTOTAL: $" + String.format("%.2f", totalWithTax);
+                c += "\nTOTAL: $" + String.format("%.2f", totalWithTax);
             }
         }
     return c;
@@ -224,7 +226,7 @@ public class Cart {
             c += "\n\nAmount paid: " + String.format("%.2f", (amountPaid));
         }else if (seatSelection.isEmpty() && !listOfProducts.isEmpty()) {
             for (Concession p:listOfProducts) {
-            c += "Seat: " + p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
+            c += p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
             }
             c += "\nSales tax: $" + String.format("%.2f", taxTotal);
             //c += "\nAmount paid: " + String.format("%.2f", (paid));
@@ -234,13 +236,14 @@ public class Cart {
             for (Seating a:seatSelection) {
             c += "Seat: " + a.getSeat() + " Price: $" + String.format("%.2f",a.getSeatCost()) + "\n";
             }
+            c += "\n";
             for (Concession p:listOfProducts) {
-            c += "\nSeat: " + p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
+            c += p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
             }
             
             c += "\nSales tax: $" + String.format("%.2f", taxTotal);
             //c += "\nAmount paid: " + String.format("%.2f", (paid));
-            c += "\n\nTOTAL: $" + String.format("%.2f", totalWithTax);
+            c += "\nTOTAL: $" + String.format("%.2f", totalWithTax);
             c += "\n\nAmount paid: " + String.format("%.2f", (amountPaid));
         }
 
@@ -264,7 +267,7 @@ public class Cart {
             c += "\n\nAmount paid: " + String.format("%.2f", (amountPaid));
         }else if (seatSelection.isEmpty() && !listOfProducts.isEmpty()) {
             for (Concession p:listOfProducts) {
-            c += "Seat: " + p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
+            c += p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
             }
             c += "\nSales tax: $" + String.format("%.2f", taxTotal);
             //c += "\nAmount paid: " + String.format("%.2f", (paid));
@@ -274,13 +277,14 @@ public class Cart {
             for (Seating a:seatSelection) {
             c += "Seat: " + a.getSeat() + " Price: $" + String.format("%.2f",a.getSeatCost()) + "\n";
             }
+            c += "\n";
             for (Concession p:listOfProducts) {
-            c += "\nSeat: " + p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
+            c += p.getProduct() + " Price: $" + String.format("%.2f",p.getPrice()) + "\n";
             }
             
             c += "\nSales tax: $" + String.format("%.2f", taxTotal);
             //c += "\nAmount paid: " + String.format("%.2f", (paid));
-            c += "\n\nTOTAL: $" + String.format("%.2f", total);
+            c += "\nTOTAL: $" + String.format("%.2f", total);
             c += "\n\nAmount paid: " + String.format("%.2f", (amountPaid));
         }
 

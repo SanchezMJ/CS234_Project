@@ -1,22 +1,13 @@
-package com.mycompany.cs234project;
-
-
-import com.mycompany.cs234project.Authentication;
-import com.mycompany.cs234project.Customer;
-import com.mycompany.cs234project.Membership;
-import java.awt.Color;
-import java.util.HashSet;
-import java.util.InputMismatchException;
-import javax.swing.JOptionPane;
-import javax.swing.*;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package com.mycompany.cs234project;
 
+import java.awt.Color;
+import java.util.HashSet;
+import java.util.InputMismatchException;
+import javax.swing.JOptionPane;
 /**
  *
  * @author mjsanchez
@@ -24,21 +15,20 @@ import java.awt.event.FocusListener;
 public class CustomerRegistrationGui extends javax.swing.JFrame {
     private Customer newCust;
     private Membership member;
-    //private HashSet<Customer>members;
     /**
-     * Creates new form CustomerRegistrationGui
+     * Creates new form CustomerRegistrationGUII
      */
     public CustomerRegistrationGui() {
-        
+        initComponents();
     }
+
     public CustomerRegistrationGui(HashSet<Customer> members, Membership member, Authentication authentication) {
         newCust = new Customer();
         this.member = member;
         //this.members = members;
         initComponents();
-        getContentPane().setBackground(Color.black);
+        getContentPane().setBackground(Color.DARK_GRAY);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,31 +38,29 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tpFirstName = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        lblCustomerRegistration = new javax.swing.JLabel();
+        lblFirstName = new javax.swing.JLabel();
         tfFirstName = new javax.swing.JTextField();
-        tpLastName = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
+        lblLastName = new javax.swing.JLabel();
         tfLastName = new javax.swing.JTextField();
-        tpBirthday = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
-        tfBirthday = new javax.swing.JTextField();
-        tpPhoneNumber = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
+        lblBirthdate = new javax.swing.JLabel();
+        tfBirthdate = new javax.swing.JTextField();
+        lblPhoneNumber = new javax.swing.JLabel();
         tfPhoneNumber = new javax.swing.JTextField();
-        tpPassword = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        lblPassword = new javax.swing.JLabel();
         tfPassword = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        butRegister = new javax.swing.JButton();
+        btnRegister = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setAlwaysOnTop(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextPane1.setEditable(false);
-        jTextPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextPane1.setText("First Name");
-        tpFirstName.setViewportView(jTextPane1);
+        lblCustomerRegistration.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblCustomerRegistration.setForeground(new java.awt.Color(255, 255, 255));
+        lblCustomerRegistration.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCustomerRegistration.setText("Customer Registration");
+
+        lblFirstName.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        lblFirstName.setForeground(new java.awt.Color(255, 255, 255));
+        lblFirstName.setText("First Name");
 
         tfFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,9 +68,9 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
             }
         });
 
-        jTextPane2.setEditable(false);
-        jTextPane2.setText("Last Name");
-        tpLastName.setViewportView(jTextPane2);
+        lblLastName.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        lblLastName.setForeground(new java.awt.Color(255, 255, 255));
+        lblLastName.setText("Last Name");
 
         tfLastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,19 +78,19 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
             }
         });
 
-        jTextPane3.setEditable(false);
-        jTextPane3.setText("Birthdate (mm/dd/yyyy)");
-        tpBirthday.setViewportView(jTextPane3);
+        lblBirthdate.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        lblBirthdate.setForeground(new java.awt.Color(255, 255, 255));
+        lblBirthdate.setText("Birthdate mm/dd/yyy");
 
-        tfBirthday.addActionListener(new java.awt.event.ActionListener() {
+        tfBirthdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfBirthdayActionPerformed(evt);
+                tfBirthdateActionPerformed(evt);
             }
         });
 
-        jTextPane4.setEditable(false);
-        jTextPane4.setText("10 digit Phone Number");
-        tpPhoneNumber.setViewportView(jTextPane4);
+        lblPhoneNumber.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        lblPhoneNumber.setForeground(new java.awt.Color(255, 255, 255));
+        lblPhoneNumber.setText("10 Digit Phone Number");
 
         tfPhoneNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,9 +98,9 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
             }
         });
 
-        jTextPane5.setEditable(false);
-        jTextPane5.setText("Password");
-        tpPassword.setViewportView(jTextPane5);
+        lblPassword.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(255, 255, 255));
+        lblPassword.setText("Password");
 
         tfPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,15 +108,10 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Helvetica", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Customer Registration");
-
-        butRegister.setText("Reigster");
-        butRegister.addActionListener(new java.awt.event.ActionListener() {
+        btnRegister.setText("Register");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butRegisterActionPerformed(evt);
+                btnRegisterActionPerformed(evt);
             }
         });
 
@@ -137,90 +120,97 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tpPhoneNumber)
-                    .addComponent(tpPassword)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(tpBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(tpLastName)
-                    .addComponent(tpFirstName))
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(butRegister)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tfFirstName)
-                        .addComponent(tfLastName)
-                        .addComponent(tfBirthday)
-                        .addComponent(tfPhoneNumber)
-                        .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(20, 20, 20))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(84, 84, 84)
+                        .addComponent(lblCustomerRegistration, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addComponent(tfLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addComponent(tfFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblBirthdate, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addComponent(tfBirthdate, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addComponent(tfPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnRegister)
+                                    .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblCustomerRegistration, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tpFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tfFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfLastName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tpLastName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tfBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tpBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tfLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tfPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tpPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblBirthdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tfBirthdate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tpPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblPhoneNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tfPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(butRegister)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnRegister)
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(491, 471));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLastNameActionPerformed
-
-    }//GEN-LAST:event_tfLastNameActionPerformed
-
     private void tfFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfFirstNameActionPerformed
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_tfFirstNameActionPerformed
 
-    private void tfBirthdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfBirthdayActionPerformed
+    private void tfLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLastNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfLastNameActionPerformed
 
-    }//GEN-LAST:event_tfBirthdayActionPerformed
+    private void tfBirthdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfBirthdateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfBirthdateActionPerformed
 
     private void tfPhoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPhoneNumberActionPerformed
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_tfPhoneNumberActionPerformed
 
     private void tfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPasswordActionPerformed
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_tfPasswordActionPerformed
 
-    private void butRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butRegisterActionPerformed
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
         String lastName = tfLastName.getText();
         newCust.setLastName(lastName);
         String firstName = tfFirstName.getText();
         newCust.setFirstName(firstName);
-        String birthday = tfBirthday.getText();
+        String birthday = tfBirthdate.getText();
         newCust.setDOB(birthday);
         String pNumber = tfPhoneNumber.getText();
         String password = tfPassword.getText();
@@ -233,14 +223,12 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Registration Successful!");
                 this.setVisible(false);
             }else{
-                JOptionPane.showMessageDialog(this, "Incorrect number of digits. Please try again.");
+                JOptionPane.showMessageDialog(this, "Incorrect number of phone number digits. Please try again.");
             }
             }catch(InputMismatchException e){
-            JOptionPane.showMessageDialog(this, "Invalid input.");
-            }
-        //this.setVisible(false); new CustomerMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
-        
-    }//GEN-LAST:event_butRegisterActionPerformed
+        JOptionPane.showMessageDialog(this, "Invalid input.");
+        }
+    }//GEN-LAST:event_btnRegisterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,6 +256,7 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(CustomerRegistrationGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -278,22 +267,17 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton butRegister;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane3;
-    private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextField tfBirthday;
+    private javax.swing.JButton btnRegister;
+    private javax.swing.JLabel lblBirthdate;
+    private javax.swing.JLabel lblCustomerRegistration;
+    private javax.swing.JLabel lblFirstName;
+    private javax.swing.JLabel lblLastName;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblPhoneNumber;
+    private javax.swing.JTextField tfBirthdate;
     private javax.swing.JTextField tfFirstName;
     private javax.swing.JTextField tfLastName;
     private javax.swing.JTextField tfPassword;
     private javax.swing.JTextField tfPhoneNumber;
-    private javax.swing.JScrollPane tpBirthday;
-    private javax.swing.JScrollPane tpFirstName;
-    private javax.swing.JScrollPane tpLastName;
-    private javax.swing.JScrollPane tpPassword;
-    private javax.swing.JScrollPane tpPhoneNumber;
     // End of variables declaration//GEN-END:variables
 }

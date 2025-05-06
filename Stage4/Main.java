@@ -558,12 +558,13 @@ public static void main(String[] args) {
         Authentication authStaff = new Authentication(manage);
         
         //Generate Workers
-        Staff worker1 = new Staff("Jordan", "Bock", "Manager", 40.45, "jbock", "Whiskey");
-        manage.addEmployee(worker1);
-        Staff worker2 = new Staff("Giovanni", "Pernudi", "Manager", 40.45, "gpernudi", "Bourbon");
-        manage.addEmployee(worker2);
-        Staff worker3 = new Staff("Michael", "Sanchez", "Cashier", 18.45, "msanchez", "Scotch");
-        manage.addEmployee(worker3);
+        try{
+            manage.importStaff("staff.csv");
+        }catch(IOException e){
+            System.err.println("Error importing staff: "+e.getMessage());
+        }
+            manage.showEmployees();
+      
         
         //Initialize lists
         HashSet<Customer>newest = mem1.getMembers();

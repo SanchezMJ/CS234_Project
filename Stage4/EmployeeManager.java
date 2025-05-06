@@ -4,6 +4,13 @@
  */
 package com.mycompany.cs234project;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 /**
@@ -51,6 +58,61 @@ public class EmployeeManager {
       }
         
     }
+    
+    public void importStaff(String filepath)throws IOException{
+        listOfEmployees.clear();
+        File file = new File(filepath);
+        
+        if(!file.exists()){
+            System.err.println("File not found: "+filepath);
+            return;
+        }
+        try(BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream(filepath),"UTF-8"))){
+            String line;
+            while((line=br.readLine())!=null){
+                
+                if(line.trim().isEmpty()) continue;
+                
+                String[] parts=line.split(",");
+                if((parts.length)>=6){
+                    String firstName = parts[0].trim();
+                    String lastName = parts[1].trim();
+                    String position = parts[2];
+                    String payRateStr=parts[3].trim();
+                    String userName = parts[4];
+                    String password = parts[5];
+                    try{
+                        double payRate = Double.parseDouble(payRateStr);
+                        if (payRate>=0){
+                    Staff staff = new Staff(firstName,lastName,position,payRate,userName,password);
+                    addEmployee(staff);
+                        }else{
+                            System.err.println("Invalid pay rate: "+payRate);
+                        }
+                    }catch(NumberFormatException e){
+                        System.err.println("Error parsing price or stock:"+line);
+                    }
+                    }else{
+                            System.err.println("Invalid format"+line);
+                            }
+                    }
+        
+            System.out.println("Staff imported successfully.");
+        }catch(IOException e){
+            System.err.println("Error importing staff: "+e.getMessage());
+        
+        }
+    }
+    
+    public void updateCSV(String filename){
+        try(PrintWriter writer = new PrintWriter(new FileWriter(filename))){
+            for(Staff staff: listOfEmployees){
+            writer.println(staff.getFirstName()+","+staff.getLastName()+","+staff.getPosition()+","+staff.getPay()+","+staff.getUserName()+","+staff.getPassword());
+        }
+    }catch(IOException e){
+    e.printStackTrace();
+}
+}
     
 }
 

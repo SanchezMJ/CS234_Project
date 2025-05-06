@@ -16,7 +16,10 @@ public class CashPaymentGUI extends javax.swing.JFrame {
     private Customer customer;
     private Cart cart;
     private double tax;
-    private double totalDue;
+    private double total;
+    private double totalWithTax;
+    private double change;
+    private double paid;
     /**
      * Creates new form CashPaymentGUI
      */
@@ -26,8 +29,11 @@ public class CashPaymentGUI extends javax.swing.JFrame {
     public CashPaymentGUI(Customer customer, Cart cart) {
         this.customer = customer;
         this.cart = cart;
-        totalDue = cart.getTotal() + (cart.getTotal() * cart.getTax());
+        total = cart.getTotal();
+        totalWithTax = cart.getTotalWithTax();
         lblDue = new JLabel();
+        this.change = 0.0;
+        this.paid = 0.0;
         lblDue.setText("0");
         lblDue.setVisible(false);
         getContentPane().setBackground(Color.darkGray);
@@ -63,8 +69,9 @@ public class CashPaymentGUI extends javax.swing.JFrame {
 
         lblTotal.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         lblTotal.setForeground(new java.awt.Color(255, 255, 255));
-        lblTotal.setText("Total: $" + String.format("%.2f", (cart.getTotal() + (cart.getTotal() * cart.getTax()))));
+        lblTotal.setText("Total: $" + String.format("%.2f", (cart.getTotalWithTax())));
 
+        lblDue.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblDue.setForeground(new java.awt.Color(255, 255, 255));
 
         btnCompleteTrans.setText("Complete Transaction");
@@ -80,16 +87,15 @@ public class CashPaymentGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(84, 84, 84)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblDue, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnCompleteTrans, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblCashAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(tfCashGiven, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCompleteTrans, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(lblCashAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(37, 37, 37)
+                            .addComponent(tfCashGiven, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(lblDue, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -101,9 +107,9 @@ public class CashPaymentGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblCashAmount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tfCashGiven))
-                .addGap(18, 18, 18)
+                .addGap(32, 32, 32)
                 .addComponent(lblDue, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addComponent(btnCompleteTrans, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46))
         );
@@ -118,20 +124,25 @@ public class CashPaymentGUI extends javax.swing.JFrame {
             num = Double.parseDouble(tfCashGiven.getText());
             String changeText;
          //String amountDue;
-            double change = 0;
+            change = 0;
             String cashGiven = tfCashGiven.getText();
-            double cash = Double.parseDouble(cashGiven);
-            totalDue = cart.getTotal() + (cart.getTotal() * cart.getTax());
-            if (cash >= totalDue) {
-                change = cash - totalDue;
+            paid = Double.parseDouble(cashGiven);
+            if (paid >= totalWithTax) {
+                change = paid - totalWithTax;
+                cart.setAmountPaid(num);
                 String text = String.format("%.2f", change);
                 changeText = "Change Due: $" + text;
+                cart.setTotalWithTax(0.0);
+                lblDue.setForeground(Color.green);
                 lblDue.setVisible(true);
                 lblDue.setText(changeText);
         } else {
-            change = totalDue - cash;
+            change = totalWithTax - paid;
+            cart.setTotalWithTax(change);
+            cart.setAmountPaid(num);
             String text = String.format("%.2f", change);
             changeText = "Amount Due: $" + text;
+            lblDue.setForeground(Color.red);
             lblDue.setVisible(true);
             lblDue.setText(changeText);
         }
@@ -142,34 +153,26 @@ public class CashPaymentGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfCashGivenActionPerformed
 
     private void btnCompleteTransActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteTransActionPerformed
-    try{
-        String input = tfCashGiven.getText().trim();
-        if (input.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Please enter a cash amount.");
-            return;
-        }
-        
-        double cash = Double.parseDouble(input);
-        totalDue = cart.getTotal() + (cart.getTotal() * cart.getTax());
-        
-        if(cash >= totalDue) {
-            double change = cash - totalDue;
-            
-            if(customer != null && !customer.getFirstName().equalsIgnoreCase("Guest")){
-                customer.addPoints(totalDue);
-                JOptionPane.showMessageDialog(this, customer.getFirstName() + " earned " + customer.getPoints() + " points!");
+        if (cart.getTotalWithTax() > 0) {
+            this.setVisible(false);
+            System.out.print("total > 0" + cart.getTotalWithTax());
+            new PaymentGUI(customer, cart, change, paid).setVisible(true);
+        } else {
+            System.out.print("total < 0" + cart.getTotalWithTax());
+            if (customer.getFirstName().equals("Guest")) {
+                new ReceiptGUI(customer, cart).setVisible(true);
+
+            } else {
+                double points = total/1;
+                customer.addPoints(points);
+                new ReceiptGUI(customer, cart).setVisible(true);
             }
             
-            JOptionPane.showMessageDialog(this, "Transaction Complete.\nChange Due: $" + String.format("%.2f", change));
-            cart.emptyCart();
-            this.dispose();
-        }else{
-            double shortage = totalDue - cash;
-            JOptionPane.showMessageDialog(this, "Insufficent amount.\nStill owed: $" + String.format("%.2f", shortage));
+        cart.emptyCart();
+        cart.setAmountPaid(0.0);
+        this.setVisible(false);
         }
-        }catch (NumberFormatException ex){
-                JOptionPane.showMessageDialog(this, "Invalid input. Please enter a numerical value.");
-                }
+        
     }//GEN-LAST:event_btnCompleteTransActionPerformed
 //    public String getChange() {
 //        String changeText;

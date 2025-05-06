@@ -36,7 +36,7 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         
     }
     public CustomerMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
-        current = customer;
+        this.current = new Customer();
         this.staff = staff;
         this.hashset = hashset;
         this.mem = mem;

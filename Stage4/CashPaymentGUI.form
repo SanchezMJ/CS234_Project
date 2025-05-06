@@ -30,19 +30,17 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="lblDue" min="-2" pref="201" max="-2" attributes="0"/>
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="btnCompleteTrans" min="-2" pref="171" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="lblTotal" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="lblCashAmount" min="-2" pref="98" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="tfCashGiven" min="-2" pref="95" max="-2" attributes="0"/>
-                          </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnCompleteTrans" min="-2" pref="171" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="lblTotal" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="lblCashAmount" min="-2" pref="98" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="tfCashGiven" min="-2" pref="95" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <Component id="lblDue" min="-2" pref="201" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="86" max="32767" attributes="0"/>
           </Group>
@@ -58,9 +56,9 @@
                   <Component id="lblCashAmount" max="32767" attributes="0"/>
                   <Component id="tfCashGiven" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Component id="lblDue" min="-2" pref="38" max="-2" attributes="0"/>
-              <EmptySpace pref="58" max="32767" attributes="0"/>
+              <EmptySpace pref="44" max="32767" attributes="0"/>
               <Component id="btnCompleteTrans" min="-2" pref="45" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
           </Group>
@@ -90,12 +88,15 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="&quot;Total: $&quot; + String.format(&quot;%.2f&quot;, (cart.getTotal() + (cart.getTotal() * cart.getTax())))" type="code"/>
+          <Connection code="&quot;Total: $&quot; + String.format(&quot;%.2f&quot;, (cart.getTotalWithTax()))" type="code"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblDue">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Helvetica Neue" size="13" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>

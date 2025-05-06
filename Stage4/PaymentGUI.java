@@ -13,6 +13,8 @@ import java.awt.Color;
 public class PaymentGUI extends javax.swing.JFrame {
     private Customer current;
     private Cart cart;
+    private double cash;
+    private double am;
     /**
      * Creates new form PaymentGUI
      */
@@ -22,10 +24,20 @@ public class PaymentGUI extends javax.swing.JFrame {
     public PaymentGUI(Customer current, Cart cart) {
         this.current = current;
         this.cart = cart;
+        this.cash = 0.0;
+        this.am = 0.0;
         getContentPane().setBackground(Color.darkGray);
         initComponents();
     }
     
+    public PaymentGUI(Customer current, Cart cart, double am, double cash) {
+        this.current = current;
+        this.cart = cart;
+        this.am = am;
+        this.cash = cash;
+        getContentPane().setBackground(Color.darkGray);
+        initComponents();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,7 +50,7 @@ public class PaymentGUI extends javax.swing.JFrame {
         lblSelectPayment = new javax.swing.JLabel();
         btnCash = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
+        tfReciept = new javax.swing.JEditorPane();
         btnCreditCard = new javax.swing.JButton();
         btnGiftCard = new javax.swing.JButton();
         btnCancelPurchase = new javax.swing.JButton();
@@ -60,13 +72,13 @@ public class PaymentGUI extends javax.swing.JFrame {
             }
         });
 
-        jEditorPane1.setText(cart.showCart());
-        jEditorPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        tfReciept.setText(cart.showCart());
+        tfReciept.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jEditorPane1PropertyChange(evt);
+                tfRecieptPropertyChange(evt);
             }
         });
-        jScrollPane1.setViewportView(jEditorPane1);
+        jScrollPane1.setViewportView(tfReciept);
 
         btnCreditCard.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         btnCreditCard.setText("Credit Card");
@@ -126,11 +138,16 @@ public class PaymentGUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jEditorPane1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jEditorPane1PropertyChange
-        cart.showCart();
-    }//GEN-LAST:event_jEditorPane1PropertyChange
+    private void tfRecieptPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tfRecieptPropertyChange
+        if (am == 0) {
+            cart.showCart();
+        } else {
+            cart.showCartBalance(cash);
+        }
+    }//GEN-LAST:event_tfRecieptPropertyChange
 
     private void btnCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCashActionPerformed
+        this.setVisible(false);
         new CashPaymentGUI(current, cart).setVisible(true);
     }//GEN-LAST:event_btnCashActionPerformed
 
@@ -175,8 +192,8 @@ public class PaymentGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnCash;
     private javax.swing.JButton btnCreditCard;
     private javax.swing.JButton btnGiftCard;
-    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblSelectPayment;
+    private javax.swing.JEditorPane tfReciept;
     // End of variables declaration//GEN-END:variables
 }

@@ -82,14 +82,35 @@ public class ReceiptGUI extends javax.swing.JFrame {
             cart.setTotalWithTax(0.0);
             return c;
         } else {
-            double points = cart.getTotal() + cart.getTotal() * cart.getTax();
-            customer.addPoints(points);
-            double earned = points*2;
-            c = cart.showCart() + "\n\n" + customer.getFirstName() + " you have earned " + String.format("%.2f", earned) + " points!";
-            cart.setAmountPaidZero(0.0);
-            cart.setTotal(0.0);
-            cart.setTotalWithTax(0.0);
-            return c;
+            if (am == 0) {
+                System.out.println("am==0 " + am);
+                double points = cart.getTotal() + cart.getTotal() * cart.getTax();
+                customer.addPoints(points);
+                double earned = points*2;
+                c = cart.showCart() + "\n\n" + customer.getFirstName() + " you have earned " + String.format("%.2f", earned) + " points!";
+                cart.setAmountPaidZero(0.0);
+                cart.setTotal(0.0);
+                cart.setTotalWithTax(0.0);
+                return c;
+            } else {
+                System.out.println("else " + am);
+                double points = cart.getTotal() + cart.getTotal() * cart.getTax();
+                customer.addPoints(points);
+                double earned = points*2;
+                c = cart.showCartReceipt(paid) + "\n\n" + customer.getFirstName() + " you have earned " + String.format("%.2f", earned) + " points!";
+                cart.setAmountPaidZero(0.0);
+                cart.setTotal(0.0);
+                cart.setTotalWithTax(0.0);
+                return c;
+            }
+            //double points = cart.getTotal() + cart.getTotal() * cart.getTax();
+//            customer.addPoints(points);
+//            double earned = points*2;
+//            c = cart.showCart(paid) + "\n\n" + customer.getFirstName() + " you have earned " + String.format("%.2f", earned) + " points!";
+//            cart.setAmountPaidZero(0.0);
+//            cart.setTotal(0.0);
+//            cart.setTotalWithTax(0.0);
+//            return c;
         }
     }
     

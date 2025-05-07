@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
  * @author mjsanchez
  */
 public class StaffMenuGui extends javax.swing.JFrame {
+    //sets instance variables
     private Customer current;
     private Staff staff;
     private Membership mem;
@@ -33,6 +34,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
      */
  
     public StaffMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows){
+        //intializes instance variables
         this.current = new Customer();
         this.staff = staff;
         this.hashset = hashset;
@@ -47,6 +49,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
         this.shows = shows;
         initComponents();
         
+        //sets background color
         getContentPane().setBackground(Color.black);
     }
 
@@ -148,18 +151,22 @@ public class StaffMenuGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void butDisplayMembersListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butDisplayMembersListActionPerformed
+        //button displays memeber list
         JOptionPane.showMessageDialog(this, mem.getMembers());
     }//GEN-LAST:event_butDisplayMembersListActionPerformed
 
     private void butMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butMainMenuActionPerformed
+        //button moves to main menu
         this.setVisible(false); new MainGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butMainMenuActionPerformed
 
     private void butDisplayStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butDisplayStaffActionPerformed
+        //button displays staff managemnet menu
         this.setVisible(false);new EmployeeRoster(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butDisplayStaffActionPerformed
 
     private void butInventoryMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butInventoryMenu1ActionPerformed
+        //button displays inventory menu
         this.setVisible(false);new InventoryMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butInventoryMenu1ActionPerformed
 

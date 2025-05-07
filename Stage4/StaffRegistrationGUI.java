@@ -18,6 +18,7 @@ import java.util.ArrayList;
  * @author jbock
  */
 public class StaffRegistrationGUI extends javax.swing.JFrame {
+    //sets instance variables
     private Staff newStaf;
     private EmployeeManager objman;
     private ArrayList<Staff> alist;
@@ -27,6 +28,7 @@ public class StaffRegistrationGUI extends javax.swing.JFrame {
      * Creates new form StaffRegistrationGUI
      */
     public StaffRegistrationGUI(ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth) {
+        //intializes instance variables
         newStaf=new Staff();
         this.objman=objman;
         this.alist=alist;
@@ -36,9 +38,6 @@ public class StaffRegistrationGUI extends javax.swing.JFrame {
         
     }
 
-    private StaffRegistrationGUI() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -233,6 +232,7 @@ public class StaffRegistrationGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfFirstName10ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //button registers new staff memeber 
         String firstName=tfFirstName10.getText();
         newStaf.setFirstName(firstName);
         String lastName=tfLastName.getText();
@@ -280,9 +280,7 @@ public class StaffRegistrationGUI extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new StaffRegistrationGUI().setVisible(true);
-            }
+            public void run() {}
         });
     }
 

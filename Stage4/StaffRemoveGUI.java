@@ -15,20 +15,21 @@ import java.util.ArrayList;
  * @author jbock
  */
 public class StaffRemoveGUI extends javax.swing.JFrame {
+    //sets instance variable
     private EmployeeManager objman;
 
     /**
      * Creates new form StaffRemoveGUI
      */
+    //intializes instance variables
     public StaffRemoveGUI(ArrayList<Staff> alist, EmployeeManager objman) {
         this.objman=objman;
         initComponents();
+        
+        //sets background color
         getContentPane().setBackground(Color.black);
     }
 
-    private StaffRemoveGUI() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -118,6 +119,7 @@ public class StaffRemoveGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfUserName2ActionPerformed
 
     private void jSubmit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSubmit1ActionPerformed
+        //button that finds user to remove by username
         String userName=tfUserName2.getText();
         Staff toRemove=null;
                         for(Staff emp: objman.getListOfEmployees()){
@@ -167,7 +169,6 @@ public class StaffRemoveGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StaffRemoveGUI().setVisible(true);
             }
         });
     }

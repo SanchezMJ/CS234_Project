@@ -37,20 +37,22 @@ public class Staff {
         this.password=password;
     }
     
-    //sets name
+    //sets first name
     public void setFirstName(String name){
         this.firstName=name;
     }
     
-    //gets name
+    //gets first name
     public String getFirstName(){
         return firstName;
     }
-
+    
+    //gets last name
     public String getLastName() {
         return lastName;
     }
-
+    
+    //sets last name
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -74,11 +76,13 @@ public class Staff {
     public double getPay(){
         return payRate;
     }
-
+    
+    //gets user name
     public String getUserName() {
         return userName;
     }
-
+    
+    //sets user name
     public void setUserName(String userName) {
         this.userName = userName;
     }

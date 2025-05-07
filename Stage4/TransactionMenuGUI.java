@@ -4,6 +4,7 @@
  */
 package com.mycompany.cs234project;
 
+//imports
 import static com.mycompany.cs234project.Main.CustomerLogin;
 import static com.mycompany.cs234project.Main.TransactionMenu;
 import java.awt.Color;
@@ -15,6 +16,8 @@ import javax.swing.JOptionPane;
  *
  * @author mjsanchez
  */
+
+//setting instance variables
 public class TransactionMenuGUI extends javax.swing.JFrame {
     private Customer current;
     private Staff staff;
@@ -34,6 +37,7 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
     public TransactionMenuGUI () {
         
     }
+    //intializes instance variables
     public TransactionMenuGUI(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         current = customer;
         this.staff = staff;
@@ -49,6 +53,7 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
         this.shows = shows;
         initComponents();
         
+        //sets background color
         Color col = new Color(153, 0, 0);
         getContentPane().setBackground(col);
     }
@@ -149,19 +154,22 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void butBuyTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butBuyTicketsActionPerformed
-        //this.setVisible(false); 
+        //opens movie selection screen
         new MovieSelectionGUI2(inventory, cart, shows).setVisible(true);
     }//GEN-LAST:event_butBuyTicketsActionPerformed
 
     private void butMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butMainMenuActionPerformed
+       //opens main menu
         this.setVisible(false); new MainGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butMainMenuActionPerformed
 
     private void butPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butPaymentActionPerformed
+       //opens payment screen
         new PaymentGUI(current, cart).setVisible(true);
     }//GEN-LAST:event_butPaymentActionPerformed
 
     private void butConcessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butConcessionActionPerformed
+       //opens conceccion menu
         new ConcessionMenuGUI(inventory, prod, cart).setVisible(true);
     }//GEN-LAST:event_butConcessionActionPerformed
 

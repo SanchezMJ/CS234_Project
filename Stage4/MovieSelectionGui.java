@@ -234,7 +234,11 @@ public class MovieSelectionGui extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         if(shows.get(0).getScreenType().equals("imax")) {
-            
+            Showtimes currentShow = new Showtimes();
+            currentShow = shows.get(0);
+            currentShow.displayShowSeating();
+            String t = currentShow.getScreenType();
+            this.setVisible(false); new ImaxSeatingGui(currentShow, t, cart).setVisible(true);
         }else {
             Showtimes currentShow = new Showtimes();
             currentShow = shows.get(0);
@@ -246,7 +250,11 @@ public class MovieSelectionGui extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         if(shows.get(1).getScreenType().equals("imax")) {
-            
+            Showtimes currentShow = new Showtimes();
+            currentShow = shows.get(1);
+            currentShow.displayShowSeating();
+            String t = currentShow.getScreenType();
+            this.setVisible(false); new ImaxSeatingGui(currentShow, t, cart).setVisible(true);
         }else {
             Showtimes currentShow = new Showtimes();
             currentShow = shows.get(1);

@@ -150,7 +150,7 @@ public class TransactionMenuGUI extends javax.swing.JFrame {
 
     private void butBuyTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butBuyTicketsActionPerformed
         //this.setVisible(false); 
-        new MovieSelectionGui(inventory, cart, shows).setVisible(true);
+        new MovieSelectionGUI2(inventory, cart, shows).setVisible(true);
     }//GEN-LAST:event_butBuyTicketsActionPerformed
 
     private void butMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butMainMenuActionPerformed

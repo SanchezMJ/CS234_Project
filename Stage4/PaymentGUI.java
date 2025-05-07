@@ -53,8 +53,6 @@ public class PaymentGUI extends javax.swing.JFrame {
         tfReciept = new javax.swing.JEditorPane();
         btnCreditCard = new javax.swing.JButton();
         btnGiftCard = new javax.swing.JButton();
-        btnCancelPurchase = new javax.swing.JButton();
-        btnCancelPurchase1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(0, 51, 102));
@@ -82,15 +80,19 @@ public class PaymentGUI extends javax.swing.JFrame {
 
         btnCreditCard.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         btnCreditCard.setText("Credit Card");
+        btnCreditCard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreditCardActionPerformed(evt);
+            }
+        });
 
         btnGiftCard.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         btnGiftCard.setText("Gift Card");
-
-        btnCancelPurchase.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        btnCancelPurchase.setText("Cancel Purchase");
-
-        btnCancelPurchase1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        btnCancelPurchase1.setText("Purchase Menu");
+        btnGiftCard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGiftCardActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,10 +105,8 @@ public class PaymentGUI extends javax.swing.JFrame {
                         .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnGiftCard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCreditCard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCash, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCancelPurchase, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
-                            .addComponent(btnCancelPurchase1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnCreditCard, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                            .addComponent(btnCash, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(51, 51, 51)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(20, Short.MAX_VALUE))
@@ -126,11 +126,7 @@ public class PaymentGUI extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCreditCard, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnGiftCard, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCancelPurchase1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCancelPurchase, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnGiftCard, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
@@ -152,6 +148,16 @@ public class PaymentGUI extends javax.swing.JFrame {
         this.setVisible(false);
         new CashPaymentGUI(current, cart).setVisible(true);
     }//GEN-LAST:event_btnCashActionPerformed
+
+    private void btnCreditCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreditCardActionPerformed
+        this.setVisible(false);
+        new CreditCardPaymentGUI(current, cart).setVisible(true);
+    }//GEN-LAST:event_btnCreditCardActionPerformed
+
+    private void btnGiftCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiftCardActionPerformed
+        this.setVisible(false);
+        new GiftCardPaymentGUI(current, cart).setVisible(true);
+    }//GEN-LAST:event_btnGiftCardActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,8 +195,6 @@ public class PaymentGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelPurchase;
-    private javax.swing.JButton btnCancelPurchase1;
     private javax.swing.JButton btnCash;
     private javax.swing.JButton btnCreditCard;
     private javax.swing.JButton btnGiftCard;

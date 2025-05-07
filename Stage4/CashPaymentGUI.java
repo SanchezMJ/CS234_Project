@@ -57,7 +57,7 @@ public class CashPaymentGUI extends javax.swing.JFrame {
         lblDue = new javax.swing.JLabel();
         btnCompleteTrans = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(51, 102, 0));
 
         lblCashAmount.setForeground(new java.awt.Color(255, 255, 255));
@@ -160,15 +160,21 @@ public class CashPaymentGUI extends javax.swing.JFrame {
         if (balance > 0) {
             this.setVisible(false);
             //System.out.print("total > 0" + cart.getTotalWithTax());
+            Payment cash = new CashPayment(totalWithTax, paid);
+            cash.addPayment(cash);
             new PaymentGUI(customer, cart, change, paid).setVisible(true);
         } else {
             //System.out.print("total < 0" + cart.getTotalWithTax());
             if (customer.getFirstName().equals("Guest")) {
+                Payment cash = new CashPayment(totalWithTax, paid);
+                cash.addPayment(cash);
                 new ReceiptGUI(customer, cart, change, paid).setVisible(true);
 
             } else {
                 double points = total/1;
                 customer.addPoints(points);
+                Payment cash = new CashPayment(totalWithTax, paid);
+                cash.addPayment(cash);
                 new ReceiptGUI(customer, cart, change, paid).setVisible(true);
             }
         //System.out.println("complete, cart emptied, amountPaid ==0");   

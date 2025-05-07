@@ -9,10 +9,12 @@ package com.mycompany.cs234project;
  * @author jbock
  */
 public class Concession {
+    //sets instance variables
     private String product;
     private double price;
     private int totalStock;
     
+    //intializes instance variables
     public Concession(String product, double price, int totalStock){
         this.product=product;
         this.price=price;
@@ -20,34 +22,42 @@ public class Concession {
         
     }
     
+    //sets price
     public void setPrice(double price){
         this.price=price;
     }
     
+    //gets price
     public double getPrice(){
         return price;
     }
     
+    //sets product name
     public void setProduct(String product){
         this.product=product;
     }
     
+    //gets product name
     public String getProduct(){
         return product;
     }
     
+    //sets amount in stock
     public void setTotalStock(int totalStock){
         this.totalStock=totalStock;
     }
     
+    //gets amount in stock
     public int getTotalStock(){
         return totalStock;
     }
     
+    //looks to see if theres enough product in stock
     public boolean checkStock(int quantity){
         return totalStock>=quantity;
     }
     
+    //reduces stock after purchase
     public void reduceStock(int quantity){
         if(checkStock(quantity)){
             totalStock=totalStock-quantity;
@@ -56,11 +66,13 @@ public class Concession {
         }
     }
     
+    //formats price to two decimal places
     @Override
     public String toString(){
        return product+" Price: $"+String.format("%.2f",price)+" Stock: "+totalStock+"\n";
     }
     
+    //checks to see if a value = null
     @Override
     public boolean equals(Object o){
         if(this==o) return true;
@@ -69,6 +81,7 @@ public class Concession {
         return product!=null&&product.equalsIgnoreCase(other.product);
     }
     
+    //checks for case sensitivity
     @Override
     public int hashCode(){
         return product!=null?product.toLowerCase().hashCode():0;

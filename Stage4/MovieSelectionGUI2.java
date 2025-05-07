@@ -45,8 +45,14 @@ public class MovieSelectionGUI2 extends javax.swing.JFrame {
         lblMovie1T1Rating = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         taMovieDescMovie1 = new javax.swing.JTextArea();
+        pnlMovie3 = new javax.swing.JPanel();
+        lblMovie2Title = new javax.swing.JLabel();
+        btnMovie2Time1 = new javax.swing.JButton();
+        lblMovie2T1Rating = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        taMovie2DescMovie = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         pnlMovie1.setBackground(new java.awt.Color(51, 51, 51));
         pnlMovie1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -81,6 +87,8 @@ public class MovieSelectionGUI2 extends javax.swing.JFrame {
         taMovieDescMovie1.setWrapStyleWord(true);
         taMovieDescMovie1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         taMovieDescMovie1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        taMovieDescMovie1.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        taMovieDescMovie1.setEnabled(false);
         jScrollPane1.setViewportView(taMovieDescMovie1);
 
         javax.swing.GroupLayout pnlMovie1Layout = new javax.swing.GroupLayout(pnlMovie1);
@@ -95,7 +103,7 @@ public class MovieSelectionGUI2 extends javax.swing.JFrame {
                         .addComponent(lblMovie1Title, javax.swing.GroupLayout.PREFERRED_SIZE, 549, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnMovie1Time1)
-                        .addGap(0, 115, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane1))
                 .addContainerGap())
         );
@@ -110,6 +118,73 @@ public class MovieSelectionGUI2 extends javax.swing.JFrame {
                 .addComponent(lblMovie1T1Rating)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        pnlMovie3.setBackground(new java.awt.Color(0, 0, 51));
+        pnlMovie3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblMovie2Title.setFont(new java.awt.Font("Bodoni 72", 1, 48)); // NOI18N
+        lblMovie2Title.setForeground(new java.awt.Color(255, 255, 255));
+        lblMovie2Title.setText(shows.get(1).getTitle()
+        );
+
+        btnMovie2Time1.setText(shows.get(1).getTime()
+        );
+        btnMovie2Time1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMovie2Time1ActionPerformed(evt);
+            }
+        });
+
+        lblMovie2T1Rating.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        lblMovie2T1Rating.setForeground(new java.awt.Color(255, 255, 255));
+        lblMovie2T1Rating.setText("Rated: " + shows.get(1).getRating() + "   Runtime: " + shows.get(1).getRuntime()
+        );
+
+        taMovie2DescMovie.setEditable(false);
+        taMovie2DescMovie.setBackground(new java.awt.Color(0, 0, 51));
+        taMovie2DescMovie.setColumns(20);
+        taMovie2DescMovie.setFont(new java.awt.Font("Helvetica Neue", 2, 18)); // NOI18N
+        taMovie2DescMovie.setForeground(new java.awt.Color(255, 255, 255));
+        taMovie2DescMovie.setLineWrap(true);
+        taMovie2DescMovie.setRows(5);
+        taMovie2DescMovie.setText(shows.get(1).getDesc()
+        );
+        taMovie2DescMovie.setWrapStyleWord(true);
+        taMovie2DescMovie.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        taMovie2DescMovie.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        taMovie2DescMovie.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        taMovie2DescMovie.setEnabled(false);
+        jScrollPane3.setViewportView(taMovie2DescMovie);
+
+        javax.swing.GroupLayout pnlMovie3Layout = new javax.swing.GroupLayout(pnlMovie3);
+        pnlMovie3.setLayout(pnlMovie3Layout);
+        pnlMovie3Layout.setHorizontalGroup(
+            pnlMovie3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMovie3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlMovie3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMovie2T1Rating, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnlMovie3Layout.createSequentialGroup()
+                        .addComponent(lblMovie2Title, javax.swing.GroupLayout.PREFERRED_SIZE, 549, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnMovie2Time1)
+                        .addGap(0, 115, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3))
+                .addContainerGap())
+        );
+        pnlMovie3Layout.setVerticalGroup(
+            pnlMovie3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMovie3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlMovie3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMovie2Title, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMovie2Time1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblMovie2T1Rating)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
@@ -119,7 +194,9 @@ public class MovieSelectionGUI2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlMovie1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlMovie1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlMovie3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -127,7 +204,9 @@ public class MovieSelectionGUI2 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(pnlMovie1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(373, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pnlMovie3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         pack();
@@ -148,6 +227,22 @@ public class MovieSelectionGUI2 extends javax.swing.JFrame {
             this.setVisible(false); new RegularSeatingGui(currentShow, t, cart).setVisible(true);
         }
     }//GEN-LAST:event_btnMovie1Time1ActionPerformed
+
+    private void btnMovie2Time1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMovie2Time1ActionPerformed
+        if(shows.get(0).getScreenType().equals("imax")) {
+            Showtimes currentShow = new Showtimes();
+            currentShow = shows.get(1);
+            currentShow.displayShowSeating();
+            String t = currentShow.getScreenType();
+            this.setVisible(false); new ImaxSeatingGui(currentShow, t, cart).setVisible(true);
+        }else {
+            Showtimes currentShow = new Showtimes();
+            currentShow = shows.get(1);
+            currentShow.displayShowSeating();
+            String t = currentShow.getScreenType();
+            this.setVisible(false); new RegularSeatingGui(currentShow, t, cart).setVisible(true);
+        }
+    }//GEN-LAST:event_btnMovie2Time1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,10 +281,22 @@ public class MovieSelectionGUI2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnMovie1Time1;
+    private javax.swing.JButton btnMovie1Time2;
+    private javax.swing.JButton btnMovie2Time1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblMovie1T1Rating;
+    private javax.swing.JLabel lblMovie1T1Rating1;
     private javax.swing.JLabel lblMovie1Title;
+    private javax.swing.JLabel lblMovie1Title1;
+    private javax.swing.JLabel lblMovie2T1Rating;
+    private javax.swing.JLabel lblMovie2Title;
     private javax.swing.JPanel pnlMovie1;
+    private javax.swing.JPanel pnlMovie2;
+    private javax.swing.JPanel pnlMovie3;
+    private javax.swing.JTextArea taMovie2DescMovie;
     private javax.swing.JTextArea taMovieDescMovie1;
+    private javax.swing.JTextArea taMovieDescMovie2;
     // End of variables declaration//GEN-END:variables
 }

@@ -31,7 +31,8 @@ public class ConcessionMenuGUI extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridLayout(0,1));
         
         for(Concession c: prod){
-            JButton itemButton=new JButton(c.getProduct()+" - $"+c.getPrice());
+            String label=String.format("%s - $%.2f",c.getProduct(),c.getPrice());
+            JButton itemButton = new JButton(label);
             itemButton.addActionListener(e->{
                 cart.addProduct(c);
                 JOptionPane.showMessageDialog(this, c.getProduct()+" added to cart.");
@@ -42,9 +43,6 @@ public class ConcessionMenuGUI extends javax.swing.JFrame {
         jPanel1.repaint();
     }
 
-    private ConcessionMenuGUI() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -132,14 +130,12 @@ public class ConcessionMenuGUI extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ConcessionMenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        Inventory inventory =new Inventory();
-        ArrayList<Concession> prod=new ArrayList<>();
-        Cart cart= new Cart();
+       
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ConcessionMenuGUI(inventory,prod,cart).setVisible(true);
+               
                 
 
             }

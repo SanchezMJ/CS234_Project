@@ -42,11 +42,9 @@ public class EmployeeRoster extends javax.swing.JFrame {
         this.obauth = obauth;
         this.alist = alist;
         this.objman = objman;
-        System.out.println("objman is"+objman);
         this.objauth = objauth;
         this.inventory = inventory;
         this.prod =prod;
-        System.out.println("prod is"+prod);
         this.cart = cart;
         this.shows = shows;
         this.staffMenu=staffMenu;

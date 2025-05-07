@@ -14,6 +14,8 @@ import javax.swing.JOptionPane;
  *
  * @author jbock
  */
+
+//sets instance varaibles
 public class EmployeeRoster extends javax.swing.JFrame {
     private Staff newStaf;
     private Customer current;
@@ -33,6 +35,7 @@ public class EmployeeRoster extends javax.swing.JFrame {
     /**
      * Creates new form EmployeeRoster
      */
+    //intializes instance variables
     public EmployeeRoster(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows){
         newStaf=new Staff();
         this.current = new Customer();
@@ -54,7 +57,7 @@ public class EmployeeRoster extends javax.swing.JFrame {
     }
 
   
-    
+    //sets values in roster table
     private void updateRosterTable(){
         String[] columnNames={"First Name","Last Name","Position","Pay","Username","Password"};
         ArrayList<Staff> employees=objman.getListOfEmployees();
@@ -278,16 +281,19 @@ public class EmployeeRoster extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void butStaffMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butStaffMenuActionPerformed
-         this.setVisible(false); new StaffMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+        //button moves to staff menu 
+        this.setVisible(false); new StaffMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butStaffMenuActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String userName=tfUserName7.getText();
         
+        //checks if username box is empty
         if(userName.trim().isEmpty()){
             JOptionPane.showMessageDialog(this,"Username field is empty");
             return;
         }
+        //compares input to username in list
             Staff existingStaff=null;
         for(Staff emp: objman.getListOfEmployees()){
             if(emp.getUserName().equalsIgnoreCase(userName)){
@@ -295,6 +301,7 @@ public class EmployeeRoster extends javax.swing.JFrame {
                 break;
             }
         }
+        //check if someone is staff already and updates info
         if(existingStaff!=null){
             existingStaff.setFirstName(tfFirstName10.getText());
             existingStaff.setLastName(tfLastName.getText());
@@ -311,7 +318,8 @@ public class EmployeeRoster extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Employee details updated.");
             updateRosterTable();
         }else{
-            
+         
+            //creates new memeber of staff
         Staff newStaf=new Staff();
         newStaf.setFirstName(tfFirstName10.getText());
         newStaf.setLastName(tfLastName.getText());
@@ -326,6 +334,7 @@ public class EmployeeRoster extends javax.swing.JFrame {
         newStaf.setUserName(tfUserName7.getText());
         newStaf.setPassword(tfPassword9.getText());
         
+        //add employee to list and csv and then updates table
         objman.addEmployee(newStaf);
         objman.updateCSV("staff.csv");
         JOptionPane.showMessageDialog(this, "Registration Successful!");

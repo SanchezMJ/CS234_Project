@@ -59,20 +59,22 @@ public class EmployeeManager {
         
     }
     
+    //imports staff from csv file
     public void importStaff(String filepath)throws IOException{
         listOfEmployees.clear();
         File file = new File(filepath);
         
+        //shows a message if file not found
         if(!file.exists()){
             System.err.println("File not found: "+filepath);
             return;
         }
+        
+        //reads from csv and imports information
         try(BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream(filepath),"UTF-8"))){
             String line;
             while((line=br.readLine())!=null){
-                
                 if(line.trim().isEmpty()) continue;
-                
                 String[] parts=line.split(",");
                 if((parts.length)>=6){
                     String firstName = parts[0].trim();
@@ -104,6 +106,7 @@ public class EmployeeManager {
         }
     }
     
+    //updates csv based on changes made
     public void updateCSV(String filename){
         try(PrintWriter writer = new PrintWriter(new FileWriter(filename))){
             for(Staff staff: listOfEmployees){

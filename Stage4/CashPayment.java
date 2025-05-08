@@ -2,13 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.cs234project;;
+package com.mycompany.cs234project;
 
 /**
- *
- * @author mjsanchez
+ * CashPayment represents a payment made using physical cash.
+ * It extends the Payment superclass and adds functionality specific to cash.
+ * 
+ * Author: mjsanchez
  */
 public class CashPayment extends Payment{
+    // Amount of cash received from the customer
     private double cashAmount;
     
     public CashPayment(double p, double ca){
@@ -25,6 +28,9 @@ public class CashPayment extends Payment{
     }
     
     @Override
+    /**
+     * Displays details of the cash payment, including inherited price info and the cash amount.
+     */
     public void paymentDetails() {
         
         super.paymentDetails();

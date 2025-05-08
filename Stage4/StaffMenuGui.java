@@ -90,7 +90,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
         butDisplayStaff.setBounds(100, 120, 300, 50);
 
         butDisplayMembersList.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
-        butDisplayMembersList.setText("Display Members List");
+        butDisplayMembersList.setText("Manage Members");
         butDisplayMembersList.setAutoscrolls(true);
         butDisplayMembersList.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
         butDisplayMembersList.setContentAreaFilled(false);

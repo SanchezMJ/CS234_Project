@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  *
  * @author jbock
  */
+//set instance variables
 public class InventoryMenuGui extends javax.swing.JFrame {
     private Customer current;
     private Staff staff;
@@ -29,6 +30,7 @@ public class InventoryMenuGui extends javax.swing.JFrame {
     /**
      * Creates new form InventoryMenuGui
      */
+    //intializes instance variables
     public InventoryMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> show){
          this.current = new Customer();
         this.staff = staff;
@@ -48,6 +50,7 @@ public class InventoryMenuGui extends javax.swing.JFrame {
         
     }
     
+    //updates the table with inventory
     private void updateInventoryTable(){
         String[] columnNames={"Item","Price","Stock"};
         Object[][] data=new Object[prod.size()][3];
@@ -223,6 +226,7 @@ public class InventoryMenuGui extends javax.swing.JFrame {
     }//GEN-LAST:event_butStaffMenuActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //adds products to inventory
         String name=jProductName.getText().trim();
         double price;
         int totalStock;
@@ -256,7 +260,8 @@ public class InventoryMenuGui extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jRemoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRemoveButtonActionPerformed
-       String product=jProductName.getText().trim();
+       //removes products from inventory
+        String product=jProductName.getText().trim();
         Concession toRemove=null;
                         for(Concession prod: inventory.getProductList()){
                             if(prod.getProduct().equalsIgnoreCase(product)){

@@ -5,7 +5,7 @@
     <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-118,0,0,4,47"/>
+    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,122,0,0,3,18"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="0"/>
     <SyntheticProperty name="generateSize" type="boolean" value="true"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
@@ -37,35 +37,7 @@
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="butB05" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butB06" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butB07" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butB09" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butB10" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC01" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC02" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC03" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC04" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC05" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC06" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC07" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC08" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC09" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="butG01" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="butA01" min="-2" pref="54" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -86,210 +58,184 @@
                                   <Component id="butA09" min="-2" pref="54" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="butA10" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butB01" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butB02" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butB03" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butB04" min="-2" pref="54" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="butC10" min="-2" pref="54" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="butC01" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butC02" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butC03" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butC04" min="-2" pref="54" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="butB01" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butB02" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butB03" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butB04" min="-2" pref="54" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC102" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC103" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC104" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC105" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC106" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC107" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC108" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC109" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC110" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC11" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC12" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC13" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butC14" min="-2" pref="54" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="butB05" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butB06" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butB07" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butB08" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butB09" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butB10" min="-2" pref="54" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="butC05" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butC06" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butC07" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butC08" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butC09" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="butC10" min="-2" pref="54" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="butD101" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD102" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD103" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD104" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD105" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD106" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD107" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD108" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD109" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD110" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD11" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD12" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD13" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butD14" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="butE101" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE102" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE103" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE104" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE105" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE106" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE107" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE108" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE109" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE110" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE11" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE12" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE13" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butE14" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="butF01" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF02" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF03" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF04" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF05" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF06" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF07" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF08" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF09" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF10" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF11" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF12" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF13" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butF14" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="butG01" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG02" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG03" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG04" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG05" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG06" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG07" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG08" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG09" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG10" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG11" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG12" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG13" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butG14" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="butH01" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH02" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH03" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH04" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH05" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH06" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH07" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH08" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH09" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH10" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH11" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH12" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH13" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="butH14" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="lblSeatSelection" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lblSeats" min="-2" pref="476" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="butClearSelection" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="butClose" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="lblSeatSelection" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lblSeats" min="-2" pref="246" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="butClearSelection" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="butClose" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="butH01" min="-2" pref="54" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="butH02" min="-2" pref="54" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Component id="butH03" min="-2" pref="54" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="butH04" min="-2" pref="54" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="butH05" min="-2" pref="54" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="butH06" min="-2" pref="54" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="butH07" min="-2" pref="54" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="butH08" min="-2" pref="54" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="butH09" min="-2" pref="54" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="butH10" min="-2" pref="54" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                          <EmptySpace min="51" pref="291" max="32767" attributes="0"/>
                       </Group>
                       <Component id="jButton4" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="lblFOS" alignment="0" pref="834" max="32767" attributes="0"/>
-                      <Component id="jButton5" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblFOS" alignment="0" min="-2" pref="591" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="butF01" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butF02" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butF03" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butF04" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butF05" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butF06" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butF07" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butF08" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butF09" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butF10" min="-2" pref="54" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="butG02" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butG03" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butG04" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butG05" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butG06" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butG07" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butG08" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butG09" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butG10" min="-2" pref="54" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="butE01" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butE02" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butE03" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butE04" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butE05" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butE06" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butE07" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butE08" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butE09" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="butE10" min="-2" pref="54" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="butD01" min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="butD02" min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="butD03" min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="butD04" min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="butD05" min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="butD06" min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="butD07" min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="butD08" min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="butD09" min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="butD10" min="-2" pref="54" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jButton1" min="-2" pref="591" max="-2" attributes="0"/>
+                  <Component id="jButton5" min="-2" pref="594" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="51" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -302,11 +248,11 @@
                   <Group type="102" attributes="0">
                       <Component id="lblFOS" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" pref="6" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="lblEntrance" min="-2" pref="380" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="jButton1" min="-2" pref="6" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="butA01" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butA02" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -318,6 +264,15 @@
                                   <Component id="butA08" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butA09" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butA10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="butB05" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="butB06" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="butB07" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="butB08" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="butB09" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="butB10" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butB01" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butB02" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butB03" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -325,11 +280,8 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="butB05" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butB06" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butB07" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butB09" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butB10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="butC10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="butC09" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butC01" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butC02" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butC03" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -338,117 +290,79 @@
                                   <Component id="butC06" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butC07" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="butC08" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC09" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="butC10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC102" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC103" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC104" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC105" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC106" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC107" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC108" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC109" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC110" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="butC14" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jButton5" min="-2" pref="6" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jButton5" min="-2" pref="3" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="butD101" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD102" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD103" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD104" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD105" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD106" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD107" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD108" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD109" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD110" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butD14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butD01" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butD02" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butD03" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butD04" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butD05" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butD06" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butD07" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butD08" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butD09" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butD10" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="butE101" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE102" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE103" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE104" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE105" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE106" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE107" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE108" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE109" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE110" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butE14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butE10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butE03" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butE04" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butE05" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butE06" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butE07" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butE08" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butE09" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butE02" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butE01" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="butF01" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF02" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF03" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF04" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF05" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF06" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF07" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF08" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF09" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="butF10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butF14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butF09" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butF08" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butF07" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butF06" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butF05" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butF04" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butF03" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butF02" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butF01" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="butG01" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG02" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG03" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG04" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG05" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG06" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG07" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG08" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG09" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="butG10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butG14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butG01" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butG09" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butG08" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butG07" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butG06" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butG05" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butG04" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butG03" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butG02" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="butH04" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butH10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butH09" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butH08" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butH07" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butH06" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butH05" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="butH03" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="butH01" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="butH02" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH03" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH04" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH05" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH06" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH07" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH08" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH09" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="butH14" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="lblSeatSelection" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                           <Component id="lblSeats" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
@@ -462,7 +376,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="19" max="32767" attributes="0"/>
+              <EmptySpace pref="106" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -693,10 +607,21 @@
         <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butB07PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butB09">
+    <Component class="javax.swing.JButton" name="butB08">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(17)" type="code"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butB08ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butB08PropertyChange"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="butB09">
+      <Properties>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="(show.getShowSeating()).get(18)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -707,7 +632,7 @@
     <Component class="javax.swing.JButton" name="butB10">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(18)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(19)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -718,7 +643,7 @@
     <Component class="javax.swing.JButton" name="butC01">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(19)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(20)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -729,7 +654,7 @@
     <Component class="javax.swing.JButton" name="butC02">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(20)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(21)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -740,7 +665,7 @@
     <Component class="javax.swing.JButton" name="butC03">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(21)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(22)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -751,7 +676,7 @@
     <Component class="javax.swing.JButton" name="butC04">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(22)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(23)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -762,7 +687,7 @@
     <Component class="javax.swing.JButton" name="butC05">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(23)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(24)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -773,7 +698,7 @@
     <Component class="javax.swing.JButton" name="butC06">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(24)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(25)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -784,7 +709,7 @@
     <Component class="javax.swing.JButton" name="butC07">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(25)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(26)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -795,7 +720,7 @@
     <Component class="javax.swing.JButton" name="butC08">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(26)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(27)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -806,7 +731,7 @@
     <Component class="javax.swing.JButton" name="butC09">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(27)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(28)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -817,7 +742,7 @@
     <Component class="javax.swing.JButton" name="butC10">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(28)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(29)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -825,461 +750,230 @@
         <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC10PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC102">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(29)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC102ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC102PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butC103">
+    <Component class="javax.swing.JButton" name="butD01">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(30)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC103ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC103PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD01ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD01PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC104">
+    <Component class="javax.swing.JButton" name="butD02">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(31)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC104ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC104PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD02ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD02PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC105">
+    <Component class="javax.swing.JButton" name="butD03">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(32)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC105ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC105PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD03ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD03PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC106">
+    <Component class="javax.swing.JButton" name="butD04">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(33)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC106ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC106PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD04ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD04PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC107">
+    <Component class="javax.swing.JButton" name="butD05">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(34)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC107ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC107PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD05ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD05PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC108">
+    <Component class="javax.swing.JButton" name="butD06">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(35)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC108ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC108PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD06ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD06PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC109">
+    <Component class="javax.swing.JButton" name="butD07">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(36)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC109ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC109PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD07ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD07PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC110">
+    <Component class="javax.swing.JButton" name="butD08">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(37)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC110ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC110PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD08ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD08PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC11">
+    <Component class="javax.swing.JButton" name="butD09">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(38)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC11ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC11PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD09ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD09PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC12">
+    <Component class="javax.swing.JButton" name="butD10">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(39)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC12ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC12PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD10ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD10PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC13">
+    <Component class="javax.swing.JButton" name="butE01">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(40)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC13ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC13PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE01ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE01PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butC14">
+    <Component class="javax.swing.JButton" name="butE02">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(41)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butC14ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butC14PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE02ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE02PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butD101">
+    <Component class="javax.swing.JButton" name="butE03">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(42)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD101ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD101PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE03ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE03PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butD102">
+    <Component class="javax.swing.JButton" name="butE04">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(43)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD102ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD102PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE04ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE04PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butD103">
+    <Component class="javax.swing.JButton" name="butE05">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(44)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD103ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD103PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE05ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE05PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butD104">
+    <Component class="javax.swing.JButton" name="butE06">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(45)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD104ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD104PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE06ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE06PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butD105">
+    <Component class="javax.swing.JButton" name="butE07">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(46)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD105ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD105PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE07ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE07PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butD106">
+    <Component class="javax.swing.JButton" name="butE08">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(47)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD106ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD106PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE08ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE08PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butD107">
+    <Component class="javax.swing.JButton" name="butE09">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(48)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD107ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD107PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE09ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE09PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butD108">
+    <Component class="javax.swing.JButton" name="butE10">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="(show.getShowSeating()).get(49)" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD108ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD108PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butD109">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(50)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD109ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD109PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butD110">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(51)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD110ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD110PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butD11">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(52)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD11ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD11PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butD12">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(53)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD12ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD12PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butD13">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(54)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD13ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD13PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butD14">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(55)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butD14ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butD14PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE101">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(56)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE101ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE101PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE102">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(57)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE102ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE102PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE103">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(58)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE103ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE103PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE104">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(59)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE104ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE104PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE105">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(60)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE105ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE105PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE106">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(61)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE106ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE106PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE107">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(62)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE107ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE107PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE108">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(63)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE108ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE108PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE109">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(64)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE109ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE109PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE110">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(65)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE110ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE110PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE11">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(66)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE11ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE11PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE12">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(67)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE12ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE12PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE13">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(68)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE13ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE13PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butE14">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(69)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE14ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE14PropertyChange"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butE10ActionPerformed"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butE10PropertyChange"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="butF01">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(70)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(50)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1290,7 +984,7 @@
     <Component class="javax.swing.JButton" name="butF02">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(71)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(51)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1301,7 +995,7 @@
     <Component class="javax.swing.JButton" name="butF03">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(72)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(52)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1312,7 +1006,7 @@
     <Component class="javax.swing.JButton" name="butF04">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(73)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(53)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1323,7 +1017,7 @@
     <Component class="javax.swing.JButton" name="butF05">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(74)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(54)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1334,7 +1028,7 @@
     <Component class="javax.swing.JButton" name="butF06">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(75)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(55)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1345,7 +1039,7 @@
     <Component class="javax.swing.JButton" name="butF07">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(76)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(56)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1356,7 +1050,7 @@
     <Component class="javax.swing.JButton" name="butF08">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(77)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(57)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1367,7 +1061,7 @@
     <Component class="javax.swing.JButton" name="butF09">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(78)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(58)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1378,7 +1072,7 @@
     <Component class="javax.swing.JButton" name="butF10">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(79)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(59)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1386,54 +1080,10 @@
         <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butF10PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butF11">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(80)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butF11ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butF11PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butF12">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(81)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butF12ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butF12PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butF13">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(82)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butF13ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butF13PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butF14">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(83)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butF14ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butF14PropertyChange"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="butG01">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(84)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(60)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1444,7 +1094,7 @@
     <Component class="javax.swing.JButton" name="butG02">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(85)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(61)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1455,7 +1105,7 @@
     <Component class="javax.swing.JButton" name="butG03">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(86)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(62)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1466,7 +1116,7 @@
     <Component class="javax.swing.JButton" name="butG04">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(87)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(63)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1477,7 +1127,7 @@
     <Component class="javax.swing.JButton" name="butG05">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(88)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(64)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1488,7 +1138,7 @@
     <Component class="javax.swing.JButton" name="butG06">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(89)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(65)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1499,7 +1149,7 @@
     <Component class="javax.swing.JButton" name="butG07">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(90)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(66)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1510,7 +1160,7 @@
     <Component class="javax.swing.JButton" name="butG08">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(91)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(67)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1521,7 +1171,7 @@
     <Component class="javax.swing.JButton" name="butG09">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(92)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(68)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1532,7 +1182,7 @@
     <Component class="javax.swing.JButton" name="butG10">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(93)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(69)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1540,54 +1190,10 @@
         <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butG10PropertyChange"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="butG11">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(94)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butG11ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butG11PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butG12">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(95)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butG12ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butG12PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butG13">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(96)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butG13ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butG13PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butG14">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(97)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butG14ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butG14PropertyChange"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="butH01">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(98)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(70)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1598,7 +1204,7 @@
     <Component class="javax.swing.JButton" name="butH02">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(99)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(71)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1609,7 +1215,7 @@
     <Component class="javax.swing.JButton" name="butH03">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(100)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(72)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1620,7 +1226,7 @@
     <Component class="javax.swing.JButton" name="butH04">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(101)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(73)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1631,7 +1237,7 @@
     <Component class="javax.swing.JButton" name="butH05">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(102)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(74)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1642,7 +1248,7 @@
     <Component class="javax.swing.JButton" name="butH06">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(103)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(75)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1653,7 +1259,7 @@
     <Component class="javax.swing.JButton" name="butH07">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(104)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(76)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1664,7 +1270,7 @@
     <Component class="javax.swing.JButton" name="butH08">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(105)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(77)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1675,7 +1281,7 @@
     <Component class="javax.swing.JButton" name="butH09">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(106)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(78)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -1686,56 +1292,12 @@
     <Component class="javax.swing.JButton" name="butH10">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(107)" type="code"/>
+          <Connection code="(show.getShowSeating()).get(79)" type="code"/>
         </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butH10ActionPerformed"/>
         <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butH10PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butH11">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(108)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butH11ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butH11PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butH12">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(109)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butH12ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butH12PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butH13">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(110)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butH13ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butH13PropertyChange"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="butH14">
-      <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(show.getShowSeating()).get(111)" type="code"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butH14ActionPerformed"/>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="butH14PropertyChange"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblEntrance">

@@ -31,7 +31,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         this.t = t;
         this.cart = cart;
         screen = new Screen(s, t);
-        replaceSeating = show.getShowSeating();
+        replaceSeating = this.show.getShowSeating();
         getContentPane().setBackground(Color.black);
         initComponents();
     }
@@ -66,6 +66,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         butB05 = new javax.swing.JButton();
         butB06 = new javax.swing.JButton();
         butB07 = new javax.swing.JButton();
+        butB08 = new javax.swing.JButton();
         butB09 = new javax.swing.JButton();
         butB10 = new javax.swing.JButton();
         butC01 = new javax.swing.JButton();
@@ -78,47 +79,26 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         butC08 = new javax.swing.JButton();
         butC09 = new javax.swing.JButton();
         butC10 = new javax.swing.JButton();
-        butC102 = new javax.swing.JButton();
-        butC103 = new javax.swing.JButton();
-        butC104 = new javax.swing.JButton();
-        butC105 = new javax.swing.JButton();
-        butC106 = new javax.swing.JButton();
-        butC107 = new javax.swing.JButton();
-        butC108 = new javax.swing.JButton();
-        butC109 = new javax.swing.JButton();
-        butC110 = new javax.swing.JButton();
-        butC11 = new javax.swing.JButton();
-        butC12 = new javax.swing.JButton();
-        butC13 = new javax.swing.JButton();
-        butC14 = new javax.swing.JButton();
-        butD101 = new javax.swing.JButton();
-        butD102 = new javax.swing.JButton();
-        butD103 = new javax.swing.JButton();
-        butD104 = new javax.swing.JButton();
-        butD105 = new javax.swing.JButton();
-        butD106 = new javax.swing.JButton();
-        butD107 = new javax.swing.JButton();
-        butD108 = new javax.swing.JButton();
-        butD109 = new javax.swing.JButton();
-        butD110 = new javax.swing.JButton();
-        butD11 = new javax.swing.JButton();
-        butD12 = new javax.swing.JButton();
-        butD13 = new javax.swing.JButton();
-        butD14 = new javax.swing.JButton();
-        butE101 = new javax.swing.JButton();
-        butE102 = new javax.swing.JButton();
-        butE103 = new javax.swing.JButton();
-        butE104 = new javax.swing.JButton();
-        butE105 = new javax.swing.JButton();
-        butE106 = new javax.swing.JButton();
-        butE107 = new javax.swing.JButton();
-        butE108 = new javax.swing.JButton();
-        butE109 = new javax.swing.JButton();
-        butE110 = new javax.swing.JButton();
-        butE11 = new javax.swing.JButton();
-        butE12 = new javax.swing.JButton();
-        butE13 = new javax.swing.JButton();
-        butE14 = new javax.swing.JButton();
+        butD01 = new javax.swing.JButton();
+        butD02 = new javax.swing.JButton();
+        butD03 = new javax.swing.JButton();
+        butD04 = new javax.swing.JButton();
+        butD05 = new javax.swing.JButton();
+        butD06 = new javax.swing.JButton();
+        butD07 = new javax.swing.JButton();
+        butD08 = new javax.swing.JButton();
+        butD09 = new javax.swing.JButton();
+        butD10 = new javax.swing.JButton();
+        butE01 = new javax.swing.JButton();
+        butE02 = new javax.swing.JButton();
+        butE03 = new javax.swing.JButton();
+        butE04 = new javax.swing.JButton();
+        butE05 = new javax.swing.JButton();
+        butE06 = new javax.swing.JButton();
+        butE07 = new javax.swing.JButton();
+        butE08 = new javax.swing.JButton();
+        butE09 = new javax.swing.JButton();
+        butE10 = new javax.swing.JButton();
         butF01 = new javax.swing.JButton();
         butF02 = new javax.swing.JButton();
         butF03 = new javax.swing.JButton();
@@ -129,10 +109,6 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         butF08 = new javax.swing.JButton();
         butF09 = new javax.swing.JButton();
         butF10 = new javax.swing.JButton();
-        butF11 = new javax.swing.JButton();
-        butF12 = new javax.swing.JButton();
-        butF13 = new javax.swing.JButton();
-        butF14 = new javax.swing.JButton();
         butG01 = new javax.swing.JButton();
         butG02 = new javax.swing.JButton();
         butG03 = new javax.swing.JButton();
@@ -143,10 +119,6 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         butG08 = new javax.swing.JButton();
         butG09 = new javax.swing.JButton();
         butG10 = new javax.swing.JButton();
-        butG11 = new javax.swing.JButton();
-        butG12 = new javax.swing.JButton();
-        butG13 = new javax.swing.JButton();
-        butG14 = new javax.swing.JButton();
         butH01 = new javax.swing.JButton();
         butH02 = new javax.swing.JButton();
         butH03 = new javax.swing.JButton();
@@ -157,10 +129,6 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         butH08 = new javax.swing.JButton();
         butH09 = new javax.swing.JButton();
         butH10 = new javax.swing.JButton();
-        butH11 = new javax.swing.JButton();
-        butH12 = new javax.swing.JButton();
-        butH13 = new javax.swing.JButton();
-        butH14 = new javax.swing.JButton();
         lblEntrance = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -394,7 +362,19 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butB09.setText((show.getShowSeating()).get(17));
+        butB08.setText((show.getShowSeating()).get(17));
+        butB08.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butB08ActionPerformed(evt);
+            }
+        });
+        butB08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                butB08PropertyChange(evt);
+            }
+        });
+
+        butB09.setText((show.getShowSeating()).get(18));
         butB09.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butB09ActionPerformed(evt);
@@ -406,7 +386,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butB10.setText((show.getShowSeating()).get(18));
+        butB10.setText((show.getShowSeating()).get(19));
         butB10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butB10ActionPerformed(evt);
@@ -418,7 +398,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC01.setText((show.getShowSeating()).get(19));
+        butC01.setText((show.getShowSeating()).get(20));
         butC01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC01ActionPerformed(evt);
@@ -430,7 +410,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC02.setText((show.getShowSeating()).get(20));
+        butC02.setText((show.getShowSeating()).get(21));
         butC02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC02ActionPerformed(evt);
@@ -442,7 +422,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC03.setText((show.getShowSeating()).get(21));
+        butC03.setText((show.getShowSeating()).get(22));
         butC03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC03ActionPerformed(evt);
@@ -454,7 +434,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC04.setText((show.getShowSeating()).get(22));
+        butC04.setText((show.getShowSeating()).get(23));
         butC04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC04ActionPerformed(evt);
@@ -466,7 +446,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC05.setText((show.getShowSeating()).get(23));
+        butC05.setText((show.getShowSeating()).get(24));
         butC05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC05ActionPerformed(evt);
@@ -478,7 +458,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC06.setText((show.getShowSeating()).get(24));
+        butC06.setText((show.getShowSeating()).get(25));
         butC06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC06ActionPerformed(evt);
@@ -490,7 +470,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC07.setText((show.getShowSeating()).get(25));
+        butC07.setText((show.getShowSeating()).get(26));
         butC07.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC07ActionPerformed(evt);
@@ -502,7 +482,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC08.setText((show.getShowSeating()).get(26));
+        butC08.setText((show.getShowSeating()).get(27));
         butC08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC08ActionPerformed(evt);
@@ -514,7 +494,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC09.setText((show.getShowSeating()).get(27));
+        butC09.setText((show.getShowSeating()).get(28));
         butC09.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC09ActionPerformed(evt);
@@ -526,7 +506,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC10.setText((show.getShowSeating()).get(28));
+        butC10.setText((show.getShowSeating()).get(29));
         butC10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butC10ActionPerformed(evt);
@@ -538,499 +518,247 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butC102.setText((show.getShowSeating()).get(29));
-        butC102.addActionListener(new java.awt.event.ActionListener() {
+        butD01.setText((show.getShowSeating()).get(30));
+        butD01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC102ActionPerformed(evt);
+                butD01ActionPerformed(evt);
             }
         });
-        butC102.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butD01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC102PropertyChange(evt);
+                butD01PropertyChange(evt);
             }
         });
 
-        butC103.setText((show.getShowSeating()).get(30));
-        butC103.addActionListener(new java.awt.event.ActionListener() {
+        butD02.setText((show.getShowSeating()).get(31));
+        butD02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC103ActionPerformed(evt);
+                butD02ActionPerformed(evt);
             }
         });
-        butC103.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butD02.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC103PropertyChange(evt);
+                butD02PropertyChange(evt);
             }
         });
 
-        butC104.setText((show.getShowSeating()).get(31));
-        butC104.addActionListener(new java.awt.event.ActionListener() {
+        butD03.setText((show.getShowSeating()).get(32));
+        butD03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC104ActionPerformed(evt);
+                butD03ActionPerformed(evt);
             }
         });
-        butC104.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butD03.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC104PropertyChange(evt);
+                butD03PropertyChange(evt);
             }
         });
 
-        butC105.setText((show.getShowSeating()).get(32));
-        butC105.addActionListener(new java.awt.event.ActionListener() {
+        butD04.setText((show.getShowSeating()).get(33));
+        butD04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC105ActionPerformed(evt);
+                butD04ActionPerformed(evt);
             }
         });
-        butC105.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butD04.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC105PropertyChange(evt);
+                butD04PropertyChange(evt);
             }
         });
 
-        butC106.setText((show.getShowSeating()).get(33));
-        butC106.addActionListener(new java.awt.event.ActionListener() {
+        butD05.setText((show.getShowSeating()).get(34));
+        butD05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC106ActionPerformed(evt);
+                butD05ActionPerformed(evt);
             }
         });
-        butC106.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butD05.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC106PropertyChange(evt);
+                butD05PropertyChange(evt);
             }
         });
 
-        butC107.setText((show.getShowSeating()).get(34));
-        butC107.addActionListener(new java.awt.event.ActionListener() {
+        butD06.setText((show.getShowSeating()).get(35));
+        butD06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC107ActionPerformed(evt);
+                butD06ActionPerformed(evt);
             }
         });
-        butC107.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butD06.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC107PropertyChange(evt);
+                butD06PropertyChange(evt);
             }
         });
 
-        butC108.setText((show.getShowSeating()).get(35));
-        butC108.addActionListener(new java.awt.event.ActionListener() {
+        butD07.setText((show.getShowSeating()).get(36));
+        butD07.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC108ActionPerformed(evt);
+                butD07ActionPerformed(evt);
             }
         });
-        butC108.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butD07.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC108PropertyChange(evt);
+                butD07PropertyChange(evt);
             }
         });
 
-        butC109.setText((show.getShowSeating()).get(36));
-        butC109.addActionListener(new java.awt.event.ActionListener() {
+        butD08.setText((show.getShowSeating()).get(37));
+        butD08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC109ActionPerformed(evt);
+                butD08ActionPerformed(evt);
             }
         });
-        butC109.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butD08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC109PropertyChange(evt);
+                butD08PropertyChange(evt);
             }
         });
 
-        butC110.setText((show.getShowSeating()).get(37));
-        butC110.addActionListener(new java.awt.event.ActionListener() {
+        butD09.setText((show.getShowSeating()).get(38));
+        butD09.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC110ActionPerformed(evt);
+                butD09ActionPerformed(evt);
             }
         });
-        butC110.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butD09.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC110PropertyChange(evt);
+                butD09PropertyChange(evt);
             }
         });
 
-        butC11.setText((show.getShowSeating()).get(38));
-        butC11.addActionListener(new java.awt.event.ActionListener() {
+        butD10.setText((show.getShowSeating()).get(39));
+        butD10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC11ActionPerformed(evt);
+                butD10ActionPerformed(evt);
             }
         });
-        butC11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butD10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC11PropertyChange(evt);
+                butD10PropertyChange(evt);
             }
         });
 
-        butC12.setText((show.getShowSeating()).get(39));
-        butC12.addActionListener(new java.awt.event.ActionListener() {
+        butE01.setText((show.getShowSeating()).get(40));
+        butE01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC12ActionPerformed(evt);
+                butE01ActionPerformed(evt);
             }
         });
-        butC12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butE01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC12PropertyChange(evt);
+                butE01PropertyChange(evt);
             }
         });
 
-        butC13.setText((show.getShowSeating()).get(40));
-        butC13.addActionListener(new java.awt.event.ActionListener() {
+        butE02.setText((show.getShowSeating()).get(41));
+        butE02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC13ActionPerformed(evt);
+                butE02ActionPerformed(evt);
             }
         });
-        butC13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butE02.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC13PropertyChange(evt);
+                butE02PropertyChange(evt);
             }
         });
 
-        butC14.setText((show.getShowSeating()).get(41));
-        butC14.addActionListener(new java.awt.event.ActionListener() {
+        butE03.setText((show.getShowSeating()).get(42));
+        butE03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butC14ActionPerformed(evt);
+                butE03ActionPerformed(evt);
             }
         });
-        butC14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butE03.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butC14PropertyChange(evt);
+                butE03PropertyChange(evt);
             }
         });
 
-        butD101.setText((show.getShowSeating()).get(42));
-        butD101.addActionListener(new java.awt.event.ActionListener() {
+        butE04.setText((show.getShowSeating()).get(43));
+        butE04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD101ActionPerformed(evt);
+                butE04ActionPerformed(evt);
             }
         });
-        butD101.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butE04.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD101PropertyChange(evt);
+                butE04PropertyChange(evt);
             }
         });
 
-        butD102.setText((show.getShowSeating()).get(43));
-        butD102.addActionListener(new java.awt.event.ActionListener() {
+        butE05.setText((show.getShowSeating()).get(44));
+        butE05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD102ActionPerformed(evt);
+                butE05ActionPerformed(evt);
             }
         });
-        butD102.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butE05.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD102PropertyChange(evt);
+                butE05PropertyChange(evt);
             }
         });
 
-        butD103.setText((show.getShowSeating()).get(44));
-        butD103.addActionListener(new java.awt.event.ActionListener() {
+        butE06.setText((show.getShowSeating()).get(45));
+        butE06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD103ActionPerformed(evt);
+                butE06ActionPerformed(evt);
             }
         });
-        butD103.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butE06.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD103PropertyChange(evt);
+                butE06PropertyChange(evt);
             }
         });
 
-        butD104.setText((show.getShowSeating()).get(45));
-        butD104.addActionListener(new java.awt.event.ActionListener() {
+        butE07.setText((show.getShowSeating()).get(46));
+        butE07.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD104ActionPerformed(evt);
+                butE07ActionPerformed(evt);
             }
         });
-        butD104.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butE07.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD104PropertyChange(evt);
+                butE07PropertyChange(evt);
             }
         });
 
-        butD105.setText((show.getShowSeating()).get(46));
-        butD105.addActionListener(new java.awt.event.ActionListener() {
+        butE08.setText((show.getShowSeating()).get(47));
+        butE08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD105ActionPerformed(evt);
+                butE08ActionPerformed(evt);
             }
         });
-        butD105.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butE08.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD105PropertyChange(evt);
+                butE08PropertyChange(evt);
             }
         });
 
-        butD106.setText((show.getShowSeating()).get(47));
-        butD106.addActionListener(new java.awt.event.ActionListener() {
+        butE09.setText((show.getShowSeating()).get(48));
+        butE09.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD106ActionPerformed(evt);
+                butE09ActionPerformed(evt);
             }
         });
-        butD106.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butE09.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD106PropertyChange(evt);
+                butE09PropertyChange(evt);
             }
         });
 
-        butD107.setText((show.getShowSeating()).get(48));
-        butD107.addActionListener(new java.awt.event.ActionListener() {
+        butE10.setText((show.getShowSeating()).get(49));
+        butE10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD107ActionPerformed(evt);
+                butE10ActionPerformed(evt);
             }
         });
-        butD107.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        butE10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD107PropertyChange(evt);
+                butE10PropertyChange(evt);
             }
         });
 
-        butD108.setText((show.getShowSeating()).get(49));
-        butD108.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD108ActionPerformed(evt);
-            }
-        });
-        butD108.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD108PropertyChange(evt);
-            }
-        });
-
-        butD109.setText((show.getShowSeating()).get(50));
-        butD109.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD109ActionPerformed(evt);
-            }
-        });
-        butD109.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD109PropertyChange(evt);
-            }
-        });
-
-        butD110.setText((show.getShowSeating()).get(51));
-        butD110.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD110ActionPerformed(evt);
-            }
-        });
-        butD110.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD110PropertyChange(evt);
-            }
-        });
-
-        butD11.setText((show.getShowSeating()).get(52));
-        butD11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD11ActionPerformed(evt);
-            }
-        });
-        butD11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD11PropertyChange(evt);
-            }
-        });
-
-        butD12.setText((show.getShowSeating()).get(53));
-        butD12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD12ActionPerformed(evt);
-            }
-        });
-        butD12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD12PropertyChange(evt);
-            }
-        });
-
-        butD13.setText((show.getShowSeating()).get(54));
-        butD13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD13ActionPerformed(evt);
-            }
-        });
-        butD13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD13PropertyChange(evt);
-            }
-        });
-
-        butD14.setText((show.getShowSeating()).get(55));
-        butD14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butD14ActionPerformed(evt);
-            }
-        });
-        butD14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butD14PropertyChange(evt);
-            }
-        });
-
-        butE101.setText((show.getShowSeating()).get(56));
-        butE101.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE101ActionPerformed(evt);
-            }
-        });
-        butE101.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE101PropertyChange(evt);
-            }
-        });
-
-        butE102.setText((show.getShowSeating()).get(57));
-        butE102.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE102ActionPerformed(evt);
-            }
-        });
-        butE102.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE102PropertyChange(evt);
-            }
-        });
-
-        butE103.setText((show.getShowSeating()).get(58));
-        butE103.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE103ActionPerformed(evt);
-            }
-        });
-        butE103.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE103PropertyChange(evt);
-            }
-        });
-
-        butE104.setText((show.getShowSeating()).get(59));
-        butE104.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE104ActionPerformed(evt);
-            }
-        });
-        butE104.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE104PropertyChange(evt);
-            }
-        });
-
-        butE105.setText((show.getShowSeating()).get(60));
-        butE105.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE105ActionPerformed(evt);
-            }
-        });
-        butE105.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE105PropertyChange(evt);
-            }
-        });
-
-        butE106.setText((show.getShowSeating()).get(61));
-        butE106.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE106ActionPerformed(evt);
-            }
-        });
-        butE106.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE106PropertyChange(evt);
-            }
-        });
-
-        butE107.setText((show.getShowSeating()).get(62));
-        butE107.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE107ActionPerformed(evt);
-            }
-        });
-        butE107.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE107PropertyChange(evt);
-            }
-        });
-
-        butE108.setText((show.getShowSeating()).get(63));
-        butE108.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE108ActionPerformed(evt);
-            }
-        });
-        butE108.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE108PropertyChange(evt);
-            }
-        });
-
-        butE109.setText((show.getShowSeating()).get(64));
-        butE109.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE109ActionPerformed(evt);
-            }
-        });
-        butE109.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE109PropertyChange(evt);
-            }
-        });
-
-        butE110.setText((show.getShowSeating()).get(65));
-        butE110.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE110ActionPerformed(evt);
-            }
-        });
-        butE110.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE110PropertyChange(evt);
-            }
-        });
-
-        butE11.setText((show.getShowSeating()).get(66));
-        butE11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE11ActionPerformed(evt);
-            }
-        });
-        butE11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE11PropertyChange(evt);
-            }
-        });
-
-        butE12.setText((show.getShowSeating()).get(67));
-        butE12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE12ActionPerformed(evt);
-            }
-        });
-        butE12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE12PropertyChange(evt);
-            }
-        });
-
-        butE13.setText((show.getShowSeating()).get(68));
-        butE13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE13ActionPerformed(evt);
-            }
-        });
-        butE13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE13PropertyChange(evt);
-            }
-        });
-
-        butE14.setText((show.getShowSeating()).get(69));
-        butE14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butE14ActionPerformed(evt);
-            }
-        });
-        butE14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butE14PropertyChange(evt);
-            }
-        });
-
-        butF01.setText((show.getShowSeating()).get(70));
+        butF01.setText((show.getShowSeating()).get(50));
         butF01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF01ActionPerformed(evt);
@@ -1042,7 +770,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butF02.setText((show.getShowSeating()).get(71));
+        butF02.setText((show.getShowSeating()).get(51));
         butF02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF02ActionPerformed(evt);
@@ -1054,7 +782,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butF03.setText((show.getShowSeating()).get(72));
+        butF03.setText((show.getShowSeating()).get(52));
         butF03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF03ActionPerformed(evt);
@@ -1066,7 +794,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butF04.setText((show.getShowSeating()).get(73));
+        butF04.setText((show.getShowSeating()).get(53));
         butF04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF04ActionPerformed(evt);
@@ -1078,7 +806,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butF05.setText((show.getShowSeating()).get(74));
+        butF05.setText((show.getShowSeating()).get(54));
         butF05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF05ActionPerformed(evt);
@@ -1090,7 +818,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butF06.setText((show.getShowSeating()).get(75));
+        butF06.setText((show.getShowSeating()).get(55));
         butF06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF06ActionPerformed(evt);
@@ -1102,7 +830,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butF07.setText((show.getShowSeating()).get(76));
+        butF07.setText((show.getShowSeating()).get(56));
         butF07.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF07ActionPerformed(evt);
@@ -1114,7 +842,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butF08.setText((show.getShowSeating()).get(77));
+        butF08.setText((show.getShowSeating()).get(57));
         butF08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF08ActionPerformed(evt);
@@ -1126,7 +854,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butF09.setText((show.getShowSeating()).get(78));
+        butF09.setText((show.getShowSeating()).get(58));
         butF09.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF09ActionPerformed(evt);
@@ -1138,7 +866,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butF10.setText((show.getShowSeating()).get(79));
+        butF10.setText((show.getShowSeating()).get(59));
         butF10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butF10ActionPerformed(evt);
@@ -1150,55 +878,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butF11.setText((show.getShowSeating()).get(80));
-        butF11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butF11ActionPerformed(evt);
-            }
-        });
-        butF11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butF11PropertyChange(evt);
-            }
-        });
-
-        butF12.setText((show.getShowSeating()).get(81));
-        butF12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butF12ActionPerformed(evt);
-            }
-        });
-        butF12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butF12PropertyChange(evt);
-            }
-        });
-
-        butF13.setText((show.getShowSeating()).get(82));
-        butF13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butF13ActionPerformed(evt);
-            }
-        });
-        butF13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butF13PropertyChange(evt);
-            }
-        });
-
-        butF14.setText((show.getShowSeating()).get(83));
-        butF14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butF14ActionPerformed(evt);
-            }
-        });
-        butF14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butF14PropertyChange(evt);
-            }
-        });
-
-        butG01.setText((show.getShowSeating()).get(84));
+        butG01.setText((show.getShowSeating()).get(60));
         butG01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG01ActionPerformed(evt);
@@ -1210,7 +890,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butG02.setText((show.getShowSeating()).get(85));
+        butG02.setText((show.getShowSeating()).get(61));
         butG02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG02ActionPerformed(evt);
@@ -1222,7 +902,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butG03.setText((show.getShowSeating()).get(86));
+        butG03.setText((show.getShowSeating()).get(62));
         butG03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG03ActionPerformed(evt);
@@ -1234,7 +914,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butG04.setText((show.getShowSeating()).get(87));
+        butG04.setText((show.getShowSeating()).get(63));
         butG04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG04ActionPerformed(evt);
@@ -1246,7 +926,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butG05.setText((show.getShowSeating()).get(88));
+        butG05.setText((show.getShowSeating()).get(64));
         butG05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG05ActionPerformed(evt);
@@ -1258,7 +938,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butG06.setText((show.getShowSeating()).get(89));
+        butG06.setText((show.getShowSeating()).get(65));
         butG06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG06ActionPerformed(evt);
@@ -1270,7 +950,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butG07.setText((show.getShowSeating()).get(90));
+        butG07.setText((show.getShowSeating()).get(66));
         butG07.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG07ActionPerformed(evt);
@@ -1282,7 +962,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butG08.setText((show.getShowSeating()).get(91));
+        butG08.setText((show.getShowSeating()).get(67));
         butG08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG08ActionPerformed(evt);
@@ -1294,7 +974,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butG09.setText((show.getShowSeating()).get(92));
+        butG09.setText((show.getShowSeating()).get(68));
         butG09.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG09ActionPerformed(evt);
@@ -1306,7 +986,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butG10.setText((show.getShowSeating()).get(93));
+        butG10.setText((show.getShowSeating()).get(69));
         butG10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butG10ActionPerformed(evt);
@@ -1318,55 +998,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butG11.setText((show.getShowSeating()).get(94));
-        butG11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butG11ActionPerformed(evt);
-            }
-        });
-        butG11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butG11PropertyChange(evt);
-            }
-        });
-
-        butG12.setText((show.getShowSeating()).get(95));
-        butG12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butG12ActionPerformed(evt);
-            }
-        });
-        butG12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butG12PropertyChange(evt);
-            }
-        });
-
-        butG13.setText((show.getShowSeating()).get(96));
-        butG13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butG13ActionPerformed(evt);
-            }
-        });
-        butG13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butG13PropertyChange(evt);
-            }
-        });
-
-        butG14.setText((show.getShowSeating()).get(97));
-        butG14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butG14ActionPerformed(evt);
-            }
-        });
-        butG14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butG14PropertyChange(evt);
-            }
-        });
-
-        butH01.setText((show.getShowSeating()).get(98));
+        butH01.setText((show.getShowSeating()).get(70));
         butH01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH01ActionPerformed(evt);
@@ -1378,7 +1010,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butH02.setText((show.getShowSeating()).get(99));
+        butH02.setText((show.getShowSeating()).get(71));
         butH02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH02ActionPerformed(evt);
@@ -1390,7 +1022,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butH03.setText((show.getShowSeating()).get(100));
+        butH03.setText((show.getShowSeating()).get(72));
         butH03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH03ActionPerformed(evt);
@@ -1402,7 +1034,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butH04.setText((show.getShowSeating()).get(101));
+        butH04.setText((show.getShowSeating()).get(73));
         butH04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH04ActionPerformed(evt);
@@ -1414,7 +1046,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butH05.setText((show.getShowSeating()).get(102));
+        butH05.setText((show.getShowSeating()).get(74));
         butH05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH05ActionPerformed(evt);
@@ -1426,7 +1058,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butH06.setText((show.getShowSeating()).get(103));
+        butH06.setText((show.getShowSeating()).get(75));
         butH06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH06ActionPerformed(evt);
@@ -1438,7 +1070,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butH07.setText((show.getShowSeating()).get(104));
+        butH07.setText((show.getShowSeating()).get(76));
         butH07.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH07ActionPerformed(evt);
@@ -1450,7 +1082,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butH08.setText((show.getShowSeating()).get(105));
+        butH08.setText((show.getShowSeating()).get(77));
         butH08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH08ActionPerformed(evt);
@@ -1462,7 +1094,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butH09.setText((show.getShowSeating()).get(106));
+        butH09.setText((show.getShowSeating()).get(78));
         butH09.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH09ActionPerformed(evt);
@@ -1474,7 +1106,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             }
         });
 
-        butH10.setText((show.getShowSeating()).get(107));
+        butH10.setText((show.getShowSeating()).get(79));
         butH10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butH10ActionPerformed(evt);
@@ -1483,54 +1115,6 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         butH10.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 butH10PropertyChange(evt);
-            }
-        });
-
-        butH11.setText((show.getShowSeating()).get(108));
-        butH11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butH11ActionPerformed(evt);
-            }
-        });
-        butH11.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butH11PropertyChange(evt);
-            }
-        });
-
-        butH12.setText((show.getShowSeating()).get(109));
-        butH12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butH12ActionPerformed(evt);
-            }
-        });
-        butH12.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butH12PropertyChange(evt);
-            }
-        });
-
-        butH13.setText((show.getShowSeating()).get(110));
-        butH13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butH13ActionPerformed(evt);
-            }
-        });
-        butH13.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butH13PropertyChange(evt);
-            }
-        });
-
-        butH14.setText((show.getShowSeating()).get(111));
-        butH14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butH14ActionPerformed(evt);
-            }
-        });
-        butH14.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                butH14PropertyChange(evt);
             }
         });
 
@@ -1576,34 +1160,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(butB05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butB06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butB07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butB09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butB10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(butG01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(butA01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1623,198 +1180,165 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(butA09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butA10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butB01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butB02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butB03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butB04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(butA10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(butC10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC102, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC103, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC104, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC105, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC106, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC107, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC108, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC109, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC110, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butC14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(butD101, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD102, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD103, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD104, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD105, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD106, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD107, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD108, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD109, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD110, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butD14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(butE101, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE102, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE103, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE104, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE105, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE106, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE107, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE108, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE109, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE110, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butE14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(butF01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butF14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(butG01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butG14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(butH01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(butH14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblSeatSelection)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(lblSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(28, 28, 28)
-                                    .addComponent(butClearSelection)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(butClose)))
-                            .addGap(51, 51, 51))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(butC01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butC02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butC03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butC04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(butB01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butB02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butB03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butB04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(butB05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butB06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butB07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butB08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butB09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butB10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(butC05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butC06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butC07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butC08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butC09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(butC10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblSeatSelection)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(lblSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(butClearSelection)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(butClose))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(butH01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(butH02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(butH03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(butH04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(butH05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(butH06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(butH07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(butH08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(butH09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(butH10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGap(51, 291, Short.MAX_VALUE))
                         .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(lblFOS, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 834, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                    .addComponent(lblFOS, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(butF01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butF02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butF03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butF04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butF05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butF06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butF07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butF08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butF09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butF10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(butG02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butG03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butG04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butG05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butG06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butG07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butG08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butG09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butG10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(butE01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butE02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butE03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butE04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butE05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butE06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butE07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butE08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butE09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(butE10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(butD01, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(butD02, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(butD03, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(butD04, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(butD05, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(butD06, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(butD07, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(butD08, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(butD09, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(butD10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1825,11 +1349,11 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblFOS, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(9, 9, 9)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblEntrance, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(butA01)
                                     .addComponent(butA02)
@@ -1840,18 +1364,23 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                                     .addComponent(butA07)
                                     .addComponent(butA08)
                                     .addComponent(butA09)
-                                    .addComponent(butA10)
+                                    .addComponent(butA10))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(butB05)
+                                    .addComponent(butB06)
+                                    .addComponent(butB07)
+                                    .addComponent(butB08)
+                                    .addComponent(butB09)
+                                    .addComponent(butB10)
                                     .addComponent(butB01)
                                     .addComponent(butB02)
                                     .addComponent(butB03)
                                     .addComponent(butB04))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(butB05)
-                                    .addComponent(butB06)
-                                    .addComponent(butB07)
-                                    .addComponent(butB09)
-                                    .addComponent(butB10)
+                                    .addComponent(butC10)
+                                    .addComponent(butC09)
                                     .addComponent(butC01)
                                     .addComponent(butC02)
                                     .addComponent(butC03)
@@ -1859,121 +1388,84 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                                     .addComponent(butC05)
                                     .addComponent(butC06)
                                     .addComponent(butC07)
-                                    .addComponent(butC08)
-                                    .addComponent(butC09))
+                                    .addComponent(butC08))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(butC10)
-                                    .addComponent(butC102)
-                                    .addComponent(butC103)
-                                    .addComponent(butC104)
-                                    .addComponent(butC105)
-                                    .addComponent(butC106)
-                                    .addComponent(butC107)
-                                    .addComponent(butC108)
-                                    .addComponent(butC109)
-                                    .addComponent(butC110)
-                                    .addComponent(butC11)
-                                    .addComponent(butC12)
-                                    .addComponent(butC13)
-                                    .addComponent(butC14))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButton4)
                                 .addGap(43, 43, 43)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(butD101)
-                                            .addComponent(butD102)
-                                            .addComponent(butD103)
-                                            .addComponent(butD104)
-                                            .addComponent(butD105)
-                                            .addComponent(butD106)
-                                            .addComponent(butD107)
-                                            .addComponent(butD108)
-                                            .addComponent(butD109)
-                                            .addComponent(butD110)
-                                            .addComponent(butD11)
-                                            .addComponent(butD12)
-                                            .addComponent(butD13)
-                                            .addComponent(butD14))
+                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(butE101)
-                                            .addComponent(butE102)
-                                            .addComponent(butE103)
-                                            .addComponent(butE104)
-                                            .addComponent(butE105)
-                                            .addComponent(butE106)
-                                            .addComponent(butE107)
-                                            .addComponent(butE108)
-                                            .addComponent(butE109)
-                                            .addComponent(butE110)
-                                            .addComponent(butE11)
-                                            .addComponent(butE12)
-                                            .addComponent(butE13)
-                                            .addComponent(butE14))
+                                            .addComponent(butD01)
+                                            .addComponent(butD02)
+                                            .addComponent(butD03)
+                                            .addComponent(butD04)
+                                            .addComponent(butD05)
+                                            .addComponent(butD06)
+                                            .addComponent(butD07)
+                                            .addComponent(butD08)
+                                            .addComponent(butD09)
+                                            .addComponent(butD10))
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(butF01)
-                                            .addComponent(butF02)
-                                            .addComponent(butF03)
-                                            .addComponent(butF04)
-                                            .addComponent(butF05)
-                                            .addComponent(butF06)
-                                            .addComponent(butF07)
-                                            .addComponent(butF08)
-                                            .addComponent(butF09)
+                                            .addComponent(butE10)
+                                            .addComponent(butE03)
+                                            .addComponent(butE04)
+                                            .addComponent(butE05)
+                                            .addComponent(butE06)
+                                            .addComponent(butE07)
+                                            .addComponent(butE08)
+                                            .addComponent(butE09)
+                                            .addComponent(butE02)
+                                            .addComponent(butE01))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(butF10)
-                                            .addComponent(butF11)
-                                            .addComponent(butF12)
-                                            .addComponent(butF13)
-                                            .addComponent(butF14))
+                                            .addComponent(butF09)
+                                            .addComponent(butF08)
+                                            .addComponent(butF07)
+                                            .addComponent(butF06)
+                                            .addComponent(butF05)
+                                            .addComponent(butF04)
+                                            .addComponent(butF03)
+                                            .addComponent(butF02)
+                                            .addComponent(butF01))
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(butG01)
-                                            .addComponent(butG02)
-                                            .addComponent(butG03)
-                                            .addComponent(butG04)
-                                            .addComponent(butG05)
-                                            .addComponent(butG06)
-                                            .addComponent(butG07)
-                                            .addComponent(butG08)
-                                            .addComponent(butG09)
                                             .addComponent(butG10)
-                                            .addComponent(butG11)
-                                            .addComponent(butG12)
-                                            .addComponent(butG13)
-                                            .addComponent(butG14))
+                                            .addComponent(butG01)
+                                            .addComponent(butG09)
+                                            .addComponent(butG08)
+                                            .addComponent(butG07)
+                                            .addComponent(butG06)
+                                            .addComponent(butG05)
+                                            .addComponent(butG04)
+                                            .addComponent(butG03)
+                                            .addComponent(butG02))
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(butH01)
-                                            .addComponent(butH02)
-                                            .addComponent(butH03)
                                             .addComponent(butH04)
-                                            .addComponent(butH05)
-                                            .addComponent(butH06)
-                                            .addComponent(butH07)
-                                            .addComponent(butH08)
-                                            .addComponent(butH09)
                                             .addComponent(butH10)
-                                            .addComponent(butH11)
-                                            .addComponent(butH12)
-                                            .addComponent(butH13)
-                                            .addComponent(butH14))
-                                        .addGap(35, 35, 35)
+                                            .addComponent(butH09)
+                                            .addComponent(butH08)
+                                            .addComponent(butH07)
+                                            .addComponent(butH06)
+                                            .addComponent(butH05)
+                                            .addComponent(butH03)
+                                            .addComponent(butH01)
+                                            .addComponent(butH02))
+                                        .addGap(32, 32, 32)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(lblSeatSelection, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(lblSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(butClose)
                                             .addComponent(butClearSelection)))
                                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(1071, 650));
+        setSize(new java.awt.Dimension(786, 634));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -2183,13 +1675,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         butB01.setOpaque(true);
         butB01.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
-            if ("A11".equals(seating.get(i))) {
-                Seating seat = new Seating("A11", t);
+            if ("B01".equals(seating.get(i))) {
+                Seating seat = new Seating("B01", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
                 butB01.setText((show.getShowSeating()).get(10));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " A11";
+                newSeats = newSeats + " B01";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2202,13 +1694,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         butB02.setOpaque(true);
         butB02.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
-            if ("A12".equals(seating.get(i))) {
-                Seating seat = new Seating("A12", t);
+            if ("B02".equals(seating.get(i))) {
+                Seating seat = new Seating("B02", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
                 butB02.setText((show.getShowSeating()).get(11));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " A12";
+                newSeats = newSeats + " B02";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2217,17 +1709,14 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     private void butB03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butB03ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-        butB03.setForeground(Color.red);
-        butB03.setOpaque(true);
-        butB03.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
-            if ("A13".equals(seating.get(i))) {
-                Seating seat = new Seating("A13", t);
+            if ("B03".equals(seating.get(i))) {
+                Seating seat = new Seating("B03", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
                 butB03.setText((show.getShowSeating()).get(12));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " A13";
+                newSeats = newSeats + " B03";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2236,17 +1725,14 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     private void butB04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butB04ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-        butB04.setForeground(Color.red);
-        butB04.setOpaque(true);
-        butB04.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
-            if ("A14".equals(seating.get(i))) {
-                Seating seat = new Seating("A14", t);
+            if ("B04".equals(seating.get(i))) {
+                Seating seat = new Seating("B04", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
                 butB04.setText((show.getShowSeating()).get(13));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " A14";
+                newSeats = newSeats + " B04";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2255,15 +1741,17 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     private void butB05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butB05ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butB05.setForeground(Color.red);
+        butB05.setOpaque(true);
+        butB05.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
-            if ("B01".equals(seating.get(i))) {
-                Seating seat = new Seating("B01", t);
+            if ("B05".equals(seating.get(i))) {
+                Seating seat = new Seating("B05", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
                 butB05.setText((show.getShowSeating()).get(14));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B01";
+                newSeats = newSeats + " B05";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2272,15 +1760,17 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     private void butB06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butB06ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butB06.setForeground(Color.red);
+        butB06.setOpaque(true);
+        butB06.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
-            if ("B02".equals(seating.get(i))) {
-                Seating seat = new Seating("B02", t);
+            if ("B06".equals(seating.get(i))) {
+                Seating seat = new Seating("B06", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
                 butB06.setText((show.getShowSeating()).get(15));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B02";
+                newSeats = newSeats + " B06";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2289,32 +1779,51 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     private void butB07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butB07ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
-
+        butB07.setForeground(Color.red);
+        butB07.setOpaque(true);
+        butB07.setBackground(Color.red);
         for (int i = 0; i < seating.size(); i++) {
-            if ("B03".equals(seating.get(i))) {
-                Seating seat = new Seating("B03", t);
+            if ("B07".equals(seating.get(i))) {
+                Seating seat = new Seating("B07", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
                 butB07.setText((show.getShowSeating()).get(16));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B03";
+                newSeats = newSeats + " B07";
                 lblSeats.setText(newSeats);
             }
         }
     }//GEN-LAST:event_butB07ActionPerformed
+
+    private void butB08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butB08ActionPerformed
+        ArrayList<String> seating = new ArrayList<>();
+        seating = show.getShowSeating();
+
+        for (int i = 0; i < seating.size(); i++) {
+            if ("B08".equals(seating.get(i))) {
+                Seating seat = new Seating("B08", t);
+                cart.addSeat(seat);
+                show.seatsTaken(cart, show);
+                butB08.setText((show.getShowSeating()).get(17));
+                String newSeats = lblSeats.getText();
+                newSeats = newSeats + " B08";
+                lblSeats.setText(newSeats);
+            }
+        }
+    }//GEN-LAST:event_butB08ActionPerformed
 
     private void butB09ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butB09ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B04".equals(seating.get(i))) {
-                Seating seat = new Seating("B04", t);
+            if ("B09".equals(seating.get(i))) {
+                Seating seat = new Seating("B09", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butB09.setText((show.getShowSeating()).get(17));
+                butB09.setText((show.getShowSeating()).get(18));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B04";
+                newSeats = newSeats + " B09";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2325,13 +1834,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B05".equals(seating.get(i))) {
-                Seating seat = new Seating("B05", t);
+            if ("B10".equals(seating.get(i))) {
+                Seating seat = new Seating("B10", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butB10.setText((show.getShowSeating()).get(18));
+                butB10.setText((show.getShowSeating()).get(19));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B05";
+                newSeats = newSeats + " B10";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2342,13 +1851,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B06".equals(seating.get(i))) {
-                Seating seat = new Seating("B06", t);
+            if ("C01".equals(seating.get(i))) {
+                Seating seat = new Seating("C01", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butC01.setText((show.getShowSeating()).get(19));
+                butC01.setText((show.getShowSeating()).get(20));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B06";
+                newSeats = newSeats + " C01";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2359,13 +1868,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B07".equals(seating.get(i))) {
-                Seating seat = new Seating("B07", t);
+            if ("C02".equals(seating.get(i))) {
+                Seating seat = new Seating("C02", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butC02.setText((show.getShowSeating()).get(20));
+                butC02.setText((show.getShowSeating()).get(21));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B07";
+                newSeats = newSeats + " C02";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2376,13 +1885,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B08".equals(seating.get(i))) {
-                Seating seat = new Seating("B08", t);
+            if ("C03".equals(seating.get(i))) {
+                Seating seat = new Seating("C03", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butC03.setText((show.getShowSeating()).get(21));
+                butC03.setText((show.getShowSeating()).get(22));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B08";
+                newSeats = newSeats + " C03";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2393,13 +1902,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B09".equals(seating.get(i))) {
-                Seating seat = new Seating("B09", t);
+            if ("C04".equals(seating.get(i))) {
+                Seating seat = new Seating("C04", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butC04.setText((show.getShowSeating()).get(22));
+                butC04.setText((show.getShowSeating()).get(23));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B09";
+                newSeats = newSeats + " C04";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2410,13 +1919,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B10".equals(seating.get(i))) {
-                Seating seat = new Seating("B10", t);
+            if ("C05".equals(seating.get(i))) {
+                Seating seat = new Seating("C05", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butC05.setText((show.getShowSeating()).get(23));
+                butC05.setText((show.getShowSeating()).get(24));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B10";
+                newSeats = newSeats + " C05";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2427,13 +1936,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B11".equals(seating.get(i))) {
-                Seating seat = new Seating("B11", t);
+            if ("C06".equals(seating.get(i))) {
+                Seating seat = new Seating("C06", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butC06.setText((show.getShowSeating()).get(24));
+                butC06.setText((show.getShowSeating()).get(25));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B11";
+                newSeats = newSeats + " C06";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2444,13 +1953,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B12".equals(seating.get(i))) {
-                Seating seat = new Seating("B12", t);
+            if ("C07".equals(seating.get(i))) {
+                Seating seat = new Seating("C07", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butC07.setText((show.getShowSeating()).get(25));
+                butC07.setText((show.getShowSeating()).get(26));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B12";
+                newSeats = newSeats + " C07";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2461,13 +1970,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B13".equals(seating.get(i))) {
-                Seating seat = new Seating("B13", t);
+            if ("C08".equals(seating.get(i))) {
+                Seating seat = new Seating("C08", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butC08.setText((show.getShowSeating()).get(26));
+                butC08.setText((show.getShowSeating()).get(27));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B13";
+                newSeats = newSeats + " C08";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2478,13 +1987,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("B14".equals(seating.get(i))) {
-                Seating seat = new Seating("B14", t);
+            if ("C09".equals(seating.get(i))) {
+                Seating seat = new Seating("C09", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butC09.setText((show.getShowSeating()).get(27));
+                butC09.setText((show.getShowSeating()).get(28));
                 String newSeats = lblSeats.getText();
-                newSeats = newSeats + " B14";
+                newSeats = newSeats + " C09";
                 lblSeats.setText(newSeats);
             }
         }
@@ -2495,240 +2004,19 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         seating = show.getShowSeating();
 
         for (int i = 0; i < seating.size(); i++) {
-            if ("C01".equals(seating.get(i))) {
-                Seating seat = new Seating("C01", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC10.setText((show.getShowSeating()).get(28));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C01";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC10ActionPerformed
-
-    private void butC102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC102ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C02".equals(seating.get(i))) {
-                Seating seat = new Seating("C02", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC102.setText((show.getShowSeating()).get(29));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C02";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC102ActionPerformed
-
-    private void butC103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC103ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C03".equals(seating.get(i))) {
-                Seating seat = new Seating("C03", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC103.setText((show.getShowSeating()).get(30));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C03";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC103ActionPerformed
-
-    private void butC104ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC104ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C04".equals(seating.get(i))) {
-                Seating seat = new Seating("C04", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC104.setText((show.getShowSeating()).get(31));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C04";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC104ActionPerformed
-
-    private void butC105ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC105ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C05".equals(seating.get(i))) {
-                Seating seat = new Seating("C05", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC105.setText((show.getShowSeating()).get(32));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C05";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC105ActionPerformed
-
-    private void butC106ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC106ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C06".equals(seating.get(i))) {
-                Seating seat = new Seating("C06", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC106.setText((show.getShowSeating()).get(33));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C06";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC106ActionPerformed
-
-    private void butC107ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC107ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C07".equals(seating.get(i))) {
-                Seating seat = new Seating("C07", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC107.setText((show.getShowSeating()).get(34));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C07";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC107ActionPerformed
-
-    private void butC108ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC108ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C08".equals(seating.get(i))) {
-                Seating seat = new Seating("C08", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC108.setText((show.getShowSeating()).get(35));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C08";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC108ActionPerformed
-
-    private void butC109ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC109ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C09".equals(seating.get(i))) {
-                Seating seat = new Seating("C09", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC109.setText((show.getShowSeating()).get(36));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C09";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC109ActionPerformed
-
-    private void butC110ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC110ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
             if ("C10".equals(seating.get(i))) {
                 Seating seat = new Seating("C10", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butC110.setText((show.getShowSeating()).get(37));
+                butC10.setText((show.getShowSeating()).get(29));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " C10";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butC110ActionPerformed
+    }//GEN-LAST:event_butC10ActionPerformed
 
-    private void butC11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC11ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C11".equals(seating.get(i))) {
-                Seating seat = new Seating("C11", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC11.setText((show.getShowSeating()).get(38));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C11";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC11ActionPerformed
-
-    private void butC12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC12ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C12".equals(seating.get(i))) {
-                Seating seat = new Seating("C12", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC12.setText((show.getShowSeating()).get(39));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C12";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC12ActionPerformed
-
-    private void butC13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC13ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C13".equals(seating.get(i))) {
-                Seating seat = new Seating("C13", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC13.setText((show.getShowSeating()).get(40));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C13";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC13ActionPerformed
-
-    private void butC14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butC14ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("C14".equals(seating.get(i))) {
-                Seating seat = new Seating("C14", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butC14.setText((show.getShowSeating()).get(41));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " C14";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butC14ActionPerformed
-
-    private void butD101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD101ActionPerformed
+    private void butD01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD01ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2737,15 +2025,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("D01", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butD101.setText((show.getShowSeating()).get(42));
+                butD01.setText((show.getShowSeating()).get(30));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " D01";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butD101ActionPerformed
+    }//GEN-LAST:event_butD01ActionPerformed
 
-    private void butD102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD102ActionPerformed
+    private void butD02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD02ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2754,15 +2042,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("D02", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butD102.setText((show.getShowSeating()).get(43));
+                butD02.setText((show.getShowSeating()).get(31));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " D02";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butD102ActionPerformed
+    }//GEN-LAST:event_butD02ActionPerformed
 
-    private void butD103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD103ActionPerformed
+    private void butD03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD03ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2771,15 +2059,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("D03", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butD103.setText((show.getShowSeating()).get(44));
+                butD03.setText((show.getShowSeating()).get(32));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " D03";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butD103ActionPerformed
+    }//GEN-LAST:event_butD03ActionPerformed
 
-    private void butD104ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD104ActionPerformed
+    private void butD04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD04ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2788,15 +2076,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("D04", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butD104.setText((show.getShowSeating()).get(45));
+                butD04.setText((show.getShowSeating()).get(33));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " D04";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butD104ActionPerformed
+    }//GEN-LAST:event_butD04ActionPerformed
 
-    private void butD105ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD105ActionPerformed
+    private void butD05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD05ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2805,15 +2093,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("D05", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butD105.setText((show.getShowSeating()).get(46));
+                butD05.setText((show.getShowSeating()).get(34));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " D05";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butD105ActionPerformed
+    }//GEN-LAST:event_butD05ActionPerformed
 
-    private void butD106ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD106ActionPerformed
+    private void butD06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD06ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2822,15 +2110,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("D06", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butD106.setText((show.getShowSeating()).get(47));
+                butD06.setText((show.getShowSeating()).get(35));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " D06";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butD106ActionPerformed
+    }//GEN-LAST:event_butD06ActionPerformed
 
-    private void butD107ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD107ActionPerformed
+    private void butD07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD07ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2839,15 +2127,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("D07", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butD107.setText((show.getShowSeating()).get(48));
+                butD07.setText((show.getShowSeating()).get(36));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " D07";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butD107ActionPerformed
+    }//GEN-LAST:event_butD07ActionPerformed
 
-    private void butD108ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD108ActionPerformed
+    private void butD08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD08ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2856,15 +2144,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("D08", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butD108.setText((show.getShowSeating()).get(49));
+                butD08.setText((show.getShowSeating()).get(37));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " D08";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butD108ActionPerformed
+    }//GEN-LAST:event_butD08ActionPerformed
 
-    private void butD109ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD109ActionPerformed
+    private void butD09ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD09ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2873,15 +2161,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("D09", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butD109.setText((show.getShowSeating()).get(50));
+                butD09.setText((show.getShowSeating()).get(38));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " D09";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butD109ActionPerformed
+    }//GEN-LAST:event_butD09ActionPerformed
 
-    private void butD110ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD110ActionPerformed
+    private void butD10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD10ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2890,83 +2178,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("D10", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butD110.setText((show.getShowSeating()).get(51));
+                butD10.setText((show.getShowSeating()).get(39));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " D10";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butD110ActionPerformed
+    }//GEN-LAST:event_butD10ActionPerformed
 
-    private void butD11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD11ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("D11".equals(seating.get(i))) {
-                Seating seat = new Seating("D11", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butD11.setText((show.getShowSeating()).get(52));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " D11";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butD11ActionPerformed
-
-    private void butD12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD12ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("D12".equals(seating.get(i))) {
-                Seating seat = new Seating("D12", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butD12.setText((show.getShowSeating()).get(53));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " D12";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butD12ActionPerformed
-
-    private void butD13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD13ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("D13".equals(seating.get(i))) {
-                Seating seat = new Seating("D13", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butD13.setText((show.getShowSeating()).get(54));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " D13";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butD13ActionPerformed
-
-    private void butD14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butD14ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("D14".equals(seating.get(i))) {
-                Seating seat = new Seating("D14", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butD14.setText((show.getShowSeating()).get(55));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " D14";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butD14ActionPerformed
-
-    private void butE101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE101ActionPerformed
+    private void butE01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE01ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2975,15 +2195,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("E01", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butE101.setText((show.getShowSeating()).get(56));
+                butE01.setText((show.getShowSeating()).get(40));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " E01";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butE101ActionPerformed
+    }//GEN-LAST:event_butE01ActionPerformed
 
-    private void butE102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE102ActionPerformed
+    private void butE02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE02ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -2992,15 +2212,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("E02", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butE102.setText((show.getShowSeating()).get(57));
+                butE02.setText((show.getShowSeating()).get(41));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " E02";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butE102ActionPerformed
+    }//GEN-LAST:event_butE02ActionPerformed
 
-    private void butE103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE103ActionPerformed
+    private void butE03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE03ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -3009,15 +2229,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("E03", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butE103.setText((show.getShowSeating()).get(58));
+                butE03.setText((show.getShowSeating()).get(42));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " E03";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butE103ActionPerformed
+    }//GEN-LAST:event_butE03ActionPerformed
 
-    private void butE104ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE104ActionPerformed
+    private void butE04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE04ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -3026,15 +2246,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("E04", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butE104.setText((show.getShowSeating()).get(59));
+                butE04.setText((show.getShowSeating()).get(43));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " E04";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butE104ActionPerformed
+    }//GEN-LAST:event_butE04ActionPerformed
 
-    private void butE105ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE105ActionPerformed
+    private void butE05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE05ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -3043,15 +2263,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("E05", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butE105.setText((show.getShowSeating()).get(60));
+                butE05.setText((show.getShowSeating()).get(44));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " E05";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butE105ActionPerformed
+    }//GEN-LAST:event_butE05ActionPerformed
 
-    private void butE106ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE106ActionPerformed
+    private void butE06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE06ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -3060,15 +2280,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("E06", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butE106.setText((show.getShowSeating()).get(61));
+                butE06.setText((show.getShowSeating()).get(45));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " E06";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butE106ActionPerformed
+    }//GEN-LAST:event_butE06ActionPerformed
 
-    private void butE107ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE107ActionPerformed
+    private void butE07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE07ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -3077,15 +2297,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("E07", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butE107.setText((show.getShowSeating()).get(62));
+                butE07.setText((show.getShowSeating()).get(46));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " E07";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butE107ActionPerformed
+    }//GEN-LAST:event_butE07ActionPerformed
 
-    private void butE108ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE108ActionPerformed
+    private void butE08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE08ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -3094,15 +2314,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("E08", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butE108.setText((show.getShowSeating()).get(63));
+                butE08.setText((show.getShowSeating()).get(47));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " E08";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butE108ActionPerformed
+    }//GEN-LAST:event_butE08ActionPerformed
 
-    private void butE109ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE109ActionPerformed
+    private void butE09ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE09ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -3111,15 +2331,15 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("E09", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butE109.setText((show.getShowSeating()).get(64));
+                butE09.setText((show.getShowSeating()).get(48));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " E09";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butE109ActionPerformed
+    }//GEN-LAST:event_butE09ActionPerformed
 
-    private void butE110ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE110ActionPerformed
+    private void butE10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE10ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();
 
@@ -3128,81 +2348,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("E10", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butE110.setText((show.getShowSeating()).get(65));
+                butE10.setText((show.getShowSeating()).get(49));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " E10";
                 lblSeats.setText(newSeats);
             }
         }
-    }//GEN-LAST:event_butE110ActionPerformed
-
-    private void butE11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE11ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("E11".equals(seating.get(i))) {
-                Seating seat = new Seating("E11", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butE11.setText((show.getShowSeating()).get(66));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " E11";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butE11ActionPerformed
-
-    private void butE12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE12ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("E12".equals(seating.get(i))) {
-                Seating seat = new Seating("E12", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butE12.setText((show.getShowSeating()).get(67));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " E12";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butE12ActionPerformed
-
-    private void butE13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE13ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("E13".equals(seating.get(i))) {
-                Seating seat = new Seating("E13", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butE13.setText((show.getShowSeating()).get(68));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " E13";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butE13ActionPerformed
-
-    private void butE14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butE14ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("E14".equals(seating.get(i))) {
-                Seating seat = new Seating("E14", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butE14.setText((show.getShowSeating()).get(69));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " E14";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butE14ActionPerformed
+    }//GEN-LAST:event_butE10ActionPerformed
 
     private void butF01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butF01ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
@@ -3213,7 +2365,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("F01", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butF01.setText((show.getShowSeating()).get(70));
+                butF01.setText((show.getShowSeating()).get(50));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " F01";
                 lblSeats.setText(newSeats);
@@ -3230,7 +2382,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("F02", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butF02.setText((show.getShowSeating()).get(71));
+                butF02.setText((show.getShowSeating()).get(51));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " F02";
                 lblSeats.setText(newSeats);
@@ -3247,7 +2399,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("F03", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butF03.setText((show.getShowSeating()).get(72));
+                butF03.setText((show.getShowSeating()).get(52));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " F03";
                 lblSeats.setText(newSeats);
@@ -3264,7 +2416,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("F04", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butF04.setText((show.getShowSeating()).get(73));
+                butF04.setText((show.getShowSeating()).get(53));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " F04";
                 lblSeats.setText(newSeats);
@@ -3281,7 +2433,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("F05", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butF05.setText((show.getShowSeating()).get(74));
+                butF05.setText((show.getShowSeating()).get(54));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " F05";
                 lblSeats.setText(newSeats);
@@ -3298,7 +2450,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("F06", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butF06.setText((show.getShowSeating()).get(75));
+                butF06.setText((show.getShowSeating()).get(55));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " F06";
                 lblSeats.setText(newSeats);
@@ -3315,7 +2467,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("F07", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butF07.setText((show.getShowSeating()).get(76));
+                butF07.setText((show.getShowSeating()).get(56));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " F07";
                 lblSeats.setText(newSeats);
@@ -3332,7 +2484,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("F08", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butF08.setText((show.getShowSeating()).get(77));
+                butF08.setText((show.getShowSeating()).get(57));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " F08";
                 lblSeats.setText(newSeats);
@@ -3349,7 +2501,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("F09", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butF09.setText((show.getShowSeating()).get(78));
+                butF09.setText((show.getShowSeating()).get(58));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " F09";
                 lblSeats.setText(newSeats);
@@ -3366,81 +2518,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("F10", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butF10.setText((show.getShowSeating()).get(79));
+                butF10.setText((show.getShowSeating()).get(59));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " F10";
                 lblSeats.setText(newSeats);
             }
         }
     }//GEN-LAST:event_butF10ActionPerformed
-
-    private void butF11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butF11ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("F11".equals(seating.get(i))) {
-                Seating seat = new Seating("F11", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butF11.setText((show.getShowSeating()).get(80));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " F11";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butF11ActionPerformed
-
-    private void butF12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butF12ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("F12".equals(seating.get(i))) {
-                Seating seat = new Seating("F12", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butF12.setText((show.getShowSeating()).get(81));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " F12";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butF12ActionPerformed
-
-    private void butF13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butF13ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("F13".equals(seating.get(i))) {
-                Seating seat = new Seating("F13", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butF13.setText((show.getShowSeating()).get(82));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " F13";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butF13ActionPerformed
-
-    private void butF14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butF14ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("F14".equals(seating.get(i))) {
-                Seating seat = new Seating("F14", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butF14.setText((show.getShowSeating()).get(83));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " F14";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butF14ActionPerformed
 
     private void butG01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butG01ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
@@ -3451,7 +2535,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("G01", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butG01.setText((show.getShowSeating()).get(84));
+                butG01.setText((show.getShowSeating()).get(60));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " G01";
                 lblSeats.setText(newSeats);
@@ -3468,7 +2552,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("G02", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butG02.setText((show.getShowSeating()).get(85));
+                butG02.setText((show.getShowSeating()).get(61));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " G02";
                 lblSeats.setText(newSeats);
@@ -3485,7 +2569,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("G03", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butG03.setText((show.getShowSeating()).get(86));
+                butG03.setText((show.getShowSeating()).get(62));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " G03";
                 lblSeats.setText(newSeats);
@@ -3502,7 +2586,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("G04", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butG04.setText((show.getShowSeating()).get(87));
+                butG04.setText((show.getShowSeating()).get(63));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " G04";
                 lblSeats.setText(newSeats);
@@ -3519,7 +2603,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("G05", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butG05.setText((show.getShowSeating()).get(88));
+                butG05.setText((show.getShowSeating()).get(64));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " G05";
                 lblSeats.setText(newSeats);
@@ -3536,7 +2620,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("G06", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butG06.setText((show.getShowSeating()).get(89));
+                butG06.setText((show.getShowSeating()).get(65));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " G06";
                 lblSeats.setText(newSeats);
@@ -3553,7 +2637,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("G07", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butG07.setText((show.getShowSeating()).get(90));
+                butG07.setText((show.getShowSeating()).get(66));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " G07";
                 lblSeats.setText(newSeats);
@@ -3570,7 +2654,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("G08", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butG08.setText((show.getShowSeating()).get(91));
+                butG08.setText((show.getShowSeating()).get(67));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " G08";
                 lblSeats.setText(newSeats);
@@ -3587,7 +2671,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("G09", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butG09.setText((show.getShowSeating()).get(92));
+                butG09.setText((show.getShowSeating()).get(68));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " G09";
                 lblSeats.setText(newSeats);
@@ -3604,81 +2688,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("G10", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butG10.setText((show.getShowSeating()).get(93));
+                butG10.setText((show.getShowSeating()).get(69));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " G10";
                 lblSeats.setText(newSeats);
             }
         }
     }//GEN-LAST:event_butG10ActionPerformed
-
-    private void butG11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butG11ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("G11".equals(seating.get(i))) {
-                Seating seat = new Seating("G11", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butG11.setText((show.getShowSeating()).get(94));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " G11";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butG11ActionPerformed
-
-    private void butG12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butG12ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("G12".equals(seating.get(i))) {
-                Seating seat = new Seating("G12", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butG12.setText((show.getShowSeating()).get(95));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " G12";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butG12ActionPerformed
-
-    private void butG13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butG13ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("G13".equals(seating.get(i))) {
-                Seating seat = new Seating("G13", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butG13.setText((show.getShowSeating()).get(96));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " G13";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butG13ActionPerformed
-
-    private void butG14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butG14ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("G14".equals(seating.get(i))) {
-                Seating seat = new Seating("G14", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butG14.setText((show.getShowSeating()).get(97));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " G14";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butG14ActionPerformed
 
     private void butH01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butH01ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
@@ -3689,7 +2705,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("H01", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butH01.setText((show.getShowSeating()).get(98));
+                butH01.setText((show.getShowSeating()).get(70));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " H01";
                 lblSeats.setText(newSeats);
@@ -3706,7 +2722,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("H02", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butH02.setText((show.getShowSeating()).get(99));
+                butH02.setText((show.getShowSeating()).get(71));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " H02";
                 lblSeats.setText(newSeats);
@@ -3723,7 +2739,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("H03", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butH03.setText((show.getShowSeating()).get(100));
+                butH03.setText((show.getShowSeating()).get(72));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " H03";
                 lblSeats.setText(newSeats);
@@ -3740,7 +2756,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("H04", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butH04.setText((show.getShowSeating()).get(101));
+                butH04.setText((show.getShowSeating()).get(73));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " H04";
                 lblSeats.setText(newSeats);
@@ -3757,7 +2773,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("H05", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butH05.setText((show.getShowSeating()).get(102));
+                butH05.setText((show.getShowSeating()).get(74));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " H05";
                 lblSeats.setText(newSeats);
@@ -3774,7 +2790,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("H06", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butH06.setText((show.getShowSeating()).get(103));
+                butH06.setText((show.getShowSeating()).get(75));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " H06";
                 lblSeats.setText(newSeats);
@@ -3791,7 +2807,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("H07", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butH07.setText((show.getShowSeating()).get(104));
+                butH07.setText((show.getShowSeating()).get(76));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " H07";
                 lblSeats.setText(newSeats);
@@ -3808,7 +2824,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("H08", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butH08.setText((show.getShowSeating()).get(105));
+                butH08.setText((show.getShowSeating()).get(77));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " H08";
                 lblSeats.setText(newSeats);
@@ -3825,98 +2841,13 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
                 Seating seat = new Seating("H09", t);
                 cart.addSeat(seat);
                 show.seatsTaken(cart, show);
-                butH09.setText((show.getShowSeating()).get(106));
+                butH09.setText((show.getShowSeating()).get(78));
                 String newSeats = lblSeats.getText();
                 newSeats = newSeats + " H09";
                 lblSeats.setText(newSeats);
             }
         }
     }//GEN-LAST:event_butH09ActionPerformed
-
-    private void butH10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butH10ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("H10".equals(seating.get(i))) {
-                Seating seat = new Seating("H10", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butH10.setText((show.getShowSeating()).get(107));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " H10";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butH10ActionPerformed
-
-    private void butH11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butH11ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("H11".equals(seating.get(i))) {
-                Seating seat = new Seating("H11", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butH11.setText((show.getShowSeating()).get(108));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " H11";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butH11ActionPerformed
-
-    private void butH12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butH12ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("H12".equals(seating.get(i))) {
-                Seating seat = new Seating("H12", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butH12.setText((show.getShowSeating()).get(109));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " H12";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butH12ActionPerformed
-
-    private void butH13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butH13ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("H13".equals(seating.get(i))) {
-                Seating seat = new Seating("H13", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butH13.setText((show.getShowSeating()).get(110));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " H13";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butH13ActionPerformed
-
-    private void butH14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butH14ActionPerformed
-        ArrayList<String> seating = new ArrayList<>();
-        seating = show.getShowSeating();
-
-        for (int i = 0; i < seating.size(); i++) {
-            if ("H14".equals(seating.get(i))) {
-                Seating seat = new Seating("H14", t);
-                cart.addSeat(seat);
-                show.seatsTaken(cart, show);
-                butH14.setText((show.getShowSeating()).get(111));
-                String newSeats = lblSeats.getText();
-                newSeats = newSeats + " H14";
-                lblSeats.setText(newSeats);
-            }
-        }
-    }//GEN-LAST:event_butH14ActionPerformed
 
     private void butClearSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butClearSelectionActionPerformed
         ArrayList<Seating> seats = cart.getSeatSelection();
@@ -4080,6 +3011,14 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_butB07PropertyChange
 
+    private void butB08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB08PropertyChange
+        if (butB08.getText().equals("XXX")) {
+            butB08.setForeground(Color.red);
+            butB08.setOpaque(true);
+            butB08.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_butB08PropertyChange
+
     private void butB09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butB09PropertyChange
         if (butB09.getText().equals("XXX")) {
             butB09.setForeground(Color.red);
@@ -4176,333 +3115,165 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_butC10PropertyChange
 
-    private void butC102PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC102PropertyChange
-        if (butC102.getText().equals("XXX")) {
-            butC102.setForeground(Color.red);
-            butC102.setOpaque(true);
-            butC102.setBackground(Color.red);
+    private void butD01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD01PropertyChange
+        if (butD01.getText().equals("XXX")) {
+            butD01.setForeground(Color.red);
+            butD01.setOpaque(true);
+            butD01.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC102PropertyChange
+    }//GEN-LAST:event_butD01PropertyChange
 
-    private void butC103PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC103PropertyChange
-        if (butC103.getText().equals("XXX")) {
-            butC103.setForeground(Color.red);
-            butC103.setOpaque(true);
-            butC103.setBackground(Color.red);
+    private void butD02PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD02PropertyChange
+        if (butD02.getText().equals("XXX")) {
+            butD02.setForeground(Color.red);
+            butD02.setOpaque(true);
+            butD02.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC103PropertyChange
+    }//GEN-LAST:event_butD02PropertyChange
 
-    private void butC104PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC104PropertyChange
-        if (butC104.getText().equals("XXX")) {
-            butC104.setForeground(Color.red);
-            butC104.setOpaque(true);
-            butC104.setBackground(Color.red);
+    private void butD03PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD03PropertyChange
+        if (butD03.getText().equals("XXX")) {
+            butD03.setForeground(Color.red);
+            butD03.setOpaque(true);
+            butD03.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC104PropertyChange
+    }//GEN-LAST:event_butD03PropertyChange
 
-    private void butC105PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC105PropertyChange
-        if (butC105.getText().equals("XXX")) {
-            butC105.setForeground(Color.red);
-            butC105.setOpaque(true);
-            butC105.setBackground(Color.red);
+    private void butD04PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD04PropertyChange
+        if (butD04.getText().equals("XXX")) {
+            butD04.setForeground(Color.red);
+            butD04.setOpaque(true);
+            butD04.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC105PropertyChange
+    }//GEN-LAST:event_butD04PropertyChange
 
-    private void butC106PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC106PropertyChange
-        if (butC106.getText().equals("XXX")) {
-            butC106.setForeground(Color.red);
-            butC106.setOpaque(true);
-            butC106.setBackground(Color.red);
+    private void butD05PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD05PropertyChange
+        if (butD05.getText().equals("XXX")) {
+            butD05.setForeground(Color.red);
+            butD05.setOpaque(true);
+            butD05.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC106PropertyChange
+    }//GEN-LAST:event_butD05PropertyChange
 
-    private void butC107PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC107PropertyChange
-        if (butC107.getText().equals("XXX")) {
-            butC107.setForeground(Color.red);
-            butC107.setOpaque(true);
-            butC107.setBackground(Color.red);
+    private void butD06PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD06PropertyChange
+        if (butD06.getText().equals("XXX")) {
+            butD06.setForeground(Color.red);
+            butD06.setOpaque(true);
+            butD06.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC107PropertyChange
+    }//GEN-LAST:event_butD06PropertyChange
 
-    private void butC108PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC108PropertyChange
-        if (butC108.getText().equals("XXX")) {
-            butC108.setForeground(Color.red);
-            butC108.setOpaque(true);
-            butC108.setBackground(Color.red);
+    private void butD07PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD07PropertyChange
+        if (butD07.getText().equals("XXX")) {
+            butD07.setForeground(Color.red);
+            butD07.setOpaque(true);
+            butD07.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC108PropertyChange
+    }//GEN-LAST:event_butD07PropertyChange
 
-    private void butC109PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC109PropertyChange
-        if (butC109.getText().equals("XXX")) {
-            butC109.setForeground(Color.red);
-            butC109.setOpaque(true);
-            butC109.setBackground(Color.red);
+    private void butD08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD08PropertyChange
+        if (butD08.getText().equals("XXX")) {
+            butD08.setForeground(Color.red);
+            butD08.setOpaque(true);
+            butD08.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC109PropertyChange
+    }//GEN-LAST:event_butD08PropertyChange
 
-    private void butC110PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC110PropertyChange
-        if (butC110.getText().equals("XXX")) {
-            butC110.setForeground(Color.red);
-            butC110.setOpaque(true);
-            butC110.setBackground(Color.red);
+    private void butD09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD09PropertyChange
+        if (butD09.getText().equals("XXX")) {
+            butD09.setForeground(Color.red);
+            butD09.setOpaque(true);
+            butD09.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC110PropertyChange
+    }//GEN-LAST:event_butD09PropertyChange
 
-    private void butC11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC11PropertyChange
-        if (butC11.getText().equals("XXX")) {
-            butC11.setForeground(Color.red);
-            butC11.setOpaque(true);
-            butC11.setBackground(Color.red);
+    private void butD10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD10PropertyChange
+        if (butD10.getText().equals("XXX")) {
+            butD10.setForeground(Color.red);
+            butD10.setOpaque(true);
+            butD10.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC11PropertyChange
+    }//GEN-LAST:event_butD10PropertyChange
 
-    private void butC12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC12PropertyChange
-        if (butC12.getText().equals("XXX")) {
-            butC12.setForeground(Color.red);
-            butC12.setOpaque(true);
-            butC12.setBackground(Color.red);
+    private void butE01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE01PropertyChange
+        if (butE01.getText().equals("XXX")) {
+            butE01.setForeground(Color.red);
+            butE01.setOpaque(true);
+            butE01.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC12PropertyChange
+    }//GEN-LAST:event_butE01PropertyChange
 
-    private void butC13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC13PropertyChange
-        if (butC13.getText().equals("XXX")) {
-            butC13.setForeground(Color.red);
-            butC13.setOpaque(true);
-            butC13.setBackground(Color.red);
+    private void butE02PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE02PropertyChange
+        if (butE02.getText().equals("XXX")) {
+            butE02.setForeground(Color.red);
+            butE02.setOpaque(true);
+            butE02.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC13PropertyChange
+    }//GEN-LAST:event_butE02PropertyChange
 
-    private void butC14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butC14PropertyChange
-        if (butC14.getText().equals("XXX")) {
-            butC14.setForeground(Color.red);
-            butC14.setOpaque(true);
-            butC14.setBackground(Color.red);
+    private void butE03PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE03PropertyChange
+        if (butE03.getText().equals("XXX")) {
+            butE03.setForeground(Color.red);
+            butE03.setOpaque(true);
+            butE03.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butC14PropertyChange
+    }//GEN-LAST:event_butE03PropertyChange
 
-    private void butD101PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD101PropertyChange
-        if (butD101.getText().equals("XXX")) {
-            butD101.setForeground(Color.red);
-            butD101.setOpaque(true);
-            butD101.setBackground(Color.red);
+    private void butE04PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE04PropertyChange
+        if (butE04.getText().equals("XXX")) {
+            butE04.setForeground(Color.red);
+            butE04.setOpaque(true);
+            butE04.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butD101PropertyChange
+    }//GEN-LAST:event_butE04PropertyChange
 
-    private void butD102PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD102PropertyChange
-        if (butD102.getText().equals("XXX")) {
-            butD102.setForeground(Color.red);
-            butD102.setOpaque(true);
-            butD102.setBackground(Color.red);
+    private void butE05PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE05PropertyChange
+        if (butE05.getText().equals("XXX")) {
+            butE05.setForeground(Color.red);
+            butE05.setOpaque(true);
+            butE05.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butD102PropertyChange
+    }//GEN-LAST:event_butE05PropertyChange
 
-    private void butD103PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD103PropertyChange
-        if (butD103.getText().equals("XXX")) {
-            butD103.setForeground(Color.red);
-            butD103.setOpaque(true);
-            butD103.setBackground(Color.red);
+    private void butE06PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE06PropertyChange
+        if (butE06.getText().equals("XXX")) {
+            butE06.setForeground(Color.red);
+            butE06.setOpaque(true);
+            butE06.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butD103PropertyChange
+    }//GEN-LAST:event_butE06PropertyChange
 
-    private void butD104PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD104PropertyChange
-        if (butD104.getText().equals("XXX")) {
-            butD104.setForeground(Color.red);
-            butD104.setOpaque(true);
-            butD104.setBackground(Color.red);
+    private void butE07PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE07PropertyChange
+        if (butE07.getText().equals("XXX")) {
+            butE07.setForeground(Color.red);
+            butE07.setOpaque(true);
+            butE07.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butD104PropertyChange
+    }//GEN-LAST:event_butE07PropertyChange
 
-    private void butD105PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD105PropertyChange
-        if (butD105.getText().equals("XXX")) {
-            butD105.setForeground(Color.red);
-            butD105.setOpaque(true);
-            butD105.setBackground(Color.red);
+    private void butE08PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE08PropertyChange
+        if (butE08.getText().equals("XXX")) {
+            butE08.setForeground(Color.red);
+            butE08.setOpaque(true);
+            butE08.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butD105PropertyChange
+    }//GEN-LAST:event_butE08PropertyChange
 
-    private void butD106PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD106PropertyChange
-        if (butD106.getText().equals("XXX")) {
-            butD106.setForeground(Color.red);
-            butD106.setOpaque(true);
-            butD106.setBackground(Color.red);
+    private void butE09PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE09PropertyChange
+        if (butE09.getText().equals("XXX")) {
+            butE09.setForeground(Color.red);
+            butE09.setOpaque(true);
+            butE09.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butD106PropertyChange
+    }//GEN-LAST:event_butE09PropertyChange
 
-    private void butD107PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD107PropertyChange
-        if (butD107.getText().equals("XXX")) {
-            butD107.setForeground(Color.red);
-            butD107.setOpaque(true);
-            butD107.setBackground(Color.red);
+    private void butE10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE10PropertyChange
+        if (butE10.getText().equals("XXX")) {
+            butE10.setForeground(Color.red);
+            butE10.setOpaque(true);
+            butE10.setBackground(Color.red);
         }
-    }//GEN-LAST:event_butD107PropertyChange
-
-    private void butD108PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD108PropertyChange
-        if (butD108.getText().equals("XXX")) {
-            butD108.setForeground(Color.red);
-            butD108.setOpaque(true);
-            butD108.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butD108PropertyChange
-
-    private void butD109PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD109PropertyChange
-        if (butD109.getText().equals("XXX")) {
-            butD109.setForeground(Color.red);
-            butD109.setOpaque(true);
-            butD109.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butD109PropertyChange
-
-    private void butD110PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD110PropertyChange
-        if (butD110.getText().equals("XXX")) {
-            butD110.setForeground(Color.red);
-            butD110.setOpaque(true);
-            butD110.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butD110PropertyChange
-
-    private void butD11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD11PropertyChange
-        if (butD11.getText().equals("XXX")) {
-            butD11.setForeground(Color.red);
-            butD11.setOpaque(true);
-            butD11.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butD11PropertyChange
-
-    private void butD12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD12PropertyChange
-        if (butD12.getText().equals("XXX")) {
-            butD12.setForeground(Color.red);
-            butD12.setOpaque(true);
-            butD12.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butD12PropertyChange
-
-    private void butD13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD13PropertyChange
-        if (butD13.getText().equals("XXX")) {
-            butD13.setForeground(Color.red);
-            butD13.setOpaque(true);
-            butD13.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butD13PropertyChange
-
-    private void butD14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butD14PropertyChange
-        if (butD14.getText().equals("XXX")) {
-            butD14.setForeground(Color.red);
-            butD14.setOpaque(true);
-            butD14.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butD14PropertyChange
-
-    private void butE101PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE101PropertyChange
-        if (butE101.getText().equals("XXX")) {
-            butE101.setForeground(Color.red);
-            butE101.setOpaque(true);
-            butE101.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE101PropertyChange
-
-    private void butE102PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE102PropertyChange
-        if (butE102.getText().equals("XXX")) {
-            butE102.setForeground(Color.red);
-            butE102.setOpaque(true);
-            butE102.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE102PropertyChange
-
-    private void butE103PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE103PropertyChange
-        if (butE103.getText().equals("XXX")) {
-            butE103.setForeground(Color.red);
-            butE103.setOpaque(true);
-            butE103.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE103PropertyChange
-
-    private void butE104PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE104PropertyChange
-        if (butE104.getText().equals("XXX")) {
-            butE104.setForeground(Color.red);
-            butE104.setOpaque(true);
-            butE104.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE104PropertyChange
-
-    private void butE105PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE105PropertyChange
-        if (butE105.getText().equals("XXX")) {
-            butE105.setForeground(Color.red);
-            butE105.setOpaque(true);
-            butE105.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE105PropertyChange
-
-    private void butE106PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE106PropertyChange
-        if (butE106.getText().equals("XXX")) {
-            butE106.setForeground(Color.red);
-            butE106.setOpaque(true);
-            butE106.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE106PropertyChange
-
-    private void butE107PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE107PropertyChange
-        if (butE107.getText().equals("XXX")) {
-            butE107.setForeground(Color.red);
-            butE107.setOpaque(true);
-            butE107.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE107PropertyChange
-
-    private void butE108PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE108PropertyChange
-        if (butE108.getText().equals("XXX")) {
-            butE108.setForeground(Color.red);
-            butE108.setOpaque(true);
-            butE108.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE108PropertyChange
-
-    private void butE109PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE109PropertyChange
-        if (butE109.getText().equals("XXX")) {
-            butE109.setForeground(Color.red);
-            butE109.setOpaque(true);
-            butE109.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE109PropertyChange
-
-    private void butE110PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE110PropertyChange
-        if (butE110.getText().equals("XXX")) {
-            butE110.setForeground(Color.red);
-            butE110.setOpaque(true);
-            butE110.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE110PropertyChange
-
-    private void butE11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE11PropertyChange
-        if (butE11.getText().equals("XXX")) {
-            butE11.setForeground(Color.red);
-            butE11.setOpaque(true);
-            butE11.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE11PropertyChange
-
-    private void butE12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE12PropertyChange
-        if (butE12.getText().equals("XXX")) {
-            butE12.setForeground(Color.red);
-            butE12.setOpaque(true);
-            butE12.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE12PropertyChange
-
-    private void butE13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE13PropertyChange
-        if (butE13.getText().equals("XXX")) {
-            butE13.setForeground(Color.red);
-            butE13.setOpaque(true);
-            butE13.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE13PropertyChange
-
-    private void butE14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butE14PropertyChange
-        if (butE14.getText().equals("XXX")) {
-            butE14.setForeground(Color.red);
-            butE14.setOpaque(true);
-            butE14.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butE14PropertyChange
+    }//GEN-LAST:event_butE10PropertyChange
 
     private void butF01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF01PropertyChange
         if (butF01.getText().equals("XXX")) {
@@ -4584,38 +3355,6 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_butF10PropertyChange
 
-    private void butF11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF11PropertyChange
-        if (butF11.getText().equals("XXX")) {
-            butF11.setForeground(Color.red);
-            butF11.setOpaque(true);
-            butF11.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butF11PropertyChange
-
-    private void butF12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF12PropertyChange
-        if (butF12.getText().equals("XXX")) {
-            butF12.setForeground(Color.red);
-            butF12.setOpaque(true);
-            butF12.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butF12PropertyChange
-
-    private void butF13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF13PropertyChange
-        if (butF13.getText().equals("XXX")) {
-            butF13.setForeground(Color.red);
-            butF13.setOpaque(true);
-            butF13.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butF13PropertyChange
-
-    private void butF14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butF14PropertyChange
-        if (butF14.getText().equals("XXX")) {
-            butF14.setForeground(Color.red);
-            butF14.setOpaque(true);
-            butF14.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butF14PropertyChange
-
     private void butG01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG01PropertyChange
         if (butG01.getText().equals("XXX")) {
             butG01.setForeground(Color.red);
@@ -4696,38 +3435,6 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_butG10PropertyChange
 
-    private void butG11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG11PropertyChange
-        if (butG11.getText().equals("XXX")) {
-            butG11.setForeground(Color.red);
-            butG11.setOpaque(true);
-            butG11.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butG11PropertyChange
-
-    private void butG12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG12PropertyChange
-        if (butG12.getText().equals("XXX")) {
-            butG12.setForeground(Color.red);
-            butG12.setOpaque(true);
-            butG12.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butG12PropertyChange
-
-    private void butG13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG13PropertyChange
-        if (butG13.getText().equals("XXX")) {
-            butG13.setForeground(Color.red);
-            butG13.setOpaque(true);
-            butG13.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butG13PropertyChange
-
-    private void butG14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butG14PropertyChange
-        if (butG14.getText().equals("XXX")) {
-            butG14.setForeground(Color.red);
-            butG14.setOpaque(true);
-            butG14.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butG14PropertyChange
-
     private void butH01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH01PropertyChange
         if (butH01.getText().equals("XXX")) {
             butH01.setForeground(Color.red);
@@ -4800,6 +3507,23 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_butH09PropertyChange
 
+    private void butH10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butH10ActionPerformed
+        ArrayList<String> seating = new ArrayList<>();
+        seating = show.getShowSeating();
+
+        for (int i = 0; i < seating.size(); i++) {
+            if ("H10".equals(seating.get(i))) {
+                Seating seat = new Seating("H10", t);
+                cart.addSeat(seat);
+                show.seatsTaken(cart, show);
+                butH10.setText((show.getShowSeating()).get(79));
+                String newSeats = lblSeats.getText();
+                newSeats = newSeats + " H10";
+                lblSeats.setText(newSeats);
+            }
+        }
+    }//GEN-LAST:event_butH10ActionPerformed
+
     private void butH10PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH10PropertyChange
         if (butH10.getText().equals("XXX")) {
             butH10.setForeground(Color.red);
@@ -4807,38 +3531,6 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
             butH10.setBackground(Color.red);
         }
     }//GEN-LAST:event_butH10PropertyChange
-
-    private void butH11PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH11PropertyChange
-        if (butH11.getText().equals("XXX")) {
-            butH11.setForeground(Color.red);
-            butH11.setOpaque(true);
-            butH11.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butH11PropertyChange
-
-    private void butH12PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH12PropertyChange
-        if (butH12.getText().equals("XXX")) {
-            butH12.setForeground(Color.red);
-            butH12.setOpaque(true);
-            butH12.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butH12PropertyChange
-
-    private void butH13PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH13PropertyChange
-        if (butH13.getText().equals("XXX")) {
-            butH13.setForeground(Color.red);
-            butH13.setOpaque(true);
-            butH13.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butH13PropertyChange
-
-    private void butH14PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_butH14PropertyChange
-        if (butH14.getText().equals("XXX")) {
-            butH14.setForeground(Color.red);
-            butH14.setOpaque(true);
-            butH14.setBackground(Color.red);
-        }
-    }//GEN-LAST:event_butH14PropertyChange
     
     public void tryRepaint() {
         repaint();
@@ -4899,6 +3591,7 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     private javax.swing.JButton butB05;
     private javax.swing.JButton butB06;
     private javax.swing.JButton butB07;
+    private javax.swing.JButton butB08;
     private javax.swing.JButton butB09;
     private javax.swing.JButton butB10;
     private javax.swing.JButton butC01;
@@ -4911,49 +3604,28 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     private javax.swing.JButton butC08;
     private javax.swing.JButton butC09;
     private javax.swing.JButton butC10;
-    private javax.swing.JButton butC102;
-    private javax.swing.JButton butC103;
-    private javax.swing.JButton butC104;
-    private javax.swing.JButton butC105;
-    private javax.swing.JButton butC106;
-    private javax.swing.JButton butC107;
-    private javax.swing.JButton butC108;
-    private javax.swing.JButton butC109;
-    private javax.swing.JButton butC11;
-    private javax.swing.JButton butC110;
-    private javax.swing.JButton butC12;
-    private javax.swing.JButton butC13;
-    private javax.swing.JButton butC14;
     private javax.swing.JButton butClearSelection;
     private javax.swing.JButton butClose;
-    private javax.swing.JButton butD101;
-    private javax.swing.JButton butD102;
-    private javax.swing.JButton butD103;
-    private javax.swing.JButton butD104;
-    private javax.swing.JButton butD105;
-    private javax.swing.JButton butD106;
-    private javax.swing.JButton butD107;
-    private javax.swing.JButton butD108;
-    private javax.swing.JButton butD109;
-    private javax.swing.JButton butD11;
-    private javax.swing.JButton butD110;
-    private javax.swing.JButton butD12;
-    private javax.swing.JButton butD13;
-    private javax.swing.JButton butD14;
-    private javax.swing.JButton butE101;
-    private javax.swing.JButton butE102;
-    private javax.swing.JButton butE103;
-    private javax.swing.JButton butE104;
-    private javax.swing.JButton butE105;
-    private javax.swing.JButton butE106;
-    private javax.swing.JButton butE107;
-    private javax.swing.JButton butE108;
-    private javax.swing.JButton butE109;
-    private javax.swing.JButton butE11;
-    private javax.swing.JButton butE110;
-    private javax.swing.JButton butE12;
-    private javax.swing.JButton butE13;
-    private javax.swing.JButton butE14;
+    private javax.swing.JButton butD01;
+    private javax.swing.JButton butD02;
+    private javax.swing.JButton butD03;
+    private javax.swing.JButton butD04;
+    private javax.swing.JButton butD05;
+    private javax.swing.JButton butD06;
+    private javax.swing.JButton butD07;
+    private javax.swing.JButton butD08;
+    private javax.swing.JButton butD09;
+    private javax.swing.JButton butD10;
+    private javax.swing.JButton butE01;
+    private javax.swing.JButton butE02;
+    private javax.swing.JButton butE03;
+    private javax.swing.JButton butE04;
+    private javax.swing.JButton butE05;
+    private javax.swing.JButton butE06;
+    private javax.swing.JButton butE07;
+    private javax.swing.JButton butE08;
+    private javax.swing.JButton butE09;
+    private javax.swing.JButton butE10;
     private javax.swing.JButton butF01;
     private javax.swing.JButton butF02;
     private javax.swing.JButton butF03;
@@ -4964,10 +3636,6 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     private javax.swing.JButton butF08;
     private javax.swing.JButton butF09;
     private javax.swing.JButton butF10;
-    private javax.swing.JButton butF11;
-    private javax.swing.JButton butF12;
-    private javax.swing.JButton butF13;
-    private javax.swing.JButton butF14;
     private javax.swing.JButton butG01;
     private javax.swing.JButton butG02;
     private javax.swing.JButton butG03;
@@ -4978,10 +3646,6 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     private javax.swing.JButton butG08;
     private javax.swing.JButton butG09;
     private javax.swing.JButton butG10;
-    private javax.swing.JButton butG11;
-    private javax.swing.JButton butG12;
-    private javax.swing.JButton butG13;
-    private javax.swing.JButton butG14;
     private javax.swing.JButton butH01;
     private javax.swing.JButton butH02;
     private javax.swing.JButton butH03;
@@ -4992,10 +3656,6 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     private javax.swing.JButton butH08;
     private javax.swing.JButton butH09;
     private javax.swing.JButton butH10;
-    private javax.swing.JButton butH11;
-    private javax.swing.JButton butH12;
-    private javax.swing.JButton butH13;
-    private javax.swing.JButton butH14;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

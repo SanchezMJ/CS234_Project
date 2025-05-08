@@ -229,18 +229,20 @@ public class MovieSelectionGUI2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMovie1Time1ActionPerformed
 
     private void btnMovie2Time1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMovie2Time1ActionPerformed
-        if(shows.get(0).getScreenType().equals("imax")) {
-            Showtimes currentShow = new Showtimes();
-            currentShow = shows.get(1);
-            currentShow.displayShowSeating();
-            String t = currentShow.getScreenType();
-            this.setVisible(false); new ImaxSeatingGui(currentShow, t, cart).setVisible(true);
+        if(shows.get(1).getScreenType().equals("imax")) {
+            Showtimes imaxShow = new Showtimes();
+            imaxShow = shows.get(1);
+            imaxShow.displayShowSeating();
+            String t = imaxShow.getScreenType();
+            System.out.println(t + " " + shows.get(1).getTitle());
+            
+            this.setVisible(false); new ImaxSeatingGui(imaxShow, t, cart).setVisible(true);
         }else {
-            Showtimes currentShow = new Showtimes();
-            currentShow = shows.get(1);
-            currentShow.displayShowSeating();
-            String t = currentShow.getScreenType();
-            this.setVisible(false); new RegularSeatingGui(currentShow, t, cart).setVisible(true);
+            Showtimes imaxShow = new Showtimes();
+            imaxShow = shows.get(1);
+            imaxShow.displayShowSeating();
+            String t = imaxShow.getScreenType();
+            this.setVisible(false); new RegularSeatingGui(imaxShow, t, cart).setVisible(true);
         }
     }//GEN-LAST:event_btnMovie2Time1ActionPerformed
 

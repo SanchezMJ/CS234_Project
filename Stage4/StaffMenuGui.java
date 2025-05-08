@@ -87,7 +87,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(butDisplayStaff);
-        butDisplayStaff.setBounds(140, 140, 250, 50);
+        butDisplayStaff.setBounds(100, 120, 300, 50);
 
         butDisplayMembersList.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butDisplayMembersList.setText("Display Members List");
@@ -102,7 +102,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(butDisplayMembersList);
-        butDisplayMembersList.setBounds(140, 200, 250, 50);
+        butDisplayMembersList.setBounds(100, 180, 300, 50);
 
         lblTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblTitle1.setForeground(new java.awt.Color(255, 255, 255));
@@ -114,7 +114,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
         lblTitle2.setForeground(new java.awt.Color(255, 153, 0));
         lblTitle2.setText("Movie Theater");
         getContentPane().add(lblTitle2);
-        lblTitle2.setBounds(190, 60, 255, 57);
+        lblTitle2.setBounds(190, 60, 255, 56);
 
         butMainMenu.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butMainMenu.setText("Main Menu");
@@ -129,7 +129,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(butMainMenu);
-        butMainMenu.setBounds(140, 310, 250, 40);
+        butMainMenu.setBounds(100, 290, 300, 40);
 
         butInventoryMenu1.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butInventoryMenu1.setText("Inventory Menu");
@@ -144,7 +144,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(butInventoryMenu1);
-        butInventoryMenu1.setBounds(140, 260, 250, 40);
+        butInventoryMenu1.setBounds(100, 240, 300, 40);
 
         setSize(new java.awt.Dimension(529, 398));
         setLocationRelativeTo(null);
@@ -152,7 +152,8 @@ public class StaffMenuGui extends javax.swing.JFrame {
 
     private void butDisplayMembersListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butDisplayMembersListActionPerformed
         //button displays memeber list
-        JOptionPane.showMessageDialog(this, mem.getMembers());
+        //JOptionPane.showMessageDialog(this, mem.getMembers());
+        new CustomerChangeGui(current, mem, hashset).setVisible(true);
     }//GEN-LAST:event_butDisplayMembersListActionPerformed
 
     private void butMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butMainMenuActionPerformed
@@ -162,12 +163,12 @@ public class StaffMenuGui extends javax.swing.JFrame {
 
     private void butDisplayStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butDisplayStaffActionPerformed
         //button displays staff managemnet menu
-        this.setVisible(false);new EmployeeRoster(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+        new EmployeeRoster(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butDisplayStaffActionPerformed
 
     private void butInventoryMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butInventoryMenu1ActionPerformed
         //button displays inventory menu
-        this.setVisible(false);new InventoryMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+        new InventoryMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butInventoryMenu1ActionPerformed
 
     /**

@@ -98,6 +98,9 @@ public class Customer {
         }
         
         //Method to return points for customer.
+        public void setPoints(double p) {
+            points = p;
+        }
         public double getPoints() {
             return points;
         }

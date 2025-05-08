@@ -8,14 +8,21 @@ import java.util.ArrayList;
  *
  * @author jbock
  */
+
+/**
+ * Cart class stores selected seats and concession products, calculates totals and taxes,
+ * and supports receipt generation and transaction tracking.
+ */
 public class Cart {
+    // Fields to track totals, products, and payments
     private double total;
     private ArrayList<Concession> listOfProducts;
     private ArrayList<Seating> seatSelection;
     private double tax;
     private double totalWithTax;
     private double amountPaid;
-    
+
+    // Constructor initializes fields
     public Cart(){
         this.listOfProducts=new ArrayList<>();
         this.seatSelection=new ArrayList<>();
@@ -24,7 +31,8 @@ public class Cart {
         this.totalWithTax = 0.0;
         this.amountPaid = 0.0;
     }
-    
+
+    // Returns a product from the cart
     public Concession getProduct(Concession product){
         return product;
     }
@@ -35,7 +43,8 @@ public class Cart {
         totalWithTax = totalWithTax + seat.getSeatCost() + (seat.getSeatCost() * tax);
         total = total + seat.getSeatCost() + (seat.getSeatCost() * tax);
     }
-    
+
+    // Removes a seat and subtracts its cost (plus tax)
     public void remSeat(Seating seat) {
 
         total = total - seat.getSeatCost() - (seat.getSeatCost() * tax);
@@ -43,6 +52,7 @@ public class Cart {
         seatSelection.remove(seat);
  
     }
+    // Returns selected seats
     public ArrayList<Seating> getSeatSelection() {
         return seatSelection;
     }
@@ -58,17 +68,20 @@ public class Cart {
     public double getTotalWithTax() {
         return totalWithTax;
     }
+    // Returns seat ID string
     public String getSeatId(Object seat) {
         Seating s = new Seating();
         String st;
         st = s.getSeat();
         return st;
     }
-    
+
+    // Adds payment amount to the total amount paid
     public void setAmountPaid(double p) {
         this.amountPaid = amountPaid + p;
     }
-    
+
+     // Resets amount paid to a specific value (e.g., 0.0)
     public void setAmountPaidZero(double z) {
         this.amountPaid = z;
     }
@@ -82,13 +95,15 @@ public class Cart {
         total = total + con.getPrice() + (con.getPrice()*tax);
         totalWithTax = totalWithTax + con.getPrice() + (con.getPrice()*tax);
     }
-    
+
+    // Removes a product and subtracts its price (plus tax)
     public void remProduct(Concession con) {
         listOfProducts.remove(con);
         total = total - con.getPrice() - (con.getPrice()*tax);
         totalWithTax = totalWithTax - con.getPrice() - (con.getPrice()*tax);
     }
-    
+
+    // Returns current products
     public ArrayList<Concession> showProducts(){
         return listOfProducts;
     
@@ -101,11 +116,13 @@ public class Cart {
     public void setTotal(double m) {
         total = m;
     }
+    // Empties both seat and product selections and resets total
     public void emptyCart(){
         seatSelection.clear();
         listOfProducts.clear();
         total=0;
     }
+    // Returns selected seat labels as a string
     public String getSeatSelections() {
         String list = "";
         if(seatSelection.isEmpty()){
@@ -136,7 +153,8 @@ public class Cart {
                 }
         }
     }
-    
+
+     // Returns formatted cart content including tax and total, based on what was added
     public String showCart() {
         String c = "";
         System.out.println();
@@ -208,7 +226,8 @@ public class Cart {
         }
     return c;
     }
-    
+
+    // Returns cart with totals and current balance based on a passed amount
     public String showCartBalance(double paid) {
         String c = "";
         System.out.println();
@@ -249,7 +268,8 @@ public class Cart {
 
     return c;
     }
-    
+
+    // Shows a final receipt without updating balance
     public String showCartReceipt(double paid) {
         String c = "";
         System.out.println();

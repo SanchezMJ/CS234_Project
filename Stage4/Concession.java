@@ -5,14 +5,16 @@
 package com.mycompany.cs234project;
 
 /**
- *
- * @author jbock
+ * Concession represents an item sold at the theater (e.g., snacks, drinks).
+ * It contains the product's name, price, and stock quantity.
+ * 
+ * Author: jbock
  */
 public class Concession {
     //sets instance variables
-    private String product;
-    private double price;
-    private int totalStock;
+    private String product; // Name of the concession item
+    private double price; // Price of the item
+    private int totalStock; // Quantity in stock
     
     //intializes instance variables
     public Concession(String product, double price, int totalStock){

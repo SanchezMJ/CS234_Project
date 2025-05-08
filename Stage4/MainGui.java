@@ -4,9 +4,12 @@
  */
 package com.mycompany.cs234project;
 
+import static com.mycompany.cs234project.Main.MainMenu;
+import static com.mycompany.cs234project.Main.StaffLogin;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashSet;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -135,7 +138,29 @@ public class MainGui extends javax.swing.JFrame {
     }//GEN-LAST:event_butCustomerActionPerformed
 
     private void butStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butStaffActionPerformed
-        this.setVisible(false); new StaffMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+//    String userName = JOptionPane.showInputDialog(this, "Enter your user name.");
+//    String inputPass = JOptionPane.showInputDialog(this, "Enter your password");
+//    staff = objauth.AuthenticateStaff(userName, inputPass);
+    int choice = 4;
+        while (staff==null || staff.getFirstName() == null) {
+            
+            String userName = JOptionPane.showInputDialog(this, "Enter your user name.");
+            String inputPass = JOptionPane.showInputDialog(this, "Enter your password");
+            staff = objauth.AuthenticateStaff(userName, inputPass);
+                    //if no valid user is returned, prompt for correct credentials again.
+                if (staff==null || staff.getFirstName() == null) {
+                    choice = JOptionPane.showConfirmDialog(this, "No staff member found, try again?");
+                    if (choice == 2 || choice == 1) {
+                        break;
+                    }
+                }
+        }
+        if (choice == 2 || choice == 1) {
+            
+        }else {
+            this.setVisible(false); new StaffMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
+        }
+        //this.setVisible(false); new StaffMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butStaffActionPerformed
 
     private void butExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butExitActionPerformed

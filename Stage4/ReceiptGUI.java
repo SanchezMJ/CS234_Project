@@ -63,7 +63,8 @@ public class ReceiptGUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pack();
+        setSize(new java.awt.Dimension(307, 514));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     public String showReceipt() {
         String c;

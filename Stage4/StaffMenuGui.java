@@ -68,6 +68,8 @@ public class StaffMenuGui extends javax.swing.JFrame {
         lblTitle2 = new javax.swing.JLabel();
         butMainMenu = new javax.swing.JButton();
         butInventoryMenu1 = new javax.swing.JButton();
+        butCustomersReport = new javax.swing.JButton();
+        butStaffReport = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Movie Theater");
@@ -129,7 +131,7 @@ public class StaffMenuGui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(butMainMenu);
-        butMainMenu.setBounds(100, 290, 300, 40);
+        butMainMenu.setBounds(100, 390, 300, 40);
 
         butInventoryMenu1.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
         butInventoryMenu1.setText("Inventory Menu");
@@ -146,13 +148,42 @@ public class StaffMenuGui extends javax.swing.JFrame {
         getContentPane().add(butInventoryMenu1);
         butInventoryMenu1.setBounds(100, 240, 300, 40);
 
-        setSize(new java.awt.Dimension(529, 398));
+        butCustomersReport.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butCustomersReport.setText("Customers Report");
+        butCustomersReport.setAutoscrolls(true);
+        butCustomersReport.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butCustomersReport.setContentAreaFilled(false);
+        butCustomersReport.setOpaque(true);
+        butCustomersReport.setPreferredSize(new java.awt.Dimension(184, 38));
+        butCustomersReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butCustomersReportActionPerformed(evt);
+            }
+        });
+        getContentPane().add(butCustomersReport);
+        butCustomersReport.setBounds(100, 290, 300, 40);
+
+        butStaffReport.setFont(new java.awt.Font("Canela Text", 0, 24)); // NOI18N
+        butStaffReport.setText("Staff Report");
+        butStaffReport.setAutoscrolls(true);
+        butStaffReport.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 51), new java.awt.Color(153, 51, 0), new java.awt.Color(204, 102, 0)));
+        butStaffReport.setContentAreaFilled(false);
+        butStaffReport.setOpaque(true);
+        butStaffReport.setPreferredSize(new java.awt.Dimension(184, 38));
+        butStaffReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butStaffReportActionPerformed(evt);
+            }
+        });
+        getContentPane().add(butStaffReport);
+        butStaffReport.setBounds(100, 340, 300, 40);
+
+        setSize(new java.awt.Dimension(535, 492));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void butDisplayMembersListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butDisplayMembersListActionPerformed
         //button displays memeber list
-        //JOptionPane.showMessageDialog(this, mem.getMembers());
         new CustomerChangeGui(current, mem, hashset).setVisible(true);
     }//GEN-LAST:event_butDisplayMembersListActionPerformed
 
@@ -170,6 +201,16 @@ public class StaffMenuGui extends javax.swing.JFrame {
         //button displays inventory menu
         new InventoryMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butInventoryMenu1ActionPerformed
+
+    private void butCustomersReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustomersReportActionPerformed
+        // Displays CustomerReportGui frame
+        new CustomersReportGui(mem, hashset).setVisible(true);
+    }//GEN-LAST:event_butCustomersReportActionPerformed
+
+    private void butStaffReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butStaffReportActionPerformed
+        // TODO add your handling code here:
+        new StaffReportGui(objman, alist).setVisible(true);
+    }//GEN-LAST:event_butStaffReportActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,10 +254,12 @@ public class StaffMenuGui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton butCustomersReport;
     private javax.swing.JButton butDisplayMembersList;
     private javax.swing.JButton butDisplayStaff;
     private javax.swing.JButton butInventoryMenu1;
     private javax.swing.JButton butMainMenu;
+    private javax.swing.JButton butStaffReport;
     private javax.swing.JLabel lblTitle1;
     private javax.swing.JLabel lblTitle2;
     // End of variables declaration//GEN-END:variables

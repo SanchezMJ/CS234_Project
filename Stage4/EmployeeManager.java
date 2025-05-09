@@ -55,10 +55,21 @@ public class EmployeeManager {
         for (Staff employee : listOfEmployees){
             System.out.println(employee);
         }
-      }
+    }
         
     }
     
+    //shows list of employees
+    public String displayEmployees(){
+        String staff = "";
+        for (Staff m:listOfEmployees) {
+            staff += m.getFirstName() + " " + m.getLastName() + "\n";
+            staff += "Position: " + m.getPosition() + " Pay rate: " + m.getPay() + "\n";
+            staff += "User name: " + m.getUserName() + " " + "Password: " + m.getPassword() + "\n";
+            staff += "------------------------------------------\n\n";
+        }
+        return staff;
+    }
     //imports staff from csv file
     public void importStaff(String filepath)throws IOException{
         listOfEmployees.clear();

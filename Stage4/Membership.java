@@ -60,4 +60,15 @@ public class Membership {
             System.out.println("------------------------------");
         }
     }
+    
+    public String showMembers() {
+        String memReport = "";
+       for (Customer m : members) {
+            memReport += m.getFirstName() + " " + m.getLastName() + "\n";
+            memReport += "Member ID: " + m.getMemberID() + " Points: " + m.getPoints() + "\n";
+            memReport += "DOB: " + m.getdob() + "  Points: " + m.getPoints() + "\n"; 
+            memReport += "------------------------------\n\n";
+        } 
+       return memReport;
+    }
 }

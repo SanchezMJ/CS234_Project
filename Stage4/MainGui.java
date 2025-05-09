@@ -3,8 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-import static com.mycompany.cs234project.Main.MainMenu;
-import static com.mycompany.cs234project.Main.StaffLogin;
+
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashSet;

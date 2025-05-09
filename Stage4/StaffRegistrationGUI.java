@@ -1,4 +1,4 @@
-package com.mycompany.cs234project;
+
 import com.mycompany.cs234project.Authentication;
 import java.awt.Color;
 import java.util.HashSet;

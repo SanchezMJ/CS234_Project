@@ -5,8 +5,6 @@
 
 
 import javax.swing.JOptionPane;
-import com.mycompany.cs234project.EmployeeManager;
-import com.mycompany.cs234project.Staff;
 import java.awt.Color;
 import java.util.ArrayList;
 

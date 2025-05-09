@@ -272,7 +272,7 @@ public class InventoryMenuGui extends javax.swing.JFrame {
                         if(toRemove!=null){
                             inventory.removeProduct(toRemove);
                             JOptionPane.showMessageDialog(this,"Product removed.");
-                            this.setVisible(false);
+                            this.setVisible(true);
                         }else{
                             JOptionPane.showMessageDialog(this,"Product not found.");
                         }

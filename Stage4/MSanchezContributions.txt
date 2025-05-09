@@ -1,0 +1,66 @@
+Stage 4 Contributions
+
+Created the following GUI frames
+
+CashPaymentGUI
+CreditCardPaymentGUI
+CustomerChangeGui
+CustomerMenuGui
+CustomerRegistrationGui
+CustomersReportGui
+GiftCardPaymentGUI
+ImaxSeatingGui
+MainGui
+MovieSelectionGUI2
+MovieSelectionGui (got corrupted and had to redo)
+PaymentGUI
+ReceiptGUI
+RegularSeatingGui
+StaffReportGui
+TransactionMenuGui
+
+helped with 
+StaffMenuGui
+
+Created the user guide
+
+Failed to schedule a meeting with you for stage 4. 
+It was my turn for this.
+
+
+
+
+Stage 3 Contributions
+
+Main.java Contributions:
+
+Initially created these with tons of help and editing from Jordan.
+
+MainMenu() method
+CustomerMainMenu() method
+StaffMainMenu() method contributor
+CustomerLogin() method
+StaffLogin() method
+CustomerRegister() method contributor
+StaffRegister() method
+StaffMenu() method
+TransactionMenu() method
+AddProducts() method
+PaymentMenu() method
+Main() method
+
+Author of:
+Authentication.java
+CashPayment.java
+CreditCardPayment.java
+Customer.java
+GiftCardPayment.java
+GiftCards.java
+Membership.java
+Payment.java
+Screen.java
+Seating.java
+
+Contributed to:
+Cart.java - helped with the seating methods and getCart
+Showtimes.java - SeatsTaken method

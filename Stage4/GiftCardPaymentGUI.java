@@ -9,8 +9,10 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author mjsanchez
+ * @author Michael Sanchez
  */
+
+//Variable definitions
 public class GiftCardPaymentGUI extends javax.swing.JFrame {
     private Customer customer;
     private Cart cart;
@@ -26,6 +28,8 @@ public class GiftCardPaymentGUI extends javax.swing.JFrame {
     public GiftCardPaymentGUI() {
         initComponents();
     }
+    
+    //Initializes variables
     public GiftCardPaymentGUI(Customer customer, Cart cart) {
         this.customer = customer;
         this.cart = cart;
@@ -139,6 +143,11 @@ public class GiftCardPaymentGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfExpDateActionPerformed
 
     private void ConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmActionPerformed
+        /**
+         * Assigns text field values to a new GiftCard Object and charges that 
+         * object the total amount.  then checks to see if the current customer 
+         * is a guest and if not, adds points before printing a receipt.
+         */
         double total = cart.getTotalWithTax();
         String ccnum = tfCardNumber.getText();
         String expDate = tfExpDate.getText();

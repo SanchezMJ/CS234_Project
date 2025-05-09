@@ -13,8 +13,10 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author mjsanchez
+ * @author Michael Sanchez
  */
+
+//variable definitions
 public class CustomerMenuGui extends javax.swing.JFrame {
     private Customer current;
     private Staff staff;
@@ -35,6 +37,8 @@ public class CustomerMenuGui extends javax.swing.JFrame {
     public CustomerMenuGui() {
         
     }
+    
+    //Initializes variables in constructor
     public CustomerMenuGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         this.current = new Customer();
         this.staff = staff;
@@ -147,6 +151,10 @@ public class CustomerMenuGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void butCustLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustLoginActionPerformed
+    /**
+     * Method for allowing customers to log in.  Prompts user for a phone number and verifies
+     * that the phone number is the right length.  Then prompts for a password.
+     */
     String pNum = JOptionPane.showInputDialog(this, "Enter your phone number.");
     if (pNum != null && !pNum.isEmpty()) {
         try {
@@ -163,6 +171,10 @@ public class CustomerMenuGui extends javax.swing.JFrame {
         } catch (NumberFormatException e) {
             
     }
+    /**
+     * if the user exists or is not a guest, continue to transaction menu, else, prompts user
+     * to login as a guest and returns to customer menu.
+     */
     if (current != null && current.getFirstName() != "Guest") {
         this.setVisible(false); 
         TransactionMenuGUI tm = new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
@@ -177,17 +189,19 @@ public class CustomerMenuGui extends javax.swing.JFrame {
     }//GEN-LAST:event_butCustLoginActionPerformed
 
     private void butCustMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustMainMenuActionPerformed
+        //Returns to main menu.
         this.setVisible(false); new MainGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butCustMainMenuActionPerformed
 
     private void butLoginAsGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butLoginAsGuestActionPerformed
+        //Allows the user to login as a guest.
         this.setVisible(false); 
         TransactionMenuGUI tm = new TransactionMenuGUI(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows);
         tm.setVisible(true);
     }//GEN-LAST:event_butLoginAsGuestActionPerformed
 
     private void butCustRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustRegActionPerformed
-        //this.setVisible(false); 
+        //Opens Customer registration frame.
         new CustomerRegistrationGui(hashset, mem, obauth).setVisible(true);
     }//GEN-LAST:event_butCustRegActionPerformed
 

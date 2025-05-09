@@ -13,8 +13,10 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author mjsanchez
+ * @author Michael Sanchez
  */
+
+//variable definitions
 public class MainGui extends javax.swing.JFrame {
     private Customer current;
     private Staff staff;
@@ -36,6 +38,7 @@ public class MainGui extends javax.swing.JFrame {
     public MainGui() {
         
     }
+    //Initializes variables
     public MainGui(Customer customer, Staff staff, HashSet<Customer> hashset, Membership mem, Authentication obauth, ArrayList<Staff> alist, EmployeeManager objman, Authentication objauth, Inventory inventory, ArrayList<Concession> prod, Cart cart, ArrayList<Showtimes> shows) {
         current = customer;
         this.staff = staff;
@@ -134,13 +137,18 @@ public class MainGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void butCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCustomerActionPerformed
+        //Hides this frame and opens Customer Menu when selected.
         this.setVisible(false); new CustomerMenuGui(current, staff, hashset, mem, obauth, alist, objman, objauth, inventory, prod, cart, shows).setVisible(true);
     }//GEN-LAST:event_butCustomerActionPerformed
 
     private void butStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butStaffActionPerformed
-//    String userName = JOptionPane.showInputDialog(this, "Enter your user name.");
-//    String inputPass = JOptionPane.showInputDialog(this, "Enter your password");
-//    staff = objauth.AuthenticateStaff(userName, inputPass);
+    /**
+     * Verifies if staff object is null or the first name is null.  it is by default.
+     * If so, while loop is entered and prompts for user name and password.
+     * The inputs are passed to check if they match a staff member.  If not prompts the user
+     * if they want to try again or cancel returning to Main menu.  If the user exists and 
+     * the password is correct, this window is hidden and StaffMenu frame is called.
+     */
     int choice = 4;
         while (staff==null || staff.getFirstName() == null) {
             
@@ -164,6 +172,7 @@ public class MainGui extends javax.swing.JFrame {
     }//GEN-LAST:event_butStaffActionPerformed
 
     private void butExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butExitActionPerformed
+        //Exits the program.
         System.exit(0);
     }//GEN-LAST:event_butExitActionPerformed
 

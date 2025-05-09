@@ -11,8 +11,10 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author mjsanchez
+ * @author Michael Sanchez
  */
+
+//Variable Definitions
 public class ImaxSeatingGui extends javax.swing.JFrame {
     private Showtimes show;
     private String t;
@@ -26,6 +28,8 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
     public ImaxSeatingGui() {
         
     }
+    
+    //Initializes variables
     public ImaxSeatingGui(Showtimes show, String t, Cart cart) {
         this.show = show;
         this.t = t;
@@ -1469,6 +1473,16 @@ public class ImaxSeatingGui extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * All button actions performed will set the seat value will then be checked for the 
+     * current shows seat and assign that seat object to the cart's seat selection ArrayList.  
+     * If the button is pushed, it will also add the 
+     * seat value to current seat selection on this frame.  If seat is selected, it will change the 
+     * array value from the seat designations to "XXX".  
+     * 
+     * All button changes will see if the value is changed to "XXX" and if so, it will set the text 
+     * and background to red once triggered.
+     */
     private void butA01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butA01ActionPerformed
         ArrayList<String> seating = new ArrayList<>();
         seating = show.getShowSeating();

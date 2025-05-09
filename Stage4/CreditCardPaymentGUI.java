@@ -8,9 +8,10 @@ import java.awt.Color;
 import javax.swing.JLabel;
 
 /**
- *
- * @author mjsanchez
+ * @author Michael Sanchez
  */
+
+//Variable definitions
 public class CreditCardPaymentGUI extends javax.swing.JFrame {
     private Customer customer;
     private Cart cart;
@@ -20,12 +21,15 @@ public class CreditCardPaymentGUI extends javax.swing.JFrame {
     private double change;
     private double paid;
     private double balance;
+    
     /**
      * Creates new form CreditCardPaymentGUI
      */
     public CreditCardPaymentGUI() {
         initComponents();
     }
+    
+    //Constuctor that initializes the variables
     public CreditCardPaymentGUI(Customer customer, Cart cart) {
         this.customer = customer;
         this.cart = cart;
@@ -206,6 +210,10 @@ public class CreditCardPaymentGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfSecurityNumActionPerformed
 
     private void ConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmActionPerformed
+        /**
+         * Method that assigns the text for all text fields to creditCardPayment object
+         * charges the card for the payment amount and adds points before showing receipt
+         */
         double total = cart.getTotalWithTax();
         String fname = tfCardName.getText();
         String lname = tfCardLastName.getText();
@@ -215,6 +223,7 @@ public class CreditCardPaymentGUI extends javax.swing.JFrame {
         int sec = Integer.parseInt(secNum);
         Payment credit = new CreditCardPayment(total, fname, lname, ccnum, expDate, sec);
         credit.addPayment(credit);
+        //checks if customer is a registered customer, adds points if they are and prints receipt.
         if (customer.getFirstName().equals("Guest")) {
             cart.setAmountPaid(totalWithTax);
                 new ReceiptGUI(customer, cart, change, totalWithTax).setVisible(true);

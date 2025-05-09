@@ -10,8 +10,10 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author mjsanchez
+ * @author Michael Sanchez
  */
+
+//Variable definitions for this class
 public class CashPaymentGUI extends javax.swing.JFrame {
     private Customer customer;
     private Cart cart;
@@ -24,9 +26,13 @@ public class CashPaymentGUI extends javax.swing.JFrame {
     /**
      * Creates new form CashPaymentGUI
      */
+    
+    //generic constructor
     public CashPaymentGUI() {
-        
+      initComponents();  
     }
+    
+    //Constructor initializing variables
     public CashPaymentGUI(Customer customer, Cart cart) {
         this.customer = customer;
         this.cart = cart;
@@ -119,26 +125,37 @@ public class CashPaymentGUI extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(400, 328));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //Method that acts when a value is entered into the text field tfCashGiven
     private void tfCashGivenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCashGivenActionPerformed
         double num;
         try {
+            //converts the text input to a double
             num = Double.parseDouble(tfCashGiven.getText());
             String changeText;
          //String amountDue;
             change = 0;
+            //converts the text input to a double
             String cashGiven = tfCashGiven.getText();
+            //Assignes paid value as cashGiven
             paid = Double.parseDouble(cashGiven);
             if (paid >= totalWithTax) {
                 change = paid - totalWithTax;
                 cart.setAmountPaid(num);
+                /**if paid is greater than what customer owes, value change is 
+                 * assigned the value of paid minus the owed total and then formatted
+                 * to 2 decimal places below.
+                 */
                 String text = String.format("%.2f", change);
                 changeText = "Change Due: $" + text;
-                //cart.setTotalWithTax(0.0);
                 
                 lblDue.setForeground(Color.green);
                 lblDue.setVisible(true);
                 lblDue.setText(changeText);
+        /** 
+         * If the amount owed is greater than what was paid, then a balance value
+         * is assigned, text is changed to red.
+         */
         } else {
             change = totalWithTax - paid;
             cart.setTotalWithTax(change);
@@ -155,14 +172,24 @@ public class CashPaymentGUI extends javax.swing.JFrame {
             tfCashGiven.setText("");
         }
     }//GEN-LAST:event_tfCashGivenActionPerformed
-
+    
+    //Method that checks if there is a balance owed
     private void btnCompleteTransActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteTransActionPerformed
+        /**
+         * If balance is owed then open a cashpayment window with remainder so 
+         * customer can pay with a any payment option.
+         */
         if (balance > 0) {
             this.setVisible(false);
             //System.out.print("total > 0" + cart.getTotalWithTax());
             Payment cash = new CashPayment(totalWithTax, paid);
             cash.addPayment(cash);
             new PaymentGUI(customer, cart, change, paid).setVisible(true);
+        /**
+         * If there is no balance, checks to see if the customer is a guest or 
+         * a registered customer then prints receipt.  If registered points are 
+         * added to the customer.
+         */
         } else {
             //System.out.print("total < 0" + cart.getTotalWithTax());
             if (customer.getFirstName().equals("Guest")) {
@@ -176,35 +203,15 @@ public class CashPaymentGUI extends javax.swing.JFrame {
                 Payment cash = new CashPayment(totalWithTax, paid);
                 cash.addPayment(cash);
                 new ReceiptGUI(customer, cart, change, paid).setVisible(true);
-            }
-        //System.out.println("complete, cart emptied, amountPaid ==0");   
+            }   
         cart.emptyCart();
-        //cart.setAmountPaid(0.0);
         double ap = cart.getAmountPaid();
         System.out.println("AmountPaid: " + ap);
         this.setVisible(false);
         }
         
     }//GEN-LAST:event_btnCompleteTransActionPerformed
-//    public String getChange() {
-//        String changeText;
-//        //String amountDue;
-//        double change = 0;
-//        String cashGiven = tfCashGiven.getText();
-//        double cash = Double.parseDouble(cashGiven);
-//        double totalDue = cart.getTotal() + (cart.getTotal() * cart.getTax());
-//        if (cash >= totalDue) {
-//            change = cash - totalDue;
-//            String text = String.format("%.2f", change);
-//            changeText = "Change Due: $" + text;
-//            return changeText;
-//        } else {
-//            change = totalDue - cash;
-//            String text = String.format("%.2f", change);
-//            changeText = "Amount Due: $" + text;
-//            return changeText;
-//        }
-//    }
+
     /**
      * @param args the command line arguments
      */

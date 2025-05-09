@@ -16,9 +16,10 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
- *
- * @author mjsanchez
+ * @author Michael Sanchez
  */
+
+//Variable definitions
 public class CustomerChangeGui extends javax.swing.JFrame {
     private Customer customer;
     private String customerData;
@@ -32,6 +33,8 @@ public class CustomerChangeGui extends javax.swing.JFrame {
     public CustomerChangeGui() {
         initComponents();
     }
+    
+    //Initializes variables
     public CustomerChangeGui(Customer customer, Membership mem, HashSet<Customer> members) {
         this.customer = customer;
         this.customerData = "Customers.csv";
@@ -254,6 +257,10 @@ public class CustomerChangeGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        /**
+         * Once this window is opened, rows are read from the file Customers.csv and 
+         * assigned to an array of strings and displayed in the table as rows.
+         */
         try {
             BufferedReader reader = new BufferedReader(new FileReader(customerData));
             ArrayList<String> tableData = new ArrayList<>();
@@ -282,6 +289,10 @@ public class CustomerChangeGui extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        /**
+         * Method that takes all rows in table and assigns them into a string array
+         * then saves them in Customers.csv.
+         */
         DefaultTableModel model = (DefaultTableModel)tblCustomers.getModel();
         
         ArrayList<String> tableData = new ArrayList<>();
@@ -311,12 +322,18 @@ public class CustomerChangeGui extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        //Calls the clear method when button is pushed and enables the add button while disabling the update button.
         clear();
         btnAdd.setEnabled(true);
         btnUpdate.setEnabled(false);
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        /**
+         * Method once button is pressed that takes the current row
+         * finds the customer with the same phone number and removes that customer
+         * object from the members list. 
+         */
         int row = tblCustomers.getSelectedRow();
         Customer cust = new Customer();
         DefaultTableModel model = (DefaultTableModel)tblCustomers.getModel();
@@ -336,6 +353,10 @@ public class CustomerChangeGui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        /**
+         * Gets selected row and assigns the text from the fields to customer
+         * object values.  Then updates that specific row.
+         */
         int row = tblCustomers.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel)tblCustomers.getModel();
         Customer cust = new Customer();
@@ -356,6 +377,10 @@ public class CustomerChangeGui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void tblCustomersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCustomersMouseClicked
+        /**
+         * Once the table is clicked, this will assign all fields on frame
+         * with the values for each Customer object field.
+         */
         int row = tblCustomers.getSelectedRow();
         Customer cust = new Customer();
         DefaultTableModel model = (DefaultTableModel)tblCustomers.getModel();
@@ -378,6 +403,12 @@ public class CustomerChangeGui extends javax.swing.JFrame {
     }//GEN-LAST:event_tblCustomersMouseClicked
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        /**
+         * Method that takes all the fields text inputs and assigns them to 
+         * a new customer object's values.  Then assigns the values to a 
+         * String array where that array can be added to the table as a row,
+         * and the customer object can be added to the members list.
+         */
         int row = tblCustomers.getSelectedRow();
         ArrayList<String> tableData = new ArrayList<>();
         DefaultTableModel model = (DefaultTableModel)tblCustomers.getModel();
@@ -404,7 +435,7 @@ public class CustomerChangeGui extends javax.swing.JFrame {
         btnUpdate.setEnabled(false);
         
     }//GEN-LAST:event_btnAddActionPerformed
-
+    //Updates the table information with the assigned values for cust
     private void updateTableInfo(DefaultTableModel theModel, int row, Customer cust) {
         DefaultTableModel model = theModel;
         model.setValueAt(cust.getFirstName(), row, 0);
@@ -415,6 +446,7 @@ public class CustomerChangeGui extends javax.swing.JFrame {
         model.setValueAt(cust.getPassword(), row, 5);
     }
     
+    //Clears all the text fiedls on the frame.
     private void clear() {
         tfFirstName.setText("");
         tfLastName.setText("");

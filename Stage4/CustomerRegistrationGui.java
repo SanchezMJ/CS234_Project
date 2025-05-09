@@ -10,8 +10,10 @@ import java.util.InputMismatchException;
 import javax.swing.JOptionPane;
 /**
  *
- * @author mjsanchez
+ * @author Michael Sanchez
  */
+
+//Variable definitions
 public class CustomerRegistrationGui extends javax.swing.JFrame {
     private Customer newCust;
     private Membership member;
@@ -21,7 +23,8 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
     public CustomerRegistrationGui() {
         initComponents();
     }
-
+    
+    //Initializes variables.
     public CustomerRegistrationGui(HashSet<Customer> members, Membership member, Authentication authentication) {
         newCust = new Customer();
         this.member = member;
@@ -206,6 +209,11 @@ public class CustomerRegistrationGui extends javax.swing.JFrame {
     }//GEN-LAST:event_tfPasswordActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        /**
+         * Takes text values from the frames fields and assigns them to a 
+         * new customer object.  Also verifies that the phone number is 
+         * the correct length.
+         */
         String lastName = tfLastName.getText();
         newCust.setLastName(lastName);
         String firstName = tfFirstName.getText();

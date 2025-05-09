@@ -1,0 +1,27 @@
+Author of:
+Showtimes.java
+Showtime Manager.java
+Staff.java
+Employee Manager.java
+Movie Catalog.java
+Concession.java
+Inventory.java
+Cart.java
+InventoryMenu() method in main class.
+ConcessionMenuGUI.java
+EmployeeRoster.java
+InventoryMenuGui.java
+Text file with compilation instructions
+
+Contributor to:
+ Main Class: - majority of class framework created by Michael. I made additions and edits to what was in place.  
+  StaffMainMenu() method
+  CustomerRegister() method
+  MovieSelection() method
+  PaymentMenu() method
+Contributor:
+StaffMenuGui.java
+TransactionMenu.java
+Latest UML changes for this phase
+
+Troubleshooting and tweaking for various methods

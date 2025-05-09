@@ -1,0 +1,16 @@
+Stage 4:
+- fixed coding from feedback provided from Stage 3
+- Optimized code to prepare it for beginning Stage 4.
+- Test the wrokflow of the program
+- Troubleshooted and fixed code that were resulting in errors
+- Fixed Screen and Seat Selection class to properly display iMax Seating
+- Fixed OutofBound Index error to fully display all of the seats for teather
+- Uploaded more than one movie description into the program to give selection to user.
+- Started implemented GUI for various menus when it comes to payment and selections
+- Fixed coding error presented in Stage 3 to add additional items into the inventory class
+- Fixed issues with cash payment GUI to complete the transaction
+- Fixed issues with the cash payment GUI to allow for cent payments instead of full-dollar amounts
+- Fixed issues with cash payment GUI to show users if they were missing usfficent funds and provided change back to the cusomter 
+- Prepare code ready for final presentation
+- Provided comments for various methods in multiple classes to provide information on their functionality
+- Optimized coding to ensure program does not break easily due to input error and created failsafes to catches these errors. 
